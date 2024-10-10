@@ -2400,7 +2400,9 @@ bool TrackTypeMustBeMadeInvisible(ride_type_t rideType, track_type_t trackType, 
                 return true;
         }
     }
-    else if (rideType == RIDE_TYPE_CORKSCREW_ROLLER_COASTER && parkFileVersion < kExtendedCorkscrewCoasterVersion)
+    else if (
+        (rideType == RIDE_TYPE_CORKSCREW_ROLLER_COASTER || rideType == RIDE_TYPE_HYPERCOASTER)
+        && parkFileVersion < kExtendedCorkscrewCoasterVersion)
     {
         switch (trackType)
         {
