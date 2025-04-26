@@ -29,6 +29,8 @@ constexpr RideTypeDescriptor MonsterTrucksRTD =
             array[EnumValue(TrackGroup::spinningTunnel)] = NewSupportType(WoodenSupportType::Truss);
             return array;
         }(),
+        .trackGroupTunnelStyles = kTrackGroupTunnelStylesStandard,
+        .tunnelGroup = TunnelGroup::uninverted,
         .enabledTrackGroups = {TrackGroup::straight, TrackGroup::stationEnd, TrackGroup::slope, TrackGroup::slopeSteepUp, TrackGroup::slopeSteepDown, TrackGroup::curveVerySmall, TrackGroup::curveSmall, TrackGroup::rapids},
         .extraTrackGroups = {TrackGroup::spinningTunnel},
     }),

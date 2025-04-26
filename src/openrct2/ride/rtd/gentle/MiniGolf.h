@@ -29,6 +29,14 @@ constexpr RideTypeDescriptor MiniGolfRTD =
             array[EnumValue(TrackGroup::miniGolfHole)] = NewSupportType(WoodenSupportTypeCovered(WoodenSupportType::Truss, true));
             return array;
         }(),
+        .trackGroupTunnelStyles = []() consteval {
+            std::array<TunnelStyle, EnumValue(TrackGroup::count)> array{};
+            array.fill(TunnelStyle::standardWithPath);
+            array[EnumValue(TrackGroup::stationEnd)] = TunnelStyle::square;
+            array[EnumValue(TrackGroup::onridePhoto)] = TunnelStyle::square;
+            return array;
+        }(),
+        .tunnelGroup = TunnelGroup::uninverted,
         .enabledTrackGroups = {TrackGroup::straight, TrackGroup::stationEnd, TrackGroup::slope, TrackGroup::curveVerySmall, TrackGroup::miniGolfHole},
         .extraTrackGroups = {},
     }),

@@ -28,6 +28,8 @@ constexpr RideTypeDescriptor SplashBoatsRTD =
             array.fill(NewSupportType(WoodenSupportType::Truss));
             return array;
         }(),
+        .trackGroupTunnelStyles = kTrackGroupTunnelStylesSquare,
+        .tunnelGroup = TunnelGroup::uninverted,
         .enabledTrackGroups = {TrackGroup::straight, TrackGroup::stationEnd, TrackGroup::slope, TrackGroup::slopeSteepDown, TrackGroup::sBend, TrackGroup::curve, TrackGroup::onridePhoto},
         .extraTrackGroups = {},
     }),

@@ -24,8 +24,6 @@
 
 using namespace OpenRCT2;
 
-static constexpr TunnelGroup kTunnelGroup = TunnelGroup::Standard;
-
 enum
 {
     SprMiniGolfFlatSwNe = 14404,
@@ -499,13 +497,11 @@ static void PaintMiniGolfTrackFlat(
     {
         imageId = session.TrackColours.WithIndex(SprMiniGolfFlatNwSe);
         PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 6, 0, height }, { 20, 32, 1 } });
-        PaintUtilPushTunnelRight(session, height, TunnelType::PathAndMiniGolf);
     }
     else
     {
         imageId = session.TrackColours.WithIndex(SprMiniGolfFlatSwNe);
         PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 1 } });
-        PaintUtilPushTunnelLeft(session, height, TunnelType::PathAndMiniGolf);
     }
 
     if (MiniGolfPaintUtilShouldDrawFence(session, trackElement))
@@ -550,16 +546,16 @@ static void PaintMiniGolfTrack25DegUp(
     switch (direction)
     {
         case 0:
-            PaintUtilPushTunnelLeft(session, height - 8, kTunnelGroup, TunnelSubType::SlopeStart);
+
             break;
         case 1:
-            PaintUtilPushTunnelRight(session, height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
+
             break;
         case 2:
-            PaintUtilPushTunnelLeft(session, height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
+
             break;
         case 3:
-            PaintUtilPushTunnelRight(session, height - 8, kTunnelGroup, TunnelSubType::SlopeStart);
+
             break;
     }
 
@@ -585,16 +581,16 @@ static void PaintMiniGolfTrackFlatTo25DegUp(
     switch (direction)
     {
         case 0:
-            PaintUtilPushTunnelLeft(session, height, TunnelType::PathAndMiniGolf);
+
             break;
         case 1:
-            PaintUtilPushTunnelRight(session, height, kTunnelGroup, TunnelSubType::SlopeEnd);
+
             break;
         case 2:
-            PaintUtilPushTunnelLeft(session, height, kTunnelGroup, TunnelSubType::SlopeEnd);
+
             break;
         case 3:
-            PaintUtilPushTunnelRight(session, height, TunnelType::PathAndMiniGolf);
+
             break;
     }
 
@@ -620,16 +616,16 @@ static void PaintMiniGolfTrack25DegUpToFlat(
     switch (direction)
     {
         case 0:
-            PaintUtilPushTunnelLeft(session, height - 8, kTunnelGroup, TunnelSubType::Flat);
+
             break;
         case 1:
-            PaintUtilPushTunnelRight(session, height + 8, TunnelType::PathAndMiniGolf);
+
             break;
         case 2:
-            PaintUtilPushTunnelLeft(session, height + 8, TunnelType::PathAndMiniGolf);
+
             break;
         case 3:
-            PaintUtilPushTunnelRight(session, height - 8, kTunnelGroup, TunnelSubType::Flat);
+
             break;
     }
 
@@ -712,7 +708,6 @@ static void PaintMiniGolfStation(
         TrackPaintUtilDrawStationCovers(session, EDGE_NW, hasFence, stationObj, height, stationColour);
         TrackPaintUtilDrawStationCovers(session, EDGE_SE, hasSEFence, stationObj, height, stationColour);
     }
-    TrackPaintUtilDrawStationTunnel(session, direction, height);
 
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
@@ -732,7 +727,7 @@ static void PaintMiniGolfTrackLeftQuarterTurn1Tile(
     switch (direction)
     {
         case 0:
-            PaintUtilPushTunnelLeft(session, height, TunnelType::PathAndMiniGolf);
+
             if (!shouldDrawFence)
                 break;
 
@@ -750,7 +745,7 @@ static void PaintMiniGolfTrackLeftQuarterTurn1Tile(
             break;
 
         case 2:
-            PaintUtilPushTunnelRight(session, height, TunnelType::PathAndMiniGolf);
+
             if (!shouldDrawFence)
                 break;
 
@@ -759,8 +754,7 @@ static void PaintMiniGolfTrackLeftQuarterTurn1Tile(
             break;
 
         case 3:
-            PaintUtilPushTunnelLeft(session, height, TunnelType::PathAndMiniGolf);
-            PaintUtilPushTunnelRight(session, height, TunnelType::PathAndMiniGolf);
+
             if (!shouldDrawFence)
                 break;
 
@@ -811,11 +805,9 @@ static void PaintMiniGolfHoleAb(
 
     if ((direction == 0 && trackSequence == 0) || (direction == 2 && trackSequence == 1))
     {
-        PaintUtilPushTunnelLeft(session, height, TunnelType::PathAndMiniGolf);
     }
     else if ((direction == 3 && trackSequence == 0) || (direction == 1 && trackSequence == 1))
     {
-        PaintUtilPushTunnelRight(session, height, TunnelType::PathAndMiniGolf);
     }
 
     if (direction & 1)
@@ -869,11 +861,9 @@ static void PaintMiniGolfHoleC(
 
     if ((direction == 0 && trackSequence == 0) || (direction == 2 && trackSequence == 1))
     {
-        PaintUtilPushTunnelLeft(session, height, TunnelType::PathAndMiniGolf);
     }
     else if ((direction == 3 && trackSequence == 0) || (direction == 1 && trackSequence == 1))
     {
-        PaintUtilPushTunnelRight(session, height, TunnelType::PathAndMiniGolf);
     }
 
     if (direction & 1)
@@ -932,12 +922,12 @@ static void PaintMiniGolfHoleD(
     {
         case 0x00:
         case 0x12:
-            PaintUtilPushTunnelLeft(session, height, TunnelType::PathAndMiniGolf);
+
             break;
 
         case 0x02:
         case 0x30:
-            PaintUtilPushTunnelRight(session, height, TunnelType::PathAndMiniGolf);
+
             break;
     }
 }
@@ -964,12 +954,12 @@ static void PaintMiniGolfHoleE(
     {
         case (0 << 4 | 0):
         case (3 << 4 | 2):
-            PaintUtilPushTunnelLeft(session, height, TunnelType::PathAndMiniGolf);
+
             break;
 
         case (2 << 4 | 2):
         case (3 << 4 | 0):
-            PaintUtilPushTunnelRight(session, height, TunnelType::PathAndMiniGolf);
+
             break;
     }
 }

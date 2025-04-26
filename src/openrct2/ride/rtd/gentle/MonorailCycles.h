@@ -29,6 +29,8 @@ constexpr RideTypeDescriptor MonorailCyclesRTD =
             array[EnumValue(TrackGroup::stationEnd)] = NewSupportType(MetalSupportType::Boxed);
             return array;
         }(),
+        .trackGroupTunnelStyles = kTrackGroupTunnelStylesStandard,
+        .tunnelGroup = TunnelGroup::uninverted,
         .enabledTrackGroups = {TrackGroup::straight, TrackGroup::stationEnd, TrackGroup::sBend, TrackGroup::curveSmall, TrackGroup::curve},
         .extraTrackGroups = {},
     }),

@@ -71,7 +71,6 @@ static void PaintBoatHireStation(
 {
     const auto* stationObj = ride.getStationObject();
 
-    TrackPaintUtilDrawStationTunnel(session, direction, height);
     TrackPaintUtilDrawPier(
         session, ride, stationObj, session.MapPosition, direction, height, trackElement, session.CurrentRotation);
 

@@ -27,6 +27,8 @@ constexpr RideTypeDescriptor ReverseFreefallCoasterRTD =
             array.fill(NewSupportType(WoodenSupportType::Truss));
             return array;
         }(),
+        .trackGroupTunnelStyles = kTrackGroupTunnelStylesSquare,
+        .tunnelGroup = TunnelGroup::uninverted,
         .enabledTrackGroups = { TrackGroup::straight, TrackGroup::stationEnd, TrackGroup::liftHillSteep, TrackGroup::reverseFreefall, TrackGroup::onridePhoto},
         .extraTrackGroups = {},
     }),

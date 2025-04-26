@@ -11,6 +11,7 @@
 
 #include "../paint/support/MetalSupports.h"
 #include "../paint/support/WoodenSupports.h"
+#include "../paint/tile_element/Paint.Tunnel.h"
 #include "../paint/track/Segment.h"
 #include "Track.h"
 
@@ -77,6 +78,67 @@ namespace OpenRCT2::TrackMetaData
         return { 0, 0, 0, 0 };
     }
 
+    struct SequenceTunnel
+    {
+        int8_t height = 0;
+        Direction direction{};
+        TunnelSlope subType = TunnelSlope::none;
+        bool doorable = false;
+    };
+
+    constexpr uint8_t kSequenceTunnelMaxPerSequence = 2;
+
+    using SequenceTunnelGroup = std::array<SequenceTunnel, kSequenceTunnelMaxPerSequence>;
+
+    constexpr SequenceTunnelGroup kSequenceTunnelUnimplemented{};
+
+    struct SequenceTunnels
+    {
+        std::array<SequenceTunnelGroup, kTunnelGroupCount> tunnelGroups{};
+        uint8_t verticalTunnelHeight = 0;
+    };
+
+    constexpr SequenceTunnels SequenceTunnelsAllGroups(const SequenceTunnelGroup& tunnels, const uint8_t verticalTunnelHeight)
+    {
+        return { { { tunnels, tunnels, tunnels } }, verticalTunnelHeight };
+    }
+
+    constexpr SequenceTunnels SequenceTunnelsReverse(SequenceTunnels sequenceTunnels)
+    {
+        for (auto& tunnelGroup : sequenceTunnels.tunnelGroups)
+        {
+            for (auto& tunnel : tunnelGroup)
+            {
+                tunnel.direction = DirectionReverse(tunnel.direction);
+            }
+        }
+        return sequenceTunnels;
+    }
+
+    constexpr SequenceTunnels SequenceTunnelsPrev(SequenceTunnels sequenceTunnels)
+    {
+        for (auto& tunnelGroup : sequenceTunnels.tunnelGroups)
+        {
+            for (auto& tunnel : tunnelGroup)
+            {
+                tunnel.direction = DirectionPrev(tunnel.direction);
+            }
+        }
+        return sequenceTunnels;
+    }
+
+    constexpr SequenceTunnels SequenceTunnelsFlipXAxis(SequenceTunnels sequenceTunnels)
+    {
+        for (auto& tunnelGroup : sequenceTunnels.tunnelGroups)
+        {
+            for (auto& tunnel : tunnelGroup)
+            {
+                tunnel.direction = DirectionFlipXAxis(tunnel.direction);
+            }
+        }
+        return sequenceTunnels;
+    }
+
     struct SequenceDescriptor
     {
         SequenceClearance clearance{};
@@ -90,6 +152,7 @@ namespace OpenRCT2::TrackMetaData
         std::array<uint16_t, EnumValue(OpenRCT2::BlockedSegments::BlockedSegmentsType::count)> blockedSegments{
             kSegmentsNone, kSegmentsNone, kSegmentsNone, kSegmentsNone, kSegmentsNone
         };
+        SequenceTunnels tunnels{};
     };
 
     using TrackComputeFunction = int32_t (*)(const int16_t);

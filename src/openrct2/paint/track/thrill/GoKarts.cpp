@@ -18,8 +18,6 @@
 
 using namespace OpenRCT2;
 
-static constexpr TunnelGroup kTunnelGroup = TunnelGroup::Square;
-
 enum
 {
     SPR_GO_KARTS_FLAT_SW_NE = 20752,
@@ -1344,8 +1342,6 @@ static void PaintGoKartsTrackFlat(
 
         imageId = session.TrackColours.WithIndex(SPR_GO_KARTS_FLAT_FRONT_SW_NE);
         PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 29, height + 2 }, { 32, 1, 3 } });
-
-        PaintUtilPushTunnelLeft(session, height, kTunnelGroup, TunnelSubType::Flat);
     }
     else
     {
@@ -1354,8 +1350,6 @@ static void PaintGoKartsTrackFlat(
 
         imageId = session.TrackColours.WithIndex(SPR_GO_KARTS_FLAT_FRONT_NW_SE);
         PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 29, 0, height + 2 }, { 1, 32, 3 } });
-
-        PaintUtilPushTunnelRight(session, height, kTunnelGroup, TunnelSubType::Flat);
     }
 
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
@@ -1394,16 +1388,16 @@ static void PaintGoKartsTrack25DegUp(
     switch (direction)
     {
         case 0:
-            PaintUtilPushTunnelLeft(session, height - 8, kTunnelGroup, TunnelSubType::SlopeStart);
+
             break;
         case 1:
-            PaintUtilPushTunnelRight(session, height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
+
             break;
         case 2:
-            PaintUtilPushTunnelLeft(session, height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
+
             break;
         case 3:
-            PaintUtilPushTunnelRight(session, height - 8, kTunnelGroup, TunnelSubType::SlopeStart);
+
             break;
     }
 
@@ -1443,16 +1437,16 @@ static void PaintGoKartsTrackFlatTo25DegUp(
     switch (direction)
     {
         case 0:
-            PaintUtilPushTunnelLeft(session, height, kTunnelGroup, TunnelSubType::Flat);
+
             break;
         case 1:
-            PaintUtilPushTunnelRight(session, height, kTunnelGroup, TunnelSubType::SlopeEnd);
+
             break;
         case 2:
-            PaintUtilPushTunnelLeft(session, height, kTunnelGroup, TunnelSubType::SlopeEnd);
+
             break;
         case 3:
-            PaintUtilPushTunnelRight(session, height, kTunnelGroup, TunnelSubType::Flat);
+
             break;
     }
 
@@ -1493,16 +1487,15 @@ static void PaintGoKartsTrack25DegUpToFlat(
     {
         case 0:
 
-            PaintUtilPushTunnelLeft(session, height - 8, kTunnelGroup, TunnelSubType::Flat);
             break;
         case 1:
-            PaintUtilPushTunnelRight(session, height + 8, kTunnelGroup, TunnelSubType::FlatTo25Deg);
+
             break;
         case 2:
-            PaintUtilPushTunnelLeft(session, height + 8, kTunnelGroup, TunnelSubType::FlatTo25Deg);
+
             break;
         case 3:
-            PaintUtilPushTunnelRight(session, height - 8, kTunnelGroup, TunnelSubType::Flat);
+
             break;
     }
 
@@ -1575,14 +1568,10 @@ static void PaintGoKartsStation(
     if (direction == 0 || direction == 2)
     {
         PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 29, height + 2 }, { 32, 1, 3 } });
-
-        PaintUtilPushTunnelLeft(session, height, kTunnelGroup, TunnelSubType::Flat);
     }
     else
     {
         PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 29, 0, height + 2 }, { 1, 32, 3 } });
-
-        PaintUtilPushTunnelRight(session, height, kTunnelGroup, TunnelSubType::Flat);
     }
 
     if (direction == 0 || direction == 2)
@@ -1693,14 +1682,13 @@ static void PaintGoKartsTrackLeftQuarterTurn1Tile(
     switch (direction)
     {
         case 0:
-            PaintUtilPushTunnelLeft(session, height, kTunnelGroup, TunnelSubType::Flat);
+
             break;
         case 2:
-            PaintUtilPushTunnelRight(session, height, kTunnelGroup, TunnelSubType::Flat);
+
             break;
         case 3:
-            PaintUtilPushTunnelLeft(session, height, kTunnelGroup, TunnelSubType::Flat);
-            PaintUtilPushTunnelRight(session, height, kTunnelGroup, TunnelSubType::Flat);
+
             break;
     }
 
@@ -1728,11 +1716,9 @@ static void TrackUp60(
 
     if (direction == 0 || direction == 3)
     {
-        PaintUtilPushTunnelRotated(session, direction, height - 8, kTunnelGroup, TunnelSubType::SlopeStart);
     }
     else
     {
-        PaintUtilPushTunnelRotated(session, direction, height + 56, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
     PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
@@ -1750,11 +1736,9 @@ static void TrackUp25ToUp60(
 
     if (direction == 0 || direction == 3)
     {
-        PaintUtilPushTunnelRotated(session, direction, height - 8, kTunnelGroup, TunnelSubType::SlopeStart);
     }
     else
     {
-        PaintUtilPushTunnelRotated(session, direction, height + 24, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
     PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
@@ -1772,11 +1756,9 @@ static void TrackUp60ToUp25(
 
     if (direction == 0 || direction == 3)
     {
-        PaintUtilPushTunnelRotated(session, direction, height - 8, kTunnelGroup, TunnelSubType::SlopeStart);
     }
     else
     {
-        PaintUtilPushTunnelRotated(session, direction, height + 24, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
     PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
@@ -1815,11 +1797,9 @@ static void TrackFlatToUp60LongBase(
 
     if (trackSequence == 0 && (direction == 0 || direction == 3))
     {
-        PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::Flat);
     }
     else if (trackSequence == 3 && (direction == 1 || direction == 2))
     {
-        PaintUtilPushTunnelRotated(session, direction, height + 24, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
     static constexpr std::array generalSupportHeights = { 48, 48, 64, 80 };
     PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
@@ -1838,11 +1818,9 @@ static void TrackUp60ToFlatLongBase(
 
     if (trackSequence == 0 && (direction == 0 || direction == 3))
     {
-        PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::SlopeStart);
     }
     else if (trackSequence == 3 && (direction == 1 || direction == 2))
     {
-        PaintUtilPushTunnelRotated(session, direction, height + 8, kTunnelGroup, TunnelSubType::Flat);
     }
     static constexpr std::array generalSupportHeights = { 80, 64, 48, 48 };
     PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
@@ -1883,7 +1861,7 @@ static void TrackLeftQuarterTurn3Tiles(
     if (woodenSupportSubType != WoodenSupportSubType::Null)
     {
     }
-    TrackPaintUtilLeftQuarterTurn3TilesTunnel(session, kTunnelGroup, TunnelSubType::Flat, height, direction, trackSequence);
+
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
@@ -1912,11 +1890,9 @@ static void TrackLeftQuarterTurn5Tiles(
 
     if (trackSequence == 0 && (direction == 0 || direction == 3))
     {
-        PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::Flat);
     }
     else if (trackSequence == 6 && (direction == 2 || direction == 3))
     {
-        PaintUtilPushTunnelRotated(session, DirectionPrev(direction), height, kTunnelGroup, TunnelSubType::Flat);
     }
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
@@ -1946,7 +1922,6 @@ static void TrackLeftEighthToDiag(
 
     if (trackSequence == 0 && (direction == 0 || direction == 3))
     {
-        PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::Flat);
     }
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
@@ -1967,7 +1942,6 @@ static void TrackRightEighthToDiag(
 
     if (trackSequence == 0 && (direction == 0 || direction == 3))
     {
-        PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::Flat);
     }
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
@@ -2155,11 +2129,9 @@ static void TrackLeftQuarterTurn3TilesUp25(
 
     if (trackSequence == 0 && (direction == 0 || direction == 3))
     {
-        PaintUtilPushTunnelRotated(session, direction, height - 8, kTunnelGroup, TunnelSubType::SlopeStart);
     }
     else if (trackSequence == 3 && (direction == 2 || direction == 3))
     {
-        PaintUtilPushTunnelRotated(session, DirectionPrev(direction), height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
 
     static constexpr std::array generalSupportHeights = { 72, 56, 56, 72 };
@@ -2179,11 +2151,9 @@ static void TrackRightQuarterTurn3TilesUp25(
 
     if (trackSequence == 0 && (direction == 0 || direction == 3))
     {
-        PaintUtilPushTunnelRotated(session, direction, height - 8, kTunnelGroup, TunnelSubType::SlopeStart);
     }
     else if (trackSequence == 3 && (direction == 0 || direction == 1))
     {
-        PaintUtilPushTunnelRotated(session, DirectionNext(direction), height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
 
     static constexpr std::array generalSupportHeights = { 72, 56, 56, 72 };
@@ -2221,11 +2191,9 @@ static void TrackLeftQuarterTurn5TilesUp25(
 
     if (trackSequence == 0 && (direction == 0 || direction == 3))
     {
-        PaintUtilPushTunnelRotated(session, direction, height - 8, kTunnelGroup, TunnelSubType::SlopeStart);
     }
     else if (trackSequence == 6 && (direction == 2 || direction == 3))
     {
-        PaintUtilPushTunnelRotated(session, DirectionPrev(direction), height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
 
     static constexpr std::array generalSupportHeights = { 72, 72, 72, 64, 72, 72, 72 };
@@ -2245,11 +2213,9 @@ static void TrackRightQuarterTurn5TilesUp25(
 
     if (trackSequence == 0 && (direction == 0 || direction == 3))
     {
-        PaintUtilPushTunnelRotated(session, direction, height - 8, kTunnelGroup, TunnelSubType::SlopeStart);
     }
     else if (trackSequence == 6 && (direction == 2 || direction == 3))
     {
-        PaintUtilPushTunnelRotated(session, DirectionNext(direction), height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
 
     static constexpr std::array generalSupportHeights = { 72, 72, 72, 64, 72, 72, 72 };
@@ -2287,7 +2253,6 @@ static void TrackLeftEighthToDiagUp25(
 
     if (trackSequence == 0 && (direction == 0 || direction == 3))
     {
-        PaintUtilPushTunnelRotated(session, direction, height - 8, kTunnelGroup, TunnelSubType::SlopeStart);
     }
 
     PaintUtilSetGeneralSupportHeight(session, height + 72);
@@ -2306,7 +2271,6 @@ static void TrackRightEighthToDiagUp25(
 
     if (trackSequence == 0 && (direction == 0 || direction == 3))
     {
-        PaintUtilPushTunnelRotated(session, direction, height - 8, kTunnelGroup, TunnelSubType::SlopeStart);
     }
 
     PaintUtilSetGeneralSupportHeight(session, height + 72);
@@ -2325,7 +2289,6 @@ static void TrackLeftEighthToOrthogonalUp25(
 
     if (trackSequence == 4 && (direction == 1 || direction == 2))
     {
-        PaintUtilPushTunnelRotated(session, direction, height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
 
     PaintUtilSetGeneralSupportHeight(session, height + 72);
@@ -2344,7 +2307,6 @@ static void TrackRightEighthToOrthogonalUp25(
 
     if (trackSequence == 4 && (direction == 0 || direction == 1))
     {
-        PaintUtilPushTunnelRotated(session, DirectionNext(direction), height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
 
     PaintUtilSetGeneralSupportHeight(session, height + 72);
@@ -2403,7 +2365,6 @@ static void TrackSBendLeft(
     if ((trackSequence == 0 && (direction == 0 || direction == 3))
         || (trackSequence == 3 && (direction == 1 || direction == 2)))
     {
-        PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::Flat);
     }
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
@@ -2425,7 +2386,6 @@ static void TrackSBendRight(
     if ((trackSequence == 0 && (direction == 0 || direction == 3))
         || (trackSequence == 3 && (direction == 1 || direction == 2)))
     {
-        PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::Flat);
     }
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }

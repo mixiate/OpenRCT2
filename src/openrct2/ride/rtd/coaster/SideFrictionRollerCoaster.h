@@ -27,6 +27,8 @@ constexpr RideTypeDescriptor SideFrictionRollerCoasterRTD =
             array.fill(NewSupportType(WoodenSupportType::Truss));
             return array;
         }(),
+        .trackGroupTunnelStyles = kTrackGroupTunnelStylesSquare,
+        .tunnelGroup = TunnelGroup::uninverted,
         .enabledTrackGroups = {TrackGroup::straight, TrackGroup::stationEnd, TrackGroup::liftHill, TrackGroup::slope, TrackGroup::sBend, TrackGroup::curveSmall, TrackGroup::curve, TrackGroup::curveLarge, TrackGroup::brakes, TrackGroup::slopeSteepUp, TrackGroup::slopeSteepDown},
         .extraTrackGroups = {},
     }),

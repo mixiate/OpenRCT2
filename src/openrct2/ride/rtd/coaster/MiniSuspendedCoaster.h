@@ -28,6 +28,8 @@ constexpr RideTypeDescriptor MiniSuspendedCoasterRTD =
             array[EnumValue(TrackGroup::stationEnd)] = NewSupportType(MetalSupportType::Boxed);
             return array;
         }(),
+        .trackGroupTunnelStyles = kTrackGroupTunnelStylesStandard,
+        .tunnelGroup = TunnelGroup::inverted,
         .enabledTrackGroups = { TrackGroup::straight, TrackGroup::stationEnd, TrackGroup::liftHill, TrackGroup::slope, TrackGroup::sBend, TrackGroup::curveSmall, TrackGroup::curve, TrackGroup::curveLarge},
         .extraTrackGroups = {},
     }),

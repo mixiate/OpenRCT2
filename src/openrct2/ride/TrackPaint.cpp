@@ -2063,6 +2063,47 @@ void PaintTrack(PaintSession& session, Direction direction, int32_t height, cons
             PaintUtilSetSegmentSupportHeight(session, blockedSegments, 0xFFFF, 0);
         }
         paintFunction(session, *ride, trackSequence, direction, height, trackElement, trackDrawerEntry.supportType);
+
+        if (!rtd.HasFlag(RtdFlag::trackMustBeOnWater))
+        {
+            for (const auto& tunnel :
+                 ted.sequences[trackSequence].tunnels.tunnelGroups[EnumValue(trackDrawerEntry.tunnelGroup)])
+            {
+                if (tunnel.subType == TunnelSlope::none)
+                {
+                    continue;
+                }
+                else if (tunnel.doorable && rtd.HasFlag(RtdFlag::hasLandscapeDoors))
+                {
+                    if (tunnel.direction == direction)
+                    {
+                        PaintUtilPushTunnelLeft(
+                            session, height + tunnel.height, GetTunnelTypeDoors(trackElement, tunnel.direction));
+                    }
+                    else if (tunnel.direction == DirectionNext(direction))
+                    {
+                        PaintUtilPushTunnelRight(
+                            session, height + tunnel.height, GetTunnelTypeDoors(trackElement, tunnel.direction));
+                    }
+                }
+                else
+                {
+                    const auto tunnelStyle = trackDrawerEntry.trackGroupTunnelStyles[EnumValue(ted.definition.group)];
+                    if (tunnel.direction == direction)
+                    {
+                        PaintUtilPushTunnelLeft(session, height + tunnel.height, tunnelStyle, tunnel.subType);
+                    }
+                    else if (tunnel.direction == DirectionNext(direction))
+                    {
+                        PaintUtilPushTunnelRight(session, height + tunnel.height, tunnelStyle, tunnel.subType);
+                    }
+                }
+            }
+            if (ted.sequences[trackSequence].flags & TRACK_SEQUENCE_FLAG_VERTICAL_TUNNEL)
+            {
+                PaintUtilSetVerticalTunnel(session, height + ted.sequences[trackSequence].tunnels.verticalTunnelHeight);
+            }
+        }
     }
 }
 
@@ -2071,7 +2112,6 @@ void TrackPaintUtilOnridePhotoPaint2(
     int32_t supportsAboveHeightOffset, int32_t trackHeightOffset)
 {
     TrackPaintUtilOnridePhotoPaint(session, direction, height + trackHeightOffset, trackElement);
-    PaintUtilPushTunnelRotated(session, direction, height, TunnelGroup::Square, TunnelSubType::Flat);
     PaintUtilSetGeneralSupportHeight(session, height + supportsAboveHeightOffset);
 }
 

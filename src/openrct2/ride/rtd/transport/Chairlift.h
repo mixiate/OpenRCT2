@@ -29,6 +29,8 @@ constexpr RideTypeDescriptor ChairliftRTD =
             array[EnumValue(TrackGroup::stationEnd)] = NewSupportType(WoodenSupportType::Truss);
             return array;
         }(),
+        .trackGroupTunnelStyles = kTrackGroupTunnelStylesSquare,
+        .tunnelGroup = TunnelGroup::uninverted,
         .enabledTrackGroups = {TrackGroup::straight, TrackGroup::stationEnd, TrackGroup::slope, TrackGroup::curveVerySmall},
         .extraTrackGroups = {},
     }),

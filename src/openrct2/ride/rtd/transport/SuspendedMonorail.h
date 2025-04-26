@@ -23,6 +23,8 @@ constexpr RideTypeDescriptor SuspendedMonorailRTD =
         .trackStyle = TrackStyle::suspendedMonorail,
         .trackGroupBlockedSegmentTypes = OpenRCT2::BlockedSegments::kTrackGroupBlockedSegmentsInverted,
         .trackGroupSupportTypes = kTrackGroupSupportTypesMetalBoxed,
+        .trackGroupTunnelStyles = kTrackGroupTunnelStylesSemiInvertedSquare,
+        .tunnelGroup = TunnelGroup::inverted,
         .enabledTrackGroups = {TrackGroup::straight, TrackGroup::stationEnd, TrackGroup::slope, TrackGroup::sBend, TrackGroup::curveSmall, TrackGroup::curve, TrackGroup::curveLarge},
         .extraTrackGroups = {},
     }),
