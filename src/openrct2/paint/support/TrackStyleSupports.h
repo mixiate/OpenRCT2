@@ -75,8 +75,6 @@ extern const TrackElementMetalSupports kClassicStandUpRollerCoasterMetalSupports
 extern const TrackElementMetalSupports kCompactInvertedCoasterMetalSupports[EnumValue(TrackElemType::Count)];
 extern const TrackElementMetalSupports kCorkscrewRollerCoasterMetalSupports[EnumValue(TrackElemType::Count)];
 extern const TrackElementMetalSupports kDinghySlideMetalSupports[EnumValue(TrackElemType::Count)];
-extern const TrackElementMetalSupports kFlyingRollerCoasterMetalSupports[EnumValue(TrackElemType::Count)];
-extern const TrackElementMetalSupports kFlyingRollerCoasterInvertedMetalSupports[EnumValue(TrackElemType::Count)];
 extern const TrackElementMetalSupports kGhostTrainMetalSupports[EnumValue(TrackElemType::Count)];
 extern const TrackElementMetalSupports kHeartlineTwisterCoasterMetalSupports[EnumValue(TrackElemType::Count)];
 extern const TrackElementMetalSupports kInvertedHairpinCoasterMetalSupports[EnumValue(TrackElemType::Count)];
@@ -85,7 +83,6 @@ extern const TrackElementMetalSupports kInvertedRollerCoasterMetalSupports[EnumV
 extern const TrackElementMetalSupports kJuniorRollerCoasterMetalSupports[EnumValue(TrackElemType::Count)];
 extern const TrackElementMetalSupports kLatticeTriangleMetalSupports[EnumValue(TrackElemType::Count)];
 extern const TrackElementMetalSupports kLatticeTriangleAltMetalSupports[EnumValue(TrackElemType::Count)];
-extern const TrackElementMetalSupports kLayDownRollerCoasterInvertedMetalSupports[EnumValue(TrackElemType::Count)];
 extern const TrackElementMetalSupports kLimLaunchedRollerCoasterMetalSupports[EnumValue(TrackElemType::Count)];
 extern const TrackElementMetalSupports kLogFlumeMetalSupports[EnumValue(TrackElemType::Count)];
 extern const TrackElementMetalSupports kLoopingRollerCoasterMetalSupports[EnumValue(TrackElemType::Count)];

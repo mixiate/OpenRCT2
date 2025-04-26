@@ -7,320 +7,141 @@
  * OpenRCT2 is licensed under the GNU General Public License version 3.
  *****************************************************************************/
 
-#include "../../../interface/Viewport.h"
-#include "../../../ride/RideData.h"
-#include "../../../ride/Track.h"
+#include "../../../core/EnumUtils.hpp"
+#include "../../../ride/TrackData.h"
 #include "../../../ride/TrackPaint.h"
-#include "../../../world/Map.h"
-#include "../../Paint.h"
+#include "../../../world/tile_element/TrackElement.h"
 #include "../../support/TrackStyleSupports.h"
 
 using namespace OpenRCT2;
 
-/** rct2: 0x */
-static void PaintMiniHelicoptersTrackStation(
-    PaintSession& session, const Ride& ride, [[maybe_unused]] uint8_t trackSequence, uint8_t direction, int32_t height,
-    const TrackElement& trackElement, SupportType supportType)
-{
-    ImageId imageId;
-
-    if (direction == 0 || direction == 2)
-    {
-        imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_FLAT_NE_SW);
-        PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 6, height + 1 }, { 32, 20, 1 } });
-    }
-    else if (direction == 1 || direction == 3)
-    {
-        imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_FLAT_SE_NW);
-        PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 6, 0, height + 1 }, { 20, 32, 1 } });
-    }
-
-    if (TrackPaintUtilDrawStation(session, ride, direction, height, trackElement, StationBaseType::b, -2))
-    {
-        DrawSupportsSideBySide(session, direction, height, session.SupportColours, MetalSupportType::Boxed);
-    }
-    else if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
-    {
-    }
-}
-
-/** rct2: 0x0081F348 */
-static void PaintMiniHelicoptersTrackFlat(
-    PaintSession& session, const Ride& ride, uint8_t trackSequence, uint8_t direction, int32_t height,
-    const TrackElement& trackElement, SupportType supportType)
-{
-    ImageId imageId;
-
-    if (direction & 1)
-    {
-        imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_FLAT_SE_NW);
-        PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 6, 0, height }, { 20, 32, 3 } });
-    }
-    else
-    {
-        imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_FLAT_NE_SW);
-        PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
-    }
-
-    if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
-    {
-    }
-}
-
-/** rct2: 0x0081F368 */
-static void PaintMiniHelicoptersTrackFlatTo25DegUp(
-    PaintSession& session, const Ride& ride, uint8_t trackSequence, uint8_t direction, int32_t height,
-    const TrackElement& trackElement, SupportType supportType)
-{
-    ImageId imageId;
-
-    switch (direction)
-    {
-        case 0:
-            imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_FLAT_TO_25_DEG_UP_SW_NE);
-            PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
-
-            break;
-        case 1:
-            imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_FLAT_TO_25_DEG_UP_NW_SE);
-            PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 6, 0, height }, { 20, 32, 3 } });
-
-            break;
-        case 2:
-            imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_FLAT_TO_25_DEG_UP_NE_SW);
-            PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
-
-            break;
-        case 3:
-            imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_FLAT_TO_25_DEG_UP_SE_NW);
-            PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 6, 0, height }, { 20, 32, 3 } });
-
-            break;
-    }
-
-    if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
-    {
-    }
-}
-
-/** rct2: 0x0081F358 */
-static void PaintMiniHelicoptersTrack25DegUp(
-    PaintSession& session, const Ride& ride, uint8_t trackSequence, uint8_t direction, int32_t height,
-    const TrackElement& trackElement, SupportType supportType)
-{
-    ImageId imageId;
-
-    switch (direction)
-    {
-        case 0:
-            imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_25_DEG_UP_SW_NE);
-            PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
-
-            break;
-        case 1:
-            imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_25_DEG_UP_NW_SE);
-            PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 6, 0, height }, { 20, 32, 3 } });
-
-            break;
-        case 2:
-            imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_25_DEG_UP_NE_SW);
-            PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
-
-            break;
-        case 3:
-            imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_25_DEG_UP_SE_NW);
-            PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 6, 0, height }, { 20, 32, 3 } });
-
-            break;
-    }
-
-    if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
-    {
-    }
-}
-
-/** rct2: 0x0081F378 */
-static void PaintMiniHelicoptersTrack25DegUpToFlat(
-    PaintSession& session, const Ride& ride, uint8_t trackSequence, uint8_t direction, int32_t height,
-    const TrackElement& trackElement, SupportType supportType)
-{
-    ImageId imageId;
-
-    switch (direction)
-    {
-        case 0:
-            imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_25_DEG_UP_TO_FLAT_SW_NE);
-            PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
-
-            break;
-        case 1:
-            imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_25_DEG_UP_TO_FLAT_NW_SE);
-            PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 6, 0, height }, { 20, 32, 3 } });
-
-            break;
-        case 2:
-            imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_25_DEG_UP_TO_FLAT_NE_SW);
-            PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
-
-            break;
-        case 3:
-            imageId = session.TrackColours.WithIndex(SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_25_DEG_UP_TO_FLAT_SE_NW);
-            PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 6, 0, height }, { 20, 32, 3 } });
-
-            break;
-    }
-
-    if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
-    {
-    }
-}
-
-/** rct2: 0x */
-static void PaintMiniHelicoptersTrackFlatTo25DegDown(
-    PaintSession& session, const Ride& ride, uint8_t trackSequence, uint8_t direction, int32_t height,
-    const TrackElement& trackElement, SupportType supportType)
-{
-    PaintMiniHelicoptersTrack25DegUpToFlat(
-        session, ride, trackSequence, (direction + 2) % 4, height, trackElement, supportType);
-}
-
-/** rct2: 0x0081F388 */
-static void PaintMiniHelicoptersTrack25DegDown(
-    PaintSession& session, const Ride& ride, uint8_t trackSequence, uint8_t direction, int32_t height,
-    const TrackElement& trackElement, SupportType supportType)
-{
-    PaintMiniHelicoptersTrack25DegUp(session, ride, trackSequence, (direction + 2) % 4, height, trackElement, supportType);
-}
-
-/** rct2: 0x0081F3A8 */
-static void PaintMiniHelicoptersTrack25DegDownToFlat(
-    PaintSession& session, const Ride& ride, uint8_t trackSequence, uint8_t direction, int32_t height,
-    const TrackElement& trackElement, SupportType supportType)
-{
-    PaintMiniHelicoptersTrackFlatTo25DegUp(
-        session, ride, trackSequence, (direction + 2) % 4, height, trackElement, supportType);
-}
-
-/** rct2: 0x0081F3E8 */
-static void PaintMiniHelicoptersTrackLeftQuarterTurn3Tiles(
-    PaintSession& session, const Ride& ride, uint8_t trackSequence, uint8_t direction, int32_t height,
-    const TrackElement& trackElement, SupportType supportType)
-{
-    TrackPaintUtilLeftQuarterTurn3TilesPaint(
-        session, 3, height, direction, trackSequence, session.TrackColours,
-        kTrackSpritesSubmarineRideMiniHelicoptersQuarterTurn3Tiles);
-
-    switch (trackSequence)
-    {
-        case 0:
-
-            break;
-        case 2:
-            break;
-        case 3:
-
-            break;
-    }
-}
-
-static constexpr uint8_t kMiniHelicoptersRightQuarterTurn3TilesToLeftTurnMap[] = {
-    3,
-    1,
-    2,
-    0,
+static constexpr TrackPaintFunction kMiniHelicoptersTrackPaintFunctions[] = {
+    trackPaintSprite,        trackPaintSpriteStation, trackPaintSpriteStation,
+    trackPaintSpriteStation, trackPaintSprite,        TrackPaintFunctionDummy,
+    trackPaintSprite,        TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    trackPaintSprite,        trackPaintSprite,        TrackPaintFunctionDummy,
+    trackPaintSprite,        TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    trackPaintSprite,        TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    trackPaintSprite,        trackPaintSprite,        TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, trackPaintSprite,
+    trackPaintSprite,        TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, trackPaintSpriteWithChildSpinningTunnel,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy, TrackPaintFunctionDummy,
+    TrackPaintFunctionDummy, TrackPaintFunctionDummy,
 };
-
-/** rct2: 0x0081F3F8 */
-static void PaintMiniHelicoptersTrackRightQuarterTurn3Tiles(
-    PaintSession& session, const Ride& ride, uint8_t trackSequence, uint8_t direction, int32_t height,
-    const TrackElement& trackElement, SupportType supportType)
-{
-    trackSequence = kMiniHelicoptersRightQuarterTurn3TilesToLeftTurnMap[trackSequence];
-    PaintMiniHelicoptersTrackLeftQuarterTurn3Tiles(
-        session, ride, trackSequence, (direction + 3) % 4, height, trackElement, supportType);
-}
-
-/** rct2: 0x0081F408 */
-static void PaintMiniHelicoptersTrackLeftQuarterTurn1Tile(
-    PaintSession& session, const Ride& ride, uint8_t trackSequence, uint8_t direction, int32_t height,
-    const TrackElement& trackElement, SupportType supportType)
-{
-    TrackPaintUtilLeftQuarterTurn1TilePaint(
-        session, 1, height, 0, direction, session.TrackColours, kTrackSpritesSubmarineRideMiniHelicoptersQuarterTurn1Tile);
-}
-
-/** rct2: 0x0081F418 */
-static void PaintMiniHelicoptersTrackRightQuarterTurn1Tile(
-    PaintSession& session, const Ride& ride, uint8_t trackSequence, uint8_t direction, int32_t height,
-    const TrackElement& trackElement, SupportType supportType)
-{
-    PaintMiniHelicoptersTrackLeftQuarterTurn1Tile(
-        session, ride, trackSequence, (direction + 3) % 4, height, trackElement, supportType);
-}
-
-static void PaintMiniHelicoptersTrackSpinningTunnel(
-    PaintSession& session, const Ride& ride, uint8_t trackSequence, uint8_t direction, int32_t height,
-    const TrackElement& trackElement, SupportType supportType)
-{
-    const uint32_t sprites[kNumOrthogonalDirections][2] = {
-        { SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_FLAT_NE_SW, 28773 },
-        { SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_FLAT_SE_NW, 28774 },
-        { SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_FLAT_NE_SW, 28773 },
-        { SPR_TRACK_SUBMARINE_RIDE_MINI_HELICOPTERS_FLAT_SE_NW, 28774 },
-    };
-
-    ImageId imageId = session.TrackColours.WithIndex(sprites[direction][0]);
-    ImageId underlay = session.TrackColours.WithIndex(sprites[direction][1]);
-
-    PaintAddImageAsParentRotated(session, direction, underlay, { 0, 6, height - 2 }, { { 0, 6, height }, { 32, 20, 1 } });
-    PaintAddImageAsChildRotated(session, direction, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
-    TrackPaintUtilSpinningTunnelPaint(session, 1, height, direction);
-}
+static_assert(std::size(kMiniHelicoptersTrackPaintFunctions) == EnumValue(TrackElemType::Count));
 
 /**
  * rct2: 0x0081F268
  */
 TrackPaintFunction GetTrackPaintFunctionMiniHelicopters(OpenRCT2::TrackElemType trackType)
 {
-    switch (trackType)
-    {
-        case TrackElemType::Flat:
-            return PaintMiniHelicoptersTrackFlat;
-
-        case TrackElemType::EndStation:
-        case TrackElemType::BeginStation:
-        case TrackElemType::MiddleStation:
-            return PaintMiniHelicoptersTrackStation;
-
-        case TrackElemType::Up25:
-            return PaintMiniHelicoptersTrack25DegUp;
-        case TrackElemType::FlatToUp25:
-            return PaintMiniHelicoptersTrackFlatTo25DegUp;
-        case TrackElemType::Up25ToFlat:
-            return PaintMiniHelicoptersTrack25DegUpToFlat;
-
-        case TrackElemType::Down25:
-            return PaintMiniHelicoptersTrack25DegDown;
-        case TrackElemType::FlatToDown25:
-            return PaintMiniHelicoptersTrackFlatTo25DegDown;
-        case TrackElemType::Down25ToFlat:
-            return PaintMiniHelicoptersTrack25DegDownToFlat;
-
-        case TrackElemType::LeftQuarterTurn3Tiles:
-            return PaintMiniHelicoptersTrackLeftQuarterTurn3Tiles;
-        case TrackElemType::RightQuarterTurn3Tiles:
-            return PaintMiniHelicoptersTrackRightQuarterTurn3Tiles;
-
-        case TrackElemType::LeftQuarterTurn1Tile:
-            return PaintMiniHelicoptersTrackLeftQuarterTurn1Tile;
-        case TrackElemType::RightQuarterTurn1Tile:
-            return PaintMiniHelicoptersTrackRightQuarterTurn1Tile;
-
-        case TrackElemType::SpinningTunnel:
-            return PaintMiniHelicoptersTrackSpinningTunnel;
-        default:
-            return TrackPaintFunctionDummy;
-    }
+    return kMiniHelicoptersTrackPaintFunctions[EnumValue(trackType)];
 }
 
 // clang-format off

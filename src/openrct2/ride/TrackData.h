@@ -155,6 +155,12 @@ namespace OpenRCT2::TrackMetaData
         SequenceTunnels tunnels{};
     };
 
+    struct TrackElementRotatedType
+    {
+        OpenRCT2::TrackElemType elementType;
+        int8_t extraDirection;
+    };
+
     using TrackComputeFunction = int32_t (*)(const int16_t);
     struct TrackElementDescriptor
     {
@@ -179,6 +185,8 @@ namespace OpenRCT2::TrackMetaData
 
         TrackComputeFunction verticalFactor;
         TrackComputeFunction lateralFactor;
+
+        TrackElementRotatedType rotatedType;
     };
 
     const TrackElementDescriptor& GetTrackElementDescriptor(OpenRCT2::TrackElemType type);

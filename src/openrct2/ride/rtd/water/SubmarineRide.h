@@ -11,6 +11,7 @@
 
 #include "../../../SpriteIds.h"
 #include "../../../drawing/LightFX.h"
+#include "../../../paint/track/water/SubmarineRide.h"
 #include "../../RideData.h"
 #include "../../ShopItem.h"
 #include "../../Track.h"
@@ -26,6 +27,8 @@ constexpr RideTypeDescriptor SubmarineRideRTD =
         .trackGroupSupportTypes = kTrackGroupSupportTypesMetalStick,
         .enabledTrackGroups = {TrackGroup::straight, TrackGroup::stationEnd, TrackGroup::curveVerySmall, TrackGroup::curveSmall},
         .extraTrackGroups = {},
+        .sprites = OpenRCT2::SubmarineRide::kSprites,
+        .stationDesc = { 0, StationType::pier, StationBaseType::none, 0 },
     }),
     .InvertedTrackPaintFunctions = {},
     .Flags = kRtdFlagsHasThreeColours | EnumsToFlags(RtdFlag::hasLeaveWhenAnotherVehicleArrivesAtStation,

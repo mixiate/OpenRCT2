@@ -10,6 +10,7 @@
 #pragma once
 
 #include "../../../SpriteIds.h"
+#include "../../../paint/track/coaster/MiniSuspendedCoaster.h"
 #include "../../RideData.h"
 #include "../../ShopItem.h"
 #include "../../Track.h"
@@ -32,6 +33,8 @@ constexpr RideTypeDescriptor MiniSuspendedCoasterRTD =
         .tunnelGroup = TunnelGroup::inverted,
         .enabledTrackGroups = { TrackGroup::straight, TrackGroup::stationEnd, TrackGroup::liftHill, TrackGroup::slope, TrackGroup::sBend, TrackGroup::curveSmall, TrackGroup::curve, TrackGroup::curveLarge},
         .extraTrackGroups = {},
+        .sprites = OpenRCT2::MiniSuspendedCoaster::kSprites,
+        .stationDesc = { 6, StationType::invertedWide24, StationBaseType::c, 0 },
     }),
     .InvertedTrackPaintFunctions = {},
     .Flags = kRtdFlagsCommonCoaster | kRtdFlagsCommonCoasterNonAlt | 

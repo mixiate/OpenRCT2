@@ -427,8 +427,8 @@ static constexpr const TrackElementMetalSupports* kTrackStyleMetalSupports[81] =
     kEnterpriseMetalSupports,
     kFacilityMetalSupports,
     kFerrisWheelMetalSupports,
-    kFlyingRollerCoasterMetalSupports,
-    kFlyingRollerCoasterInvertedMetalSupports,
+    kTwisterRollerCoasterMetalSupports,  // FlyingRollerCoaster
+    kInvertedRollerCoasterMetalSupports, // FlyingRollerCoasterInverted
     kFlyingSaucersMetalSupports,
     kGhostTrainMetalSupports,
     kGoKartsMetalSupports,
@@ -442,7 +442,7 @@ static constexpr const TrackElementMetalSupports* kTrackStyleMetalSupports[81] =
     kLatticeTriangleMetalSupports,
     kLatticeTriangleAltMetalSupports,
     kLaunchedFreefallMetalSupports,
-    kLayDownRollerCoasterInvertedMetalSupports,
+    kCompactInvertedCoasterMetalSupports, // LayDownRollerCoasterInverted
     kLiftMetalSupports,
     kLimLaunchedRollerCoasterMetalSupports,
     kLogFlumeMetalSupports,
