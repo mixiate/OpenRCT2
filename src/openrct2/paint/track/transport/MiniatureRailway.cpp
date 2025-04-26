@@ -647,8 +647,6 @@ static void PaintMiniatureRailwayTrackFlat(
             session, direction, imageIdAlt.WithTransparency(FilterPaletteID::PaletteDarken2), { 0, 6, height },
             { { 0, 6, height + 2 }, { 32, 20, 2 } });
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AD170, 0x008AD180, 0x008AD190 */
@@ -660,8 +658,6 @@ static void PaintMiniatureRailwayStation(
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 6, height }, { { 0, 6, height + 1 }, { 32, 20, 1 } });
 
     TrackPaintUtilDrawStation2(session, ride, direction, height, trackElement, StationBaseType::a, -2, 7, 9);
-
-    PaintUtilSetGeneralSupportHeight(session, height + 30);
 }
 
 /** rct2: 0x008AD0D0 */
@@ -688,8 +684,6 @@ static void PaintMiniatureRailwayTrack25DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AD0E0 */
@@ -716,8 +710,6 @@ static void PaintMiniatureRailwayTrackFlatTo25DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008AD0F0 */
@@ -744,8 +736,6 @@ static void PaintMiniatureRailwayTrack25DegUpToFlat(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008AD100 */
@@ -874,8 +864,6 @@ static void PaintMiniatureRailwayTrackRightQuarterTurn5Tiles(
     if (direction == 3 && trackSequence == 0)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AD130 */
@@ -932,8 +920,6 @@ static void PaintMiniatureRailwayTrackSBendLeft(
         {
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AD160 */
@@ -979,8 +965,6 @@ static void PaintMiniatureRailwayTrackSBendRight(
         {
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AD1B0 */
@@ -999,8 +983,6 @@ static void PaintMiniatureRailwayTrackRightQuarterTurn3Tiles(
         auto imageId = session.TrackColours.WithIndex(SPR_G2_MINIATURE_RAILWAY_QUARTER_TURN_3_TILES_SW_SE_PART_3);
         PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 0, height }, { 8, 8, 2 } });
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AD1A0 */
@@ -1038,18 +1020,6 @@ static void PaintMiniatureRailwayTrackLeftEighthToDiag(
         }
         PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { offset, height }, bounds });
     }
-
-    if (direction == 0 && trackSequence == 0)
-    {
-    }
-    if (direction == 3 && trackSequence == 0)
-    {
-    }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
-
-    if (trackSequence != 4 || !isRightEighthToOrthog)
-        PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AD1D0 */
@@ -1073,17 +1043,6 @@ static void PaintMiniatureRailwayTrackRightEighthToDiag(
         }
         PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { offset, height }, bounds });
     }
-
-    if (direction == 0 && trackSequence == 0)
-    {
-    }
-    if (direction == 3 && trackSequence == 0)
-    {
-    }
-
-    // Fixes #5281.
-    if (trackSequence != 4 || !isLeftEighthToOrthog)
-        PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AD1E0 */

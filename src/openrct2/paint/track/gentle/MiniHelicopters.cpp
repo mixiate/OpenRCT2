@@ -42,8 +42,6 @@ static void PaintMiniHelicoptersTrackStation(
     else if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0081F348 */
@@ -67,8 +65,6 @@ static void PaintMiniHelicoptersTrackFlat(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0081F368 */
@@ -105,8 +101,6 @@ static void PaintMiniHelicoptersTrackFlatTo25DegUp(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x0081F358 */
@@ -143,8 +137,6 @@ static void PaintMiniHelicoptersTrack25DegUp(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x0081F378 */
@@ -181,8 +173,6 @@ static void PaintMiniHelicoptersTrack25DegUpToFlat(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x */
@@ -231,8 +221,6 @@ static void PaintMiniHelicoptersTrackLeftQuarterTurn3Tiles(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static constexpr uint8_t kMiniHelicoptersRightQuarterTurn3TilesToLeftTurnMap[] = {
@@ -259,8 +247,6 @@ static void PaintMiniHelicoptersTrackLeftQuarterTurn1Tile(
 {
     TrackPaintUtilLeftQuarterTurn1TilePaint(
         session, 1, height, 0, direction, session.TrackColours, kTrackSpritesSubmarineRideMiniHelicoptersQuarterTurn1Tile);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0081F418 */
@@ -289,8 +275,6 @@ static void PaintMiniHelicoptersTrackSpinningTunnel(
     PaintAddImageAsParentRotated(session, direction, underlay, { 0, 6, height - 2 }, { { 0, 6, height }, { 32, 20, 1 } });
     PaintAddImageAsChildRotated(session, direction, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
     TrackPaintUtilSpinningTunnelPaint(session, 1, height, direction);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /**

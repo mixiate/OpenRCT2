@@ -114,8 +114,6 @@ static void MineTrainRCTrackFlat(
                 break;
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0071C154, 0x0071C164, 0x0071C174 */
@@ -149,8 +147,6 @@ static void MineTrainRCTrackStation(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0071BFB4 */
@@ -217,7 +213,6 @@ static void MineTrainRCTrack25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x0071BFC4 */
@@ -255,7 +250,6 @@ static void MineTrainRCTrack60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 /** rct2: 0x0071BFD4 */
@@ -322,7 +316,6 @@ static void MineTrainRCTrackFlatTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x0071BFE4 */
@@ -366,7 +359,6 @@ static void MineTrainRCTrack25DegUpTo60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x0071BFF4 */
@@ -410,7 +402,6 @@ static void MineTrainRCTrack60DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x0071C004 */
@@ -477,7 +468,6 @@ static void MineTrainRCTrack25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x0071C014 */
@@ -563,10 +553,10 @@ static void MineTrainRCTrackLeftQuarterTurn5(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -591,7 +581,6 @@ static void MineTrainRCTrackLeftQuarterTurn5(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             switch (direction)
@@ -617,10 +606,9 @@ static void MineTrainRCTrackLeftQuarterTurn5(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 5:
             switch (direction)
@@ -645,7 +633,6 @@ static void MineTrainRCTrackLeftQuarterTurn5(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 6:
             switch (direction)
@@ -681,7 +668,7 @@ static void MineTrainRCTrackLeftQuarterTurn5(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -729,8 +716,6 @@ static void MineTrainRCTrackFlatToLeftBank(
                 { { 0, 6, height }, { 32, 20, 1 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0071C084 */
@@ -767,8 +752,6 @@ static void MineTrainRCTrackFlatToRightBank(
                 { { 0, 27, height }, { 32, 1, 26 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0071C094 */
@@ -805,8 +788,6 @@ static void MineTrainRCTrackLeftBankToFlat(
                 { { 0, 6, height }, { 32, 20, 1 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0071C0A4 */
@@ -843,8 +824,6 @@ static void MineTrainRCTrackRightBankToFlat(
                 { { 0, 27, height }, { 32, 1, 26 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0071C0D4 */
@@ -937,7 +916,6 @@ static void MineTrainRCTrackBankedLeftQuarterTurn5(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 4:
             break;
@@ -1005,8 +983,6 @@ static void MineTrainRCTrackBankedLeftQuarterTurn5(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0071C0E4 */
@@ -1060,7 +1036,6 @@ static void MineTrainRCTrackLeftBankTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x0071C214 */
@@ -1104,7 +1079,6 @@ static void MineTrainRCTrackRightBankTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x0071C224 */
@@ -1148,7 +1122,6 @@ static void MineTrainRCTrack25DegUpToLeftBank(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x0071C234 */
@@ -1192,7 +1165,6 @@ static void MineTrainRCTrack25DegUpToRightBank(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x0071C244 */
@@ -1255,8 +1227,6 @@ static void MineTrainRCTrackLeftBank(
                 { { 0, 6, height }, { 32, 20, 1 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0071C314 */
@@ -1302,10 +1272,10 @@ static void MineTrainRCTrackLeftQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -1332,7 +1302,6 @@ static void MineTrainRCTrackLeftQuarterTurn525DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 3:
             switch (direction)
@@ -1359,10 +1328,9 @@ static void MineTrainRCTrackLeftQuarterTurn525DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 5:
             switch (direction)
@@ -1389,7 +1357,6 @@ static void MineTrainRCTrackLeftQuarterTurn525DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 6:
             switch (direction)
@@ -1428,7 +1395,7 @@ static void MineTrainRCTrackLeftQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -1468,10 +1435,10 @@ static void MineTrainRCTrackRightQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -1501,7 +1468,7 @@ static void MineTrainRCTrackRightQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -1531,10 +1498,10 @@ static void MineTrainRCTrackRightQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 5:
             switch (direction)
@@ -1564,7 +1531,7 @@ static void MineTrainRCTrackRightQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -1603,7 +1570,7 @@ static void MineTrainRCTrackRightQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -1666,7 +1633,7 @@ static void MineTrainRCTrackSBendLeft(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -1694,7 +1661,7 @@ static void MineTrainRCTrackSBendLeft(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -1722,7 +1689,7 @@ static void MineTrainRCTrackSBendLeft(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -1761,7 +1728,7 @@ static void MineTrainRCTrackSBendLeft(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -1804,7 +1771,7 @@ static void MineTrainRCTrackSBendRight(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -1832,7 +1799,7 @@ static void MineTrainRCTrackSBendRight(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -1860,7 +1827,7 @@ static void MineTrainRCTrackSBendRight(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -1899,7 +1866,7 @@ static void MineTrainRCTrackSBendRight(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -1942,11 +1909,10 @@ static void MineTrainRCTrackLeftQuarterTurn3(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -1971,7 +1937,7 @@ static void MineTrainRCTrackLeftQuarterTurn3(
                         { { 16, 16, height }, { 16, 16, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -2010,7 +1976,7 @@ static void MineTrainRCTrackLeftQuarterTurn3(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2065,11 +2031,10 @@ static void MineTrainRCTrackLeftQuarterTurn3Bank(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -2095,7 +2060,7 @@ static void MineTrainRCTrackLeftQuarterTurn3Bank(
                         { { 16, 16, height }, { 16, 16, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -2137,7 +2102,7 @@ static void MineTrainRCTrackLeftQuarterTurn3Bank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2185,14 +2150,13 @@ static void MineTrainRCTrackLeftQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -2227,7 +2191,7 @@ static void MineTrainRCTrackLeftQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -2266,14 +2230,13 @@ static void MineTrainRCTrackRightQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -2308,7 +2271,7 @@ static void MineTrainRCTrackRightQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -2374,11 +2337,10 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -2404,7 +2366,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpSmall(
                         { { 16, 16, height }, { 16, 16, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -2446,7 +2408,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -2488,11 +2450,10 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 5:
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 6:
             switch (direction)
@@ -2518,7 +2479,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpSmall(
                         { { 16, 0, height }, { 16, 16, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -2554,7 +2515,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2600,11 +2561,10 @@ static void MineTrainRCTrackRightHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -2630,7 +2590,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpSmall(
                         { { 16, 0, height }, { 16, 16, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -2672,7 +2632,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -2714,11 +2674,10 @@ static void MineTrainRCTrackRightHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 5:
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 6:
             switch (direction)
@@ -2744,7 +2703,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpSmall(
                         { { 16, 16, height }, { 16, 16, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -2780,7 +2739,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2856,10 +2815,10 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -2889,7 +2848,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -2922,10 +2881,10 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 5:
             switch (direction)
@@ -2958,7 +2917,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 6:
             switch (direction)
@@ -3000,7 +2959,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -3042,10 +3001,10 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 8:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 9:
             switch (direction)
@@ -3075,7 +3034,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 10:
             switch (direction)
@@ -3108,10 +3067,10 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 11:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 12:
             switch (direction)
@@ -3144,7 +3103,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 13:
             switch (direction)
@@ -3180,7 +3139,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -3226,10 +3185,10 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -3259,7 +3218,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -3289,10 +3248,10 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 5:
             switch (direction)
@@ -3322,7 +3281,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 6:
             switch (direction)
@@ -3364,7 +3323,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -3406,10 +3365,10 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 8:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 9:
             switch (direction)
@@ -3439,7 +3398,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 10:
             switch (direction)
@@ -3469,10 +3428,10 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 11:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 12:
             switch (direction)
@@ -3502,7 +3461,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 13:
             switch (direction)
@@ -3538,7 +3497,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -3595,8 +3554,6 @@ static void MineTrainRCTrackBrakes(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0071C334 */
@@ -3672,7 +3629,7 @@ static void MineTrainRCTrackLeftEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -3702,7 +3659,7 @@ static void MineTrainRCTrackLeftEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -3732,11 +3689,10 @@ static void MineTrainRCTrackLeftEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 4:
             switch (direction)
@@ -3762,7 +3718,7 @@ static void MineTrainRCTrackLeftEighthToDiag(
                         { { 16, 0, height }, { 16, 16, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -3805,7 +3761,7 @@ static void MineTrainRCTrackRightEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -3835,7 +3791,7 @@ static void MineTrainRCTrackRightEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -3865,11 +3821,10 @@ static void MineTrainRCTrackRightEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 4:
             switch (direction)
@@ -3895,7 +3850,7 @@ static void MineTrainRCTrackRightEighthToDiag(
                         { { 16, 16, height }, { 16, 16, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -3956,7 +3911,7 @@ static void MineTrainRCTrackLeftEighthBankToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -3986,7 +3941,7 @@ static void MineTrainRCTrackLeftEighthBankToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -4016,11 +3971,10 @@ static void MineTrainRCTrackLeftEighthBankToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 4:
             switch (direction)
@@ -4046,7 +4000,7 @@ static void MineTrainRCTrackLeftEighthBankToDiag(
                         { { 16, 0, height }, { 16, 16, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -4089,7 +4043,7 @@ static void MineTrainRCTrackRightEighthBankToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -4119,7 +4073,7 @@ static void MineTrainRCTrackRightEighthBankToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -4149,11 +4103,10 @@ static void MineTrainRCTrackRightEighthBankToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 4:
             switch (direction)
@@ -4179,7 +4132,7 @@ static void MineTrainRCTrackRightEighthBankToDiag(
                         { { 16, 16, height }, { 16, 16, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -4225,8 +4178,6 @@ static void MineTrainRCTrackDiagFlat(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void MineTrainRCTrackDiagBrakes(
@@ -4240,8 +4191,6 @@ static void MineTrainRCTrackDiagBrakes(
     if (MineTrainRCDiagonalSupports[trackSequence][direction] != WoodenSupportSubType::Null)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void MineTrainRCTrackDiagBlockBrakes(
@@ -4255,8 +4204,6 @@ static void MineTrainRCTrackDiagBlockBrakes(
     if (MineTrainRCDiagonalSupports[trackSequence][direction] != WoodenSupportSubType::Null)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0071C414 */
@@ -4307,8 +4254,6 @@ static void MineTrainRCTrackDiag25DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x0071C474 */
@@ -4325,7 +4270,7 @@ static void MineTrainRCTrackDiag60DegUp(
                     session, direction, session.TrackColours.WithIndex(20385), { -16, -16, height },
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 1:
             if (direction == 0)
@@ -4335,7 +4280,6 @@ static void MineTrainRCTrackDiag60DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
             break;
         case 2:
             if (direction == 2)
@@ -4345,7 +4289,6 @@ static void MineTrainRCTrackDiag60DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
             break;
         case 3:
             if (direction == 1)
@@ -4355,7 +4298,6 @@ static void MineTrainRCTrackDiag60DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
             break;
     }
 }
@@ -4376,7 +4318,6 @@ static void MineTrainRCTrackDiagFlatTo25DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
             if (direction == 0)
@@ -4387,7 +4328,6 @@ static void MineTrainRCTrackDiagFlatTo25DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             if (direction == 2)
@@ -4398,7 +4338,6 @@ static void MineTrainRCTrackDiagFlatTo25DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             if (direction == 1)
@@ -4409,7 +4348,6 @@ static void MineTrainRCTrackDiagFlatTo25DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -4429,7 +4367,6 @@ static void MineTrainRCTrackDiag25DegUpTo60DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 1:
             if (direction == 0)
@@ -4439,7 +4376,6 @@ static void MineTrainRCTrackDiag25DegUpTo60DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             if (direction == 2)
@@ -4449,7 +4385,6 @@ static void MineTrainRCTrackDiag25DegUpTo60DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 3:
             if (direction == 1)
@@ -4459,7 +4394,6 @@ static void MineTrainRCTrackDiag25DegUpTo60DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
     }
 }
@@ -4480,7 +4414,7 @@ static void MineTrainRCTrackDiag60DegUpTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             if (direction == 0)
@@ -4490,7 +4424,6 @@ static void MineTrainRCTrackDiag60DegUpTo25DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             if (direction == 2)
@@ -4500,7 +4433,6 @@ static void MineTrainRCTrackDiag60DegUpTo25DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 3:
             if (direction == 1)
@@ -4510,7 +4442,6 @@ static void MineTrainRCTrackDiag60DegUpTo25DegUp(
                     { { 0, 0, height }, { 16, 16, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
     }
 }
@@ -4531,7 +4462,6 @@ static void MineTrainRCTrackDiag25DegUpToFlat(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 1:
             if (direction == 0)
@@ -4542,7 +4472,6 @@ static void MineTrainRCTrackDiag25DegUpToFlat(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
             if (direction == 2)
@@ -4553,7 +4482,6 @@ static void MineTrainRCTrackDiag25DegUpToFlat(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             if (direction == 1)
@@ -4564,7 +4492,6 @@ static void MineTrainRCTrackDiag25DegUpToFlat(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }
@@ -4585,7 +4512,6 @@ static void MineTrainRCTrackDiag25DegDown(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 1:
             if (direction == 0)
@@ -4596,7 +4522,6 @@ static void MineTrainRCTrackDiag25DegDown(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
             if (direction == 2)
@@ -4607,7 +4532,6 @@ static void MineTrainRCTrackDiag25DegDown(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             if (direction == 1)
@@ -4618,7 +4542,6 @@ static void MineTrainRCTrackDiag25DegDown(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }
@@ -4638,7 +4561,6 @@ static void MineTrainRCTrackDiag60DegDown(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
             break;
         case 1:
             if (direction == 0)
@@ -4648,7 +4570,6 @@ static void MineTrainRCTrackDiag60DegDown(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
             break;
         case 2:
             if (direction == 2)
@@ -4658,7 +4579,6 @@ static void MineTrainRCTrackDiag60DegDown(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
             break;
         case 3:
             if (direction == 1)
@@ -4668,7 +4588,6 @@ static void MineTrainRCTrackDiag60DegDown(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
             break;
     }
 }
@@ -4721,8 +4640,6 @@ static void MineTrainRCTrackDiagFlatTo25DegDown(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x0071C484 */
@@ -4740,7 +4657,6 @@ static void MineTrainRCTrackDiag25DegDownTo60DegDown(
                     { { 0, 0, height }, { 16, 16, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 1:
             if (direction == 0)
@@ -4750,7 +4666,6 @@ static void MineTrainRCTrackDiag25DegDownTo60DegDown(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             if (direction == 2)
@@ -4760,7 +4675,6 @@ static void MineTrainRCTrackDiag25DegDownTo60DegDown(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 3:
             if (direction == 1)
@@ -4770,7 +4684,6 @@ static void MineTrainRCTrackDiag25DegDownTo60DegDown(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
     }
 }
@@ -4790,7 +4703,6 @@ static void MineTrainRCTrackDiag60DegDownTo25DegDown(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 1:
             if (direction == 0)
@@ -4800,7 +4712,6 @@ static void MineTrainRCTrackDiag60DegDownTo25DegDown(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             if (direction == 2)
@@ -4810,7 +4721,6 @@ static void MineTrainRCTrackDiag60DegDownTo25DegDown(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 3:
             if (direction == 1)
@@ -4820,7 +4730,6 @@ static void MineTrainRCTrackDiag60DegDownTo25DegDown(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
     }
 }
@@ -4841,7 +4750,6 @@ static void MineTrainRCTrackDiag25DegDownToFlat(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
             if (direction == 0)
@@ -4852,7 +4760,6 @@ static void MineTrainRCTrackDiag25DegDownToFlat(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             if (direction == 2)
@@ -4863,7 +4770,6 @@ static void MineTrainRCTrackDiag25DegDownToFlat(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             if (direction == 1)
@@ -4874,7 +4780,6 @@ static void MineTrainRCTrackDiag25DegDownToFlat(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -4894,7 +4799,6 @@ static void MineTrainRCTrackDiagFlatToLeftBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 1:
             if (direction == 0)
@@ -4907,7 +4811,6 @@ static void MineTrainRCTrackDiagFlatToLeftBank(
                     { { -16, -16, height + 27 }, { 32, 32, 0 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             if (direction == 2)
@@ -4917,7 +4820,6 @@ static void MineTrainRCTrackDiagFlatToLeftBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             if (direction == 1)
@@ -4927,7 +4829,6 @@ static void MineTrainRCTrackDiagFlatToLeftBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
     }
 }
@@ -4947,7 +4848,6 @@ static void MineTrainRCTrackDiagFlatToRightBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 1:
             if (direction == 0)
@@ -4957,7 +4857,6 @@ static void MineTrainRCTrackDiagFlatToRightBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             if (direction == 2)
@@ -4970,7 +4869,6 @@ static void MineTrainRCTrackDiagFlatToRightBank(
                     { { -16, -16, height + 27 }, { 32, 32, 0 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             if (direction == 1)
@@ -4980,7 +4878,6 @@ static void MineTrainRCTrackDiagFlatToRightBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
     }
 }
@@ -5000,7 +4897,6 @@ static void MineTrainRCTrackDiagLeftBankToFlat(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 1:
             if (direction == 0)
@@ -5013,7 +4909,6 @@ static void MineTrainRCTrackDiagLeftBankToFlat(
                     { { -16, -16, height + 27 }, { 32, 32, 0 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             if (direction == 2)
@@ -5023,7 +4918,6 @@ static void MineTrainRCTrackDiagLeftBankToFlat(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             if (direction == 1)
@@ -5033,7 +4927,6 @@ static void MineTrainRCTrackDiagLeftBankToFlat(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
     }
 }
@@ -5053,7 +4946,6 @@ static void MineTrainRCTrackDiagRightBankToFlat(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 1:
             if (direction == 0)
@@ -5063,7 +4955,6 @@ static void MineTrainRCTrackDiagRightBankToFlat(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             if (direction == 2)
@@ -5076,7 +4967,6 @@ static void MineTrainRCTrackDiagRightBankToFlat(
                     { { -16, -16, height + 27 }, { 32, 32, 0 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             if (direction == 1)
@@ -5086,7 +4976,6 @@ static void MineTrainRCTrackDiagRightBankToFlat(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
     }
 }
@@ -5106,7 +4995,6 @@ static void MineTrainRCTrackDiagLeftBankTo25DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
             if (direction == 0)
@@ -5119,7 +5007,6 @@ static void MineTrainRCTrackDiagLeftBankTo25DegUp(
                     { { -16, -16, height + 35 }, { 32, 32, 0 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             if (direction == 2)
@@ -5129,7 +5016,6 @@ static void MineTrainRCTrackDiagLeftBankTo25DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             if (direction == 1)
@@ -5139,7 +5025,6 @@ static void MineTrainRCTrackDiagLeftBankTo25DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -5159,7 +5044,6 @@ static void MineTrainRCTrackDiagRightBankTo25DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
             if (direction == 0)
@@ -5169,7 +5053,6 @@ static void MineTrainRCTrackDiagRightBankTo25DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             if (direction == 2)
@@ -5182,7 +5065,6 @@ static void MineTrainRCTrackDiagRightBankTo25DegUp(
                     { { -16, -16, height + 35 }, { 32, 32, 0 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             if (direction == 1)
@@ -5192,7 +5074,6 @@ static void MineTrainRCTrackDiagRightBankTo25DegUp(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -5212,7 +5093,6 @@ static void MineTrainRCTrackDiag25DegUpToLeftBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 1:
             if (direction == 0)
@@ -5225,7 +5105,6 @@ static void MineTrainRCTrackDiag25DegUpToLeftBank(
                     { { -16, -16, height + 35 }, { 32, 32, 0 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
             if (direction == 2)
@@ -5235,7 +5114,6 @@ static void MineTrainRCTrackDiag25DegUpToLeftBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             if (direction == 1)
@@ -5245,7 +5123,6 @@ static void MineTrainRCTrackDiag25DegUpToLeftBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }
@@ -5266,7 +5143,7 @@ static void MineTrainRCTrackDiag25DegUpToRightBank(
                         { { -16, -16, height }, { 32, 32, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (direction == 0)
@@ -5276,7 +5153,6 @@ static void MineTrainRCTrackDiag25DegUpToRightBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
             if (direction == 2)
@@ -5289,7 +5165,6 @@ static void MineTrainRCTrackDiag25DegUpToRightBank(
                     { { -16, -16, height + 35 }, { 32, 32, 0 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             if (direction == 1)
@@ -5299,7 +5174,6 @@ static void MineTrainRCTrackDiag25DegUpToRightBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }
@@ -5352,8 +5226,6 @@ static void MineTrainRCTrackDiagLeftBankTo25DegDown(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x0071C544 */
@@ -5403,8 +5275,6 @@ static void MineTrainRCTrackDiagRightBankTo25DegDown(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x0071C554 */
@@ -5422,7 +5292,6 @@ static void MineTrainRCTrackDiag25DegDownToLeftBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
             if (direction == 0)
@@ -5435,7 +5304,6 @@ static void MineTrainRCTrackDiag25DegDownToLeftBank(
                     { { -16, -16, height + 35 }, { 32, 32, 0 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             if (direction == 2)
@@ -5445,7 +5313,6 @@ static void MineTrainRCTrackDiag25DegDownToLeftBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             if (direction == 1)
@@ -5455,7 +5322,6 @@ static void MineTrainRCTrackDiag25DegDownToLeftBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -5475,7 +5341,6 @@ static void MineTrainRCTrackDiag25DegDownToRightBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
             if (direction == 0)
@@ -5485,7 +5350,6 @@ static void MineTrainRCTrackDiag25DegDownToRightBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             if (direction == 2)
@@ -5498,7 +5362,6 @@ static void MineTrainRCTrackDiag25DegDownToRightBank(
                     { { -16, -16, height + 35 }, { 32, 32, 0 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             if (direction == 1)
@@ -5508,7 +5371,6 @@ static void MineTrainRCTrackDiag25DegDownToRightBank(
                     { { -16, -16, height }, { 32, 32, 1 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -5557,8 +5419,6 @@ static void MineTrainRCTrackDiagLeftBank(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0071C3E4 */
@@ -5576,7 +5436,6 @@ static void MineTrainRCTrackDiagRightBank(
                     { { -16, -16, height }, { 32, 32, 3 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 1:
             if (direction == 0)
@@ -5586,7 +5445,6 @@ static void MineTrainRCTrackDiagRightBank(
                     { { -16, -16, height }, { 32, 32, 3 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             if (direction == 2)
@@ -5596,7 +5454,6 @@ static void MineTrainRCTrackDiagRightBank(
                     { { -16, -16, height + 27 }, { 32, 32, 0 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             if (direction == 1)
@@ -5606,7 +5463,6 @@ static void MineTrainRCTrackDiagRightBank(
                     { { -16, -16, height }, { 32, 32, 3 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
     }
 }
@@ -5620,8 +5476,6 @@ static void MineTrainRCTrackBlockBrakes(
     PaintAddImageAsParentRotated(
         session, direction, session.TrackColours.WithIndex(kMineTrainBlockBrakeImages[direction][isClosed]), { 0, 0, height },
         { { 0, 6, height }, { 32, 20, 1 } });
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void MineTrainRCTrackFlatTo60DegUpLongBase(
@@ -5658,7 +5512,7 @@ static void MineTrainRCTrackFlatTo60DegUpLongBase(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -5685,7 +5539,6 @@ static void MineTrainRCTrackFlatTo60DegUpLongBase(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             switch (direction)
@@ -5712,7 +5565,6 @@ static void MineTrainRCTrackFlatTo60DegUpLongBase(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
         case 3:
             switch (direction)
@@ -5748,7 +5600,7 @@ static void MineTrainRCTrackFlatTo60DegUpLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
     }
 }
@@ -5786,7 +5638,7 @@ static void MineTrainRCTrack60DegUpToFlatLongBase(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 1:
             switch (direction)
@@ -5813,7 +5665,6 @@ static void MineTrainRCTrack60DegUpToFlatLongBase(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
             break;
         case 2:
             switch (direction)
@@ -5840,7 +5691,6 @@ static void MineTrainRCTrack60DegUpToFlatLongBase(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             switch (direction)
@@ -5876,7 +5726,7 @@ static void MineTrainRCTrack60DegUpToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }

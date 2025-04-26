@@ -84,8 +84,6 @@ static void LatticeTriangleTrackAltStation(
     else if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void LatticeTriangleTrackAltBrakes(
@@ -100,8 +98,6 @@ static void LatticeTriangleTrackAltBrakes(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void LatticeTriangleTrackAltBlockBrakes(
@@ -116,8 +112,6 @@ static void LatticeTriangleTrackAltBlockBrakes(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void LatticeTriangleTrackAltBooster(
@@ -150,8 +144,6 @@ static void LatticeTriangleTrackAltBooster(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void LatticeTriangleTrackAltPoweredLift(
@@ -171,7 +163,6 @@ static void LatticeTriangleTrackAltPoweredLift(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void LatticeTriangleTrackAltDiagBooster(

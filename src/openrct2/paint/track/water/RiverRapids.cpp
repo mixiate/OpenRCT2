@@ -197,8 +197,6 @@ static void PaintRiverRapidsTrackFlat(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x007576C0 */
@@ -208,7 +206,6 @@ static void PaintRiverRapidsStation(
 {
     PaintRiverRapidsTrackFlat(session, ride, trackSequence, direction, height, trackElement, supportType);
     TrackPaintUtilDrawNarrowStationPlatform(session, ride, direction, height, 12, trackElement, StationBaseType::none, 0);
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void PaintRiverRapidsTrack25Deg(
@@ -226,8 +223,6 @@ static void PaintRiverRapidsTrack25Deg(
 
     imageId = session.TrackColours.WithIndex(sprites[direction][1]);
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 0, height }, { { 0, 27, height + 16 }, { 32, 1, 34 } });
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void PaintRiverRapidsTrack25DegToFlatA(
@@ -272,8 +267,6 @@ static void PaintRiverRapidsTrack25DegToFlatA(
             PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 27, 0, height + 16 }, { 1, 32, 18 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void PaintRiverRapidsTrack25DegToFlatB(
@@ -318,8 +311,6 @@ static void PaintRiverRapidsTrack25DegToFlatB(
             PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 27, 0, height + 16 }, { 1, 32, 26 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x00757660 */
@@ -418,8 +409,6 @@ static void PaintRiverRapidsTrackLeftQuarterTurn1Tile(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x00757700 */
@@ -469,8 +458,6 @@ static void PaintRiverRapidsTrackRightQuarterTurn1Tile(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x00757710 */
@@ -534,8 +521,6 @@ static void PaintRiverRapidsTrackWaterfall(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x00757720 */
@@ -570,8 +555,6 @@ static void PaintRiverRapidsTrackRapids(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x00757740 */
@@ -581,7 +564,6 @@ static void PaintRiverRapidsTrackOnRidePhoto(
 {
     PaintRiverRapidsTrackFlat(session, ride, trackSequence, direction, height, trackElement, supportType);
     TrackPaintUtilOnridePhotoPaint(session, direction, height + 13, trackElement);
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x */
@@ -634,8 +616,6 @@ static void PaintRiverRapidsTrackWhirlpool(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /**

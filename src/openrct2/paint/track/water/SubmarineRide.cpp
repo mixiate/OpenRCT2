@@ -42,8 +42,6 @@ static void SubmarineRidePaintTrackStation(
 
     TrackPaintUtilDrawPier(
         session, ride, stationObj, session.MapPosition, direction, height, trackElement, session.CurrentRotation);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void SubmarineRidePaintTrackFlat(
@@ -67,8 +65,6 @@ static void SubmarineRidePaintTrackFlat(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 16);
 }
 
 static void SubmarineRidePaintTrackLeftQuarterTurn3Tiles(
@@ -90,8 +86,6 @@ static void SubmarineRidePaintTrackLeftQuarterTurn3Tiles(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 16);
 }
 
 static constexpr uint8_t submarine_ride_right_quarter_turn_3_tiles_to_left_turn_map[] = {
@@ -115,8 +109,6 @@ static void SubmarineRidePaintTrackLeftQuarterTurn1Tile(
 {
     TrackPaintUtilLeftQuarterTurn1TilePaint(
         session, 1, height - 16, 0, direction, session.TrackColours, kTrackSpritesSubmarineRideMiniHelicoptersQuarterTurn1Tile);
-
-    PaintUtilSetGeneralSupportHeight(session, height + 16);
 }
 
 static void SubmarineRidePaintTrackRightQuarterTurn1Tile(

@@ -430,8 +430,6 @@ static void PaintMonorailTrackFlat(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AE25C, 0x008AE26C, 0x008AE27C */
@@ -456,8 +454,6 @@ static void PaintMonorailStation(
     else if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AE1BC */
@@ -495,8 +491,6 @@ static void PaintMonorailTrack25DegUp(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AE1CC */
@@ -534,8 +528,6 @@ static void PaintMonorailTrackFlatTo25DegUp(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008AE1DC */
@@ -573,8 +565,6 @@ static void PaintMonorailTrack25DegUpToFlat(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008AE1EC */
@@ -633,8 +623,6 @@ static void PaintMonorailTrackRightQuarterTurn5Tiles(
     if (direction == 3 && trackSequence == 0)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AE21C */
@@ -688,8 +676,6 @@ static void PaintMonorailTrackSBendLeft(
         {
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AE24C */
@@ -730,8 +716,6 @@ static void PaintMonorailTrackSBendRight(
         {
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AE29C */
@@ -750,8 +734,6 @@ static void PaintMonorailTrackRightQuarterTurn3Tiles(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AE28C */
@@ -789,8 +771,6 @@ static void PaintMonorailTrackLeftEighthToDiag(
     if (direction == 3 && trackSequence == 0)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AE32C */
@@ -814,8 +794,6 @@ static void PaintMonorailTrackRightEighthToDiag(
     if (direction == 3 && trackSequence == 0)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AE33C */
@@ -857,8 +835,6 @@ static void PaintMonorailTrackDiag25DegUp(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AE2BC */
@@ -873,8 +849,6 @@ static void PaintMonorailTrackDiagFlatTo25DegUp(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008AE2CC */
@@ -889,8 +863,6 @@ static void PaintMonorailTrackDiag25DegUpToFlat(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AE30C */
@@ -905,8 +877,6 @@ static void PaintMonorailTrackDiag25DegDown(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AE2EC */
@@ -921,8 +891,6 @@ static void PaintMonorailTrackDiagFlatTo25DegDown(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AE2FC */
@@ -937,8 +905,6 @@ static void PaintMonorailTrackDiag25DegDownToFlat(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /**

@@ -106,8 +106,6 @@ static void StandUpRCTrackFlat(
         {
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A7384, 0x008A7394, 0x008A73A4 */
@@ -142,8 +140,6 @@ static void StandUpRCTrackStation(
     else if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A7124 */
@@ -207,7 +203,6 @@ static void StandUpRCTrack25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008A7134 */
@@ -275,7 +270,6 @@ static void StandUpRCTrack60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 /** rct2: 0x008A7144 */
@@ -339,7 +333,6 @@ static void StandUpRCTrackFlatTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008A7154 */
@@ -419,7 +412,6 @@ static void StandUpRCTrack25DegUpTo60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x008A7164 */
@@ -499,7 +491,6 @@ static void StandUpRCTrack60DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x008A7174 */
@@ -563,7 +554,6 @@ static void StandUpRCTrack25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008A7184 */
@@ -645,10 +635,9 @@ static void StandUpRCTrackLeftQuarterTurn5(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -670,7 +659,7 @@ static void StandUpRCTrackLeftQuarterTurn5(
                         session, direction, session.TrackColours.WithIndex(25258), { 0, 16, height }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -692,10 +681,9 @@ static void StandUpRCTrackLeftQuarterTurn5(
                         session, direction, session.TrackColours.WithIndex(25257), { 0, 0, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 5:
             switch (direction)
@@ -717,7 +705,7 @@ static void StandUpRCTrackLeftQuarterTurn5(
                         session, direction, session.TrackColours.WithIndex(25256), { 16, 0, height }, { 16, 32, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 6:
             switch (direction)
@@ -749,7 +737,7 @@ static void StandUpRCTrackLeftQuarterTurn5(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -799,8 +787,6 @@ static void StandUpRCTrackFlatToLeftBank(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A7214 */
@@ -839,8 +825,6 @@ static void StandUpRCTrackFlatToRightBank(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A7224 */
@@ -879,8 +863,6 @@ static void StandUpRCTrackLeftBankToFlat(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A7234 */
@@ -919,8 +901,6 @@ static void StandUpRCTrackRightBankToFlat(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A7244 */
@@ -964,10 +944,9 @@ static void StandUpRCTrackBankedLeftQuarterTurn5(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -993,7 +972,7 @@ static void StandUpRCTrackBankedLeftQuarterTurn5(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -1019,10 +998,9 @@ static void StandUpRCTrackBankedLeftQuarterTurn5(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 5:
             switch (direction)
@@ -1048,7 +1026,7 @@ static void StandUpRCTrackBankedLeftQuarterTurn5(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 6:
             switch (direction)
@@ -1090,7 +1068,7 @@ static void StandUpRCTrackBankedLeftQuarterTurn5(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -1146,7 +1124,6 @@ static void StandUpRCTrackLeftBankTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008A7274 */
@@ -1191,7 +1168,6 @@ static void StandUpRCTrackRightBankTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008A7284 */
@@ -1236,7 +1212,6 @@ static void StandUpRCTrack25DegUpToLeftBank(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008A7294 */
@@ -1281,7 +1256,6 @@ static void StandUpRCTrack25DegUpToRightBank(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008A72A4 */
@@ -1352,8 +1326,6 @@ static void StandUpRCTrackLeftBank(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A72F4 */
@@ -1419,10 +1391,9 @@ static void StandUpRCTrackLeftQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             if (trackElement.HasChain())
@@ -1469,7 +1440,7 @@ static void StandUpRCTrackLeftQuarterTurn525DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -1516,10 +1487,9 @@ static void StandUpRCTrackLeftQuarterTurn525DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 5:
             if (trackElement.HasChain())
@@ -1566,7 +1536,7 @@ static void StandUpRCTrackLeftQuarterTurn525DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             if (trackElement.HasChain())
@@ -1622,7 +1592,7 @@ static void StandUpRCTrackLeftQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -1682,10 +1652,9 @@ static void StandUpRCTrackRightQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             if (trackElement.HasChain())
@@ -1732,7 +1701,7 @@ static void StandUpRCTrackRightQuarterTurn525DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -1779,10 +1748,9 @@ static void StandUpRCTrackRightQuarterTurn525DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 5:
             if (trackElement.HasChain())
@@ -1829,7 +1797,7 @@ static void StandUpRCTrackRightQuarterTurn525DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             if (trackElement.HasChain())
@@ -1885,7 +1853,7 @@ static void StandUpRCTrackRightQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -1940,7 +1908,7 @@ static void StandUpRCTrackSBendLeft(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -1963,7 +1931,6 @@ static void StandUpRCTrackSBendLeft(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -1986,7 +1953,6 @@ static void StandUpRCTrackSBendLeft(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             switch (direction)
@@ -2018,7 +1984,7 @@ static void StandUpRCTrackSBendLeft(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2054,7 +2020,7 @@ static void StandUpRCTrackSBendRight(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -2077,7 +2043,6 @@ static void StandUpRCTrackSBendRight(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -2100,7 +2065,6 @@ static void StandUpRCTrackSBendRight(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             switch (direction)
@@ -2132,7 +2096,7 @@ static void StandUpRCTrackSBendRight(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2171,7 +2135,7 @@ static void StandUpRCTrackLeftVerticalLoop(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -2198,7 +2162,7 @@ static void StandUpRCTrackLeftVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -2220,7 +2184,7 @@ static void StandUpRCTrackLeftVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(25490), { 16, 16, height }, { 4, 16, 119 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 3:
             switch (direction)
@@ -2242,13 +2206,11 @@ static void StandUpRCTrackLeftVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(25489), { 0, 16, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 6:
             switch (direction)
@@ -2270,7 +2232,7 @@ static void StandUpRCTrackLeftVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(25488), { 0, 0, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 7:
             switch (direction)
@@ -2292,7 +2254,7 @@ static void StandUpRCTrackLeftVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(25487), { 12, 0, height }, { 3, 16, 119 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 8:
             switch (direction)
@@ -2319,7 +2281,7 @@ static void StandUpRCTrackLeftVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 9:
             switch (direction)
@@ -2351,7 +2313,7 @@ static void StandUpRCTrackLeftVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -2390,7 +2352,6 @@ static void StandUpRCTrackRightVerticalLoop(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 1:
             switch (direction)
@@ -2417,7 +2378,6 @@ static void StandUpRCTrackRightVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -2439,7 +2399,6 @@ static void StandUpRCTrackRightVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(25495), { 16, 0, height }, { 5, 16, 119 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
             break;
         case 3:
             switch (direction)
@@ -2461,13 +2420,10 @@ static void StandUpRCTrackRightVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(25496), { 0, 0, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 6:
             switch (direction)
@@ -2489,7 +2445,6 @@ static void StandUpRCTrackRightVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(25497), { 0, 16, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 7:
             switch (direction)
@@ -2511,7 +2466,6 @@ static void StandUpRCTrackRightVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(25498), { 10, 16, height }, { 4, 16, 119 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
             break;
         case 8:
             switch (direction)
@@ -2538,7 +2492,6 @@ static void StandUpRCTrackRightVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 9:
             switch (direction)
@@ -2570,7 +2523,6 @@ static void StandUpRCTrackRightVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }
@@ -2609,10 +2561,9 @@ static void StandUpRCTrackLeftQuarterTurn3(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -2634,7 +2585,7 @@ static void StandUpRCTrackLeftQuarterTurn3(
                         session, direction, session.TrackColours.WithIndex(25510), { 16, 16, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -2669,7 +2620,7 @@ static void StandUpRCTrackLeftQuarterTurn3(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2724,10 +2675,9 @@ static void StandUpRCTrackLeftQuarterTurn3Bank(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -2753,7 +2703,7 @@ static void StandUpRCTrackLeftQuarterTurn3Bank(
                         { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -2795,7 +2745,7 @@ static void StandUpRCTrackLeftQuarterTurn3Bank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2872,13 +2822,11 @@ static void StandUpRCTrackLeftQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             if (trackElement.HasChain())
@@ -2942,7 +2890,7 @@ static void StandUpRCTrackLeftQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -3010,13 +2958,11 @@ static void StandUpRCTrackRightQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             if (trackElement.HasChain())
@@ -3080,7 +3026,7 @@ static void StandUpRCTrackRightQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -3135,7 +3081,7 @@ static void StandUpRCTrackHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -3164,7 +3110,7 @@ static void StandUpRCTrackHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -3187,7 +3133,7 @@ static void StandUpRCTrackHalfLoopUp(
                         { { 15, 6, height }, { 2, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 3:
             switch (direction)
@@ -3212,7 +3158,7 @@ static void StandUpRCTrackHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -3260,7 +3206,6 @@ static void StandUpRCTrackLeftCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
             switch (direction)
@@ -3286,7 +3231,7 @@ static void StandUpRCTrackLeftCorkscrewUp(
                         { { 6, 6, height + 10 }, { 20, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -3322,7 +3267,6 @@ static void StandUpRCTrackLeftCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -3362,7 +3306,7 @@ static void StandUpRCTrackRightCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -3388,7 +3332,7 @@ static void StandUpRCTrackRightCorkscrewUp(
                         { { 6, 6, height + 10 }, { 20, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -3424,7 +3368,6 @@ static void StandUpRCTrackRightCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -3486,10 +3429,9 @@ static void StandUpRCTrackLeftHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -3515,7 +3457,7 @@ static void StandUpRCTrackLeftHalfBankedHelixUpSmall(
                         { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -3557,7 +3499,7 @@ static void StandUpRCTrackLeftHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -3599,10 +3541,9 @@ static void StandUpRCTrackLeftHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 6:
             switch (direction)
@@ -3628,7 +3569,7 @@ static void StandUpRCTrackLeftHalfBankedHelixUpSmall(
                         { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -3664,7 +3605,7 @@ static void StandUpRCTrackLeftHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -3710,10 +3651,9 @@ static void StandUpRCTrackRightHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -3739,7 +3679,7 @@ static void StandUpRCTrackRightHalfBankedHelixUpSmall(
                         { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -3781,7 +3721,7 @@ static void StandUpRCTrackRightHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -3823,10 +3763,9 @@ static void StandUpRCTrackRightHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 6:
             switch (direction)
@@ -3852,7 +3791,7 @@ static void StandUpRCTrackRightHalfBankedHelixUpSmall(
                         { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -3888,7 +3827,7 @@ static void StandUpRCTrackRightHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -3964,10 +3903,9 @@ static void StandUpRCTrackLeftHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -3993,7 +3931,7 @@ static void StandUpRCTrackLeftHalfBankedHelixUpLarge(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -4019,10 +3957,9 @@ static void StandUpRCTrackLeftHalfBankedHelixUpLarge(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 5:
             switch (direction)
@@ -4048,7 +3985,7 @@ static void StandUpRCTrackLeftHalfBankedHelixUpLarge(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 6:
             switch (direction)
@@ -4090,7 +4027,7 @@ static void StandUpRCTrackLeftHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -4132,10 +4069,9 @@ static void StandUpRCTrackLeftHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 8:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 9:
             switch (direction)
@@ -4161,7 +4097,7 @@ static void StandUpRCTrackLeftHalfBankedHelixUpLarge(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 10:
             switch (direction)
@@ -4187,10 +4123,9 @@ static void StandUpRCTrackLeftHalfBankedHelixUpLarge(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 11:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 12:
             switch (direction)
@@ -4216,7 +4151,7 @@ static void StandUpRCTrackLeftHalfBankedHelixUpLarge(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 13:
             switch (direction)
@@ -4252,7 +4187,7 @@ static void StandUpRCTrackLeftHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -4298,10 +4233,9 @@ static void StandUpRCTrackRightHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -4327,7 +4261,7 @@ static void StandUpRCTrackRightHalfBankedHelixUpLarge(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -4353,10 +4287,9 @@ static void StandUpRCTrackRightHalfBankedHelixUpLarge(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 5:
             switch (direction)
@@ -4382,7 +4315,7 @@ static void StandUpRCTrackRightHalfBankedHelixUpLarge(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 6:
             switch (direction)
@@ -4424,7 +4357,7 @@ static void StandUpRCTrackRightHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -4466,10 +4399,9 @@ static void StandUpRCTrackRightHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 8:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 9:
             switch (direction)
@@ -4495,7 +4427,7 @@ static void StandUpRCTrackRightHalfBankedHelixUpLarge(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 10:
             switch (direction)
@@ -4521,10 +4453,9 @@ static void StandUpRCTrackRightHalfBankedHelixUpLarge(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 11:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 12:
             switch (direction)
@@ -4550,7 +4481,7 @@ static void StandUpRCTrackRightHalfBankedHelixUpLarge(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 13:
             switch (direction)
@@ -4586,7 +4517,7 @@ static void StandUpRCTrackRightHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -4642,8 +4573,6 @@ static void StandUpRCTrackBrakes(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A74A4 */
@@ -4714,7 +4643,7 @@ static void StandUpRCTrackLeftEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -4740,7 +4669,7 @@ static void StandUpRCTrackLeftEighthToDiag(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -4766,10 +4695,10 @@ static void StandUpRCTrackLeftEighthToDiag(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -4799,7 +4728,7 @@ static void StandUpRCTrackLeftEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -4839,7 +4768,7 @@ static void StandUpRCTrackRightEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -4865,7 +4794,7 @@ static void StandUpRCTrackRightEighthToDiag(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -4891,10 +4820,10 @@ static void StandUpRCTrackRightEighthToDiag(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -4924,7 +4853,7 @@ static void StandUpRCTrackRightEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -4985,7 +4914,7 @@ static void StandUpRCTrackLeftEighthBankToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -5011,7 +4940,7 @@ static void StandUpRCTrackLeftEighthBankToDiag(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -5037,10 +4966,10 @@ static void StandUpRCTrackLeftEighthBankToDiag(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -5070,7 +4999,7 @@ static void StandUpRCTrackLeftEighthBankToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -5113,7 +5042,7 @@ static void StandUpRCTrackRightEighthBankToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -5139,7 +5068,7 @@ static void StandUpRCTrackRightEighthBankToDiag(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -5165,10 +5094,10 @@ static void StandUpRCTrackRightEighthBankToDiag(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -5198,7 +5127,7 @@ static void StandUpRCTrackRightEighthBankToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -5281,7 +5210,7 @@ static void StandUpRCTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -5306,7 +5235,7 @@ static void StandUpRCTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -5331,7 +5260,7 @@ static void StandUpRCTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -5376,7 +5305,7 @@ static void StandUpRCTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -5411,7 +5340,7 @@ static void StandUpRCTrackDiag60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -5436,7 +5365,7 @@ static void StandUpRCTrackDiag60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -5461,7 +5390,7 @@ static void StandUpRCTrackDiag60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -5506,7 +5435,7 @@ static void StandUpRCTrackDiag60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
     }
 }
@@ -5541,7 +5470,7 @@ static void StandUpRCTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -5566,7 +5495,7 @@ static void StandUpRCTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -5591,7 +5520,7 @@ static void StandUpRCTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -5636,7 +5565,7 @@ static void StandUpRCTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -5671,7 +5600,7 @@ static void StandUpRCTrackDiag25DegUpTo60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -5696,7 +5625,7 @@ static void StandUpRCTrackDiag25DegUpTo60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -5721,7 +5650,7 @@ static void StandUpRCTrackDiag25DegUpTo60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -5766,7 +5695,7 @@ static void StandUpRCTrackDiag25DegUpTo60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -5801,7 +5730,7 @@ static void StandUpRCTrackDiag60DegUpTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -5826,7 +5755,7 @@ static void StandUpRCTrackDiag60DegUpTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -5851,7 +5780,7 @@ static void StandUpRCTrackDiag60DegUpTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -5896,7 +5825,7 @@ static void StandUpRCTrackDiag60DegUpTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -5931,7 +5860,7 @@ static void StandUpRCTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -5956,7 +5885,7 @@ static void StandUpRCTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -5981,7 +5910,7 @@ static void StandUpRCTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -6026,7 +5955,7 @@ static void StandUpRCTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -6061,7 +5990,7 @@ static void StandUpRCTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -6086,7 +6015,7 @@ static void StandUpRCTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -6111,7 +6040,7 @@ static void StandUpRCTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -6156,7 +6085,7 @@ static void StandUpRCTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -6191,7 +6120,7 @@ static void StandUpRCTrackDiag60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -6216,7 +6145,7 @@ static void StandUpRCTrackDiag60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -6241,7 +6170,7 @@ static void StandUpRCTrackDiag60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -6286,7 +6215,7 @@ static void StandUpRCTrackDiag60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
     }
 }
@@ -6415,8 +6344,6 @@ static void StandUpRCTrackDiagFlatTo25DegDown(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008A7594 */
@@ -6449,7 +6376,7 @@ static void StandUpRCTrackDiag25DegDownTo60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -6474,7 +6401,7 @@ static void StandUpRCTrackDiag25DegDownTo60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -6499,7 +6426,7 @@ static void StandUpRCTrackDiag25DegDownTo60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -6544,7 +6471,7 @@ static void StandUpRCTrackDiag25DegDownTo60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -6579,7 +6506,7 @@ static void StandUpRCTrackDiag60DegDownTo25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -6604,7 +6531,7 @@ static void StandUpRCTrackDiag60DegDownTo25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -6629,7 +6556,7 @@ static void StandUpRCTrackDiag60DegDownTo25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -6674,7 +6601,7 @@ static void StandUpRCTrackDiag60DegDownTo25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -6709,7 +6636,7 @@ static void StandUpRCTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -6734,7 +6661,7 @@ static void StandUpRCTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -6759,7 +6686,7 @@ static void StandUpRCTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -6804,7 +6731,7 @@ static void StandUpRCTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -6825,7 +6752,7 @@ static void StandUpRCTrackDiagFlatToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -6839,7 +6766,7 @@ static void StandUpRCTrackDiagFlatToLeftBank(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -6850,7 +6777,7 @@ static void StandUpRCTrackDiagFlatToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -6871,7 +6798,7 @@ static void StandUpRCTrackDiagFlatToLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -6892,7 +6819,7 @@ static void StandUpRCTrackDiagFlatToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -6903,7 +6830,7 @@ static void StandUpRCTrackDiagFlatToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -6917,7 +6844,7 @@ static void StandUpRCTrackDiagFlatToRightBank(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -6938,7 +6865,7 @@ static void StandUpRCTrackDiagFlatToRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -6959,7 +6886,7 @@ static void StandUpRCTrackDiagLeftBankToFlat(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -6973,7 +6900,7 @@ static void StandUpRCTrackDiagLeftBankToFlat(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -6984,7 +6911,7 @@ static void StandUpRCTrackDiagLeftBankToFlat(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -7005,7 +6932,7 @@ static void StandUpRCTrackDiagLeftBankToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -7026,7 +6953,7 @@ static void StandUpRCTrackDiagRightBankToFlat(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -7037,7 +6964,7 @@ static void StandUpRCTrackDiagRightBankToFlat(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -7051,7 +6978,7 @@ static void StandUpRCTrackDiagRightBankToFlat(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -7072,7 +6999,7 @@ static void StandUpRCTrackDiagRightBankToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -7093,7 +7020,7 @@ static void StandUpRCTrackDiagLeftBankTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -7107,7 +7034,7 @@ static void StandUpRCTrackDiagLeftBankTo25DegUp(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -7118,7 +7045,7 @@ static void StandUpRCTrackDiagLeftBankTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -7139,7 +7066,7 @@ static void StandUpRCTrackDiagLeftBankTo25DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -7160,7 +7087,7 @@ static void StandUpRCTrackDiagRightBankTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -7171,7 +7098,7 @@ static void StandUpRCTrackDiagRightBankTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -7185,7 +7112,7 @@ static void StandUpRCTrackDiagRightBankTo25DegUp(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -7206,7 +7133,7 @@ static void StandUpRCTrackDiagRightBankTo25DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -7227,7 +7154,7 @@ static void StandUpRCTrackDiag25DegUpToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -7241,7 +7168,7 @@ static void StandUpRCTrackDiag25DegUpToLeftBank(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -7252,7 +7179,7 @@ static void StandUpRCTrackDiag25DegUpToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -7273,7 +7200,7 @@ static void StandUpRCTrackDiag25DegUpToLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -7294,7 +7221,7 @@ static void StandUpRCTrackDiag25DegUpToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -7305,7 +7232,7 @@ static void StandUpRCTrackDiag25DegUpToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -7319,7 +7246,7 @@ static void StandUpRCTrackDiag25DegUpToRightBank(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -7340,7 +7267,7 @@ static void StandUpRCTrackDiag25DegUpToRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -7406,8 +7333,6 @@ static void StandUpRCTrackDiagLeftBankTo25DegDown(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008A7674 */
@@ -7471,8 +7396,6 @@ static void StandUpRCTrackDiagRightBankTo25DegDown(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008A7684 */
@@ -7491,7 +7414,7 @@ static void StandUpRCTrackDiag25DegDownToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -7505,7 +7428,7 @@ static void StandUpRCTrackDiag25DegDownToLeftBank(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -7516,7 +7439,7 @@ static void StandUpRCTrackDiag25DegDownToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -7537,7 +7460,7 @@ static void StandUpRCTrackDiag25DegDownToLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -7558,7 +7481,7 @@ static void StandUpRCTrackDiag25DegDownToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -7569,7 +7492,7 @@ static void StandUpRCTrackDiag25DegDownToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -7583,7 +7506,7 @@ static void StandUpRCTrackDiag25DegDownToRightBank(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -7604,7 +7527,7 @@ static void StandUpRCTrackDiag25DegDownToRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -7625,7 +7548,7 @@ static void StandUpRCTrackDiagLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -7636,7 +7559,7 @@ static void StandUpRCTrackDiagLeftBank(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -7647,7 +7570,7 @@ static void StandUpRCTrackDiagLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -7668,7 +7591,7 @@ static void StandUpRCTrackDiagLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -7689,7 +7612,7 @@ static void StandUpRCTrackDiagRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -7700,7 +7623,7 @@ static void StandUpRCTrackDiagRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -7711,7 +7634,7 @@ static void StandUpRCTrackDiagRightBank(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -7732,7 +7655,7 @@ static void StandUpRCTrackDiagRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -7750,8 +7673,6 @@ static void StandUpRCTrackBlockBrakes(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void StandUpRCTrackFlatTo60DegUp(
@@ -7797,7 +7718,6 @@ static void StandUpRCTrackFlatTo60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 64);
 }
 
 static void StandUpRCTrack60DegUpToFlat(
@@ -7840,7 +7760,6 @@ static void StandUpRCTrack60DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void StandUpRCTrackFlatTo60DegDown(
@@ -7872,7 +7791,7 @@ static void StandUpRCTrackDiagFlatTo60DegUp(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
             switch (direction)
@@ -7883,7 +7802,7 @@ static void StandUpRCTrackDiagFlatTo60DegUp(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 2:
             switch (direction)
@@ -7894,7 +7813,7 @@ static void StandUpRCTrackDiagFlatTo60DegUp(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -7915,7 +7834,7 @@ static void StandUpRCTrackDiagFlatTo60DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -7935,7 +7854,7 @@ static void StandUpRCTrackDiag60DegUpToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -7946,7 +7865,7 @@ static void StandUpRCTrackDiag60DegUpToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -7957,7 +7876,7 @@ static void StandUpRCTrackDiag60DegUpToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -7978,7 +7897,7 @@ static void StandUpRCTrackDiag60DegUpToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -7998,7 +7917,7 @@ static void StandUpRCTrackDiagFlatTo60DegDown(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -8009,7 +7928,7 @@ static void StandUpRCTrackDiagFlatTo60DegDown(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -8020,7 +7939,7 @@ static void StandUpRCTrackDiagFlatTo60DegDown(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -8041,7 +7960,7 @@ static void StandUpRCTrackDiagFlatTo60DegDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -8061,7 +7980,7 @@ static void StandUpRCTrackDiag60DegDownToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
             switch (direction)
@@ -8072,7 +7991,7 @@ static void StandUpRCTrackDiag60DegDownToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 2:
             switch (direction)
@@ -8083,7 +8002,7 @@ static void StandUpRCTrackDiag60DegDownToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -8104,7 +8023,7 @@ static void StandUpRCTrackDiag60DegDownToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -8145,7 +8064,7 @@ static void StandUpRCTrackFlatTo60DegUpLongBase(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -8174,7 +8093,7 @@ static void StandUpRCTrackFlatTo60DegUpLongBase(
             if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -8209,7 +8128,7 @@ static void StandUpRCTrackFlatTo60DegUpLongBase(
             if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -8247,7 +8166,7 @@ static void StandUpRCTrackFlatTo60DegUpLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
     }
 }
@@ -8287,7 +8206,7 @@ static void StandUpRCTrack60DegUpToFlatLongBase(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 1:
             switch (direction)
@@ -8322,7 +8241,7 @@ static void StandUpRCTrack60DegUpToFlatLongBase(
             if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 2:
             switch (direction)
@@ -8351,7 +8270,7 @@ static void StandUpRCTrack60DegUpToFlatLongBase(
             if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -8389,7 +8308,7 @@ static void StandUpRCTrack60DegUpToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -8441,7 +8360,6 @@ static void StandUpRCTrack90DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 1:
             break;
@@ -8492,7 +8410,6 @@ static void StandUpRCTrack60DegUpTo90DegUp(
             {
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 1:
             break;
@@ -8542,7 +8459,6 @@ static void StandUpRCTrack90DegUpTo60DegUp(
 
             break;
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 80);
 }
 
 static void StandUpRCTrack60DegDownTo90DegDown(
@@ -8578,7 +8494,7 @@ static void StandUpRCTrack60DegDownTo90DegDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 1:
             break;
@@ -8624,8 +8540,6 @@ static void StandUpRCTrackLeftQuarterTurn160DegUp(
                 { 0, 0, height }, { { 2, 2, height + 99 }, { 28, 28, 1 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 static void StandUpRCTrackRightQuarterTurn160DegUp(
@@ -8667,8 +8581,6 @@ static void StandUpRCTrackRightQuarterTurn160DegUp(
                 { 0, 0, height }, { { 2, 2, height + 99 }, { 28, 28, 1 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 static void StandUpRCTrackLeftQuarterTurn160DegDown(
@@ -8723,7 +8635,6 @@ static void StandUpRCTrackLeftQuarterTurn190DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
             break;
         case 1:
             break;
@@ -8767,7 +8678,6 @@ static void StandUpRCTrackRightQuarterTurn190DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
             break;
         case 1:
             break;
@@ -8837,7 +8747,6 @@ static void StandUpRCTrack25DegUpToLeftBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void StandUpRCTrack25DegUpToRightBanked25DegUp(
@@ -8888,7 +8797,6 @@ static void StandUpRCTrack25DegUpToRightBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void StandUpRCTrackLeftBanked25DegUpTo25DegUp(
@@ -8939,7 +8847,6 @@ static void StandUpRCTrackLeftBanked25DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void StandUpRCTrackRightBanked25DegUpTo25DegUp(
@@ -8990,7 +8897,6 @@ static void StandUpRCTrackRightBanked25DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void StandUpRCTrackLeftBanked25DegDownTo25DegDown(
@@ -9070,7 +8976,6 @@ static void StandUpRCTrackLeftBankedFlatToLeftBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void StandUpRCTrackRightBankedFlatToRightBanked25DegUp(
@@ -9118,7 +9023,6 @@ static void StandUpRCTrackRightBankedFlatToRightBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void StandUpRCTrackLeftBanked25DegUpToLeftBankedFlat(
@@ -9166,7 +9070,6 @@ static void StandUpRCTrackLeftBanked25DegUpToLeftBankedFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void StandUpRCTrackRightBanked25DegUpToRightBankedFlat(
@@ -9214,7 +9117,6 @@ static void StandUpRCTrackRightBanked25DegUpToRightBankedFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void StandUpRCTrackLeftBankedFlatToLeftBanked25DegDown(
@@ -9294,7 +9196,6 @@ static void StandUpRCTrack25DegUpLeftBanked(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void StandUpRCTrack25DegUpRightBanked(
@@ -9342,7 +9243,6 @@ static void StandUpRCTrack25DegUpRightBanked(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void StandUpRCTrack25DegDownLeftBanked(
@@ -9407,7 +9307,6 @@ static void StandUpRCTrackFlatToLeftBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void StandUpRCTrackFlatToRightBanked25DegUp(
@@ -9458,7 +9357,6 @@ static void StandUpRCTrackFlatToRightBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void StandUpRCTrackLeftBanked25DegUpToFlat(
@@ -9500,7 +9398,6 @@ static void StandUpRCTrackLeftBanked25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void StandUpRCTrackRightBanked25DegUpToFlat(
@@ -9542,7 +9439,6 @@ static void StandUpRCTrackRightBanked25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void StandUpRCTrackFlatToLeftBanked25DegDown(
@@ -9613,10 +9509,9 @@ static void StandUpRCTrackLeftBankedQuarterTurn3Tile25DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
             switch (direction)
@@ -9628,7 +9523,6 @@ static void StandUpRCTrackLeftBankedQuarterTurn3Tile25DegUp(
                         { 16, 16, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             switch (direction)
@@ -9675,7 +9569,7 @@ static void StandUpRCTrackLeftBankedQuarterTurn3Tile25DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -9718,10 +9612,9 @@ static void StandUpRCTrackRightBankedQuarterTurn3Tile25DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
             switch (direction)
@@ -9733,7 +9626,6 @@ static void StandUpRCTrackRightBankedQuarterTurn3Tile25DegUp(
                         { 16, 16, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             switch (direction)
@@ -9780,7 +9672,7 @@ static void StandUpRCTrackRightBankedQuarterTurn3Tile25DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -9841,10 +9733,9 @@ static void StandUpRCTrackLeftBankedQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -9874,7 +9765,7 @@ static void StandUpRCTrackLeftBankedQuarterTurn525DegUp(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -9904,10 +9795,9 @@ static void StandUpRCTrackLeftBankedQuarterTurn525DegUp(
                         { 0, 0, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 5:
             switch (direction)
@@ -9937,7 +9827,7 @@ static void StandUpRCTrackLeftBankedQuarterTurn525DegUp(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -9980,7 +9870,7 @@ static void StandUpRCTrackLeftBankedQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -10023,10 +9913,9 @@ static void StandUpRCTrackRightBankedQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -10056,7 +9945,7 @@ static void StandUpRCTrackRightBankedQuarterTurn525DegUp(
                         { 0, 0, height }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -10086,10 +9975,9 @@ static void StandUpRCTrackRightBankedQuarterTurn525DegUp(
                         { 0, 0, height }, { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 5:
             switch (direction)
@@ -10119,7 +10007,7 @@ static void StandUpRCTrackRightBankedQuarterTurn525DegUp(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -10162,7 +10050,7 @@ static void StandUpRCTrackRightBankedQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -10222,7 +10110,7 @@ static void StandUpRCTrackLeftEighthToDiagUp25(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -10248,7 +10136,7 @@ static void StandUpRCTrackLeftEighthToDiagUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -10274,10 +10162,10 @@ static void StandUpRCTrackLeftEighthToDiagUp25(
                         { 0, 0, height }, { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -10307,7 +10195,7 @@ static void StandUpRCTrackLeftEighthToDiagUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -10349,7 +10237,7 @@ static void StandUpRCTrackRightEighthToDiagUp25(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -10375,7 +10263,7 @@ static void StandUpRCTrackRightEighthToDiagUp25(
                         { 0, 0, height }, { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -10401,10 +10289,10 @@ static void StandUpRCTrackRightEighthToDiagUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -10434,7 +10322,7 @@ static void StandUpRCTrackRightEighthToDiagUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -10473,7 +10361,7 @@ static void StandUpRCTrackLeftEighthToOrthogonalUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -10499,10 +10387,10 @@ static void StandUpRCTrackLeftEighthToOrthogonalUp25(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -10528,7 +10416,7 @@ static void StandUpRCTrackLeftEighthToOrthogonalUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -10563,7 +10451,6 @@ static void StandUpRCTrackLeftEighthToOrthogonalUp25(
             {
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
     }
 }
@@ -10602,7 +10489,7 @@ static void StandUpRCTrackRightEighthToOrthogonalUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -10628,10 +10515,10 @@ static void StandUpRCTrackRightEighthToOrthogonalUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -10657,7 +10544,7 @@ static void StandUpRCTrackRightEighthToOrthogonalUp25(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -10690,7 +10577,7 @@ static void StandUpRCTrackRightEighthToOrthogonalUp25(
             if (direction == 0 || direction == 1)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -10747,7 +10634,7 @@ static void StandUpRCTrackDiagUp25ToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -10763,7 +10650,7 @@ static void StandUpRCTrackDiagUp25ToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 48 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -10775,7 +10662,7 @@ static void StandUpRCTrackDiagUp25ToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -10797,7 +10684,7 @@ static void StandUpRCTrackDiagUp25ToLeftBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -10818,7 +10705,7 @@ static void StandUpRCTrackDiagUp25ToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -10830,7 +10717,7 @@ static void StandUpRCTrackDiagUp25ToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -10846,7 +10733,7 @@ static void StandUpRCTrackDiagUp25ToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 48 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -10868,7 +10755,7 @@ static void StandUpRCTrackDiagUp25ToRightBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -10889,7 +10776,7 @@ static void StandUpRCTrackDiagLeftBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -10905,7 +10792,7 @@ static void StandUpRCTrackDiagLeftBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height + 48 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -10917,7 +10804,7 @@ static void StandUpRCTrackDiagLeftBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -10939,7 +10826,7 @@ static void StandUpRCTrackDiagLeftBankedUp25ToUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -10960,7 +10847,7 @@ static void StandUpRCTrackDiagRightBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -10972,7 +10859,7 @@ static void StandUpRCTrackDiagRightBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -10988,7 +10875,7 @@ static void StandUpRCTrackDiagRightBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height + 48 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -11010,7 +10897,7 @@ static void StandUpRCTrackDiagRightBankedUp25ToUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -11063,7 +10950,7 @@ static void StandUpRCTrackDiagLeftBankedFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -11075,7 +10962,7 @@ static void StandUpRCTrackDiagLeftBankedFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 34 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -11087,7 +10974,7 @@ static void StandUpRCTrackDiagLeftBankedFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -11109,7 +10996,7 @@ static void StandUpRCTrackDiagLeftBankedFlatToLeftBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -11130,7 +11017,7 @@ static void StandUpRCTrackDiagRightBankedFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -11142,7 +11029,7 @@ static void StandUpRCTrackDiagRightBankedFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -11154,7 +11041,7 @@ static void StandUpRCTrackDiagRightBankedFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 34 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -11176,7 +11063,7 @@ static void StandUpRCTrackDiagRightBankedFlatToRightBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -11197,7 +11084,7 @@ static void StandUpRCTrackDiagLeftBankedUp25ToLeftBankedFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -11209,7 +11096,7 @@ static void StandUpRCTrackDiagLeftBankedUp25ToLeftBankedFlat(
                         { -16, -16, height }, { { -16, -16, height + 32 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -11221,7 +11108,7 @@ static void StandUpRCTrackDiagLeftBankedUp25ToLeftBankedFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -11243,7 +11130,7 @@ static void StandUpRCTrackDiagLeftBankedUp25ToLeftBankedFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -11264,7 +11151,7 @@ static void StandUpRCTrackDiagRightBankedUp25ToRightBankedFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -11276,7 +11163,7 @@ static void StandUpRCTrackDiagRightBankedUp25ToRightBankedFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -11288,7 +11175,7 @@ static void StandUpRCTrackDiagRightBankedUp25ToRightBankedFlat(
                         { -16, -16, height }, { { -16, -16, height + 32 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -11310,7 +11197,7 @@ static void StandUpRCTrackDiagRightBankedUp25ToRightBankedFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -11363,7 +11250,7 @@ static void StandUpRCTrackDiagUp25LeftBanked(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -11375,7 +11262,7 @@ static void StandUpRCTrackDiagUp25LeftBanked(
                         { -16, -16, height }, { { -16, -16, height + 42 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -11387,7 +11274,7 @@ static void StandUpRCTrackDiagUp25LeftBanked(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -11409,7 +11296,7 @@ static void StandUpRCTrackDiagUp25LeftBanked(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -11430,7 +11317,7 @@ static void StandUpRCTrackDiagUp25RightBanked(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -11442,7 +11329,7 @@ static void StandUpRCTrackDiagUp25RightBanked(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -11454,7 +11341,7 @@ static void StandUpRCTrackDiagUp25RightBanked(
                         { -16, -16, height }, { { -16, -16, height + 42 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -11476,7 +11363,7 @@ static void StandUpRCTrackDiagUp25RightBanked(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -11511,7 +11398,7 @@ static void StandUpRCTrackDiagFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -11527,7 +11414,7 @@ static void StandUpRCTrackDiagFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 34 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -11539,7 +11426,7 @@ static void StandUpRCTrackDiagFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -11561,7 +11448,7 @@ static void StandUpRCTrackDiagFlatToLeftBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -11582,7 +11469,7 @@ static void StandUpRCTrackDiagFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -11594,7 +11481,7 @@ static void StandUpRCTrackDiagFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -11610,7 +11497,7 @@ static void StandUpRCTrackDiagFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 34 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -11632,7 +11519,7 @@ static void StandUpRCTrackDiagFlatToRightBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -11653,7 +11540,7 @@ static void StandUpRCTrackDiagLeftBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -11669,7 +11556,7 @@ static void StandUpRCTrackDiagLeftBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -11681,7 +11568,7 @@ static void StandUpRCTrackDiagLeftBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -11703,7 +11590,7 @@ static void StandUpRCTrackDiagLeftBankedUp25ToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -11724,7 +11611,7 @@ static void StandUpRCTrackDiagRightBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -11736,7 +11623,7 @@ static void StandUpRCTrackDiagRightBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -11752,7 +11639,7 @@ static void StandUpRCTrackDiagRightBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -11774,7 +11661,7 @@ static void StandUpRCTrackDiagRightBankedUp25ToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -11852,7 +11739,7 @@ static void StandUpRCTrackLeftEighthBankToDiagUp25(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -11882,7 +11769,7 @@ static void StandUpRCTrackLeftEighthBankToDiagUp25(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -11912,10 +11799,10 @@ static void StandUpRCTrackLeftEighthBankToDiagUp25(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -11949,7 +11836,7 @@ static void StandUpRCTrackLeftEighthBankToDiagUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -11995,7 +11882,7 @@ static void StandUpRCTrackRightEighthBankToDiagUp25(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -12025,7 +11912,7 @@ static void StandUpRCTrackRightEighthBankToDiagUp25(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -12055,10 +11942,10 @@ static void StandUpRCTrackRightEighthBankToDiagUp25(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -12092,7 +11979,7 @@ static void StandUpRCTrackRightEighthBankToDiagUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -12135,7 +12022,7 @@ static void StandUpRCTrackLeftEighthBankToOrthogonalUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -12165,10 +12052,10 @@ static void StandUpRCTrackLeftEighthBankToOrthogonalUp25(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -12198,7 +12085,7 @@ static void StandUpRCTrackLeftEighthBankToOrthogonalUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -12235,7 +12122,7 @@ static void StandUpRCTrackLeftEighthBankToOrthogonalUp25(
             if (direction == 1 || direction == 2)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -12278,7 +12165,7 @@ static void StandUpRCTrackRightEighthBankToOrthogonalUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -12308,10 +12195,10 @@ static void StandUpRCTrackRightEighthBankToOrthogonalUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -12341,7 +12228,7 @@ static void StandUpRCTrackRightEighthBankToOrthogonalUp25(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -12378,7 +12265,7 @@ static void StandUpRCTrackRightEighthBankToOrthogonalUp25(
             if (direction == 0 || direction == 1)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -12461,7 +12348,7 @@ static void StandUpRCTrackLeftBankToLeftQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
             switch (direction)
@@ -12475,7 +12362,6 @@ static void StandUpRCTrackLeftBankToLeftQuarterTurn325DegUp(
                         { 22, 22, height }, { { 22, 22, height + 32 }, { 20, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             switch (direction)
@@ -12486,7 +12372,6 @@ static void StandUpRCTrackLeftBankToLeftQuarterTurn325DegUp(
                         { 16, 16, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -12531,7 +12416,7 @@ static void StandUpRCTrackLeftBankToLeftQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -12576,7 +12461,7 @@ static void StandUpRCTrackRightBankToRightQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
             switch (direction)
@@ -12590,7 +12475,6 @@ static void StandUpRCTrackRightBankToRightQuarterTurn325DegUp(
                         { 22, 22, height }, { { 22, 22, height + 32 }, { 20, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             switch (direction)
@@ -12601,7 +12485,6 @@ static void StandUpRCTrackRightBankToRightQuarterTurn325DegUp(
                         { 16, 16, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -12646,7 +12529,7 @@ static void StandUpRCTrackRightBankToRightQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -12703,7 +12586,7 @@ static void StandUpRCTrackLeftLargeCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -12736,7 +12619,7 @@ static void StandUpRCTrackLeftLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -12757,10 +12640,9 @@ static void StandUpRCTrackLeftLargeCorkscrewUp(
                         { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 4:
             switch (direction)
@@ -12794,7 +12676,6 @@ static void StandUpRCTrackLeftLargeCorkscrewUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
         case 5:
             switch (direction)
@@ -12833,7 +12714,6 @@ static void StandUpRCTrackLeftLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -12872,7 +12752,7 @@ static void StandUpRCTrackRightLargeCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -12905,7 +12785,7 @@ static void StandUpRCTrackRightLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -12926,10 +12806,9 @@ static void StandUpRCTrackRightLargeCorkscrewUp(
                         { 0, 0, height }, { { 0, 31, height }, { 48, 1, 64 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 4:
             switch (direction)
@@ -12962,7 +12841,6 @@ static void StandUpRCTrackRightLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
         case 5:
             switch (direction)
@@ -13001,7 +12879,6 @@ static void StandUpRCTrackRightLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -13052,7 +12929,7 @@ static void StandUpRCTrack90DegToInvertedFlatQuarterLoopUp(
                         { 0, 0, height }, { { 6, 4, height + 8 }, { 20, 2, 48 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 1:
             switch (direction)
@@ -13084,7 +12961,7 @@ static void StandUpRCTrack90DegToInvertedFlatQuarterLoopUp(
                         { 0, 0, height }, { { 0, 0, height + 48 }, { 32, 20, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 2:
             switch (direction)
@@ -13113,7 +12990,7 @@ static void StandUpRCTrack90DegToInvertedFlatQuarterLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -13167,7 +13044,7 @@ static void StandUpRCTrackLeftMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -13197,7 +13074,6 @@ static void StandUpRCTrackLeftMediumHalfLoopUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -13227,7 +13103,7 @@ static void StandUpRCTrackLeftMediumHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
+
             break;
         case 3:
             switch (direction)
@@ -13259,7 +13135,7 @@ static void StandUpRCTrackLeftMediumHalfLoopUp(
                         { 0, 0, height }, { { 0, 0, height + 140 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
+
             break;
         case 4:
             switch (direction)
@@ -13292,7 +13168,6 @@ static void StandUpRCTrackLeftMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -13338,7 +13213,7 @@ static void StandUpRCTrackRightMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -13368,7 +13243,6 @@ static void StandUpRCTrackRightMediumHalfLoopUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -13398,7 +13272,7 @@ static void StandUpRCTrackRightMediumHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
+
             break;
         case 3:
             switch (direction)
@@ -13431,7 +13305,6 @@ static void StandUpRCTrackRightMediumHalfLoopUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
             break;
         case 4:
             switch (direction)
@@ -13464,7 +13337,6 @@ static void StandUpRCTrackRightMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -13520,7 +13392,7 @@ static void StandUpRCTrackLeftLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -13556,7 +13428,7 @@ static void StandUpRCTrackLeftLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -13591,7 +13463,7 @@ static void StandUpRCTrackLeftLargeHalfLoopUp(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 3:
             switch (direction)
@@ -13621,7 +13493,7 @@ static void StandUpRCTrackLeftLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 4:
             switch (direction)
@@ -13647,7 +13519,7 @@ static void StandUpRCTrackLeftLargeHalfLoopUp(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 128);
+
             break;
         case 5:
             switch (direction)
@@ -13679,7 +13551,7 @@ static void StandUpRCTrackLeftLargeHalfLoopUp(
                         { 0, 0, height }, { { 0, 0, height + 210 }, { 48, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 6:
             switch (direction)
@@ -13708,7 +13580,7 @@ static void StandUpRCTrackLeftLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -13750,7 +13622,7 @@ static void StandUpRCTrackRightLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -13786,7 +13658,7 @@ static void StandUpRCTrackRightLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -13821,7 +13693,7 @@ static void StandUpRCTrackRightLargeHalfLoopUp(
                         { 0, 0, height }, { { -16, 0, height + 32 }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 3:
             switch (direction)
@@ -13851,7 +13723,7 @@ static void StandUpRCTrackRightLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 4:
             switch (direction)
@@ -13877,7 +13749,7 @@ static void StandUpRCTrackRightLargeHalfLoopUp(
                         { 0, 0, height }, { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 128);
+
             break;
         case 5:
             switch (direction)
@@ -13909,7 +13781,7 @@ static void StandUpRCTrackRightLargeHalfLoopUp(
                         { 0, 0, height }, { { 0, 0, height + 210 }, { 48, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 6:
             switch (direction)
@@ -13938,7 +13810,7 @@ static void StandUpRCTrackRightLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -14000,7 +13872,7 @@ static void StandUpRCTrackLeftBarrelRollUpToDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -14032,7 +13904,7 @@ static void StandUpRCTrackLeftBarrelRollUpToDown(
                         { 0, 0, height }, { { 0, 6, height + 40 }, { 32, 20, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -14073,7 +13945,7 @@ static void StandUpRCTrackLeftBarrelRollUpToDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -14121,7 +13993,7 @@ static void StandUpRCTrackRightBarrelRollUpToDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -14153,7 +14025,7 @@ static void StandUpRCTrackRightBarrelRollUpToDown(
                         { 0, 0, height }, { { 0, 6, height + 40 }, { 32, 20, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -14194,7 +14066,7 @@ static void StandUpRCTrackRightBarrelRollUpToDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -14259,7 +14131,7 @@ static void StandUpRCTrackLeftZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -14291,7 +14163,7 @@ static void StandUpRCTrackLeftZeroGRollUp(
                         { 0, 0, height }, { { 0, 6, height + 56 }, { 32, 20, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -14333,7 +14205,6 @@ static void StandUpRCTrackLeftZeroGRollUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }
@@ -14381,7 +14252,7 @@ static void StandUpRCTrackRightZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -14413,7 +14284,7 @@ static void StandUpRCTrackRightZeroGRollUp(
                         { 0, 0, height }, { { 0, 6, height + 32 }, { 32, 20, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -14455,7 +14326,6 @@ static void StandUpRCTrackRightZeroGRollUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }
@@ -14514,7 +14384,7 @@ static void StandUpRCTrackLeftLargeZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 1:
             switch (direction)
@@ -14543,7 +14413,7 @@ static void StandUpRCTrackLeftLargeZeroGRollUp(
                         { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -14575,7 +14445,7 @@ static void StandUpRCTrackLeftLargeZeroGRollUp(
                         { 0, 0, height }, { { 0, 6, height + 60 }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -14617,7 +14487,6 @@ static void StandUpRCTrackLeftLargeZeroGRollUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }
@@ -14662,7 +14531,7 @@ static void StandUpRCTrackRightLargeZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 1:
             switch (direction)
@@ -14691,7 +14560,7 @@ static void StandUpRCTrackRightLargeZeroGRollUp(
                         { 0, 0, height }, { { 0, 30, height }, { 32, 0, 96 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -14724,7 +14593,6 @@ static void StandUpRCTrackRightLargeZeroGRollUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
         case 3:
             switch (direction)
@@ -14766,7 +14634,6 @@ static void StandUpRCTrackRightLargeZeroGRollUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }

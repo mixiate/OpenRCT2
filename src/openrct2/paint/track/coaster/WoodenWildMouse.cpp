@@ -138,8 +138,6 @@ static void WoodenWildMouseTrackFlat(
 
     auto imageId = session.TrackColours.WithIndex(imageIds[direction]);
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 6, height }, { 32, 20, 1 });
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void WoodenWildMouseTrackStation(
@@ -157,8 +155,6 @@ static void WoodenWildMouseTrackStation(
         { { 0, 6, height + 1 }, { 32, 20, 1 } });
 
     TrackPaintUtilDrawStation(session, ride, direction, height, trackElement, StationBaseType::b, -2);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A5474 */
@@ -191,8 +187,6 @@ static void WoodenWildMouseTrack25DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008A5484 */
@@ -233,8 +227,6 @@ static void WoodenWildMouseTrack60DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 /** rct2: 0x008A5494 */
@@ -267,8 +259,6 @@ static void WoodenWildMouseTrackFlatTo25DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008A54A4 */
@@ -313,8 +303,6 @@ static void WoodenWildMouseTrack25DegUpTo60DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void WoodenWildMouseTrack60DegTo25DegUp(
@@ -358,8 +346,6 @@ static void WoodenWildMouseTrack60DegTo25DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x008A54C4 */
@@ -392,8 +378,6 @@ static void WoodenWildMouseTrack25DegUpToFlat(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008A54D4 */
@@ -472,8 +456,6 @@ static void WoodenWildMouseTrackRightQuarterTurn3(
     };
 
     TrackPaintUtilRightQuarterTurn3TilesPaint4(session, height, direction, trackSequence, session.TrackColours, imageIds);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void WoodenWildMouseTrackLeftQuarterTurn3(
@@ -511,8 +493,6 @@ static void WoodenWildMouseTrackLeftQuarterTurn1(
             PaintAddImageAsParent(session, imageId, { 6, 6, height }, { 24, 24, 1 });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A55D4 */
@@ -564,8 +544,6 @@ static void WoodenWildMouseTrackFlatTo60DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 64);
 }
 
 /** rct2: 0x008A55F4 */
@@ -609,8 +587,6 @@ static void WoodenWildMouseTrack60DegUpToFlat(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x008A5604 */

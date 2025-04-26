@@ -495,7 +495,6 @@ static void PaintSplashBoatsTrack25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void PaintSplashBoatsTrack60DegUp(
@@ -515,7 +514,6 @@ static void PaintSplashBoatsTrack60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 static void PaintSplashBoatsTrackFlatTo25DegUp(
@@ -534,7 +532,6 @@ static void PaintSplashBoatsTrackFlatTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void PaintSplashBoatsTrack25DegUpToFlat(
@@ -553,7 +550,6 @@ static void PaintSplashBoatsTrack25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void PaintSplashBoatsTrack25DegUpTo60DegUp(
@@ -573,7 +569,6 @@ static void PaintSplashBoatsTrack25DegUpTo60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void PaintSplashBoatsTrack60DegUpTo25DegUp(
@@ -593,7 +588,6 @@ static void PaintSplashBoatsTrack60DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void PaintSplashBoatsTrack25DegDown(
@@ -612,7 +606,6 @@ static void PaintSplashBoatsTrack25DegDown(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void PaintSplashBoatsTrack60DegDown(
@@ -638,7 +631,6 @@ static void PaintSplashBoatsTrackFlatTo25DegDown(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void PaintSplashBoatsTrack25DegDownTo60DegDown(
@@ -671,7 +663,6 @@ static void PaintSplashBoatsTrack25DegDownToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** Start of elements originally from River Rafts */
@@ -691,8 +682,6 @@ static void PaintSplashBoatsTrackFlat(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0089B1A0 */
@@ -708,8 +697,6 @@ static void PaintSplashBoatsStation(
         const ImageId frontId = session.TrackColours.WithIndex(kSplashBoatsFlatImageIndexes[direction][1]);
         PaintAddImageAsParentRotated(session, direction, frontId, { 0, 0, height }, { { 0, 27, height }, { 32, 1, 26 } });
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0089B1D0 */
@@ -735,8 +722,6 @@ static void PaintSplashBoatsTrackLeftQuarterTurn5Tiles(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0089B1D0 */
@@ -762,8 +747,6 @@ static void PaintSplashBoatsTrackRightQuarterTurn5Tiles(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0089B180 */
@@ -844,8 +827,6 @@ static void PaintSplashBoatsTrackSBendLeft(
         {
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0089B190 */
@@ -926,8 +907,6 @@ static void PaintSplashBoatsTrackSBendRight(
         {
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void PaintSplashBoatsTrackOnRidePhoto(

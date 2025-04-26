@@ -112,8 +112,6 @@ static void CorkscrewRCTrackFlat(
         {
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A7D68, 0x008A7D78, 0x008A7D88 */
@@ -148,8 +146,6 @@ static void CorkscrewRCTrackStation(
     else if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A7B08 */
@@ -221,7 +217,6 @@ static void CorkscrewRCTrack25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008A7B18 */
@@ -293,7 +288,6 @@ static void CorkscrewRCTrack60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 /** rct2: 0x008A7B28 */
@@ -365,7 +359,6 @@ static void CorkscrewRCTrackFlatTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008A7B38 */
@@ -449,7 +442,6 @@ static void CorkscrewRCTrack25DegUpTo60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x008A7B48 */
@@ -533,7 +525,6 @@ static void CorkscrewRCTrack60DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x008A7B58 */
@@ -605,7 +596,6 @@ static void CorkscrewRCTrack25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008A7B68 */
@@ -691,10 +681,9 @@ static void CorkscrewRCTrackLeftQuarterTurn5(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -720,7 +709,7 @@ static void CorkscrewRCTrackLeftQuarterTurn5(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -746,10 +735,9 @@ static void CorkscrewRCTrackLeftQuarterTurn5(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 5:
             switch (direction)
@@ -775,7 +763,7 @@ static void CorkscrewRCTrackLeftQuarterTurn5(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 6:
             switch (direction)
@@ -811,7 +799,7 @@ static void CorkscrewRCTrackLeftQuarterTurn5(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -862,8 +850,6 @@ static void CorkscrewRCTrackFlatToLeftBank(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A7BF8 */
@@ -903,8 +889,6 @@ static void CorkscrewRCTrackFlatToRightBank(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A7C08 */
@@ -944,8 +928,6 @@ static void CorkscrewRCTrackLeftBankToFlat(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A7C18 */
@@ -985,8 +967,6 @@ static void CorkscrewRCTrackRightBankToFlat(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A7C28 */
@@ -1027,10 +1007,9 @@ static void CorkscrewRCTrackBankedLeftQuarterTurn5(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -1056,7 +1035,7 @@ static void CorkscrewRCTrackBankedLeftQuarterTurn5(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -1082,10 +1061,9 @@ static void CorkscrewRCTrackBankedLeftQuarterTurn5(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 5:
             switch (direction)
@@ -1111,7 +1089,7 @@ static void CorkscrewRCTrackBankedLeftQuarterTurn5(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 6:
             switch (direction)
@@ -1150,7 +1128,7 @@ static void CorkscrewRCTrackBankedLeftQuarterTurn5(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -1208,7 +1186,6 @@ static void CorkscrewRCTrackLeftBankTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008A7C58 */
@@ -1254,7 +1231,6 @@ static void CorkscrewRCTrackRightBankTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008A7C68 */
@@ -1300,7 +1276,6 @@ static void CorkscrewRCTrack25DegUpToLeftBank(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008A7C78 */
@@ -1346,7 +1321,6 @@ static void CorkscrewRCTrack25DegUpToRightBank(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008A7C88 */
@@ -1412,8 +1386,6 @@ static void CorkscrewRCTrackLeftBank(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A7CD8 */
@@ -1459,10 +1431,9 @@ static void CorkscrewRCTrackLeftQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -1486,7 +1457,7 @@ static void CorkscrewRCTrackLeftQuarterTurn525DegUp(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -1511,10 +1482,9 @@ static void CorkscrewRCTrackLeftQuarterTurn525DegUp(
                         session, direction, session.TrackColours.WithIndex(16527), { 0, 0, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 5:
             switch (direction)
@@ -1538,7 +1508,7 @@ static void CorkscrewRCTrackLeftQuarterTurn525DegUp(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -1574,7 +1544,7 @@ static void CorkscrewRCTrackLeftQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -1614,10 +1584,9 @@ static void CorkscrewRCTrackRightQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -1641,7 +1610,7 @@ static void CorkscrewRCTrackRightQuarterTurn525DegUp(
                         session, direction, session.TrackColours.WithIndex(16506), { 0, 0, height }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -1666,10 +1635,9 @@ static void CorkscrewRCTrackRightQuarterTurn525DegUp(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 5:
             switch (direction)
@@ -1693,7 +1661,7 @@ static void CorkscrewRCTrackRightQuarterTurn525DegUp(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -1729,7 +1697,7 @@ static void CorkscrewRCTrackRightQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -1789,7 +1757,7 @@ static void CorkscrewRCTrackSBendLeft(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -1814,7 +1782,6 @@ static void CorkscrewRCTrackSBendLeft(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -1839,7 +1806,6 @@ static void CorkscrewRCTrackSBendLeft(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             switch (direction)
@@ -1875,7 +1841,7 @@ static void CorkscrewRCTrackSBendLeft(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -1915,7 +1881,7 @@ static void CorkscrewRCTrackSBendRight(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -1940,7 +1906,6 @@ static void CorkscrewRCTrackSBendRight(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -1965,7 +1930,6 @@ static void CorkscrewRCTrackSBendRight(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             switch (direction)
@@ -2001,7 +1965,7 @@ static void CorkscrewRCTrackSBendRight(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2040,7 +2004,7 @@ static void CorkscrewRCTrackLeftVerticalLoop(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -2066,7 +2030,7 @@ static void CorkscrewRCTrackLeftVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -2092,7 +2056,7 @@ static void CorkscrewRCTrackLeftVerticalLoop(
                         { { 16, 16, height }, { 2, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 3:
             switch (direction)
@@ -2114,13 +2078,11 @@ static void CorkscrewRCTrackLeftVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(16574), { 0, 16, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 6:
             switch (direction)
@@ -2142,7 +2104,7 @@ static void CorkscrewRCTrackLeftVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(16573), { 0, 0, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 7:
             switch (direction)
@@ -2168,7 +2130,7 @@ static void CorkscrewRCTrackLeftVerticalLoop(
                         { { 12, 0, height }, { 3, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 8:
             switch (direction)
@@ -2194,7 +2156,7 @@ static void CorkscrewRCTrackLeftVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 9:
             switch (direction)
@@ -2229,7 +2191,7 @@ static void CorkscrewRCTrackLeftVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -2265,7 +2227,6 @@ static void CorkscrewRCTrackRightVerticalLoop(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 1:
             switch (direction)
@@ -2291,7 +2252,6 @@ static void CorkscrewRCTrackRightVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -2317,7 +2277,6 @@ static void CorkscrewRCTrackRightVerticalLoop(
                         { { 16, 0, height }, { 2, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
             break;
         case 3:
             switch (direction)
@@ -2339,13 +2298,10 @@ static void CorkscrewRCTrackRightVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(16581), { 0, 0, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 6:
             switch (direction)
@@ -2367,7 +2323,6 @@ static void CorkscrewRCTrackRightVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(16582), { 0, 16, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 7:
             switch (direction)
@@ -2393,7 +2348,6 @@ static void CorkscrewRCTrackRightVerticalLoop(
                         { { 10, 16, height }, { 4, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
             break;
         case 8:
             switch (direction)
@@ -2419,7 +2373,6 @@ static void CorkscrewRCTrackRightVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 9:
             switch (direction)
@@ -2451,7 +2404,6 @@ static void CorkscrewRCTrackRightVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }
@@ -2491,10 +2443,9 @@ static void CorkscrewRCTrackLeftQuarterTurn3(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -2520,7 +2471,7 @@ static void CorkscrewRCTrackLeftQuarterTurn3(
                         { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -2556,7 +2507,7 @@ static void CorkscrewRCTrackLeftQuarterTurn3(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2608,10 +2559,9 @@ static void CorkscrewRCTrackLeftQuarterTurn3Bank(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -2637,7 +2587,7 @@ static void CorkscrewRCTrackLeftQuarterTurn3Bank(
                         { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -2676,7 +2626,7 @@ static void CorkscrewRCTrackLeftQuarterTurn3Bank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2721,13 +2671,11 @@ static void CorkscrewRCTrackLeftQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             switch (direction)
@@ -2759,7 +2707,7 @@ static void CorkscrewRCTrackLeftQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -2795,13 +2743,11 @@ static void CorkscrewRCTrackRightQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             switch (direction)
@@ -2836,7 +2782,7 @@ static void CorkscrewRCTrackRightQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -2892,7 +2838,7 @@ static void CorkscrewRCTrackHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -2921,7 +2867,7 @@ static void CorkscrewRCTrackHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -2945,7 +2891,7 @@ static void CorkscrewRCTrackHalfLoopUp(
                         { { 15, 6, height }, { 2, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 3:
             switch (direction)
@@ -2970,7 +2916,7 @@ static void CorkscrewRCTrackHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -3018,7 +2964,6 @@ static void CorkscrewRCTrackLeftCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
             switch (direction)
@@ -3044,7 +2989,7 @@ static void CorkscrewRCTrackLeftCorkscrewUp(
                         { { 6, 6, height + 10 }, { 20, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -3080,7 +3025,6 @@ static void CorkscrewRCTrackLeftCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -3120,7 +3064,7 @@ static void CorkscrewRCTrackRightCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -3146,7 +3090,7 @@ static void CorkscrewRCTrackRightCorkscrewUp(
                         { { 6, 6, height + 10 }, { 20, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -3182,7 +3126,6 @@ static void CorkscrewRCTrackRightCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -3241,10 +3184,9 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -3270,7 +3212,7 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpSmall(
                         { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -3309,7 +3251,7 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -3348,10 +3290,9 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 6:
             switch (direction)
@@ -3377,7 +3318,7 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpSmall(
                         { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -3410,7 +3351,7 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -3453,10 +3394,9 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -3482,7 +3422,7 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpSmall(
                         { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -3521,7 +3461,7 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -3560,10 +3500,9 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 6:
             switch (direction)
@@ -3589,7 +3528,7 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpSmall(
                         { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -3622,7 +3561,7 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -3695,10 +3634,9 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -3724,7 +3662,7 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpLarge(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -3750,10 +3688,9 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpLarge(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 5:
             switch (direction)
@@ -3779,7 +3716,7 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpLarge(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 6:
             switch (direction)
@@ -3818,7 +3755,7 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -3857,10 +3794,9 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 8:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 9:
             switch (direction)
@@ -3886,7 +3822,7 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpLarge(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 10:
             switch (direction)
@@ -3912,10 +3848,9 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpLarge(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 11:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 12:
             switch (direction)
@@ -3941,7 +3876,7 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpLarge(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 13:
             switch (direction)
@@ -3974,7 +3909,7 @@ static void CorkscrewRCTrackLeftHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -4017,10 +3952,9 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -4046,7 +3980,7 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpLarge(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -4072,10 +4006,9 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpLarge(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 5:
             switch (direction)
@@ -4101,7 +4034,7 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpLarge(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 6:
             switch (direction)
@@ -4140,7 +4073,7 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -4179,10 +4112,9 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 8:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 9:
             switch (direction)
@@ -4208,7 +4140,7 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpLarge(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 10:
             switch (direction)
@@ -4234,10 +4166,9 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpLarge(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 11:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 12:
             switch (direction)
@@ -4263,7 +4194,7 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpLarge(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 13:
             switch (direction)
@@ -4296,7 +4227,7 @@ static void CorkscrewRCTrackRightHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -4371,8 +4302,6 @@ static void CorkscrewRCTrackLeftQuarterTurn160DegUp(
                 { { 2, 2, height + 99 }, { 28, 28, 1 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 /** rct2: 0x008A7EF8 */
@@ -4415,8 +4344,6 @@ static void CorkscrewRCTrackRightQuarterTurn160DegUp(
                 { { 2, 2, height + 99 }, { 28, 28, 1 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 /** rct2: 0x008A7F08 */
@@ -4460,8 +4387,6 @@ static void CorkscrewRCTrackBrakes(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A7F48 */
@@ -4534,7 +4459,7 @@ static void CorkscrewRCTrackFlatTo60DegUpLongBase(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -4563,7 +4488,7 @@ static void CorkscrewRCTrackFlatTo60DegUpLongBase(
             if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -4592,7 +4517,7 @@ static void CorkscrewRCTrackFlatTo60DegUpLongBase(
             if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -4630,7 +4555,7 @@ static void CorkscrewRCTrackFlatTo60DegUpLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
     }
 }
@@ -4672,7 +4597,7 @@ static void CorkscrewRCTrack60DegUpToFlatLongBase(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 1:
             switch (direction)
@@ -4701,7 +4626,7 @@ static void CorkscrewRCTrack60DegUpToFlatLongBase(
             if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 2:
             switch (direction)
@@ -4730,7 +4655,7 @@ static void CorkscrewRCTrack60DegUpToFlatLongBase(
             if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -4768,7 +4693,7 @@ static void CorkscrewRCTrack60DegUpToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -4826,7 +4751,7 @@ static void CorkscrewRCTrackLeftEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -4852,7 +4777,7 @@ static void CorkscrewRCTrackLeftEighthToDiag(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -4878,10 +4803,10 @@ static void CorkscrewRCTrackLeftEighthToDiag(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -4911,7 +4836,7 @@ static void CorkscrewRCTrackLeftEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -4951,7 +4876,7 @@ static void CorkscrewRCTrackRightEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -4977,7 +4902,7 @@ static void CorkscrewRCTrackRightEighthToDiag(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -5003,10 +4928,10 @@ static void CorkscrewRCTrackRightEighthToDiag(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -5036,7 +4961,7 @@ static void CorkscrewRCTrackRightEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -5094,7 +5019,7 @@ static void CorkscrewRCTrackLeftEighthBankToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -5120,7 +5045,7 @@ static void CorkscrewRCTrackLeftEighthBankToDiag(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -5146,10 +5071,10 @@ static void CorkscrewRCTrackLeftEighthBankToDiag(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -5179,7 +5104,7 @@ static void CorkscrewRCTrackLeftEighthBankToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -5219,7 +5144,7 @@ static void CorkscrewRCTrackRightEighthBankToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -5245,7 +5170,7 @@ static void CorkscrewRCTrackRightEighthBankToDiag(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -5271,10 +5196,10 @@ static void CorkscrewRCTrackRightEighthBankToDiag(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -5304,7 +5229,7 @@ static void CorkscrewRCTrackRightEighthBankToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -5352,8 +5277,6 @@ static void CorkscrewRCTrackDiagBrakes(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void CorkscrewRCTrackDiagBlockBrakes(
@@ -5367,8 +5290,6 @@ static void CorkscrewRCTrackDiagBlockBrakes(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A8008 */
@@ -5401,7 +5322,7 @@ static void CorkscrewRCTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -5426,7 +5347,7 @@ static void CorkscrewRCTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -5451,7 +5372,7 @@ static void CorkscrewRCTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -5496,7 +5417,7 @@ static void CorkscrewRCTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -5531,7 +5452,7 @@ static void CorkscrewRCTrackDiag60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -5556,7 +5477,7 @@ static void CorkscrewRCTrackDiag60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -5581,7 +5502,7 @@ static void CorkscrewRCTrackDiag60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -5626,7 +5547,7 @@ static void CorkscrewRCTrackDiag60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
     }
 }
@@ -5661,7 +5582,7 @@ static void CorkscrewRCTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -5686,7 +5607,7 @@ static void CorkscrewRCTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -5711,7 +5632,7 @@ static void CorkscrewRCTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -5756,7 +5677,7 @@ static void CorkscrewRCTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -5791,7 +5712,7 @@ static void CorkscrewRCTrackDiag25DegUpTo60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -5816,7 +5737,7 @@ static void CorkscrewRCTrackDiag25DegUpTo60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -5841,7 +5762,7 @@ static void CorkscrewRCTrackDiag25DegUpTo60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -5886,7 +5807,7 @@ static void CorkscrewRCTrackDiag25DegUpTo60DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -5921,7 +5842,7 @@ static void CorkscrewRCTrackDiag60DegUpTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -5946,7 +5867,7 @@ static void CorkscrewRCTrackDiag60DegUpTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -5971,7 +5892,7 @@ static void CorkscrewRCTrackDiag60DegUpTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -6016,7 +5937,7 @@ static void CorkscrewRCTrackDiag60DegUpTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -6051,7 +5972,7 @@ static void CorkscrewRCTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -6076,7 +5997,7 @@ static void CorkscrewRCTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -6101,7 +6022,7 @@ static void CorkscrewRCTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -6146,7 +6067,7 @@ static void CorkscrewRCTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -6181,7 +6102,7 @@ static void CorkscrewRCTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -6206,7 +6127,7 @@ static void CorkscrewRCTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -6231,7 +6152,7 @@ static void CorkscrewRCTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -6276,7 +6197,7 @@ static void CorkscrewRCTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -6311,7 +6232,7 @@ static void CorkscrewRCTrackDiag60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -6336,7 +6257,7 @@ static void CorkscrewRCTrackDiag60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -6361,7 +6282,7 @@ static void CorkscrewRCTrackDiag60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -6406,7 +6327,7 @@ static void CorkscrewRCTrackDiag60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
     }
 }
@@ -6535,8 +6456,6 @@ static void CorkscrewRCTrackDiagFlatTo25DegDown(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008A8078 */
@@ -6569,7 +6488,7 @@ static void CorkscrewRCTrackDiag25DegDownTo60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -6594,7 +6513,7 @@ static void CorkscrewRCTrackDiag25DegDownTo60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -6619,7 +6538,7 @@ static void CorkscrewRCTrackDiag25DegDownTo60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -6664,7 +6583,7 @@ static void CorkscrewRCTrackDiag25DegDownTo60DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -6699,7 +6618,7 @@ static void CorkscrewRCTrackDiag60DegDownTo25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -6724,7 +6643,7 @@ static void CorkscrewRCTrackDiag60DegDownTo25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -6749,7 +6668,7 @@ static void CorkscrewRCTrackDiag60DegDownTo25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -6794,7 +6713,7 @@ static void CorkscrewRCTrackDiag60DegDownTo25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -6829,7 +6748,7 @@ static void CorkscrewRCTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -6854,7 +6773,7 @@ static void CorkscrewRCTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -6879,7 +6798,7 @@ static void CorkscrewRCTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -6924,7 +6843,7 @@ static void CorkscrewRCTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -6945,7 +6864,7 @@ static void CorkscrewRCTrackDiagFlatToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -6959,7 +6878,7 @@ static void CorkscrewRCTrackDiagFlatToLeftBank(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -6970,7 +6889,7 @@ static void CorkscrewRCTrackDiagFlatToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -6991,7 +6910,7 @@ static void CorkscrewRCTrackDiagFlatToLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -7012,7 +6931,7 @@ static void CorkscrewRCTrackDiagFlatToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -7023,7 +6942,7 @@ static void CorkscrewRCTrackDiagFlatToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -7037,7 +6956,7 @@ static void CorkscrewRCTrackDiagFlatToRightBank(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -7058,7 +6977,7 @@ static void CorkscrewRCTrackDiagFlatToRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -7079,7 +6998,7 @@ static void CorkscrewRCTrackDiagLeftBankToFlat(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -7093,7 +7012,7 @@ static void CorkscrewRCTrackDiagLeftBankToFlat(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -7104,7 +7023,7 @@ static void CorkscrewRCTrackDiagLeftBankToFlat(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -7125,7 +7044,7 @@ static void CorkscrewRCTrackDiagLeftBankToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -7146,7 +7065,7 @@ static void CorkscrewRCTrackDiagRightBankToFlat(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -7157,7 +7076,7 @@ static void CorkscrewRCTrackDiagRightBankToFlat(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -7171,7 +7090,7 @@ static void CorkscrewRCTrackDiagRightBankToFlat(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -7192,7 +7111,7 @@ static void CorkscrewRCTrackDiagRightBankToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -7213,7 +7132,7 @@ static void CorkscrewRCTrackDiagLeftBankTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -7227,7 +7146,7 @@ static void CorkscrewRCTrackDiagLeftBankTo25DegUp(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -7238,7 +7157,7 @@ static void CorkscrewRCTrackDiagLeftBankTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -7259,7 +7178,7 @@ static void CorkscrewRCTrackDiagLeftBankTo25DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -7280,7 +7199,7 @@ static void CorkscrewRCTrackDiagRightBankTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -7291,7 +7210,7 @@ static void CorkscrewRCTrackDiagRightBankTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -7305,7 +7224,7 @@ static void CorkscrewRCTrackDiagRightBankTo25DegUp(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -7326,7 +7245,7 @@ static void CorkscrewRCTrackDiagRightBankTo25DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -7347,7 +7266,7 @@ static void CorkscrewRCTrackDiag25DegUpToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -7361,7 +7280,7 @@ static void CorkscrewRCTrackDiag25DegUpToLeftBank(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -7372,7 +7291,7 @@ static void CorkscrewRCTrackDiag25DegUpToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -7393,7 +7312,7 @@ static void CorkscrewRCTrackDiag25DegUpToLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -7414,7 +7333,7 @@ static void CorkscrewRCTrackDiag25DegUpToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -7425,7 +7344,7 @@ static void CorkscrewRCTrackDiag25DegUpToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -7439,7 +7358,7 @@ static void CorkscrewRCTrackDiag25DegUpToRightBank(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -7460,7 +7379,7 @@ static void CorkscrewRCTrackDiag25DegUpToRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -7526,8 +7445,6 @@ static void CorkscrewRCTrackDiagLeftBankTo25DegDown(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008A8158 */
@@ -7591,8 +7508,6 @@ static void CorkscrewRCTrackDiagRightBankTo25DegDown(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008A8168 */
@@ -7611,7 +7526,7 @@ static void CorkscrewRCTrackDiag25DegDownToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -7625,7 +7540,7 @@ static void CorkscrewRCTrackDiag25DegDownToLeftBank(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -7636,7 +7551,7 @@ static void CorkscrewRCTrackDiag25DegDownToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -7657,7 +7572,7 @@ static void CorkscrewRCTrackDiag25DegDownToLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -7678,7 +7593,7 @@ static void CorkscrewRCTrackDiag25DegDownToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -7689,7 +7604,7 @@ static void CorkscrewRCTrackDiag25DegDownToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -7703,7 +7618,7 @@ static void CorkscrewRCTrackDiag25DegDownToRightBank(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -7724,7 +7639,7 @@ static void CorkscrewRCTrackDiag25DegDownToRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -7745,7 +7660,7 @@ static void CorkscrewRCTrackDiagLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -7756,7 +7671,7 @@ static void CorkscrewRCTrackDiagLeftBank(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -7767,7 +7682,7 @@ static void CorkscrewRCTrackDiagLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -7788,7 +7703,7 @@ static void CorkscrewRCTrackDiagLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -7809,7 +7724,7 @@ static void CorkscrewRCTrackDiagRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -7820,7 +7735,7 @@ static void CorkscrewRCTrackDiagRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -7831,7 +7746,7 @@ static void CorkscrewRCTrackDiagRightBank(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -7852,7 +7767,7 @@ static void CorkscrewRCTrackDiagRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -7866,8 +7781,6 @@ static void CorkscrewRCTrackBlockBrakes(
     PaintAddImageAsParentRotated(
         session, direction, session.TrackColours.WithIndex(kCorkscrewRcBlockBrakeImages[direction][isClosed]), { 0, 0, height },
         { { 0, 6, height }, { 32, 20, 3 } });
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void CorkscrewRCTrackBooster(
@@ -7898,8 +7811,6 @@ static void CorkscrewRCTrackBooster(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void CorkscrewRCTrackLeftTwistDownToUp(
@@ -7932,7 +7843,7 @@ static void CorkscrewRCTrackLeftTwistDownToUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -7954,7 +7865,7 @@ static void CorkscrewRCTrackLeftTwistDownToUp(
                         session, direction, session.TrackColours.WithIndex(26976), { 0, 6, height + 8 }, { 32, 20, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -7986,7 +7897,6 @@ static void CorkscrewRCTrackLeftTwistDownToUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
     }
 }
@@ -8021,7 +7931,7 @@ static void CorkscrewRCTrackRightTwistDownToUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -8043,7 +7953,7 @@ static void CorkscrewRCTrackRightTwistDownToUp(
                         session, direction, session.TrackColours.WithIndex(26988), { 0, 6, height + 8 }, { 32, 20, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -8075,7 +7985,6 @@ static void CorkscrewRCTrackRightTwistDownToUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
     }
 }
@@ -8110,7 +8019,6 @@ static void CorkscrewRCTrackLeftTwistUpToDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 1:
             switch (direction)
@@ -8132,7 +8040,7 @@ static void CorkscrewRCTrackLeftTwistUpToDown(
                         session, direction, session.TrackColours.WithIndex(26979), { 0, 6, height + 8 }, { 32, 20, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -8164,7 +8072,7 @@ static void CorkscrewRCTrackLeftTwistUpToDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -8199,7 +8107,6 @@ static void CorkscrewRCTrackRightTwistUpToDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 1:
             switch (direction)
@@ -8221,7 +8128,7 @@ static void CorkscrewRCTrackRightTwistUpToDown(
                         session, direction, session.TrackColours.WithIndex(26991), { 0, 6, height + 8 }, { 32, 20, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -8253,7 +8160,7 @@ static void CorkscrewRCTrackRightTwistUpToDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -8289,7 +8196,7 @@ static void LayDownRCTrackLeftFlyerTwistUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -8312,7 +8219,7 @@ static void LayDownRCTrackLeftFlyerTwistUp(
                         session, direction, session.TrackColours.WithIndex(26976), { 0, 6, height + 24 }, { 32, 20, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -8345,7 +8252,6 @@ static void LayDownRCTrackLeftFlyerTwistUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
     }
 }
@@ -8381,7 +8287,7 @@ static void LayDownRCTrackRightFlyerTwistUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -8403,7 +8309,7 @@ static void LayDownRCTrackRightFlyerTwistUp(
                         session, direction, session.TrackColours.WithIndex(26988), { 0, 6, height + 24 }, { 32, 20, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -8435,7 +8341,6 @@ static void LayDownRCTrackRightFlyerTwistUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
     }
 }
@@ -8471,7 +8376,7 @@ static void LayDownRCTrackFlyerHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -8500,7 +8405,7 @@ static void LayDownRCTrackFlyerHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -8524,7 +8429,7 @@ static void LayDownRCTrackFlyerHalfLoopUp(
                         { { 15, 6, height }, { 2, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 3:
             switch (direction)
@@ -8549,7 +8454,7 @@ static void LayDownRCTrackFlyerHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -8589,7 +8494,6 @@ static void LayDownRCTrackLeftFlyerCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
             switch (direction)
@@ -8615,7 +8519,7 @@ static void LayDownRCTrackLeftFlyerCorkscrewUp(
                         { { 6, 6, height + 10 }, { 20, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -8651,7 +8555,6 @@ static void LayDownRCTrackLeftFlyerCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -8691,7 +8594,7 @@ static void LayDownRCTrackRightFlyerCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -8717,7 +8620,7 @@ static void LayDownRCTrackRightFlyerCorkscrewUp(
                         { { 6, 6, height + 10 }, { 20, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -8753,7 +8656,6 @@ static void LayDownRCTrackRightFlyerCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -8810,7 +8712,6 @@ static void CorkscrewRCTrackFlatTo60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 64);
 }
 
 static void CorkscrewRCTrack60DegUpToFlat(
@@ -8853,7 +8754,6 @@ static void CorkscrewRCTrack60DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void CorkscrewRCTrackFlatTo60DegDown(
@@ -8885,7 +8785,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegUp(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
             switch (direction)
@@ -8896,7 +8796,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegUp(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 2:
             switch (direction)
@@ -8907,7 +8807,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegUp(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -8928,7 +8828,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -8948,7 +8848,7 @@ static void CorkscrewRCTrackDiag60DegUpToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -8959,7 +8859,7 @@ static void CorkscrewRCTrackDiag60DegUpToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -8970,7 +8870,7 @@ static void CorkscrewRCTrackDiag60DegUpToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -8991,7 +8891,7 @@ static void CorkscrewRCTrackDiag60DegUpToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -9011,7 +8911,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegDown(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -9022,7 +8922,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegDown(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -9033,7 +8933,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegDown(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -9054,7 +8954,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -9074,7 +8974,7 @@ static void CorkscrewRCTrackDiag60DegDownToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
             switch (direction)
@@ -9085,7 +8985,7 @@ static void CorkscrewRCTrackDiag60DegDownToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 2:
             switch (direction)
@@ -9096,7 +8996,7 @@ static void CorkscrewRCTrackDiag60DegDownToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -9117,7 +9017,7 @@ static void CorkscrewRCTrackDiag60DegDownToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -9153,7 +9053,6 @@ static void CorkscrewRCTrack90DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 1:
             break;
@@ -9201,7 +9100,6 @@ static void CorkscrewRCTrack60DegUpTo90DegUp(
             {
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 1:
             break;
@@ -9251,7 +9149,6 @@ static void CorkscrewRCTrack90DegUpTo60DegUp(
 
             break;
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 80);
 }
 
 static void CorkscrewRCTrack60DegDownTo90DegDown(
@@ -9287,7 +9184,7 @@ static void CorkscrewRCTrack60DegDownTo90DegDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 1:
             break;
@@ -9331,7 +9228,6 @@ static void CorkscrewRCTrackLeftQuarterTurn190DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
             break;
         case 1:
             break;
@@ -9375,7 +9271,6 @@ static void CorkscrewRCTrackRightQuarterTurn190DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
             break;
         case 1:
             break;
@@ -9437,7 +9332,6 @@ static void CorkscrewRCTrack25DegUpToLeftBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void CorkscrewRCTrack25DegUpToRightBanked25DegUp(
@@ -9479,7 +9373,6 @@ static void CorkscrewRCTrack25DegUpToRightBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void CorkscrewRCTrackLeftBanked25DegUpTo25DegUp(
@@ -9521,7 +9414,6 @@ static void CorkscrewRCTrackLeftBanked25DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void CorkscrewRCTrackRightBanked25DegUpTo25DegUp(
@@ -9563,7 +9455,6 @@ static void CorkscrewRCTrackRightBanked25DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void CorkscrewRCTrackLeftBanked25DegDownTo25DegDown(
@@ -9634,7 +9525,6 @@ static void CorkscrewRCTrackLeftBankedFlatToLeftBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void CorkscrewRCTrackRightBankedFlatToRightBanked25DegUp(
@@ -9673,7 +9563,6 @@ static void CorkscrewRCTrackRightBankedFlatToRightBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void CorkscrewRCTrackLeftBanked25DegUpToLeftBankedFlat(
@@ -9712,7 +9601,6 @@ static void CorkscrewRCTrackLeftBanked25DegUpToLeftBankedFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void CorkscrewRCTrackRightBanked25DegUpToRightBankedFlat(
@@ -9751,7 +9639,6 @@ static void CorkscrewRCTrackRightBanked25DegUpToRightBankedFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void CorkscrewRCTrackLeftBankedFlatToLeftBanked25DegDown(
@@ -9822,7 +9709,6 @@ static void CorkscrewRCTrack25DegUpLeftBanked(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void CorkscrewRCTrack25DegUpRightBanked(
@@ -9861,7 +9747,6 @@ static void CorkscrewRCTrack25DegUpRightBanked(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void CorkscrewRCTrack25DegDownLeftBanked(
@@ -9917,7 +9802,6 @@ static void CorkscrewRCTrackFlatToLeftBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void CorkscrewRCTrackFlatToRightBanked25DegUp(
@@ -9959,7 +9843,6 @@ static void CorkscrewRCTrackFlatToRightBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void CorkscrewRCTrackLeftBanked25DegUpToFlat(
@@ -10001,7 +9884,6 @@ static void CorkscrewRCTrackLeftBanked25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void CorkscrewRCTrackRightBanked25DegUpToFlat(
@@ -10043,7 +9925,6 @@ static void CorkscrewRCTrackRightBanked25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void CorkscrewRCTrackFlatToLeftBanked25DegDown(
@@ -10116,10 +9997,9 @@ static void CorkscrewRCTrackLeftBankedQuarterTurn3Tile25DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
             switch (direction)
@@ -10131,7 +10011,6 @@ static void CorkscrewRCTrackLeftBankedQuarterTurn3Tile25DegUp(
                         { 16, 16, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             switch (direction)
@@ -10171,7 +10050,7 @@ static void CorkscrewRCTrackLeftBankedQuarterTurn3Tile25DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -10214,10 +10093,9 @@ static void CorkscrewRCTrackRightBankedQuarterTurn3Tile25DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
             switch (direction)
@@ -10229,7 +10107,6 @@ static void CorkscrewRCTrackRightBankedQuarterTurn3Tile25DegUp(
                         { 16, 16, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             switch (direction)
@@ -10272,7 +10149,7 @@ static void CorkscrewRCTrackRightBankedQuarterTurn3Tile25DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -10333,10 +10210,9 @@ static void CorkscrewRCTrackLeftBankedQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -10366,7 +10242,7 @@ static void CorkscrewRCTrackLeftBankedQuarterTurn525DegUp(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -10396,10 +10272,9 @@ static void CorkscrewRCTrackLeftBankedQuarterTurn525DegUp(
                         { 0, 0, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 5:
             switch (direction)
@@ -10429,7 +10304,7 @@ static void CorkscrewRCTrackLeftBankedQuarterTurn525DegUp(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -10469,7 +10344,7 @@ static void CorkscrewRCTrackLeftBankedQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -10512,10 +10387,9 @@ static void CorkscrewRCTrackRightBankedQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -10545,7 +10419,7 @@ static void CorkscrewRCTrackRightBankedQuarterTurn525DegUp(
                         { 0, 0, height }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -10575,10 +10449,9 @@ static void CorkscrewRCTrackRightBankedQuarterTurn525DegUp(
                         { 0, 0, height }, { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 5:
             switch (direction)
@@ -10608,7 +10481,7 @@ static void CorkscrewRCTrackRightBankedQuarterTurn525DegUp(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -10648,7 +10521,7 @@ static void CorkscrewRCTrackRightBankedQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -10705,7 +10578,7 @@ static void CorkscrewRCTrackLeftEighthToDiagUp25(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -10731,7 +10604,7 @@ static void CorkscrewRCTrackLeftEighthToDiagUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -10757,10 +10630,10 @@ static void CorkscrewRCTrackLeftEighthToDiagUp25(
                         { 0, 0, height }, { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -10790,7 +10663,7 @@ static void CorkscrewRCTrackLeftEighthToDiagUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -10829,7 +10702,7 @@ static void CorkscrewRCTrackRightEighthToDiagUp25(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -10855,7 +10728,7 @@ static void CorkscrewRCTrackRightEighthToDiagUp25(
                         { 0, 0, height }, { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -10881,10 +10754,10 @@ static void CorkscrewRCTrackRightEighthToDiagUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -10914,7 +10787,7 @@ static void CorkscrewRCTrackRightEighthToDiagUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -10953,7 +10826,7 @@ static void CorkscrewRCTrackLeftEighthToOrthogonalUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -10979,10 +10852,10 @@ static void CorkscrewRCTrackLeftEighthToOrthogonalUp25(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -11008,7 +10881,7 @@ static void CorkscrewRCTrackLeftEighthToOrthogonalUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -11039,7 +10912,6 @@ static void CorkscrewRCTrackLeftEighthToOrthogonalUp25(
             {
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
     }
 }
@@ -11078,7 +10950,7 @@ static void CorkscrewRCTrackRightEighthToOrthogonalUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -11104,10 +10976,10 @@ static void CorkscrewRCTrackRightEighthToOrthogonalUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -11133,7 +11005,7 @@ static void CorkscrewRCTrackRightEighthToOrthogonalUp25(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -11163,7 +11035,7 @@ static void CorkscrewRCTrackRightEighthToOrthogonalUp25(
             if (direction == 0 || direction == 1)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -11220,7 +11092,7 @@ static void CorkscrewRCTrackDiagUp25ToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -11236,7 +11108,7 @@ static void CorkscrewRCTrackDiagUp25ToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 48 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -11248,7 +11120,7 @@ static void CorkscrewRCTrackDiagUp25ToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -11270,7 +11142,7 @@ static void CorkscrewRCTrackDiagUp25ToLeftBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -11291,7 +11163,7 @@ static void CorkscrewRCTrackDiagUp25ToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -11303,7 +11175,7 @@ static void CorkscrewRCTrackDiagUp25ToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -11319,7 +11191,7 @@ static void CorkscrewRCTrackDiagUp25ToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 48 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -11341,7 +11213,7 @@ static void CorkscrewRCTrackDiagUp25ToRightBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -11362,7 +11234,7 @@ static void CorkscrewRCTrackDiagLeftBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -11378,7 +11250,7 @@ static void CorkscrewRCTrackDiagLeftBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height + 48 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -11390,7 +11262,7 @@ static void CorkscrewRCTrackDiagLeftBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -11412,7 +11284,7 @@ static void CorkscrewRCTrackDiagLeftBankedUp25ToUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -11433,7 +11305,7 @@ static void CorkscrewRCTrackDiagRightBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -11445,7 +11317,7 @@ static void CorkscrewRCTrackDiagRightBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -11461,7 +11333,7 @@ static void CorkscrewRCTrackDiagRightBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height + 48 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -11483,7 +11355,7 @@ static void CorkscrewRCTrackDiagRightBankedUp25ToUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -11536,7 +11408,7 @@ static void CorkscrewRCTrackDiagLeftBankedFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -11548,7 +11420,7 @@ static void CorkscrewRCTrackDiagLeftBankedFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 34 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -11560,7 +11432,7 @@ static void CorkscrewRCTrackDiagLeftBankedFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -11582,7 +11454,7 @@ static void CorkscrewRCTrackDiagLeftBankedFlatToLeftBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -11603,7 +11475,7 @@ static void CorkscrewRCTrackDiagRightBankedFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -11615,7 +11487,7 @@ static void CorkscrewRCTrackDiagRightBankedFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -11627,7 +11499,7 @@ static void CorkscrewRCTrackDiagRightBankedFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 34 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -11649,7 +11521,7 @@ static void CorkscrewRCTrackDiagRightBankedFlatToRightBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -11670,7 +11542,7 @@ static void CorkscrewRCTrackDiagLeftBankedUp25ToLeftBankedFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -11682,7 +11554,7 @@ static void CorkscrewRCTrackDiagLeftBankedUp25ToLeftBankedFlat(
                         { -16, -16, height }, { { -16, -16, height + 32 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -11694,7 +11566,7 @@ static void CorkscrewRCTrackDiagLeftBankedUp25ToLeftBankedFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -11716,7 +11588,7 @@ static void CorkscrewRCTrackDiagLeftBankedUp25ToLeftBankedFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -11737,7 +11609,7 @@ static void CorkscrewRCTrackDiagRightBankedUp25ToRightBankedFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -11749,7 +11621,7 @@ static void CorkscrewRCTrackDiagRightBankedUp25ToRightBankedFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -11761,7 +11633,7 @@ static void CorkscrewRCTrackDiagRightBankedUp25ToRightBankedFlat(
                         { -16, -16, height }, { { -16, -16, height + 32 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -11783,7 +11655,7 @@ static void CorkscrewRCTrackDiagRightBankedUp25ToRightBankedFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -11836,7 +11708,7 @@ static void CorkscrewRCTrackDiagUp25LeftBanked(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -11848,7 +11720,7 @@ static void CorkscrewRCTrackDiagUp25LeftBanked(
                         { -16, -16, height }, { { -16, -16, height + 42 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -11860,7 +11732,7 @@ static void CorkscrewRCTrackDiagUp25LeftBanked(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -11882,7 +11754,7 @@ static void CorkscrewRCTrackDiagUp25LeftBanked(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -11903,7 +11775,7 @@ static void CorkscrewRCTrackDiagUp25RightBanked(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -11915,7 +11787,7 @@ static void CorkscrewRCTrackDiagUp25RightBanked(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -11927,7 +11799,7 @@ static void CorkscrewRCTrackDiagUp25RightBanked(
                         { -16, -16, height }, { { -16, -16, height + 42 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -11949,7 +11821,7 @@ static void CorkscrewRCTrackDiagUp25RightBanked(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -11986,7 +11858,7 @@ static void CorkscrewRCTrackDiagFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -12002,7 +11874,7 @@ static void CorkscrewRCTrackDiagFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 34 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -12014,7 +11886,7 @@ static void CorkscrewRCTrackDiagFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -12036,7 +11908,7 @@ static void CorkscrewRCTrackDiagFlatToLeftBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -12057,7 +11929,7 @@ static void CorkscrewRCTrackDiagFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -12069,7 +11941,7 @@ static void CorkscrewRCTrackDiagFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -12085,7 +11957,7 @@ static void CorkscrewRCTrackDiagFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 34 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -12107,7 +11979,7 @@ static void CorkscrewRCTrackDiagFlatToRightBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -12128,7 +12000,7 @@ static void CorkscrewRCTrackDiagLeftBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -12144,7 +12016,7 @@ static void CorkscrewRCTrackDiagLeftBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -12156,7 +12028,7 @@ static void CorkscrewRCTrackDiagLeftBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -12178,7 +12050,7 @@ static void CorkscrewRCTrackDiagLeftBankedUp25ToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -12199,7 +12071,7 @@ static void CorkscrewRCTrackDiagRightBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -12211,7 +12083,7 @@ static void CorkscrewRCTrackDiagRightBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -12227,7 +12099,7 @@ static void CorkscrewRCTrackDiagRightBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -12249,7 +12121,7 @@ static void CorkscrewRCTrackDiagRightBankedUp25ToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -12327,7 +12199,7 @@ static void CorkscrewRCTrackLeftEighthBankToDiagUp25(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -12357,7 +12229,7 @@ static void CorkscrewRCTrackLeftEighthBankToDiagUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -12387,10 +12259,10 @@ static void CorkscrewRCTrackLeftEighthBankToDiagUp25(
                         { 0, 0, height }, { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -12424,7 +12296,7 @@ static void CorkscrewRCTrackLeftEighthBankToDiagUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -12470,7 +12342,7 @@ static void CorkscrewRCTrackRightEighthBankToDiagUp25(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -12500,7 +12372,7 @@ static void CorkscrewRCTrackRightEighthBankToDiagUp25(
                         { 0, 0, height }, { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -12530,10 +12402,10 @@ static void CorkscrewRCTrackRightEighthBankToDiagUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -12567,7 +12439,7 @@ static void CorkscrewRCTrackRightEighthBankToDiagUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -12610,7 +12482,7 @@ static void CorkscrewRCTrackLeftEighthBankToOrthogonalUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -12640,10 +12512,10 @@ static void CorkscrewRCTrackLeftEighthBankToOrthogonalUp25(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -12673,7 +12545,7 @@ static void CorkscrewRCTrackLeftEighthBankToOrthogonalUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -12710,7 +12582,7 @@ static void CorkscrewRCTrackLeftEighthBankToOrthogonalUp25(
             if (direction == 1 || direction == 2)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -12753,7 +12625,7 @@ static void CorkscrewRCTrackRightEighthBankToOrthogonalUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -12783,10 +12655,10 @@ static void CorkscrewRCTrackRightEighthBankToOrthogonalUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -12816,7 +12688,7 @@ static void CorkscrewRCTrackRightEighthBankToOrthogonalUp25(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -12853,7 +12725,7 @@ static void CorkscrewRCTrackRightEighthBankToOrthogonalUp25(
             if (direction == 0 || direction == 1)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -12933,10 +12805,9 @@ static void CorkscrewRCTrackLeftBankToLeftQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             switch (direction)
@@ -12947,7 +12818,6 @@ static void CorkscrewRCTrackLeftBankToLeftQuarterTurn325DegUp(
                         { 16, 16, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -12989,7 +12859,7 @@ static void CorkscrewRCTrackLeftBankToLeftQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -13031,10 +12901,9 @@ static void CorkscrewRCTrackRightBankToRightQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             switch (direction)
@@ -13045,7 +12914,6 @@ static void CorkscrewRCTrackRightBankToRightQuarterTurn325DegUp(
                         { 16, 16, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -13087,7 +12955,7 @@ static void CorkscrewRCTrackRightBankToRightQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -13132,10 +13000,9 @@ static void CorkscrewRCTrackLeftQuarterTurn325DegDownToLeftBank(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             switch (direction)
@@ -13146,7 +13013,6 @@ static void CorkscrewRCTrackLeftQuarterTurn325DegDownToLeftBank(
                         { 16, 16, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -13185,7 +13051,7 @@ static void CorkscrewRCTrackLeftQuarterTurn325DegDownToLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -13230,10 +13096,9 @@ static void CorkscrewRCTrackRightQuarterTurn325DegDownToRightBank(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             switch (direction)
@@ -13244,7 +13109,6 @@ static void CorkscrewRCTrackRightQuarterTurn325DegDownToRightBank(
                         { 16, 16, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -13283,7 +13147,7 @@ static void CorkscrewRCTrackRightQuarterTurn325DegDownToRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -13322,7 +13186,7 @@ static void CorkscrewRCTrackLeftLargeCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -13352,7 +13216,7 @@ static void CorkscrewRCTrackLeftLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -13373,10 +13237,9 @@ static void CorkscrewRCTrackLeftLargeCorkscrewUp(
                         { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 4:
             switch (direction)
@@ -13410,7 +13273,6 @@ static void CorkscrewRCTrackLeftLargeCorkscrewUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
         case 5:
             switch (direction)
@@ -13445,7 +13307,6 @@ static void CorkscrewRCTrackLeftLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -13484,7 +13345,7 @@ static void CorkscrewRCTrackRightLargeCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -13514,7 +13375,7 @@ static void CorkscrewRCTrackRightLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -13535,10 +13396,9 @@ static void CorkscrewRCTrackRightLargeCorkscrewUp(
                         { 0, 0, height }, { { 0, 31, height }, { 48, 1, 64 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 4:
             switch (direction)
@@ -13571,7 +13431,6 @@ static void CorkscrewRCTrackRightLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
         case 5:
             switch (direction)
@@ -13606,7 +13465,6 @@ static void CorkscrewRCTrackRightLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -13657,7 +13515,7 @@ static void CorkscrewRCTrack90DegToInvertedFlatQuarterLoopUp(
                         { 0, 0, height }, { { 4, 6, height + 8 }, { 2, 20, 31 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 1:
             switch (direction)
@@ -13689,7 +13547,7 @@ static void CorkscrewRCTrack90DegToInvertedFlatQuarterLoopUp(
                         { 0, 0, height }, { { 0, 0, height + 48 }, { 32, 20, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 2:
             switch (direction)
@@ -13718,7 +13576,7 @@ static void CorkscrewRCTrack90DegToInvertedFlatQuarterLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -13768,7 +13626,7 @@ static void CorkscrewRCTrackLeftMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -13798,7 +13656,6 @@ static void CorkscrewRCTrackLeftMediumHalfLoopUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -13828,7 +13685,7 @@ static void CorkscrewRCTrackLeftMediumHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
+
             break;
         case 3:
             switch (direction)
@@ -13860,7 +13717,7 @@ static void CorkscrewRCTrackLeftMediumHalfLoopUp(
                         { 0, 0, height }, { { 0, 0, height + 140 }, { 32, 20, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
+
             break;
         case 4:
             switch (direction)
@@ -13890,7 +13747,6 @@ static void CorkscrewRCTrackLeftMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -13932,7 +13788,7 @@ static void CorkscrewRCTrackRightMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -13962,7 +13818,6 @@ static void CorkscrewRCTrackRightMediumHalfLoopUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -13992,7 +13847,7 @@ static void CorkscrewRCTrackRightMediumHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
+
             break;
         case 3:
             switch (direction)
@@ -14025,7 +13880,6 @@ static void CorkscrewRCTrackRightMediumHalfLoopUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
             break;
         case 4:
             switch (direction)
@@ -14055,7 +13909,6 @@ static void CorkscrewRCTrackRightMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -14108,7 +13961,7 @@ static void CorkscrewRCTrackLeftLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -14141,7 +13994,7 @@ static void CorkscrewRCTrackLeftLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -14173,7 +14026,7 @@ static void CorkscrewRCTrackLeftLargeHalfLoopUp(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 3:
             switch (direction)
@@ -14203,7 +14056,7 @@ static void CorkscrewRCTrackLeftLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 4:
             switch (direction)
@@ -14229,7 +14082,7 @@ static void CorkscrewRCTrackLeftLargeHalfLoopUp(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 128);
+
             break;
         case 5:
             switch (direction)
@@ -14258,7 +14111,7 @@ static void CorkscrewRCTrackLeftLargeHalfLoopUp(
                         { 0, 0, height }, { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 6:
             switch (direction)
@@ -14287,7 +14140,7 @@ static void CorkscrewRCTrackLeftLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -14326,7 +14179,7 @@ static void CorkscrewRCTrackRightLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -14359,7 +14212,7 @@ static void CorkscrewRCTrackRightLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -14391,7 +14244,7 @@ static void CorkscrewRCTrackRightLargeHalfLoopUp(
                         { 0, 0, height }, { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 3:
             switch (direction)
@@ -14421,7 +14274,7 @@ static void CorkscrewRCTrackRightLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 4:
             switch (direction)
@@ -14447,7 +14300,7 @@ static void CorkscrewRCTrackRightLargeHalfLoopUp(
                         { 0, 0, height }, { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 128);
+
             break;
         case 5:
             switch (direction)
@@ -14476,7 +14329,7 @@ static void CorkscrewRCTrackRightLargeHalfLoopUp(
                         { 0, 0, height }, { { 0, 16, height + 200 }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 6:
             switch (direction)
@@ -14505,7 +14358,7 @@ static void CorkscrewRCTrackRightLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -14573,7 +14426,7 @@ static void CorkscrewRCTrackLeftBarrelRollUpToDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -14611,7 +14464,7 @@ static void CorkscrewRCTrackLeftBarrelRollUpToDown(
                         { 0, 0, height }, { { 0, 6, height + 28 }, { 32, 20, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -14658,7 +14511,7 @@ static void CorkscrewRCTrackLeftBarrelRollUpToDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -14712,7 +14565,7 @@ static void CorkscrewRCTrackRightBarrelRollUpToDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -14750,7 +14603,7 @@ static void CorkscrewRCTrackRightBarrelRollUpToDown(
                         { 0, 0, height }, { { 0, 6, height + 28 }, { 32, 20, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -14797,7 +14650,7 @@ static void CorkscrewRCTrackRightBarrelRollUpToDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -14862,7 +14715,7 @@ static void CorkscrewRCTrackLeftZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -14888,7 +14741,7 @@ static void CorkscrewRCTrackLeftZeroGRollUp(
                         { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -14933,7 +14786,6 @@ static void CorkscrewRCTrackLeftZeroGRollUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }
@@ -14981,7 +14833,7 @@ static void CorkscrewRCTrackRightZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -15007,7 +14859,7 @@ static void CorkscrewRCTrackRightZeroGRollUp(
                         { 0, 0, height }, { { 0, 6, height + 40 }, { 32, 20, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -15052,7 +14904,6 @@ static void CorkscrewRCTrackRightZeroGRollUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }
@@ -15108,7 +14959,7 @@ static void CorkscrewRCTrackLeftLargeZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 1:
             switch (direction)
@@ -15140,7 +14991,7 @@ static void CorkscrewRCTrackLeftLargeZeroGRollUp(
                         { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -15175,7 +15026,7 @@ static void CorkscrewRCTrackLeftLargeZeroGRollUp(
                         { 0, 0, height }, { { 0, 29, height + 32 }, { 32, 1, 32 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -15220,7 +15071,6 @@ static void CorkscrewRCTrackLeftLargeZeroGRollUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }
@@ -15262,7 +15112,7 @@ static void CorkscrewRCTrackRightLargeZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 1:
             switch (direction)
@@ -15294,7 +15144,7 @@ static void CorkscrewRCTrackRightLargeZeroGRollUp(
                         { 0, 0, height }, { { 0, 30, height }, { 32, 0, 96 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -15330,7 +15180,6 @@ static void CorkscrewRCTrackRightLargeZeroGRollUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
         case 3:
             switch (direction)
@@ -15375,7 +15224,6 @@ static void CorkscrewRCTrackRightLargeZeroGRollUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }
@@ -15411,7 +15259,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegUpLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 32);
+
             break;
         case 1:
             switch (direction)
@@ -15422,7 +15270,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegUpLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -15433,7 +15281,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegUpLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -15458,7 +15306,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegUpLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
             switch (direction)
@@ -15469,7 +15317,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegUpLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 5:
             switch (direction)
@@ -15480,7 +15328,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegUpLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -15505,7 +15353,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegUpLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
+
             break;
         case 7:
             switch (direction)
@@ -15516,7 +15364,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegUpLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 8:
             switch (direction)
@@ -15527,7 +15375,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegUpLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 9:
             switch (direction)
@@ -15548,7 +15396,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegUpLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 136);
+
             break;
     }
 }
@@ -15569,7 +15417,7 @@ static void CorkscrewRCTrackDiag60DegUpToFlatLongBase(
                         { -16, -16, height }, { { -8, -8, height + 0 }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
+
             break;
         case 1:
             switch (direction)
@@ -15581,7 +15429,7 @@ static void CorkscrewRCTrackDiag60DegUpToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 2:
             switch (direction)
@@ -15593,7 +15441,7 @@ static void CorkscrewRCTrackDiag60DegUpToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 3:
             switch (direction)
@@ -15619,7 +15467,7 @@ static void CorkscrewRCTrackDiag60DegUpToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 112);
+
             break;
         case 4:
             switch (direction)
@@ -15631,7 +15479,7 @@ static void CorkscrewRCTrackDiag60DegUpToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 5:
             switch (direction)
@@ -15643,7 +15491,7 @@ static void CorkscrewRCTrackDiag60DegUpToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 6:
             switch (direction)
@@ -15669,7 +15517,7 @@ static void CorkscrewRCTrackDiag60DegUpToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 7:
             switch (direction)
@@ -15681,7 +15529,7 @@ static void CorkscrewRCTrackDiag60DegUpToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 8:
             switch (direction)
@@ -15693,7 +15541,7 @@ static void CorkscrewRCTrackDiag60DegUpToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 9:
             switch (direction)
@@ -15715,7 +15563,7 @@ static void CorkscrewRCTrackDiag60DegUpToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -15736,7 +15584,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegDownLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -15748,7 +15596,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegDownLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 2:
             switch (direction)
@@ -15760,7 +15608,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegDownLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 3:
             switch (direction)
@@ -15786,7 +15634,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegDownLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 4:
             switch (direction)
@@ -15798,7 +15646,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegDownLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 5:
             switch (direction)
@@ -15810,7 +15658,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegDownLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 6:
             switch (direction)
@@ -15836,7 +15684,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegDownLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 112);
+
             break;
         case 7:
             switch (direction)
@@ -15848,7 +15696,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegDownLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 8:
             switch (direction)
@@ -15860,7 +15708,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegDownLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 9:
             switch (direction)
@@ -15882,7 +15730,7 @@ static void CorkscrewRCTrackDiagFlatTo60DegDownLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
+
             break;
     }
 }
@@ -15902,7 +15750,7 @@ static void CorkscrewRCTrackDiag60DegDownToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 80 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 136);
+
             break;
         case 1:
             switch (direction)
@@ -15913,7 +15761,7 @@ static void CorkscrewRCTrackDiag60DegDownToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 2:
             switch (direction)
@@ -15924,7 +15772,7 @@ static void CorkscrewRCTrackDiag60DegDownToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 3:
             switch (direction)
@@ -15949,7 +15797,7 @@ static void CorkscrewRCTrackDiag60DegDownToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
+
             break;
         case 4:
             switch (direction)
@@ -15960,7 +15808,7 @@ static void CorkscrewRCTrackDiag60DegDownToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 5:
             switch (direction)
@@ -15971,7 +15819,7 @@ static void CorkscrewRCTrackDiag60DegDownToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -15996,7 +15844,7 @@ static void CorkscrewRCTrackDiag60DegDownToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 7:
             switch (direction)
@@ -16007,7 +15855,7 @@ static void CorkscrewRCTrackDiag60DegDownToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 8:
             switch (direction)
@@ -16018,7 +15866,7 @@ static void CorkscrewRCTrackDiag60DegDownToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 9:
             switch (direction)
@@ -16039,7 +15887,7 @@ static void CorkscrewRCTrackDiag60DegDownToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 32);
+
             break;
     }
 }
@@ -16064,7 +15912,7 @@ static void CorkscrewRCTrackLeftEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { 0, 0, height + -8 }, { 32, 32, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
+
             break;
         case 1:
             switch (direction)
@@ -16075,7 +15923,7 @@ static void CorkscrewRCTrackLeftEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 2:
             switch (direction)
@@ -16086,7 +15934,7 @@ static void CorkscrewRCTrackLeftEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 3:
             switch (direction)
@@ -16116,7 +15964,7 @@ static void CorkscrewRCTrackLeftEighthDiveLoopUpToOrthogonal(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 112);
+
             break;
         case 4:
             switch (direction)
@@ -16142,7 +15990,7 @@ static void CorkscrewRCTrackLeftEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { 0, 6, height + 58 }, { 32, 20, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 5:
             switch (direction)
@@ -16172,7 +16020,6 @@ static void CorkscrewRCTrackLeftEighthDiveLoopUpToOrthogonal(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }
@@ -16197,7 +16044,7 @@ static void CorkscrewRCTrackRightEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { 0, 0, height + -8 }, { 32, 32, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
+
             break;
         case 1:
             switch (direction)
@@ -16208,7 +16055,7 @@ static void CorkscrewRCTrackRightEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 2:
             switch (direction)
@@ -16219,7 +16066,7 @@ static void CorkscrewRCTrackRightEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 3:
             switch (direction)
@@ -16249,7 +16096,7 @@ static void CorkscrewRCTrackRightEighthDiveLoopUpToOrthogonal(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 112);
+
             break;
         case 4:
             switch (direction)
@@ -16275,7 +16122,7 @@ static void CorkscrewRCTrackRightEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { 6, 0, height + 58 }, { 20, 32, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 5:
             switch (direction)
@@ -16305,7 +16152,6 @@ static void CorkscrewRCTrackRightEighthDiveLoopUpToOrthogonal(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }

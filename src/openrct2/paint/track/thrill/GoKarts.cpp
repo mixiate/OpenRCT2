@@ -1351,8 +1351,6 @@ static void PaintGoKartsTrackFlat(
         imageId = session.TrackColours.WithIndex(SPR_GO_KARTS_FLAT_FRONT_NW_SE);
         PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 29, 0, height + 2 }, { 1, 32, 3 } });
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0074A758 */
@@ -1400,8 +1398,6 @@ static void PaintGoKartsTrack25DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x0074A768 */
@@ -1449,8 +1445,6 @@ static void PaintGoKartsTrackFlatTo25DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x */
@@ -1498,8 +1492,6 @@ static void PaintGoKartsTrack25DegUpToFlat(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x0074A788 */
@@ -1625,8 +1617,6 @@ static void PaintGoKartsStation(
                 break;
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0074A7E8 */
@@ -1691,8 +1681,6 @@ static void PaintGoKartsTrackLeftQuarterTurn1Tile(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0074A7F8 */
@@ -1720,7 +1708,6 @@ static void TrackUp60(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 static void TrackUp25ToUp60(
@@ -1740,7 +1727,6 @@ static void TrackUp25ToUp60(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void TrackUp60ToUp25(
@@ -1760,7 +1746,6 @@ static void TrackUp60ToUp25(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void TrackDown60(
@@ -1794,15 +1779,6 @@ static void TrackFlatToUp60LongBase(
     session.WoodenSupportsPrependTo = PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsFlatToUp60LongBaseSprites[direction][trackSequence][1]), height,
         { 0, 0, 0 }, kGoKartsFlatToUp60LongBaseBoundBoxes[direction][trackSequence][1]);
-
-    if (trackSequence == 0 && (direction == 0 || direction == 3))
-    {
-    }
-    else if (trackSequence == 3 && (direction == 1 || direction == 2))
-    {
-    }
-    static constexpr std::array generalSupportHeights = { 48, 48, 64, 80 };
-    PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
 }
 
 static void TrackUp60ToFlatLongBase(
@@ -1815,15 +1791,6 @@ static void TrackUp60ToFlatLongBase(
     session.WoodenSupportsPrependTo = PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsUp60ToFlatLongBaseSprites[direction][trackSequence][1]), height,
         { 0, 0, 0 }, kGoKartsUp60ToFlatLongBaseBoundBoxes[direction][trackSequence][1]);
-
-    if (trackSequence == 0 && (direction == 0 || direction == 3))
-    {
-    }
-    else if (trackSequence == 3 && (direction == 1 || direction == 2))
-    {
-    }
-    static constexpr std::array generalSupportHeights = { 80, 64, 48, 48 };
-    PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
 }
 
 static void TrackFlatToDown60LongBase(
@@ -1850,19 +1817,6 @@ static void TrackLeftQuarterTurn3Tiles(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsLeftQuarterTurn3TilesSprites[direction][trackSequence][1]), height,
         { 0, 0, 0 }, kGoKartsLeftQuarterTurn3TilesBoundBoxes[direction][trackSequence][1]);
-
-    static constexpr std::array<WoodenSupportSubType, 4> woodenSupportSubTypes = {
-        WoodenSupportSubType::NeSw,
-        WoodenSupportSubType::Null,
-        WoodenSupportSubType::Corner3,
-        WoodenSupportSubType::NwSe,
-    };
-    const WoodenSupportSubType woodenSupportSubType = woodenSupportSubTypes[trackSequence];
-    if (woodenSupportSubType != WoodenSupportSubType::Null)
-    {
-    }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void TrackRightQuarterTurn3Tiles(
@@ -1887,14 +1841,6 @@ static void TrackLeftQuarterTurn5Tiles(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsLeftQuarterTurn5TilesSprites[direction][trackSequence][2]), height,
         { 0, 0, 0 }, kGoKartsLeftQuarterTurn5TilesBoundBoxes[direction][trackSequence][2]);
-
-    if (trackSequence == 0 && (direction == 0 || direction == 3))
-    {
-    }
-    else if (trackSequence == 6 && (direction == 2 || direction == 3))
-    {
-    }
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void TrackRightQuarterTurn5Tiles(
@@ -1919,11 +1865,6 @@ static void TrackLeftEighthToDiag(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsLeftEighthToDiagSprites[direction][trackSequence][2]), height,
         { 0, 0, 0 }, kGoKartsLeftEighthToDiagBoundBoxes[direction][trackSequence][2]);
-
-    if (trackSequence == 0 && (direction == 0 || direction == 3))
-    {
-    }
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void TrackRightEighthToDiag(
@@ -1939,11 +1880,6 @@ static void TrackRightEighthToDiag(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsRightEighthToDiagSprites[direction][trackSequence][2]), height,
         { 0, 0, 0 }, kGoKartsRightEighthToDiagBoundBoxes[direction][trackSequence][2]);
-
-    if (trackSequence == 0 && (direction == 0 || direction == 3))
-    {
-    }
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void TrackLeftEighthToOrthogonal(
@@ -1974,8 +1910,6 @@ static void TrackDiagFlat(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsDiagFlatSprites[direction][trackSequence][1]), height, { 0, 0, 0 },
         kGoKartsDiagFlatBoundBoxes[direction][trackSequence][1]);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void TrackDiagFlatToUp25(
@@ -1988,8 +1922,6 @@ static void TrackDiagFlatToUp25(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsDiagFlatToUp25Sprites[direction][trackSequence][1]), height,
         { 0, 0, 0 }, kGoKartsDiagFlatToUp25BoundBoxes[direction][trackSequence][1]);
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void TrackDiagUp25ToFlat(
@@ -2002,8 +1934,6 @@ static void TrackDiagUp25ToFlat(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsDiagUp25ToFlatSprites[direction][trackSequence][1]), height,
         { 0, 0, 0 }, kGoKartsDiagUp25ToFlatBoundBoxes[direction][trackSequence][1]);
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void TrackDiagUp25(
@@ -2016,8 +1946,6 @@ static void TrackDiagUp25(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsDiagUp25Sprites[direction][trackSequence][1]), height, { 0, 0, 0 },
         kGoKartsDiagUp25BoundBoxes[direction][trackSequence][1]);
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void TrackDiagFlatToDown25(
@@ -2057,8 +1985,6 @@ static void TrackDiagUp25ToUp60(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsDiagUp25ToUp60Sprites[direction][trackSequence][1]), height,
         { 0, 0, 0 }, kGoKartsDiagUp25ToUp60BoundBoxes[direction][trackSequence][1]);
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void TrackDiagUp60ToUp25(
@@ -2071,8 +1997,6 @@ static void TrackDiagUp60ToUp25(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsDiagUp60ToUp25Sprites[direction][trackSequence][1]), height,
         { 0, 0, 0 }, kGoKartsDiagUp60ToUp25BoundBoxes[direction][trackSequence][1]);
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void TrackDiagUp60(
@@ -2085,8 +2009,6 @@ static void TrackDiagUp60(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsDiagUp60Sprites[direction][trackSequence][1]), height, { 0, 0, 0 },
         kGoKartsDiagUp60BoundBoxes[direction][trackSequence][1]);
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 static void TrackDiagDown25ToDown60(
@@ -2126,16 +2048,6 @@ static void TrackLeftQuarterTurn3TilesUp25(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsLeftQuarterTurn3TilesUp25Sprites[direction][trackSequence][1]), height,
         { 0, 0, 0 }, kGoKartsLeftQuarterTurn3TilesUp25BoundBoxes[direction][trackSequence][1]);
-
-    if (trackSequence == 0 && (direction == 0 || direction == 3))
-    {
-    }
-    else if (trackSequence == 3 && (direction == 2 || direction == 3))
-    {
-    }
-
-    static constexpr std::array generalSupportHeights = { 72, 56, 56, 72 };
-    PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
 }
 
 static void TrackRightQuarterTurn3TilesUp25(
@@ -2148,16 +2060,6 @@ static void TrackRightQuarterTurn3TilesUp25(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsRightQuarterTurn3TilesUp25Sprites[direction][trackSequence][1]), height,
         { 0, 0, 0 }, kGoKartsRightQuarterTurn3TilesUp25BoundBoxes[direction][trackSequence][1]);
-
-    if (trackSequence == 0 && (direction == 0 || direction == 3))
-    {
-    }
-    else if (trackSequence == 3 && (direction == 0 || direction == 1))
-    {
-    }
-
-    static constexpr std::array generalSupportHeights = { 72, 56, 56, 72 };
-    PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
 }
 
 static void TrackLeftQuarterTurn3TilesDown25(
@@ -2188,16 +2090,6 @@ static void TrackLeftQuarterTurn5TilesUp25(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsLeftQuarterTurn5TilesUp25Sprites[direction][trackSequence][1]), height,
         { 0, 0, 0 }, kGoKartsLeftQuarterTurn5TilesUp25BoundBoxes[direction][trackSequence][1]);
-
-    if (trackSequence == 0 && (direction == 0 || direction == 3))
-    {
-    }
-    else if (trackSequence == 6 && (direction == 2 || direction == 3))
-    {
-    }
-
-    static constexpr std::array generalSupportHeights = { 72, 72, 72, 64, 72, 72, 72 };
-    PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
 }
 
 static void TrackRightQuarterTurn5TilesUp25(
@@ -2210,16 +2102,6 @@ static void TrackRightQuarterTurn5TilesUp25(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsRightQuarterTurn5TilesUp25Sprites[direction][trackSequence][1]), height,
         { 0, 0, 0 }, kGoKartsRightQuarterTurn5TilesUp25BoundBoxes[direction][trackSequence][1]);
-
-    if (trackSequence == 0 && (direction == 0 || direction == 3))
-    {
-    }
-    else if (trackSequence == 6 && (direction == 2 || direction == 3))
-    {
-    }
-
-    static constexpr std::array generalSupportHeights = { 72, 72, 72, 64, 72, 72, 72 };
-    PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
 }
 
 static void TrackLeftQuarterTurn5TilesDown25(
@@ -2250,12 +2132,6 @@ static void TrackLeftEighthToDiagUp25(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsLeftEighthToDiagUp25Sprites[direction][trackSequence][1]), height,
         { 0, 0, 0 }, kGoKartsLeftEighthToDiagUp25BoundBoxes[direction][trackSequence][1]);
-
-    if (trackSequence == 0 && (direction == 0 || direction == 3))
-    {
-    }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void TrackRightEighthToDiagUp25(
@@ -2268,12 +2144,6 @@ static void TrackRightEighthToDiagUp25(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsRightEighthToDiagUp25Sprites[direction][trackSequence][1]), height,
         { 0, 0, 0 }, kGoKartsRightEighthToDiagUp25BoundBoxes[direction][trackSequence][1]);
-
-    if (trackSequence == 0 && (direction == 0 || direction == 3))
-    {
-    }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void TrackLeftEighthToOrthogonalUp25(
@@ -2286,12 +2156,6 @@ static void TrackLeftEighthToOrthogonalUp25(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsLeftEighthToOrthogonalUp25Sprites[direction][trackSequence][1]), height,
         { 0, 0, 0 }, kGoKartsLeftEighthToOrthogonalUp25BoundBoxes[direction][trackSequence][1]);
-
-    if (trackSequence == 4 && (direction == 1 || direction == 2))
-    {
-    }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void TrackRightEighthToOrthogonalUp25(
@@ -2304,12 +2168,6 @@ static void TrackRightEighthToOrthogonalUp25(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsRightEighthToOrthogonalUp25Sprites[direction][trackSequence][1]),
         height, { 0, 0, 0 }, kGoKartsRightEighthToOrthogonalUp25BoundBoxes[direction][trackSequence][1]);
-
-    if (trackSequence == 4 && (direction == 0 || direction == 1))
-    {
-    }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void TrackLeftEighthToDiagDown25(
@@ -2361,12 +2219,6 @@ static void TrackSBendLeft(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsSBendLeftSprites[direction][trackSequence][2]), height, { 0, 0, 0 },
         kGoKartsSBendLeftBoundBoxes[direction][trackSequence][2]);
-
-    if ((trackSequence == 0 && (direction == 0 || direction == 3))
-        || (trackSequence == 3 && (direction == 1 || direction == 2)))
-    {
-    }
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void TrackSBendRight(
@@ -2382,12 +2234,6 @@ static void TrackSBendRight(
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(kGoKartsSBendRightSprites[direction][trackSequence][2]), height, { 0, 0, 0 },
         kGoKartsSBendRightBoundBoxes[direction][trackSequence][2]);
-
-    if ((trackSequence == 0 && (direction == 0 || direction == 3))
-        || (trackSequence == 3 && (direction == 1 || direction == 2)))
-    {
-    }
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /**

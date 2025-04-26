@@ -211,8 +211,6 @@ static void PaintReverseFreefallRCFlat(
         auto imageId = session.TrackColours.WithIndex(SPR_REVERSE_FREEFALL_RC_FLAT_SW_NE);
         PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 1 } });
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void PaintReverseFreefallRCStation(
@@ -233,8 +231,6 @@ static void PaintReverseFreefallRCStation(
     }
 
     TrackPaintUtilDrawNarrowStationPlatform(session, ride, direction, height, 5, trackElement, StationBaseType::b, -2);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void PaintReverseFreefallRCSlope(
@@ -243,7 +239,6 @@ static void PaintReverseFreefallRCSlope(
 {
     static constexpr int8_t bbHeights03[] = { 1, 6, 14, 37, 64 };
     static constexpr int8_t bbHeights12[] = { 1, 6, 14, 27, 59 };
-    static constexpr int32_t supportHeights[] = { 48, 64, 128, 176, 208, 240, 240 };
     static constexpr int32_t tunnelOffsets03[] = { 0, 0, 0, 16, 64 };
 
     auto supportsImageId = session.SupportColours.WithIndex(kPiecesSlopeSupports[trackSequence][direction]);
@@ -274,13 +269,12 @@ static void PaintReverseFreefallRCSlope(
                     session, direction, supportsImageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, bbHeight } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + supportHeights[trackSequence]);
             break;
         case 5:
             PaintAddImageAsParentRotated(
                 session, direction, supportsImageId, { 0, 0, height },
                 { { isDirection03 ? 3 : 11, 3, height }, { isDirection03 ? 26 : 18, 26, 126 } });
-            PaintUtilSetGeneralSupportHeight(session, height + supportHeights[trackSequence]);
+
             break;
         case 6:
             if (isDirection03)
@@ -298,8 +292,6 @@ static void PaintReverseFreefallRCSlope(
                     session, direction, supportsImageId, { 0, 0, height }, { { 27, 6, height }, { 1, 20, 126 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + supportHeights[trackSequence]);
-
             break;
     }
 }
@@ -314,7 +306,7 @@ static void PaintReverseFreefallRCVertical(
         case 0:
             supportsImageId = session.SupportColours.WithIndex(kPiecesVerticalSupports[direction]);
             PaintAddImageAsParent(session, supportsImageId, { 0, 0, height }, { { 3, 3, height }, { 26, 26, 79 } });
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 1:
             trackImageId = session.TrackColours.WithIndex(kPiecesVertical[direction]);
@@ -329,7 +321,6 @@ static void PaintReverseFreefallRCVertical(
                     session, direction, trackImageId, { 0, 0, height }, { { 30, 6, height }, { 2, 20, 79 } });
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
             break;
     }
 }

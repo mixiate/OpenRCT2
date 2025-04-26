@@ -67,8 +67,6 @@ static void LimLaunchedRCTrackStation(
     else if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A65E0 */
@@ -105,7 +103,7 @@ static void LimLaunchedRCTrackLeftVerticalLoop(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -127,7 +125,7 @@ static void LimLaunchedRCTrackLeftVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(15402), { 0, 6, height }, { 32, 26, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -153,7 +151,7 @@ static void LimLaunchedRCTrackLeftVerticalLoop(
                         { { 16, 16, height }, { 2, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 3:
             switch (direction)
@@ -175,13 +173,11 @@ static void LimLaunchedRCTrackLeftVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(15400), { 0, 16, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 6:
             switch (direction)
@@ -203,7 +199,7 @@ static void LimLaunchedRCTrackLeftVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(15399), { 0, 0, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 7:
             switch (direction)
@@ -229,7 +225,7 @@ static void LimLaunchedRCTrackLeftVerticalLoop(
                         { { 12, 0, height }, { 3, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 8:
             switch (direction)
@@ -251,7 +247,7 @@ static void LimLaunchedRCTrackLeftVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(15397), { 0, 14, height }, { 32, 2, 63 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 9:
             switch (direction)
@@ -286,7 +282,7 @@ static void LimLaunchedRCTrackLeftVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -322,7 +318,6 @@ static void LimLaunchedRCTrackRightVerticalLoop(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 1:
             switch (direction)
@@ -344,7 +339,6 @@ static void LimLaunchedRCTrackRightVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(15405), { 0, 0, height }, { 32, 26, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -370,7 +364,6 @@ static void LimLaunchedRCTrackRightVerticalLoop(
                         { { 16, 0, height }, { 2, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
             break;
         case 3:
             switch (direction)
@@ -392,13 +385,10 @@ static void LimLaunchedRCTrackRightVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(15407), { 0, 0, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 6:
             switch (direction)
@@ -420,7 +410,6 @@ static void LimLaunchedRCTrackRightVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(15408), { 0, 16, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 7:
             switch (direction)
@@ -446,7 +435,6 @@ static void LimLaunchedRCTrackRightVerticalLoop(
                         { { 10, 16, height }, { 4, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
             break;
         case 8:
             switch (direction)
@@ -468,7 +456,6 @@ static void LimLaunchedRCTrackRightVerticalLoop(
                         session, direction, session.TrackColours.WithIndex(15410), { 0, 6, height }, { 32, 26, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 9:
             switch (direction)
@@ -500,7 +487,6 @@ static void LimLaunchedRCTrackRightVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }
@@ -552,7 +538,7 @@ static void LimLaunchedRCTrackLeftTwistDownToUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -590,7 +576,7 @@ static void LimLaunchedRCTrackLeftTwistDownToUp(
                         { { 0, 6, height + 28 }, { 32, 20, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -637,7 +623,7 @@ static void LimLaunchedRCTrackLeftTwistDownToUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height);
+
             break;
     }
 }
@@ -689,7 +675,7 @@ static void LimLaunchedRCTrackRightTwistDownToUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -727,7 +713,7 @@ static void LimLaunchedRCTrackRightTwistDownToUp(
                         { { 0, 6, height + 28 }, { 32, 20, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -774,7 +760,7 @@ static void LimLaunchedRCTrackRightTwistDownToUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height);
+
             break;
     }
 }
@@ -825,7 +811,7 @@ static void LimLaunchedRCTrackLeftTwistUpToDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height);
+
             break;
         case 1:
             switch (direction)
@@ -863,7 +849,7 @@ static void LimLaunchedRCTrackLeftTwistUpToDown(
                         { { 0, 6, height + 28 }, { 32, 20, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -911,7 +897,7 @@ static void LimLaunchedRCTrackLeftTwistUpToDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -962,7 +948,7 @@ static void LimLaunchedRCTrackRightTwistUpToDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
             switch (direction)
@@ -1000,7 +986,7 @@ static void LimLaunchedRCTrackRightTwistUpToDown(
                         { { 0, 6, height + 28 }, { 32, 20, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -1048,7 +1034,7 @@ static void LimLaunchedRCTrackRightTwistUpToDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -1088,7 +1074,6 @@ static void LimLaunchedRCTrackLeftCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
             switch (direction)
@@ -1114,7 +1099,7 @@ static void LimLaunchedRCTrackLeftCorkscrewUp(
                         { { 6, 6, height + 10 }, { 20, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -1150,7 +1135,6 @@ static void LimLaunchedRCTrackLeftCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -1190,7 +1174,7 @@ static void LimLaunchedRCTrackRightCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -1216,7 +1200,7 @@ static void LimLaunchedRCTrackRightCorkscrewUp(
                         { { 6, 6, height + 10 }, { 20, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -1252,7 +1236,6 @@ static void LimLaunchedRCTrackRightCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -1297,8 +1280,6 @@ static void LimLaunchedRCTrackBrakes(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A6C10 */
@@ -1333,7 +1314,6 @@ static void LimLaunchedRCTrack90DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 1:
             break;
@@ -1383,7 +1363,6 @@ static void LimLaunchedRCTrack60DegUpTo90DegUp(
             {
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 1:
             break;
@@ -1435,7 +1414,6 @@ static void LimLaunchedRCTrack90DegUpTo60DegUp(
 
             break;
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 80);
 }
 
 /** rct2: 0x008A6C60 */
@@ -1472,7 +1450,7 @@ static void LimLaunchedRCTrack60DegDownTo90DegDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 1:
             break;
@@ -1510,7 +1488,7 @@ static void LimLaunchedRCTrack90DegToInvertedFlatQuarterLoopUp(
                         { { 4, 6, height + 8 }, { 2, 20, 31 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 1:
             switch (direction)
@@ -1536,7 +1514,7 @@ static void LimLaunchedRCTrack90DegToInvertedFlatQuarterLoopUp(
                         { { -8, 6, height }, { 2, 20, 31 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 2:
             switch (direction)
@@ -1565,7 +1543,7 @@ static void LimLaunchedRCTrack90DegToInvertedFlatQuarterLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -1592,8 +1570,6 @@ static void LimLaunchedRCTrackBlockBrakes(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void LimLaunchedRCTrackLeftQuarterTurn190DegUp(
@@ -1633,7 +1609,6 @@ static void LimLaunchedRCTrackLeftQuarterTurn190DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
             break;
         case 1:
             break;
@@ -1678,7 +1653,6 @@ static void LimLaunchedRCTrackRightQuarterTurn190DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
             break;
         case 1:
             break;
@@ -1752,7 +1726,7 @@ static void LimLaunchedRCTrackLeftBarrelRollUpToDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -1790,7 +1764,7 @@ static void LimLaunchedRCTrackLeftBarrelRollUpToDown(
                         { 0, 0, height }, { { 0, 6, height + 28 }, { 32, 20, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -1837,7 +1811,7 @@ static void LimLaunchedRCTrackLeftBarrelRollUpToDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -1891,7 +1865,7 @@ static void LimLaunchedRCTrackRightBarrelRollUpToDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -1929,7 +1903,7 @@ static void LimLaunchedRCTrackRightBarrelRollUpToDown(
                         { 0, 0, height }, { { 0, 6, height + 28 }, { 32, 20, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -1976,7 +1950,7 @@ static void LimLaunchedRCTrackRightBarrelRollUpToDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -2031,7 +2005,7 @@ static void LimLaunchedRCTrackHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -2061,7 +2035,7 @@ static void LimLaunchedRCTrackHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -2087,7 +2061,7 @@ static void LimLaunchedRCTrackHalfLoopUp(
                         { 16, 16, height }, { { 15, 6, height }, { 2, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 3:
             switch (direction)
@@ -2116,7 +2090,7 @@ static void LimLaunchedRCTrackHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -2164,7 +2138,7 @@ static void LimLaunchedRCTrackFlatTo60DegUpLongBase(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -2193,7 +2167,7 @@ static void LimLaunchedRCTrackFlatTo60DegUpLongBase(
             if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -2222,7 +2196,7 @@ static void LimLaunchedRCTrackFlatTo60DegUpLongBase(
             if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -2260,7 +2234,7 @@ static void LimLaunchedRCTrackFlatTo60DegUpLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
     }
 }
@@ -2300,7 +2274,7 @@ static void LimLaunchedRCTrack60DegUpToFlatLongBase(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 1:
             switch (direction)
@@ -2329,7 +2303,7 @@ static void LimLaunchedRCTrack60DegUpToFlatLongBase(
             if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 2:
             switch (direction)
@@ -2358,7 +2332,7 @@ static void LimLaunchedRCTrack60DegUpToFlatLongBase(
             if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -2396,7 +2370,7 @@ static void LimLaunchedRCTrack60DegUpToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -2451,7 +2425,7 @@ static void LimLaunchedRCTrackLeftLargeCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -2481,7 +2455,7 @@ static void LimLaunchedRCTrackLeftLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -2507,10 +2481,9 @@ static void LimLaunchedRCTrackLeftLargeCorkscrewUp(
                         { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 4:
             switch (direction)
@@ -2541,7 +2514,6 @@ static void LimLaunchedRCTrackLeftLargeCorkscrewUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
         case 5:
             switch (direction)
@@ -2577,7 +2549,6 @@ static void LimLaunchedRCTrackLeftLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -2616,7 +2587,7 @@ static void LimLaunchedRCTrackRightLargeCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -2646,7 +2617,7 @@ static void LimLaunchedRCTrackRightLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -2672,10 +2643,9 @@ static void LimLaunchedRCTrackRightLargeCorkscrewUp(
                         { 0, 0, height }, { { 0, 31, height }, { 48, 1, 64 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 4:
             switch (direction)
@@ -2705,7 +2675,6 @@ static void LimLaunchedRCTrackRightLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
         case 5:
             switch (direction)
@@ -2741,7 +2710,6 @@ static void LimLaunchedRCTrackRightLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -2796,7 +2764,7 @@ static void LimLaunchedRCTrackLeftMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -2823,7 +2791,6 @@ static void LimLaunchedRCTrackLeftMediumHalfLoopUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -2853,7 +2820,7 @@ static void LimLaunchedRCTrackLeftMediumHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
+
             break;
         case 3:
             switch (direction)
@@ -2879,7 +2846,7 @@ static void LimLaunchedRCTrackLeftMediumHalfLoopUp(
                         { 0, 0, height }, { { 0, 0, height }, { 1, 32, 160 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
+
             break;
         case 4:
             switch (direction)
@@ -2909,7 +2876,6 @@ static void LimLaunchedRCTrackLeftMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -2948,7 +2914,7 @@ static void LimLaunchedRCTrackRightMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -2975,7 +2941,6 @@ static void LimLaunchedRCTrackRightMediumHalfLoopUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -3005,7 +2970,7 @@ static void LimLaunchedRCTrackRightMediumHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
+
             break;
         case 3:
             switch (direction)
@@ -3032,7 +2997,6 @@ static void LimLaunchedRCTrackRightMediumHalfLoopUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
             break;
         case 4:
             switch (direction)
@@ -3062,7 +3026,6 @@ static void LimLaunchedRCTrackRightMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -3125,7 +3088,7 @@ static void LimLaunchedRCTrackLeftZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -3151,7 +3114,7 @@ static void LimLaunchedRCTrackLeftZeroGRollUp(
                         { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -3193,7 +3156,6 @@ static void LimLaunchedRCTrackLeftZeroGRollUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }
@@ -3241,7 +3203,7 @@ static void LimLaunchedRCTrackRightZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -3267,7 +3229,7 @@ static void LimLaunchedRCTrackRightZeroGRollUp(
                         { 0, 0, height }, { { 0, 6, height + 28 }, { 32, 20, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -3309,7 +3271,6 @@ static void LimLaunchedRCTrackRightZeroGRollUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }
@@ -3366,7 +3327,7 @@ static void LimLaunchedRCTrackLeftLargeZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 1:
             switch (direction)
@@ -3395,7 +3356,7 @@ static void LimLaunchedRCTrackLeftLargeZeroGRollUp(
                         { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -3424,7 +3385,7 @@ static void LimLaunchedRCTrackLeftLargeZeroGRollUp(
                         { 0, 0, height }, { { 0, 6, height + 40 }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -3466,7 +3427,6 @@ static void LimLaunchedRCTrackLeftLargeZeroGRollUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }
@@ -3508,7 +3468,7 @@ static void LimLaunchedRCTrackRightLargeZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 1:
             switch (direction)
@@ -3537,7 +3497,7 @@ static void LimLaunchedRCTrackRightLargeZeroGRollUp(
                         { 0, 0, height }, { { 0, 30, height }, { 32, 0, 96 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -3567,7 +3527,6 @@ static void LimLaunchedRCTrackRightLargeZeroGRollUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
         case 3:
             switch (direction)
@@ -3609,7 +3568,6 @@ static void LimLaunchedRCTrackRightLargeZeroGRollUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }
@@ -3667,13 +3625,11 @@ static void LimLaunchedRCTrackLeftBankToLeftQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -3709,7 +3665,7 @@ static void LimLaunchedRCTrackLeftBankToLeftQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -3751,13 +3707,11 @@ static void LimLaunchedRCTrackRightBankToRightQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -3793,7 +3747,7 @@ static void LimLaunchedRCTrackRightBankToRightQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -3832,13 +3786,11 @@ static void LimLaunchedRCTrackLeftQuarterTurn325DegDownToLeftBank(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -3877,7 +3829,7 @@ static void LimLaunchedRCTrackLeftQuarterTurn325DegDownToLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -3916,13 +3868,11 @@ static void LimLaunchedRCTrackRightQuarterTurn325DegDownToRightBank(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -3961,7 +3911,7 @@ static void LimLaunchedRCTrackRightQuarterTurn325DegDownToRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -4000,7 +3950,7 @@ static void LimLaunchedRCTrackLeftLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -4030,7 +3980,7 @@ static void LimLaunchedRCTrackLeftLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -4056,7 +4006,7 @@ static void LimLaunchedRCTrackLeftLargeHalfLoopUp(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 3:
             switch (direction)
@@ -4086,7 +4036,7 @@ static void LimLaunchedRCTrackLeftLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 4:
             switch (direction)
@@ -4112,7 +4062,7 @@ static void LimLaunchedRCTrackLeftLargeHalfLoopUp(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 128);
+
             break;
         case 5:
             switch (direction)
@@ -4138,7 +4088,7 @@ static void LimLaunchedRCTrackLeftLargeHalfLoopUp(
                         { 0, 0, height }, { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 6:
             switch (direction)
@@ -4167,7 +4117,7 @@ static void LimLaunchedRCTrackLeftLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -4206,7 +4156,7 @@ static void LimLaunchedRCTrackRightLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -4236,7 +4186,7 @@ static void LimLaunchedRCTrackRightLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -4262,7 +4212,7 @@ static void LimLaunchedRCTrackRightLargeHalfLoopUp(
                         { 0, 0, height }, { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 3:
             switch (direction)
@@ -4292,7 +4242,7 @@ static void LimLaunchedRCTrackRightLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 4:
             switch (direction)
@@ -4318,7 +4268,7 @@ static void LimLaunchedRCTrackRightLargeHalfLoopUp(
                         { 0, 0, height }, { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 128);
+
             break;
         case 5:
             switch (direction)
@@ -4344,7 +4294,7 @@ static void LimLaunchedRCTrackRightLargeHalfLoopUp(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 6:
             switch (direction)
@@ -4373,7 +4323,7 @@ static void LimLaunchedRCTrackRightLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -4435,7 +4385,6 @@ static void LimLaunchedRCTrackFlatTo60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 64);
 }
 
 static void LimLaunchedRCTrack60DegUpToFlat(
@@ -4478,7 +4427,6 @@ static void LimLaunchedRCTrack60DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void LimLaunchedRCTrackFlatTo60DegDown(
@@ -4510,7 +4458,7 @@ static void LimLaunchedRCTrackDiagFlatTo60DegUp(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
             switch (direction)
@@ -4521,7 +4469,7 @@ static void LimLaunchedRCTrackDiagFlatTo60DegUp(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 2:
             switch (direction)
@@ -4532,7 +4480,7 @@ static void LimLaunchedRCTrackDiagFlatTo60DegUp(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -4553,7 +4501,7 @@ static void LimLaunchedRCTrackDiagFlatTo60DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -4573,7 +4521,7 @@ static void LimLaunchedRCTrackDiag60DegUpToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -4584,7 +4532,7 @@ static void LimLaunchedRCTrackDiag60DegUpToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -4595,7 +4543,7 @@ static void LimLaunchedRCTrackDiag60DegUpToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -4616,7 +4564,7 @@ static void LimLaunchedRCTrackDiag60DegUpToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -4636,7 +4584,7 @@ static void LimLaunchedRCTrackDiagFlatTo60DegDown(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -4647,7 +4595,7 @@ static void LimLaunchedRCTrackDiagFlatTo60DegDown(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -4658,7 +4606,7 @@ static void LimLaunchedRCTrackDiagFlatTo60DegDown(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -4679,7 +4627,7 @@ static void LimLaunchedRCTrackDiagFlatTo60DegDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -4699,7 +4647,7 @@ static void LimLaunchedRCTrackDiag60DegDownToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
             switch (direction)
@@ -4710,7 +4658,7 @@ static void LimLaunchedRCTrackDiag60DegDownToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 2:
             switch (direction)
@@ -4721,7 +4669,7 @@ static void LimLaunchedRCTrackDiag60DegDownToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -4742,7 +4690,7 @@ static void LimLaunchedRCTrackDiag60DegDownToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -4775,8 +4723,6 @@ static void LimLaunchedRCTrackBooster(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 TrackPaintFunction GetTrackPaintFunctionLimLaunchedRC(OpenRCT2::TrackElemType trackType)

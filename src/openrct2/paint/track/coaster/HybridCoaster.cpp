@@ -44,8 +44,6 @@ namespace OpenRCT2::HybridRC
                 session, direction, GetTrackColour(session).WithIndex(SPR_G2_HYBRID_TRACK_FLAT + (direction & 1)),
                 { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
         }
-
-        PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
     }
 
     static void TrackStation(
@@ -73,8 +71,6 @@ namespace OpenRCT2::HybridRC
         }
 
         TrackPaintUtilDrawNarrowStationPlatform(session, ride, direction, height, 10, trackElement, StationBaseType::none, 0);
-
-        PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
     }
 
     static void Track25DegUp(
@@ -100,7 +96,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 56);
     }
 
     static void Track60DegUp(
@@ -151,7 +146,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 104);
     }
 
     static void TrackFlatTo25DegUp(
@@ -177,7 +171,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 48);
     }
 
     static void Track25DegUpTo60DegUp(
@@ -255,7 +248,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 72);
     }
 
     static void Track60DegUpTo25DegUp(
@@ -334,7 +326,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 72);
     }
 
     static void Track25DegUpToFlat(
@@ -360,7 +351,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 40);
     }
 
     static void Track25DegDown(
@@ -435,7 +425,6 @@ namespace OpenRCT2::HybridRC
                     { { boundBoxOffsets[direction].x, boundBoxOffsets[direction].y, boundBoxOffsets[direction].z },
                       { boundBoxLengths[direction].x, boundBoxLengths[direction].y, boundBoxLengths[direction].z } });
 
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 1:
                 break;
@@ -484,7 +473,6 @@ namespace OpenRCT2::HybridRC
                 {
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 1:
                 break;
@@ -534,7 +522,6 @@ namespace OpenRCT2::HybridRC
 
                 break;
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 80);
     }
 
     static void Track60DegDownTo90DegDown(
@@ -570,7 +557,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 80);
+
                 break;
             case 1:
                 break;
@@ -614,10 +601,9 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
                 switch (direction)
@@ -647,7 +633,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -686,7 +672,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -736,10 +722,10 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 2:
                 switch (direction)
@@ -769,7 +755,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -799,10 +785,10 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 4:
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 5:
                 switch (direction)
@@ -832,7 +818,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 6:
                 switch (direction)
@@ -871,7 +857,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -921,7 +907,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -951,7 +937,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 2:
                 switch (direction)
@@ -981,7 +967,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -999,7 +985,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 4:
                 switch (direction)
@@ -1025,7 +1011,7 @@ namespace OpenRCT2::HybridRC
                             { 0, 0, height }, { { 16, 0, height }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -1067,7 +1053,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -1097,7 +1083,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 2:
                 switch (direction)
@@ -1127,7 +1113,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -1145,7 +1131,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 4:
                 switch (direction)
@@ -1171,7 +1157,7 @@ namespace OpenRCT2::HybridRC
                             { 0, 0, height }, { { 16, 16, height }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -1213,16 +1199,11 @@ namespace OpenRCT2::HybridRC
                 break;
             case 1:
 
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
-
                 break;
             case 2:
 
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
-
                 break;
             case 3:
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 
                 break;
         }
@@ -1243,7 +1224,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -1269,7 +1250,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 2:
                 switch (direction)
@@ -1295,7 +1276,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -1306,7 +1287,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -1326,7 +1307,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -1352,7 +1333,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 2:
                 switch (direction)
@@ -1378,7 +1359,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -1389,7 +1370,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -1424,7 +1405,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 1:
                 if (trackElement.HasChain())
@@ -1451,7 +1432,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 if (trackElement.HasChain())
@@ -1478,7 +1458,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
                 if (trackElement.HasChain())
@@ -1504,7 +1483,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
         }
     }
@@ -1539,7 +1518,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 1:
                 if (trackElement.HasChain())
@@ -1566,7 +1545,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 if (trackElement.HasChain())
@@ -1593,7 +1571,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
                 if (trackElement.HasChain())
@@ -1619,7 +1596,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
         }
     }
@@ -1654,7 +1631,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
             case 1:
                 if (trackElement.HasChain())
@@ -1681,7 +1658,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 if (trackElement.HasChain())
@@ -1708,7 +1684,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
                 if (trackElement.HasChain())
@@ -1734,7 +1709,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
         }
     }
@@ -1769,7 +1744,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 1:
                 if (trackElement.HasChain())
@@ -1796,7 +1771,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 if (trackElement.HasChain())
@@ -1823,7 +1797,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
                 if (trackElement.HasChain())
@@ -1849,7 +1822,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
         }
     }
@@ -1963,8 +1936,6 @@ namespace OpenRCT2::HybridRC
                 }
                 break;
         }
-
-        PaintUtilSetGeneralSupportHeight(session, height + 56);
     }
 
     static void TrackDiag25DegDownToFlat(
@@ -1997,7 +1968,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
             case 1:
                 if (trackElement.HasChain())
@@ -2024,7 +1995,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 if (trackElement.HasChain())
@@ -2051,7 +2021,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
                 if (trackElement.HasChain())
@@ -2077,7 +2046,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
         }
     }
@@ -2112,7 +2081,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 104);
+
                 break;
             case 1:
                 if (trackElement.HasChain())
@@ -2139,7 +2108,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 104);
                 break;
             case 2:
                 if (trackElement.HasChain())
@@ -2166,7 +2134,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 104);
                 break;
             case 3:
                 if (trackElement.HasChain())
@@ -2192,7 +2159,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 104);
+
                 break;
         }
     }
@@ -2227,7 +2194,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
                 if (trackElement.HasChain())
@@ -2254,7 +2221,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
                 if (trackElement.HasChain())
@@ -2281,7 +2247,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
                 if (trackElement.HasChain())
@@ -2307,7 +2272,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -2342,7 +2307,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
                 if (trackElement.HasChain())
@@ -2369,7 +2334,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
                 if (trackElement.HasChain())
@@ -2396,7 +2360,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
                 if (trackElement.HasChain())
@@ -2422,7 +2385,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -2457,7 +2420,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 104);
+
                 break;
             case 1:
                 if (trackElement.HasChain())
@@ -2484,7 +2447,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 104);
                 break;
             case 2:
                 if (trackElement.HasChain())
@@ -2511,7 +2473,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 104);
                 break;
             case 3:
                 if (trackElement.HasChain())
@@ -2537,7 +2498,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 104);
+
                 break;
         }
     }
@@ -2572,7 +2533,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
                 if (trackElement.HasChain())
@@ -2599,7 +2560,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
                 if (trackElement.HasChain())
@@ -2626,7 +2586,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
                 if (trackElement.HasChain())
@@ -2652,7 +2611,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -2687,7 +2646,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
                 if (trackElement.HasChain())
@@ -2714,7 +2673,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
                 if (trackElement.HasChain())
@@ -2741,7 +2699,6 @@ namespace OpenRCT2::HybridRC
                     }
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
                 if (trackElement.HasChain())
@@ -2767,7 +2724,7 @@ namespace OpenRCT2::HybridRC
                             break;
                     }
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -2805,8 +2762,6 @@ namespace OpenRCT2::HybridRC
                     { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
                 break;
         }
-
-        PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
     }
 
     static void TrackFlatToRightBank(
@@ -2842,8 +2797,6 @@ namespace OpenRCT2::HybridRC
                     { 0, 0, height }, { { 0, 27, height }, { 32, 1, 26 } });
                 break;
         }
-
-        PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
     }
 
     static void TrackLeftBankToflat(
@@ -2900,7 +2853,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 48);
     }
 
     static void TrackRightBankTo25DegUp(
@@ -2943,7 +2895,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 48);
     }
 
     static void Track25DegUpToLeftBank(
@@ -2986,7 +2937,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 40);
     }
 
     static void Track25DegUpToRightBank(
@@ -3029,7 +2979,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 40);
     }
 
     static void TrackLeftBankTo25DegDown(
@@ -3093,8 +3042,6 @@ namespace OpenRCT2::HybridRC
                     { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
                 break;
         }
-
-        PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
     }
 
     static void TrackRightbank(
@@ -3120,7 +3067,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -3137,7 +3084,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
                 switch (direction)
@@ -3150,7 +3096,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
                 switch (direction)
@@ -3162,7 +3107,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -3183,7 +3128,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -3196,7 +3141,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
                 switch (direction)
@@ -3213,7 +3157,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
                 switch (direction)
@@ -3225,7 +3168,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -3246,7 +3189,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -3263,7 +3206,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
                 switch (direction)
@@ -3276,7 +3218,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
                 switch (direction)
@@ -3288,7 +3229,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -3309,7 +3250,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -3322,7 +3263,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
                 switch (direction)
@@ -3339,7 +3279,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
                 switch (direction)
@@ -3351,7 +3290,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -3372,7 +3311,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
             case 1:
                 switch (direction)
@@ -3389,7 +3328,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -3402,7 +3340,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
                 switch (direction)
@@ -3414,7 +3351,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
         }
     }
@@ -3435,7 +3372,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
             case 1:
                 switch (direction)
@@ -3448,7 +3385,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -3465,7 +3401,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
                 switch (direction)
@@ -3477,7 +3412,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
         }
     }
@@ -3498,7 +3433,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 1:
                 switch (direction)
@@ -3515,7 +3450,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 switch (direction)
@@ -3528,7 +3462,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
                 switch (direction)
@@ -3540,7 +3473,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
         }
     }
@@ -3561,7 +3494,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 1:
                 switch (direction)
@@ -3574,7 +3507,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 switch (direction)
@@ -3591,7 +3523,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
                 switch (direction)
@@ -3603,7 +3534,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
         }
     }
@@ -3665,8 +3596,6 @@ namespace OpenRCT2::HybridRC
                 }
                 break;
         }
-
-        PaintUtilSetGeneralSupportHeight(session, height + 56);
     }
 
     static void TrackDiagRightBankTo25DegDown(
@@ -3726,8 +3655,6 @@ namespace OpenRCT2::HybridRC
                 }
                 break;
         }
-
-        PaintUtilSetGeneralSupportHeight(session, height + 56);
     }
 
     static void TrackDiag25DegDownToLeftBank(
@@ -3746,7 +3673,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
             case 1:
                 switch (direction)
@@ -3763,7 +3690,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -3776,7 +3702,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
                 switch (direction)
@@ -3788,7 +3713,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
         }
     }
@@ -3809,7 +3734,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
             case 1:
                 switch (direction)
@@ -3822,7 +3747,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -3839,7 +3763,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
                 switch (direction)
@@ -3851,7 +3774,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
         }
     }
@@ -3872,7 +3795,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -3889,7 +3812,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
                 switch (direction)
@@ -3902,7 +3824,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
                 switch (direction)
@@ -3914,7 +3835,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -3935,7 +3856,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -3948,7 +3869,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
                 switch (direction)
@@ -3965,7 +3885,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
                 switch (direction)
@@ -3977,7 +3896,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -4025,10 +3944,9 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
                 switch (direction)
@@ -4058,7 +3976,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -4103,7 +4021,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -4159,10 +4077,10 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 2:
                 switch (direction)
@@ -4192,7 +4110,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -4225,10 +4143,10 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 4:
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 5:
                 switch (direction)
@@ -4258,7 +4176,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 6:
                 switch (direction)
@@ -4303,7 +4221,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -4359,7 +4277,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -4392,7 +4310,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 2:
                 switch (direction)
@@ -4422,7 +4340,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -4440,7 +4358,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 4:
                 switch (direction)
@@ -4469,7 +4387,7 @@ namespace OpenRCT2::HybridRC
                             { 0, 0, height }, { { 16, 0, height }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -4517,7 +4435,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -4550,7 +4468,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 2:
                 switch (direction)
@@ -4580,7 +4498,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -4598,7 +4516,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 4:
                 switch (direction)
@@ -4630,7 +4548,7 @@ namespace OpenRCT2::HybridRC
                             { 0, 0, height }, { { 16, 16, height }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -4688,10 +4606,9 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 switch (direction)
@@ -4709,7 +4626,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 3:
                 switch (direction)
@@ -4746,7 +4663,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -4788,10 +4705,9 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 switch (direction)
@@ -4809,7 +4725,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 3:
                 switch (direction)
@@ -4845,7 +4761,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -4903,10 +4819,10 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 2:
                 switch (direction)
@@ -4936,7 +4852,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 3:
                 switch (direction)
@@ -4966,10 +4882,10 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
+
                 break;
             case 4:
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 5:
                 switch (direction)
@@ -4999,7 +4915,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 6:
                 switch (direction)
@@ -5035,7 +4951,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -5077,10 +4993,10 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 2:
                 switch (direction)
@@ -5110,7 +5026,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 3:
                 switch (direction)
@@ -5140,10 +5056,10 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
+
                 break;
             case 4:
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 5:
                 switch (direction)
@@ -5173,7 +5089,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 6:
                 switch (direction)
@@ -5209,7 +5125,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -5273,8 +5189,6 @@ namespace OpenRCT2::HybridRC
 
                 break;
         }
-
-        PaintUtilSetGeneralSupportHeight(session, height + 104);
     }
 
     static void TrackRightQuarterTurn1Tile60DegUp(
@@ -5320,8 +5234,6 @@ namespace OpenRCT2::HybridRC
 
                 break;
         }
-
-        PaintUtilSetGeneralSupportHeight(session, height + 104);
     }
 
     static void TrackLeftQuarterTurn1Tile60DegDown(
@@ -5375,7 +5287,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 96);
                 break;
             case 1:
                 break;
@@ -5419,7 +5330,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 96);
                 break;
             case 1:
                 break;
@@ -5477,7 +5387,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 56);
     }
 
     static void Track25DegUpToRightBanked25DegUp(
@@ -5517,7 +5426,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 56);
     }
 
     static void TrackLeftBanked25DegUpTo25DegUp(
@@ -5557,7 +5465,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 56);
     }
 
     static void TrackRightBanked25DegUpTo25DegUp(
@@ -5597,7 +5504,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 56);
     }
 
     static void TrackLeftBanked25DegDownTo25DegDown(
@@ -5668,7 +5574,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 48);
     }
 
     static void TrackRightBankedFlatToRightBanked25DegUp(
@@ -5711,7 +5616,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 48);
     }
 
     static void TrackLeftBanked25DegUpToLeftBankedFlat(
@@ -5754,7 +5658,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 40);
     }
 
     static void TrackRightBanked25DegUpToRightBankedFlat(
@@ -5797,7 +5700,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 40);
     }
 
     static void TrackLeftBankedFlatToLeftBanked25DegDown(
@@ -5866,7 +5768,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 56);
     }
 
     static void Track25DegUpRightBanked(
@@ -5903,7 +5804,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 56);
     }
 
     static void Track25DegDownLeftBanked(
@@ -5957,7 +5857,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 48);
     }
 
     static void TrackFlatToRightBanked25DegUp(
@@ -5997,7 +5896,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 48);
     }
 
     static void TrackLeftBanked25DegUpToFlat(
@@ -6037,7 +5935,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 40);
     }
 
     static void TrackRightBanked25DegUpToFlat(
@@ -6077,7 +5974,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 40);
     }
 
     static void TrackFlatToLeftBanked25DegDown(
@@ -6153,10 +6049,9 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 switch (direction)
@@ -6174,7 +6069,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 3:
                 switch (direction)
@@ -6222,7 +6117,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -6269,10 +6164,9 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 switch (direction)
@@ -6290,7 +6184,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 3:
                 switch (direction)
@@ -6338,7 +6232,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -6406,10 +6300,10 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 2:
                 switch (direction)
@@ -6447,7 +6341,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 3:
                 switch (direction)
@@ -6485,10 +6379,10 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
+
                 break;
             case 4:
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 5:
                 switch (direction)
@@ -6526,7 +6420,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 6:
                 switch (direction)
@@ -6574,7 +6468,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -6624,10 +6518,10 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 2:
                 switch (direction)
@@ -6665,7 +6559,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 3:
                 switch (direction)
@@ -6703,10 +6597,10 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
+
                 break;
             case 4:
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 5:
                 switch (direction)
@@ -6744,7 +6638,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 6:
                 switch (direction)
@@ -6792,7 +6686,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -6852,7 +6746,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -6882,7 +6776,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 2:
                 switch (direction)
@@ -6912,7 +6806,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -6951,7 +6845,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -6993,7 +6887,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -7023,7 +6917,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 2:
                 switch (direction)
@@ -7053,7 +6947,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -7092,7 +6986,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -7140,7 +7034,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -7158,7 +7052,6 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
                 switch (direction)
@@ -7188,7 +7081,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -7233,7 +7126,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 4:
                 switch (direction)
@@ -7278,7 +7171,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 5:
                 switch (direction)
@@ -7296,7 +7189,6 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 6:
                 switch (direction)
@@ -7326,7 +7218,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 7:
                 switch (direction)
@@ -7365,7 +7257,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -7413,7 +7305,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -7431,7 +7323,6 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
                 switch (direction)
@@ -7461,7 +7352,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -7506,7 +7397,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 4:
                 switch (direction)
@@ -7551,7 +7442,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 5:
                 switch (direction)
@@ -7569,7 +7460,6 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 6:
                 switch (direction)
@@ -7599,7 +7489,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 7:
                 switch (direction)
@@ -7638,7 +7528,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -7712,10 +7602,10 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 2:
                 switch (direction)
@@ -7745,7 +7635,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -7778,10 +7668,10 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 4:
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 5:
                 switch (direction)
@@ -7811,7 +7701,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 6:
                 switch (direction)
@@ -7856,7 +7746,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 7:
                 switch (direction)
@@ -7901,10 +7791,10 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 8:
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 9:
                 switch (direction)
@@ -7934,7 +7824,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 10:
                 switch (direction)
@@ -7967,10 +7857,10 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 11:
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 12:
                 switch (direction)
@@ -8000,7 +7890,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 13:
                 switch (direction)
@@ -8039,7 +7929,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -8087,10 +7977,10 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 2:
                 switch (direction)
@@ -8120,7 +8010,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 3:
                 switch (direction)
@@ -8153,10 +8043,10 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 4:
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 5:
                 switch (direction)
@@ -8186,7 +8076,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 6:
                 switch (direction)
@@ -8231,7 +8121,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 7:
                 switch (direction)
@@ -8276,10 +8166,10 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 8:
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 9:
                 switch (direction)
@@ -8309,7 +8199,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 10:
                 switch (direction)
@@ -8342,10 +8232,10 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 11:
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 12:
                 switch (direction)
@@ -8375,7 +8265,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 13:
                 switch (direction)
@@ -8414,7 +8304,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
         }
     }
@@ -8491,7 +8381,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -8530,7 +8420,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -8578,7 +8467,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
         }
     }
@@ -8629,7 +8517,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
                 break;
             case 1:
                 switch (direction)
@@ -8668,7 +8556,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -8716,7 +8603,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
         }
     }
@@ -8776,7 +8663,6 @@ namespace OpenRCT2::HybridRC
                 {
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 40);
                 break;
             case 1:
                 switch (direction)
@@ -8809,7 +8695,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -8857,7 +8742,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 40);
                 break;
         }
     }
@@ -8902,7 +8786,6 @@ namespace OpenRCT2::HybridRC
                 {
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 40);
                 break;
             case 1:
                 switch (direction)
@@ -8935,7 +8818,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -8983,7 +8865,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 40);
                 break;
         }
     }
@@ -9042,7 +8923,6 @@ namespace OpenRCT2::HybridRC
                 {
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 88);
                 break;
             case 1:
                 switch (direction)
@@ -9078,7 +8958,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
                 switch (direction)
@@ -9117,7 +8996,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
                 break;
             case 3:
                 switch (direction)
@@ -9165,7 +9043,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 40);
                 break;
         }
     }
@@ -9210,7 +9087,6 @@ namespace OpenRCT2::HybridRC
                 {
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 88);
                 break;
             case 1:
                 switch (direction)
@@ -9246,7 +9122,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
                 switch (direction)
@@ -9285,7 +9160,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
                 break;
             case 3:
                 switch (direction)
@@ -9333,7 +9207,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 40);
                 break;
         }
     }
@@ -9394,7 +9267,7 @@ namespace OpenRCT2::HybridRC
                             { 0, 0, height }, { { 0, 32, height + 8 }, { 32, 1, 48 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 88);
+
                 break;
             case 1:
                 switch (direction)
@@ -9433,7 +9306,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
                 break;
             case 2:
                 switch (direction)
@@ -9475,7 +9347,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
         }
     }
@@ -9494,8 +9366,6 @@ namespace OpenRCT2::HybridRC
         PaintAddImageAsParentRotated(
             session, direction, GetTrackColour(session).WithIndex(SPR_G2_HYBRID_TRACK_BRAKE + (direction & 1)),
             { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
-
-        PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
     }
 
     static void TrackOnRidePhoto(
@@ -9545,7 +9415,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
             case 1:
                 switch (direction)
@@ -9572,7 +9442,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -9599,7 +9468,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
                 break;
             case 3:
                 switch (direction)
@@ -9635,7 +9503,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 80);
+
                 break;
         }
     }
@@ -9674,7 +9542,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 80);
+
                 break;
             case 1:
                 switch (direction)
@@ -9701,7 +9569,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 80);
                 break;
             case 2:
                 switch (direction)
@@ -9728,7 +9595,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
                 switch (direction)
@@ -9764,7 +9630,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 40);
+
                 break;
         }
     }
@@ -9790,8 +9656,6 @@ namespace OpenRCT2::HybridRC
         PaintAddImageAsParentRotated(
             session, direction, GetTrackColour(session).WithIndex(SPR_G2_HYBRID_TRACK_BLOCK_BRAKE + (direction & 1)),
             { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
-
-        PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
     }
 
     static void Trackbooster(
@@ -9801,8 +9665,6 @@ namespace OpenRCT2::HybridRC
         PaintAddImageAsParentRotated(
             session, direction, GetTrackColour(session).WithIndex(SPR_G2_HYBRID_TRACK_BOOSTER + (direction & 1)),
             { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
-
-        PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
     }
 
     static void TrackpoweredLift(
@@ -9819,7 +9681,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 56);
     }
 
     static void TrackLeftBankToLeftQuarterTurn3Tile25DegUp(
@@ -9862,10 +9723,9 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -9883,7 +9743,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
             case 3:
                 switch (direction)
@@ -9922,7 +9782,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
+
                 break;
         }
     }
@@ -9971,10 +9831,9 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -9992,7 +9851,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
             case 3:
                 switch (direction)
@@ -10032,7 +9891,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
+
                 break;
         }
     }
@@ -10078,10 +9937,9 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -10099,7 +9957,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
             case 3:
                 switch (direction)
@@ -10145,7 +10003,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
+
                 break;
         }
     }
@@ -10187,10 +10045,9 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
+
                 break;
             case 1:
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -10208,7 +10065,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
             case 3:
                 switch (direction)
@@ -10250,7 +10107,7 @@ namespace OpenRCT2::HybridRC
 
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 64);
+
                 break;
         }
     }
@@ -10290,7 +10147,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
                 switch (direction)
@@ -10318,7 +10175,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
                 switch (direction)
@@ -10347,11 +10203,9 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 4:
                 switch (direction)
@@ -10379,7 +10233,7 @@ namespace OpenRCT2::HybridRC
                             { { 16, 0, height }, { 20, 16, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -10422,7 +10276,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
                 switch (direction)
@@ -10453,7 +10307,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
                 switch (direction)
@@ -10484,11 +10337,9 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 4:
                 switch (direction)
@@ -10518,7 +10369,7 @@ namespace OpenRCT2::HybridRC
                             { { 16, 16, height }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -10557,7 +10408,7 @@ namespace OpenRCT2::HybridRC
                             { { 0, 0, height }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
                 switch (direction)
@@ -10588,11 +10439,9 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
                 switch (direction)
@@ -10623,7 +10472,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 4:
                 switch (direction)
@@ -10658,7 +10506,6 @@ namespace OpenRCT2::HybridRC
                 {
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
         }
     }
@@ -10697,7 +10544,7 @@ namespace OpenRCT2::HybridRC
                             { { 0, 0, height }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
                 switch (direction)
@@ -10728,11 +10575,9 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
                 switch (direction)
@@ -10763,7 +10608,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 4:
                 switch (direction)
@@ -10797,7 +10641,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 1)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -10852,7 +10696,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
                 switch (direction)
@@ -10869,7 +10713,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
                 switch (direction)
@@ -10882,7 +10725,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
                 switch (direction)
@@ -10900,7 +10742,7 @@ namespace OpenRCT2::HybridRC
                     case 3:
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -10921,7 +10763,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
                 switch (direction)
@@ -10934,7 +10776,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
                 switch (direction)
@@ -10951,7 +10792,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
                 switch (direction)
@@ -10969,7 +10809,7 @@ namespace OpenRCT2::HybridRC
                     case 3:
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -10990,7 +10830,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 1:
                 switch (direction)
@@ -11007,7 +10847,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 switch (direction)
@@ -11020,7 +10859,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
                 switch (direction)
@@ -11038,7 +10876,7 @@ namespace OpenRCT2::HybridRC
                     case 3:
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
         }
     }
@@ -11059,7 +10897,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 1:
                 switch (direction)
@@ -11072,7 +10910,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 switch (direction)
@@ -11089,7 +10926,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
                 switch (direction)
@@ -11107,7 +10943,7 @@ namespace OpenRCT2::HybridRC
                     case 3:
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
         }
     }
@@ -11158,7 +10994,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
             case 1:
                 switch (direction)
@@ -11175,7 +11011,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -11188,7 +11023,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
                 switch (direction)
@@ -11206,7 +11040,7 @@ namespace OpenRCT2::HybridRC
                     case 3:
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
         }
     }
@@ -11227,7 +11061,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
             case 1:
                 switch (direction)
@@ -11240,7 +11074,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -11257,7 +11090,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
                 switch (direction)
@@ -11275,7 +11107,7 @@ namespace OpenRCT2::HybridRC
                     case 3:
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
         }
     }
@@ -11296,7 +11128,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 1:
                 switch (direction)
@@ -11313,7 +11145,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 switch (direction)
@@ -11326,7 +11157,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
                 switch (direction)
@@ -11344,7 +11174,7 @@ namespace OpenRCT2::HybridRC
                     case 3:
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
         }
     }
@@ -11365,7 +11195,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 1:
                 switch (direction)
@@ -11378,7 +11208,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 switch (direction)
@@ -11395,7 +11224,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
                 switch (direction)
@@ -11413,7 +11241,7 @@ namespace OpenRCT2::HybridRC
                     case 3:
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
         }
     }
@@ -11466,7 +11294,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 1:
                 switch (direction)
@@ -11483,7 +11311,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 switch (direction)
@@ -11496,7 +11323,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
                 switch (direction)
@@ -11514,7 +11340,7 @@ namespace OpenRCT2::HybridRC
                     case 3:
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
         }
     }
@@ -11535,7 +11361,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 1:
                 switch (direction)
@@ -11548,7 +11374,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 switch (direction)
@@ -11565,7 +11390,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
                 switch (direction)
@@ -11583,7 +11407,7 @@ namespace OpenRCT2::HybridRC
                     case 3:
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
         }
     }
@@ -11618,7 +11442,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
             case 1:
                 switch (direction)
@@ -11635,7 +11459,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -11648,7 +11471,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
                 switch (direction)
@@ -11666,7 +11488,7 @@ namespace OpenRCT2::HybridRC
                     case 3:
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
         }
     }
@@ -11687,7 +11509,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
             case 1:
                 switch (direction)
@@ -11700,7 +11522,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
                 switch (direction)
@@ -11717,7 +11538,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
                 switch (direction)
@@ -11735,7 +11555,7 @@ namespace OpenRCT2::HybridRC
                     case 3:
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 48);
+
                 break;
         }
     }
@@ -11756,7 +11576,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 1:
                 switch (direction)
@@ -11773,7 +11593,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 switch (direction)
@@ -11786,7 +11605,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
                 switch (direction)
@@ -11804,7 +11622,7 @@ namespace OpenRCT2::HybridRC
                     case 3:
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
         }
     }
@@ -11825,7 +11643,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 1:
                 switch (direction)
@@ -11838,7 +11656,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 switch (direction)
@@ -11855,7 +11672,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
                 switch (direction)
@@ -11873,7 +11689,7 @@ namespace OpenRCT2::HybridRC
                     case 3:
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
         }
     }
@@ -11946,7 +11762,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
                 switch (direction)
@@ -11977,7 +11793,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
                 switch (direction)
@@ -12008,11 +11823,9 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 4:
                 switch (direction)
@@ -12042,7 +11855,7 @@ namespace OpenRCT2::HybridRC
                             { 0, 0, height }, { { 16, 0, height }, { 20, 16, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -12085,7 +11898,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 3)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
                 switch (direction)
@@ -12116,7 +11929,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
                 switch (direction)
@@ -12147,11 +11959,9 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 4:
                 switch (direction)
@@ -12181,7 +11991,7 @@ namespace OpenRCT2::HybridRC
                             { 0, 0, height }, { { 16, 16, height }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -12224,7 +12034,7 @@ namespace OpenRCT2::HybridRC
                             { 0, 0, height }, { { 0, 0, height }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
                 switch (direction)
@@ -12259,11 +12069,9 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
                 switch (direction)
@@ -12298,7 +12106,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 4:
                 switch (direction)
@@ -12336,7 +12143,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 1 || direction == 2)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -12379,7 +12186,7 @@ namespace OpenRCT2::HybridRC
                             { 0, 0, height }, { { 0, 0, height }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
             case 1:
                 switch (direction)
@@ -12414,11 +12221,9 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
                 switch (direction)
@@ -12453,7 +12258,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 4:
                 switch (direction)
@@ -12491,7 +12295,7 @@ namespace OpenRCT2::HybridRC
                 if (direction == 0 || direction == 1)
                 {
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 72);
+
                 break;
         }
     }
@@ -12548,7 +12352,6 @@ namespace OpenRCT2::HybridRC
         else
         {
         }
-        PaintUtilSetGeneralSupportHeight(session, height + 56);
     }
 
     static void TrackDiag25DegDownBrakes(
@@ -12566,7 +12369,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
             case 1:
                 switch (direction)
@@ -12578,7 +12381,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
                 switch (direction)
@@ -12590,7 +12392,6 @@ namespace OpenRCT2::HybridRC
                         break;
                 }
 
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
                 switch (direction)
@@ -12601,7 +12402,7 @@ namespace OpenRCT2::HybridRC
                             { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetGeneralSupportHeight(session, height + 56);
+
                 break;
         }
     }

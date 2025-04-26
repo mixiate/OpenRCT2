@@ -55,8 +55,6 @@ static void FlyingRCTrackStation(
     else if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void FlyingRCTrack90DegToInvertedFlatQuarterLoopUp(
@@ -89,7 +87,7 @@ static void FlyingRCTrack90DegToInvertedFlatQuarterLoopUp(
                         { { 4, 6, height + 8 }, { 2, 20, 31 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 1:
             switch (direction)
@@ -115,7 +113,7 @@ static void FlyingRCTrack90DegToInvertedFlatQuarterLoopUp(
                         { { -8, 6, height }, { 2, 20, 31 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 2:
             switch (direction)
@@ -144,7 +142,7 @@ static void FlyingRCTrack90DegToInvertedFlatQuarterLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -207,7 +205,6 @@ static void FlyingRCTrackHalfLoopInvertedUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 1:
             switch (direction)
@@ -233,7 +230,7 @@ static void FlyingRCTrackHalfLoopInvertedUp(
                         { { 29, 20, height + 29 }, { 2, 2, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 2:
             switch (direction)
@@ -259,7 +256,7 @@ static void FlyingRCTrackHalfLoopInvertedUp(
                         { { 29, 29, height + 2 }, { 2, 2, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 3:
             switch (direction)
@@ -288,7 +285,7 @@ static void FlyingRCTrackHalfLoopInvertedUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -333,7 +330,7 @@ static void FlyingRCTrackLeftFlyingLargeHalfLoopInvertedUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -359,7 +356,7 @@ static void FlyingRCTrackLeftFlyingLargeHalfLoopInvertedUp(
                         { { 0, 6, height + 29 }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -385,7 +382,7 @@ static void FlyingRCTrackLeftFlyingLargeHalfLoopInvertedUp(
                         { { 30, 16, height + 70 }, { 2, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 3:
             switch (direction)
@@ -411,7 +408,7 @@ static void FlyingRCTrackLeftFlyingLargeHalfLoopInvertedUp(
                         { { 30, 16, height + 100 }, { 2, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 4:
             switch (direction)
@@ -437,7 +434,7 @@ static void FlyingRCTrackLeftFlyingLargeHalfLoopInvertedUp(
                         { { 30, 0, height + 90 }, { 2, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 128);
+
             break;
         case 5:
             switch (direction)
@@ -463,7 +460,7 @@ static void FlyingRCTrackLeftFlyingLargeHalfLoopInvertedUp(
                         { { 30, 0, height + 140 }, { 2, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 6:
             switch (direction)
@@ -496,7 +493,7 @@ static void FlyingRCTrackLeftFlyingLargeHalfLoopInvertedUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -534,7 +531,7 @@ static void FlyingRCTrackRightFlyingLargeHalfLoopInvertedUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -560,7 +557,7 @@ static void FlyingRCTrackRightFlyingLargeHalfLoopInvertedUp(
                         { { 0, 6, height + 29 }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -586,7 +583,7 @@ static void FlyingRCTrackRightFlyingLargeHalfLoopInvertedUp(
                         { { 0, 0, height + 70 }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 3:
             switch (direction)
@@ -612,7 +609,7 @@ static void FlyingRCTrackRightFlyingLargeHalfLoopInvertedUp(
                         { { 0, 0, height + 100 }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 4:
             switch (direction)
@@ -638,7 +635,7 @@ static void FlyingRCTrackRightFlyingLargeHalfLoopInvertedUp(
                         { { 30, 23, height + 110 }, { 2, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 128);
+
             break;
         case 5:
             switch (direction)
@@ -664,7 +661,7 @@ static void FlyingRCTrackRightFlyingLargeHalfLoopInvertedUp(
                         { { 30, 16, height + 140 }, { 2, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 6:
             switch (direction)
@@ -697,7 +694,7 @@ static void FlyingRCTrackRightFlyingLargeHalfLoopInvertedUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }

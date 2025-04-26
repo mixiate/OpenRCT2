@@ -67,8 +67,6 @@ static void SteeplechaseTrackFlat(
                 break;
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void SteeplechaseTrackStation(
@@ -91,8 +89,6 @@ static void SteeplechaseTrackStation(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A59B8 */
@@ -151,7 +147,6 @@ static void SteeplechaseTrack25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008A59C8 */
@@ -210,7 +205,6 @@ static void SteeplechaseTrackFlatTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008A59D8 */
@@ -269,7 +263,6 @@ static void SteeplechaseTrack25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008A59E8 */
@@ -330,10 +323,9 @@ static void SteeplechaseTrackLeftQuarterTurn5(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -355,7 +347,7 @@ static void SteeplechaseTrackLeftQuarterTurn5(
                         session, direction, session.TrackColours.WithIndex(28692), { 0, 16, height }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -377,10 +369,9 @@ static void SteeplechaseTrackLeftQuarterTurn5(
                         session, direction, session.TrackColours.WithIndex(28691), { 0, 0, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 5:
             switch (direction)
@@ -402,7 +393,7 @@ static void SteeplechaseTrackLeftQuarterTurn5(
                         session, direction, session.TrackColours.WithIndex(28690), { 16, 0, height }, { 16, 32, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 6:
             switch (direction)
@@ -437,7 +428,7 @@ static void SteeplechaseTrackLeftQuarterTurn5(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -482,7 +473,7 @@ static void SteeplechaseTrackSBendLeft(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         }
         case 1:
@@ -506,7 +497,6 @@ static void SteeplechaseTrackSBendLeft(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -529,7 +519,6 @@ static void SteeplechaseTrackSBendLeft(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             switch (direction)
@@ -560,7 +549,7 @@ static void SteeplechaseTrackSBendLeft(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -596,7 +585,7 @@ static void SteeplechaseTrackSBendRight(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -619,7 +608,6 @@ static void SteeplechaseTrackSBendRight(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -642,7 +630,6 @@ static void SteeplechaseTrackSBendRight(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             switch (direction)
@@ -674,7 +661,7 @@ static void SteeplechaseTrackSBendRight(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -711,11 +698,10 @@ static void SteeplechaseTrackLeftQuarterTurn3(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         }
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -737,7 +723,7 @@ static void SteeplechaseTrackLeftQuarterTurn3(
                         session, direction, session.TrackColours.WithIndex(28678), { 16, 16, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
         {
@@ -769,7 +755,7 @@ static void SteeplechaseTrackLeftQuarterTurn3(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         }
     }
@@ -802,8 +788,6 @@ static void SteeplechaseTrackBrakes(
                 session, direction, session.TrackColours.WithIndex(28636), { 0, 6, height }, { 32, 20, 3 });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A5AD8 */
@@ -841,7 +825,7 @@ static void SteeplechaseTrackLeftEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -867,7 +851,7 @@ static void SteeplechaseTrackLeftEighthToDiag(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -893,10 +877,10 @@ static void SteeplechaseTrackLeftEighthToDiag(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -923,7 +907,6 @@ static void SteeplechaseTrackLeftEighthToDiag(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
     }
 }
@@ -963,7 +946,7 @@ static void SteeplechaseTrackRightEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -989,7 +972,7 @@ static void SteeplechaseTrackRightEighthToDiag(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -1015,10 +998,10 @@ static void SteeplechaseTrackRightEighthToDiag(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -1045,7 +1028,6 @@ static void SteeplechaseTrackRightEighthToDiag(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
     }
 }
@@ -1092,8 +1074,6 @@ static void SteeplechaseTrackDiagBrakes(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008A5B38 */
@@ -1126,7 +1106,7 @@ static void SteeplechaseTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -1151,7 +1131,7 @@ static void SteeplechaseTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -1176,7 +1156,7 @@ static void SteeplechaseTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -1202,7 +1182,6 @@ static void SteeplechaseTrackDiag25DegUp(
                 }
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }
@@ -1237,7 +1216,7 @@ static void SteeplechaseTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -1262,7 +1241,7 @@ static void SteeplechaseTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -1287,7 +1266,7 @@ static void SteeplechaseTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -1313,7 +1292,6 @@ static void SteeplechaseTrackDiagFlatTo25DegUp(
                 }
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -1348,7 +1326,7 @@ static void SteeplechaseTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -1373,7 +1351,7 @@ static void SteeplechaseTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -1398,7 +1376,7 @@ static void SteeplechaseTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -1424,7 +1402,6 @@ static void SteeplechaseTrackDiag25DegUpToFlat(
                 }
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }
@@ -1459,7 +1436,7 @@ static void SteeplechaseTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -1484,7 +1461,7 @@ static void SteeplechaseTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -1509,7 +1486,7 @@ static void SteeplechaseTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -1535,7 +1512,6 @@ static void SteeplechaseTrackDiag25DegDown(
                 }
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }
@@ -1645,8 +1621,6 @@ static void SteeplechaseTrackDiagFlatTo25DegDown(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008A5B58 */
@@ -1679,7 +1653,7 @@ static void SteeplechaseTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -1704,7 +1678,7 @@ static void SteeplechaseTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -1729,7 +1703,7 @@ static void SteeplechaseTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -1755,7 +1729,6 @@ static void SteeplechaseTrackDiag25DegDownToFlat(
                 }
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -1778,8 +1751,6 @@ static void SteeplechaseTrackBlockBrakes(
                 session, direction, session.TrackColours.WithIndex(28636), { 0, 6, height }, { 32, 20, 3 });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 TrackPaintFunction GetTrackPaintFunctionSteeplechase(OpenRCT2::TrackElemType trackType)

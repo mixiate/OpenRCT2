@@ -46,8 +46,6 @@ static void SuspendedMonorailTrackFlat(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008637A4, 0x008637B4, 0x008637C4 */
@@ -73,8 +71,6 @@ static void SuspendedMonorailTrackStation(
             { { 0, 6, height + 32 }, { 32, 20, 3 } });
         DrawSupportsSideBySide(session, direction, height, session.SupportColours, supportType.metal);
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x00863704 */
@@ -131,7 +127,6 @@ static void SuspendedMonorailTrack25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x00863714 */
@@ -188,7 +183,6 @@ static void SuspendedMonorailTrackFlatTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 64);
 }
 
 /** rct2: 0x00863724 */
@@ -245,7 +239,6 @@ static void SuspendedMonorailTrack25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x00863734 */
@@ -307,10 +300,8 @@ static void SuspendedMonorailTrackLeftQuarterTurn5(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             switch (direction)
@@ -334,7 +325,7 @@ static void SuspendedMonorailTrackLeftQuarterTurn5(
                         { { 0, 16, height + 32 }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -359,10 +350,9 @@ static void SuspendedMonorailTrackLeftQuarterTurn5(
                         session, direction, session.TrackColours.WithIndex(25869), { 0, 0, height + 32 }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 5:
             switch (direction)
@@ -386,7 +376,7 @@ static void SuspendedMonorailTrackLeftQuarterTurn5(
                         { { 16, 0, height + 32 }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 6:
             switch (direction)
@@ -422,7 +412,6 @@ static void SuspendedMonorailTrackLeftQuarterTurn5(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -472,7 +461,6 @@ static void SuspendedMonorailTrackSBendLeft(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
             switch (direction)
@@ -497,7 +485,6 @@ static void SuspendedMonorailTrackSBendLeft(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             switch (direction)
@@ -522,7 +509,6 @@ static void SuspendedMonorailTrackSBendLeft(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -558,7 +544,6 @@ static void SuspendedMonorailTrackSBendLeft(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -598,7 +583,6 @@ static void SuspendedMonorailTrackSBendRight(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
             switch (direction)
@@ -623,7 +607,6 @@ static void SuspendedMonorailTrackSBendRight(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             switch (direction)
@@ -648,7 +631,6 @@ static void SuspendedMonorailTrackSBendRight(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -684,7 +666,6 @@ static void SuspendedMonorailTrackSBendRight(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -724,10 +705,8 @@ static void SuspendedMonorailTrackLeftQuarterTurn3(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             switch (direction)
@@ -752,7 +731,7 @@ static void SuspendedMonorailTrackLeftQuarterTurn3(
                         { { 16, 16, height + 32 }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -788,7 +767,6 @@ static void SuspendedMonorailTrackLeftQuarterTurn3(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -838,7 +816,6 @@ static void SuspendedMonorailTrackLeftEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
             switch (direction)
@@ -864,7 +841,7 @@ static void SuspendedMonorailTrackLeftEighthToDiag(
                         { { 0, 16, height + 32 }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -890,10 +867,10 @@ static void SuspendedMonorailTrackLeftEighthToDiag(
                         { { 0, 0, height + 32 }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 4:
             switch (direction)
@@ -936,7 +913,6 @@ static void SuspendedMonorailTrackLeftEighthToDiag(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -976,7 +952,6 @@ static void SuspendedMonorailTrackRightEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
             switch (direction)
@@ -1002,7 +977,7 @@ static void SuspendedMonorailTrackRightEighthToDiag(
                         { { 0, 0, height + 32 }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -1028,10 +1003,10 @@ static void SuspendedMonorailTrackRightEighthToDiag(
                         { { 0, 16, height + 32 }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 4:
             switch (direction)
@@ -1074,7 +1049,6 @@ static void SuspendedMonorailTrackRightEighthToDiag(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -1107,10 +1081,6 @@ static void SuspendedMonorailTrackDiagFlat(
     TrackPaintUtilDiagTilesPaint(
         session, 3, height + 32, direction, trackSequence, kSuspendedMonorailDiagFlatImages, defaultDiagTileOffsets,
         defaultDiagBoundLengths, nullptr);
-
-    if (trackSequence == 3)
-
-        PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x00863824 */
@@ -1129,7 +1099,7 @@ static void SuspendedMonorailTrackDiag25DegUp(
                         { { -16, -16, height + 48 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -1140,7 +1110,7 @@ static void SuspendedMonorailTrackDiag25DegUp(
                         { { -16, -16, height + 48 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -1151,7 +1121,7 @@ static void SuspendedMonorailTrackDiag25DegUp(
                         { { -16, -16, height + 48 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -1179,7 +1149,6 @@ static void SuspendedMonorailTrackDiag25DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
     }
 }
@@ -1200,7 +1169,7 @@ static void SuspendedMonorailTrackDiagFlatTo25DegUp(
                         { { -16, -16, height + 40 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
             switch (direction)
@@ -1211,7 +1180,7 @@ static void SuspendedMonorailTrackDiagFlatTo25DegUp(
                         { { -16, -16, height + 40 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 2:
             switch (direction)
@@ -1222,7 +1191,7 @@ static void SuspendedMonorailTrackDiagFlatTo25DegUp(
                         { { -16, -16, height + 40 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -1250,7 +1219,6 @@ static void SuspendedMonorailTrackDiagFlatTo25DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
     }
 }
@@ -1271,7 +1239,7 @@ static void SuspendedMonorailTrackDiag25DegUpToFlat(
                         { { -16, -16, height + 40 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -1282,7 +1250,7 @@ static void SuspendedMonorailTrackDiag25DegUpToFlat(
                         { { -16, -16, height + 40 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -1293,7 +1261,7 @@ static void SuspendedMonorailTrackDiag25DegUpToFlat(
                         { { -16, -16, height + 40 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -1321,7 +1289,6 @@ static void SuspendedMonorailTrackDiag25DegUpToFlat(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
     }
 }
@@ -1342,7 +1309,7 @@ static void SuspendedMonorailTrackDiag25DegDown(
                         { { -16, -16, height + 48 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -1353,7 +1320,7 @@ static void SuspendedMonorailTrackDiag25DegDown(
                         { { -16, -16, height + 48 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -1364,7 +1331,7 @@ static void SuspendedMonorailTrackDiag25DegDown(
                         { { -16, -16, height + 48 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -1392,7 +1359,6 @@ static void SuspendedMonorailTrackDiag25DegDown(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
     }
 }
@@ -1461,8 +1427,6 @@ static void SuspendedMonorailTrackDiagFlatTo25DegDown(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x00863844 */
@@ -1481,7 +1445,7 @@ static void SuspendedMonorailTrackDiag25DegDownToFlat(
                         { { -16, -16, height + 40 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
             switch (direction)
@@ -1492,7 +1456,7 @@ static void SuspendedMonorailTrackDiag25DegDownToFlat(
                         { { -16, -16, height + 40 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 2:
             switch (direction)
@@ -1503,7 +1467,7 @@ static void SuspendedMonorailTrackDiag25DegDownToFlat(
                         { { -16, -16, height + 40 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -1531,7 +1495,6 @@ static void SuspendedMonorailTrackDiag25DegDownToFlat(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
     }
 }

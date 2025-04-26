@@ -163,8 +163,6 @@ static void classicStandUpRCTrackFlatToLeftBank(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void classicStandUpRCTrackFlatToRightBank(
@@ -184,8 +182,6 @@ static void classicStandUpRCTrackFlatToRightBank(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void classicStandUpRCTrackLeftBankToFlat(
@@ -335,8 +331,6 @@ static void classicStandUpRCTrackBankedRightQuarterTurn5(
             break;
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void classicStandUpRCTrackBankedLeftQuarterTurn5(
@@ -373,7 +367,6 @@ static void classicStandUpRCTrackLeftBankTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void classicStandUpRCTrackRightBankTo25DegUp(
@@ -400,7 +393,6 @@ static void classicStandUpRCTrackRightBankTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void classicStandUpRCTrack25DegUpToLeftBank(
@@ -427,7 +419,6 @@ static void classicStandUpRCTrack25DegUpToLeftBank(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void classicStandUpRCTrack25DegUpToRightBank(
@@ -454,7 +445,6 @@ static void classicStandUpRCTrack25DegUpToRightBank(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void classicStandUpRCTrackLeftBankTo25DegDown(
@@ -506,8 +496,6 @@ static void classicStandUpRCTrackLeftBank(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void classicStandUpRCTrackRightBank(
@@ -546,7 +534,7 @@ static void classicStandUpRCTrackLeftEighthBankToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -572,7 +560,7 @@ static void classicStandUpRCTrackLeftEighthBankToDiag(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -598,10 +586,10 @@ static void classicStandUpRCTrackLeftEighthBankToDiag(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -628,7 +616,6 @@ static void classicStandUpRCTrackLeftEighthBankToDiag(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
     }
 }
@@ -661,7 +648,7 @@ static void classicStandUpRCTrackRightEighthBankToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -687,7 +674,7 @@ static void classicStandUpRCTrackRightEighthBankToDiag(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -713,10 +700,10 @@ static void classicStandUpRCTrackRightEighthBankToDiag(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -743,7 +730,6 @@ static void classicStandUpRCTrackRightEighthBankToDiag(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
     }
 }
@@ -831,8 +817,6 @@ static void classicStandUpRCTrackRightBankedQuarterTurn3(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void classicStandUpRCTrackLeftBankedQuarterTurn3(
@@ -895,8 +879,6 @@ static inline void classicStandUpRCTrackDiagFlatWithBank(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void classicStandUpRCTrackDiagFlatToLeftBank(
@@ -1002,8 +984,6 @@ static void classicStandUpRCTrackDiagFlatTo25DegUpBanked(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void classicStandUpRCTrackDiagLeftBankTo25DegUp(
@@ -1092,8 +1072,6 @@ static void classicStandUpRCTrackDiag25DegUpToFlatBanked(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void classicStandUpRCTrackDiag25DegUpToLeftBank(

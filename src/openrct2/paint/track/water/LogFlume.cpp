@@ -176,8 +176,6 @@ static void PaintLogFlumeTrackFlat(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void PaintLogFlumeTrackStation(
@@ -200,8 +198,6 @@ static void PaintLogFlumeTrackStation(
         {
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void PaintLogFlumeTrack25DegUp(
@@ -231,7 +227,6 @@ static void PaintLogFlumeTrack25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void PaintLogFlumeTrackFlatTo25DegUp(
@@ -261,7 +256,6 @@ static void PaintLogFlumeTrackFlatTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void PaintLogFlumeTrack25DegUpToFlat(
@@ -291,7 +285,6 @@ static void PaintLogFlumeTrack25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void PaintLogFlumeTrack25DegDown(
@@ -321,7 +314,6 @@ static void PaintLogFlumeTrack25DegDown(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void PaintLogFlumeTrackFlatTo25DegDown(
@@ -351,7 +343,6 @@ static void PaintLogFlumeTrackFlatTo25DegDown(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void PaintLogFlumeTrack25DegDownToFlat(
@@ -381,7 +372,6 @@ static void PaintLogFlumeTrack25DegDownToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void PaintLogFlumeTrackSBendLeft(
@@ -461,8 +451,6 @@ static void PaintLogFlumeTrackSBendLeft(
         {
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void PaintLogFlumeTrackSBendRight(
@@ -542,8 +530,6 @@ static void PaintLogFlumeTrackSBendRight(
         {
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void PaintLogFlumeTrackLeftQuarterTurn3Tiles(
@@ -611,8 +597,6 @@ static void PaintLogFlumeTrackLeftQuarterTurn3Tiles(
         case 3:
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void PaintLogFlumeTrackRightQuarterTurn3Tiles(
@@ -680,8 +664,6 @@ static void PaintLogFlumeTrackRightQuarterTurn3Tiles(
         case 3:
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void PaintLogFlumeTrackOnRidePhoto(
@@ -715,8 +697,6 @@ static void PaintLogFlumeTrackReverser(
 
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 2 } });
     PaintAddImageAsParentRotated(session, direction, frontImageId, { 0, 0, height }, { { 0, 27, height }, { 32, 1, 26 } });
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 // Steep Additions added by OpenRCT2
@@ -750,7 +730,6 @@ static void LogFlumeTrack25Down60(
         {
         }
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void LogFlumeTrack60Down(
@@ -782,7 +761,6 @@ static void LogFlumeTrack60Down(
         {
         }
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void LogFlumeTrack60Down25(
@@ -814,7 +792,6 @@ static void LogFlumeTrack60Down25(
         {
         }
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 TrackPaintFunction GetTrackPaintFunctionLogFlume(OpenRCT2::TrackElemType trackType)

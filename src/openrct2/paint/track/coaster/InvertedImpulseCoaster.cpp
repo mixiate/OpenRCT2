@@ -47,8 +47,6 @@ static void InvertedImpulseRCTrackFlat(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008B0470, 0x008B0480, 0x008B0490 */
@@ -74,8 +72,6 @@ static void InvertedImpulseRCTrackStation(
             { { 0, 6, height + 29 }, { 32, 20, 3 } });
         DrawSupportsSideBySide(session, direction, height, session.SupportColours, supportType.metal);
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008B04A0 */
@@ -132,7 +128,6 @@ static void InvertedImpulseRCTrack25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x008B04B0 */
@@ -169,7 +164,6 @@ static void InvertedImpulseRCTrack60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 120);
 }
 
 /** rct2: 0x008B04C0 */
@@ -223,7 +217,6 @@ static void InvertedImpulseRCTrackFlatTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 64);
 }
 
 /** rct2: 0x008B04D0 */
@@ -266,7 +259,6 @@ static void InvertedImpulseRCTrack25DegUpTo60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 88);
 }
 
 /** rct2: 0x008B04E0 */
@@ -309,7 +301,6 @@ static void InvertedImpulseRCTrack60DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 88);
 }
 
 /** rct2: 0x008B04F0 */
@@ -363,7 +354,6 @@ static void InvertedImpulseRCTrack25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008B0500 */
@@ -448,7 +438,6 @@ static void InvertedImpulseRCTrack90DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 1:
             break;
@@ -498,7 +487,6 @@ static void InvertedImpulseRCTrack60DegUpTo90DegUp(
             {
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 1:
             break;
@@ -551,7 +539,6 @@ static void InvertedImpulseRCTrack90DegUpTo60DegUp(
 
             break;
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 96);
 }
 
 /** rct2: 0x008B0590 */
@@ -588,7 +575,7 @@ static void InvertedImpulseRCTrack60DegDownTo90DegDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
+
             break;
         case 1:
             break;
@@ -636,7 +623,6 @@ static void InvertedImpulseRCTrackLeftQuarterTurn190DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
             break;
         case 1:
             break;
@@ -684,7 +670,6 @@ static void InvertedImpulseRCTrackRightQuarterTurn190DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
             break;
         case 1:
             break;

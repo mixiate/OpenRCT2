@@ -184,8 +184,6 @@ static void AirPoweredVerticalRCTrackFlat(
 
     auto imageId = session.TrackColours.WithIndex(imageIds[direction]);
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 1 } });
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void AirPoweredVerticalRCTrackStation(
@@ -203,8 +201,6 @@ static void AirPoweredVerticalRCTrackStation(
         { { 0, 6, height + 1 }, { 32, 20, 1 } });
 
     TrackPaintUtilDrawNarrowStationPlatform(session, ride, direction, height, 5, trackElement, StationBaseType::b, -2);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void AirPoweredVerticalRCTrackRightQuarterTurn5(
@@ -243,8 +239,6 @@ static void AirPoweredVerticalRCTrackRightQuarterTurn5(
     };
 
     TrackPaintUtilRightQuarterTurn5TilesPaint3(session, height, direction, trackSequence, session.TrackColours, imageIds);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void AirPoweredVerticalRCTrackLeftQuarterTurn5(
@@ -276,8 +270,6 @@ static void AirPoweredVerticalRCTrackFlatToLeftBank(
         imageId = session.TrackColours.WithIndex(imageIds[direction][1]);
         PaintAddImageAsParentRotated(session, direction, imageId, { 0, 0, height }, { { 0, 27, height }, { 32, 1, 26 } });
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AFB84 */
@@ -300,8 +292,6 @@ static void AirPoweredVerticalRCTrackFlatToRightBank(
         imageId = session.TrackColours.WithIndex(imageIds[direction][1]);
         PaintAddImageAsParentRotated(session, direction, imageId, { 0, 0, height }, { { 0, 27, height }, { 32, 1, 26 } });
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void AirPoweredVerticalRCTrackLeftBankToFlat(
@@ -368,8 +358,6 @@ static void AirPoweredVerticalRCTrackBankedRightQuarterTurn5(
         auto imageId = session.TrackColours.WithIndex(SPR_AIR_POWERED_VERTICAL_RC_BANKED_QUARTER_TURN_5_FRONT_SE_NE_PART_0);
         PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 27, 0, height }, { 1, 32, 26 } });
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void AirPoweredVerticalRCTrackBankedLeftQuarterTurn5(
@@ -402,8 +390,6 @@ static void AirPoweredVerticalRCTrackLeftBank(
     {
         PaintAddImageAsParentRotated(session, direction, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void AirPoweredVerticalRCTrackRightBank(
@@ -426,8 +412,6 @@ static void AirPoweredVerticalRCTrackBrakes(
 
     auto imageId = session.TrackColours.WithIndex(imageIds[direction]);
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 1 } });
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void AirPoweredVerticalRCTrackVerticalSlopeUp(
@@ -525,9 +509,6 @@ static void AirPoweredVerticalRCTrackVerticalSlopeUp(
     static constexpr int8_t bbHeights12[] = {
         1, 6, 14, 27, 59,
     };
-    static constexpr int32_t supportHeights[] = {
-        48, 64, 128, 176, 208, 240, 240,
-    };
 
     auto supportsImageId = session.SupportColours.WithIndex(supportImageIds[trackSequence][direction]);
     auto trackImageId = session.TrackColours.WithIndex(trackImageIds[trackSequence][direction]);
@@ -609,8 +590,6 @@ static void AirPoweredVerticalRCTrackVerticalSlopeUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + supportHeights[trackSequence]);
 }
 
 static void AirPoweredVerticalRCTrackVerticalUp(
@@ -646,8 +625,6 @@ static void AirPoweredVerticalRCTrackVerticalUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 80);
 }
 
 static void AirPoweredVerticalRCTrackVerticalTop(
@@ -748,8 +725,6 @@ static void AirPoweredVerticalRCTrackVerticalTop(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 80);
 }
 
 static void AirPoweredVerticalRCTrackVerticalDown(
@@ -790,8 +765,6 @@ static void AirPoweredVerticalRCTrackBooster(
         auto imageId = colour.WithIndex(SPR_REVERSE_FREEFALL_RC_FLAT_SW_NE);
         PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 1 } });
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void AirPoweredVerticalRCTrackOnridePhoto(

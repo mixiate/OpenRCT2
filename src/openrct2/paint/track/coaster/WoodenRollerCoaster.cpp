@@ -2036,8 +2036,6 @@ static void WoodenRCTrackFlat(
     WoodenRCTrackPaint<isClassic>(
         session, direction, imageIds[direction][isChained], railsImageIds[direction][isChained], { 0, 2, height },
         { { 0, 3, height }, { 32, 25, 2 } });
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 template<bool isClassic>
@@ -2074,8 +2072,6 @@ static void WoodenRCTrackStation(
             session, direction, colours.WithIndex(stationImageIds[drewStation][direction]), { 0, 2, height },
             { { 0, 2, height }, { 32, 27, 2 } });
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AC578 */
@@ -2156,8 +2152,6 @@ static void WoodenRCTrack25DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AC588 */
@@ -2217,8 +2211,6 @@ static void WoodenRCTrack60DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 /** rct2: 0x008AC598 */
@@ -2299,8 +2291,6 @@ static void WoodenRCTrackFlatTo25DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008AC5A8 */
@@ -2405,8 +2395,6 @@ static void WoodenRCTrack25DegUpTo60DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x008AC5B8 */
@@ -2512,8 +2500,6 @@ static void WoodenRCTrack60DegUpTo25DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x008AC5C8 */
@@ -2594,8 +2580,6 @@ static void WoodenRCTrack25DegUpToFlat(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008AC5D8 */
@@ -2964,7 +2948,6 @@ static void WoodenRCTrackRightQuarterTurn5(
     if (supportSubType[direction][trackSequence] != WoodenSupportSubType::Null)
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 template<bool isClassic>
@@ -3116,10 +3099,10 @@ static void WoodenRCTrackLeftQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -3173,7 +3156,7 @@ static void WoodenRCTrackLeftQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -3227,10 +3210,10 @@ static void WoodenRCTrackLeftQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 5:
             switch (direction)
@@ -3290,7 +3273,7 @@ static void WoodenRCTrackLeftQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -3356,7 +3339,7 @@ static void WoodenRCTrackLeftQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -3418,10 +3401,10 @@ static void WoodenRCTrackRightQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -3475,7 +3458,7 @@ static void WoodenRCTrackRightQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -3529,10 +3512,10 @@ static void WoodenRCTrackRightQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 5:
             switch (direction)
@@ -3592,7 +3575,7 @@ static void WoodenRCTrackRightQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -3659,7 +3642,7 @@ static void WoodenRCTrackRightQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -3749,7 +3732,7 @@ static void WoodenRCTrackSBendLeft(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -3803,7 +3786,7 @@ static void WoodenRCTrackSBendLeft(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -3857,7 +3840,7 @@ static void WoodenRCTrackSBendLeft(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -3920,7 +3903,7 @@ static void WoodenRCTrackSBendLeft(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -3988,7 +3971,7 @@ static void WoodenRCTrackSBendRight(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -4042,7 +4025,7 @@ static void WoodenRCTrackSBendRight(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -4096,7 +4079,7 @@ static void WoodenRCTrackSBendRight(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -4159,7 +4142,7 @@ static void WoodenRCTrackSBendRight(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -4195,7 +4178,7 @@ static void WoodenRCTrackLeftVerticalLoop(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -4221,7 +4204,7 @@ static void WoodenRCTrackLeftVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -4247,7 +4230,7 @@ static void WoodenRCTrackLeftVerticalLoop(
                         { 4, 16, 119 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 3:
             switch (direction)
@@ -4273,13 +4256,11 @@ static void WoodenRCTrackLeftVerticalLoop(
                         { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 6:
             switch (direction)
@@ -4305,7 +4286,7 @@ static void WoodenRCTrackLeftVerticalLoop(
                         { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 7:
             switch (direction)
@@ -4331,7 +4312,7 @@ static void WoodenRCTrackLeftVerticalLoop(
                         { 3, 16, 119 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 8:
             switch (direction)
@@ -4357,7 +4338,7 @@ static void WoodenRCTrackLeftVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 9:
             switch (direction)
@@ -4389,7 +4370,7 @@ static void WoodenRCTrackLeftVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -4425,7 +4406,6 @@ static void WoodenRCTrackRightVerticalLoop(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 1:
             switch (direction)
@@ -4451,7 +4431,6 @@ static void WoodenRCTrackRightVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -4477,7 +4456,6 @@ static void WoodenRCTrackRightVerticalLoop(
                         { 5, 16, 119 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
             break;
         case 3:
             switch (direction)
@@ -4503,13 +4481,10 @@ static void WoodenRCTrackRightVerticalLoop(
                         { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 6:
             switch (direction)
@@ -4535,7 +4510,6 @@ static void WoodenRCTrackRightVerticalLoop(
                         { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 7:
             switch (direction)
@@ -4561,7 +4535,6 @@ static void WoodenRCTrackRightVerticalLoop(
                         { 4, 16, 119 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
             break;
         case 8:
             switch (direction)
@@ -4587,7 +4560,6 @@ static void WoodenRCTrackRightVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 9:
             switch (direction)
@@ -4619,7 +4591,6 @@ static void WoodenRCTrackRightVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }
@@ -4687,10 +4658,9 @@ static void WoodenRCTrackLeftQuarterTurn3(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -4740,7 +4710,7 @@ static void WoodenRCTrackLeftQuarterTurn3(
                         { { 16, 16, height + 27 }, { 16, 16, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -4803,7 +4773,7 @@ static void WoodenRCTrackLeftQuarterTurn3(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -4893,13 +4863,12 @@ static void WoodenRCTrackLeftQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -4968,7 +4937,7 @@ static void WoodenRCTrackLeftQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -5036,13 +5005,12 @@ static void WoodenRCTrackRightQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -5111,7 +5079,7 @@ static void WoodenRCTrackRightQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -5267,8 +5235,6 @@ static void WoodenRCTrackLeftQuarterTurn160DegUp(
                 { { 28, 28, height }, { 2, 2, 87 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 /** rct2: 0x008ACB78 */
@@ -5336,8 +5302,6 @@ static void WoodenRCTrackRightQuarterTurn160DegUp(
                 { { 2, 2, height + 86 }, { 28, 28, 1 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 /** rct2: 0x008ACB88 */
@@ -5376,8 +5340,6 @@ static void WoodenRCTrackBrakes(
     WoodenRCTrackPaint<isClassic>(
         session, direction, imageIds[direction][0], imageIds[direction][1], { 0, 2, height },
         { { 0, 3, height }, { 32, 25, 2 } });
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008ACC78 */
@@ -5449,7 +5411,6 @@ static void WoodenRCTrack25DegUpLeftBanked(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008ACC88 */
@@ -5521,7 +5482,6 @@ static void WoodenRCTrack25DegUpRightBanked(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AC878 */
@@ -5567,8 +5527,6 @@ static void WoodenRCTrackOnRidePhoto(
     }
 
     TrackPaintUtilOnridePhotoSmallPaint(session, direction, height + 16, trackElement);
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 template<bool isClassic>
@@ -5639,7 +5597,7 @@ static void WoodenRCTrackFlatTo60DegUpLongBase(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -5699,7 +5657,6 @@ static void WoodenRCTrackFlatTo60DegUpLongBase(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             switch (direction)
@@ -5760,7 +5717,6 @@ static void WoodenRCTrackFlatTo60DegUpLongBase(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
         case 3:
             switch (direction)
@@ -5805,7 +5761,7 @@ static void WoodenRCTrackFlatTo60DegUpLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
     }
 }
@@ -5855,7 +5811,7 @@ static void WoodenRCTrack60DegUpToFlatLongBase(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 1:
             switch (direction)
@@ -5918,7 +5874,6 @@ static void WoodenRCTrack60DegUpToFlatLongBase(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
             break;
         case 2:
             switch (direction)
@@ -5981,7 +5936,6 @@ static void WoodenRCTrack60DegUpToFlatLongBase(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             switch (direction)
@@ -6053,7 +6007,7 @@ static void WoodenRCTrack60DegUpToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -6209,7 +6163,6 @@ static void WoodenRCTrackWaterSplash(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 1:
             switch (direction)
@@ -6312,7 +6265,6 @@ static void WoodenRCTrackWaterSplash(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             switch (direction)
@@ -6369,7 +6321,6 @@ static void WoodenRCTrackWaterSplash(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -6472,7 +6423,6 @@ static void WoodenRCTrackWaterSplash(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 4:
             switch (direction)
@@ -6575,7 +6525,6 @@ static void WoodenRCTrackWaterSplash(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -6643,7 +6592,7 @@ static void WoodenRCTrackLeftEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -6697,7 +6646,7 @@ static void WoodenRCTrackLeftEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -6751,7 +6700,7 @@ static void WoodenRCTrackLeftEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -6769,7 +6718,7 @@ static void WoodenRCTrackLeftEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -6819,7 +6768,7 @@ static void WoodenRCTrackLeftEighthToDiag(
                         { { 16, 0, height + 27 }, { 16, 16, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -6887,7 +6836,7 @@ static void WoodenRCTrackRightEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -6941,7 +6890,7 @@ static void WoodenRCTrackRightEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -6995,7 +6944,7 @@ static void WoodenRCTrackRightEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -7013,7 +6962,7 @@ static void WoodenRCTrackRightEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -7063,7 +7012,7 @@ static void WoodenRCTrackRightEighthToDiag(
                         { { 16, 16, height }, { 16, 16, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -7247,8 +7196,6 @@ static void WoodenRCTrackDiagBrakes(
     if (kWoodenRCDiagonalSupports[trackSequence][direction] != WoodenSupportSubType::Null)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 template<bool isClassic>
@@ -7513,8 +7460,6 @@ static void WoodenRCTrackDiagBlockBrakes(
     if (kWoodenRCDiagonalSupports[trackSequence][direction] != WoodenSupportSubType::Null)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AC888 */
@@ -7674,8 +7619,6 @@ static void WoodenRCTrackDiagFlat(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AC8B8 */
@@ -7715,7 +7658,7 @@ static void WoodenRCTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -7758,7 +7701,7 @@ static void WoodenRCTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -7802,7 +7745,6 @@ static void WoodenRCTrackDiag25DegUp(
                 }
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             if (trackElement.HasChain())
@@ -7833,7 +7775,7 @@ static void WoodenRCTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -7858,7 +7800,7 @@ static void WoodenRCTrackDiag60DegUp(
                         { { -16, -16, height }, { 32, 32, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 1:
             switch (direction)
@@ -7879,7 +7821,6 @@ static void WoodenRCTrackDiag60DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
             break;
         case 2:
             switch (direction)
@@ -7900,7 +7841,6 @@ static void WoodenRCTrackDiag60DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
             break;
         case 3:
             switch (direction)
@@ -7914,7 +7854,7 @@ static void WoodenRCTrackDiag60DegUp(
                         { { -16, -16, height }, { 32, 32, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
     }
 }
@@ -7956,7 +7896,7 @@ static void WoodenRCTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -8019,7 +7959,7 @@ static void WoodenRCTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -8082,7 +8022,7 @@ static void WoodenRCTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -8113,7 +8053,7 @@ static void WoodenRCTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -8138,7 +8078,7 @@ static void WoodenRCTrackDiag25DegUpTo60DegUp(
                         { { -16, -16, height }, { 32, 32, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -8159,7 +8099,6 @@ static void WoodenRCTrackDiag25DegUpTo60DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -8180,7 +8119,6 @@ static void WoodenRCTrackDiag25DegUpTo60DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 3:
             switch (direction)
@@ -8194,7 +8132,7 @@ static void WoodenRCTrackDiag25DegUpTo60DegUp(
                         { { -16, -16, height }, { 32, 32, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -8219,7 +8157,7 @@ static void WoodenRCTrackDiag60DegUpTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -8240,7 +8178,6 @@ static void WoodenRCTrackDiag60DegUpTo25DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -8261,7 +8198,6 @@ static void WoodenRCTrackDiag60DegUpTo25DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 3:
             switch (direction)
@@ -8275,7 +8211,7 @@ static void WoodenRCTrackDiag60DegUpTo25DegUp(
                         { { 0, 0, height }, { 16, 16, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -8317,7 +8253,7 @@ static void WoodenRCTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -8360,7 +8296,7 @@ static void WoodenRCTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -8404,7 +8340,6 @@ static void WoodenRCTrackDiag25DegUpToFlat(
                 }
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             if (trackElement.HasChain())
@@ -8435,7 +8370,7 @@ static void WoodenRCTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -8477,7 +8412,7 @@ static void WoodenRCTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -8520,7 +8455,7 @@ static void WoodenRCTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -8564,7 +8499,6 @@ static void WoodenRCTrackDiag25DegDown(
                 }
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             if (trackElement.HasChain())
@@ -8595,7 +8529,7 @@ static void WoodenRCTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -8620,7 +8554,7 @@ static void WoodenRCTrackDiag60DegDown(
                         { { -16, -16, height }, { 32, 32, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 1:
             switch (direction)
@@ -8641,7 +8575,6 @@ static void WoodenRCTrackDiag60DegDown(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
             break;
         case 2:
             switch (direction)
@@ -8662,7 +8595,6 @@ static void WoodenRCTrackDiag60DegDown(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
             break;
         case 3:
             switch (direction)
@@ -8676,7 +8608,7 @@ static void WoodenRCTrackDiag60DegDown(
                         { { -16, -16, height }, { 32, 32, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
     }
 }
@@ -8835,8 +8767,6 @@ static void WoodenRCTrackDiagFlatTo25DegDown(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AC928 */
@@ -8859,7 +8789,7 @@ static void WoodenRCTrackDiag25DegDownTo60DegDown(
                         { { 0, 0, height }, { 16, 16, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -8880,7 +8810,6 @@ static void WoodenRCTrackDiag25DegDownTo60DegDown(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -8901,7 +8830,6 @@ static void WoodenRCTrackDiag25DegDownTo60DegDown(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 3:
             switch (direction)
@@ -8915,7 +8843,7 @@ static void WoodenRCTrackDiag25DegDownTo60DegDown(
                         { { -16, -16, height }, { 32, 32, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -8940,7 +8868,7 @@ static void WoodenRCTrackDiag60DegDownTo25DegDown(
                         { { -16, -16, height }, { 32, 32, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -8961,7 +8889,6 @@ static void WoodenRCTrackDiag60DegDownTo25DegDown(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -8982,7 +8909,6 @@ static void WoodenRCTrackDiag60DegDownTo25DegDown(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 3:
             switch (direction)
@@ -8996,7 +8922,7 @@ static void WoodenRCTrackDiag60DegDownTo25DegDown(
                         { { -16, -16, height }, { 32, 32, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -9038,7 +8964,7 @@ static void WoodenRCTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -9101,7 +9027,7 @@ static void WoodenRCTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -9164,7 +9090,7 @@ static void WoodenRCTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -9195,7 +9121,7 @@ static void WoodenRCTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -9278,7 +9204,7 @@ static void WoodenRCTrackDiagLeftBank(
                         { { -16, -16, height }, { 32, 32, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -9308,7 +9234,7 @@ static void WoodenRCTrackDiagLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -9338,7 +9264,7 @@ static void WoodenRCTrackDiagLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -9352,7 +9278,7 @@ static void WoodenRCTrackDiagLeftBank(
                         { { -16, -16, height }, { 32, 32, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -9377,7 +9303,7 @@ static void WoodenRCTrackDiagRightBank(
                         { { -16, -16, height }, { 32, 32, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -9407,7 +9333,7 @@ static void WoodenRCTrackDiagRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -9437,7 +9363,7 @@ static void WoodenRCTrackDiagRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -9451,7 +9377,7 @@ static void WoodenRCTrackDiagRightBank(
                         { { -16, -16, height }, { 32, 32, 2 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -9489,8 +9415,6 @@ static void WoodenRCTrackBlockBrakes(
     WoodenRCTrackPaint<isClassic>(
         session, direction, brakeImg, kBlockBrakesImageIds[direction][2], { 0, 2, height },
         { { 0, 3, height }, { 32, 25, 2 } });
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008ACCB8 */
@@ -9556,13 +9480,12 @@ static void WoodenRCTrackLeftBankedQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -9631,7 +9554,7 @@ static void WoodenRCTrackLeftBankedQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -9699,13 +9622,12 @@ static void WoodenRCTrackRightBankedQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -9774,7 +9696,7 @@ static void WoodenRCTrackRightBankedQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -9858,10 +9780,10 @@ static void WoodenRCTrackLeftBankedQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -9915,7 +9837,7 @@ static void WoodenRCTrackLeftBankedQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -9969,10 +9891,10 @@ static void WoodenRCTrackLeftBankedQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 5:
             switch (direction)
@@ -10032,7 +9954,7 @@ static void WoodenRCTrackLeftBankedQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -10098,7 +10020,7 @@ static void WoodenRCTrackLeftBankedQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -10160,10 +10082,10 @@ static void WoodenRCTrackRightBankedQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -10217,7 +10139,7 @@ static void WoodenRCTrackRightBankedQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -10271,10 +10193,10 @@ static void WoodenRCTrackRightBankedQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 5:
             switch (direction)
@@ -10334,7 +10256,7 @@ static void WoodenRCTrackRightBankedQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -10400,7 +10322,7 @@ static void WoodenRCTrackRightBankedQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -10490,7 +10412,6 @@ static void WoodenRCTrack25DegUpToLeftBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008ACD08 */
@@ -10556,7 +10477,6 @@ static void WoodenRCTrack25DegUpToRightBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008ACD18 */
@@ -10610,7 +10530,6 @@ static void WoodenRCTrackLeftBanked25DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008ACD28 */
@@ -10664,7 +10583,6 @@ static void WoodenRCTrackRightBanked25DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008ACD38 */
@@ -10776,7 +10694,6 @@ static void WoodenRCTrackLeftBankedFlatToLeftBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008ACD88 */
@@ -10848,7 +10765,6 @@ static void WoodenRCTrackRightBankedFlatToRightBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008ACD98 */
@@ -10920,7 +10836,6 @@ static void WoodenRCTrackLeftBanked25DegUpToLeftBankedFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008ACDA8 */
@@ -10992,7 +10907,6 @@ static void WoodenRCTrackRightBanked25DegUpToRightBankedFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008ACDB8 */
@@ -11104,7 +11018,6 @@ static void WoodenRCTrackFlatToLeftBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008ACBC8 */
@@ -11176,7 +11089,6 @@ static void WoodenRCTrackFlatToRightBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008ACBD8 */
@@ -11242,7 +11154,6 @@ static void WoodenRCTrackLeftBanked25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008ACBE8 */
@@ -11308,7 +11219,6 @@ static void WoodenRCTrackRightBanked25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008ACBF8 */
@@ -11372,8 +11282,6 @@ static void WoodenRCTrackBooster(
     WoodenRCTrackPaint<isClassic>(
         session, direction, imageIds[direction], railsImageIds[direction], { 0, 2, height },
         { { 0, 3, height }, { 32, 25, 2 } });
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 template<bool isClassic>
@@ -11417,7 +11325,7 @@ static void WoodenRCTrackLeftMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -11447,7 +11355,6 @@ static void WoodenRCTrackLeftMediumHalfLoopUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -11477,7 +11384,7 @@ static void WoodenRCTrackLeftMediumHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
+
             break;
         case 3:
             switch (direction)
@@ -11506,7 +11413,7 @@ static void WoodenRCTrackLeftMediumHalfLoopUp(
                         { 0, 0, height }, { { 0, 0, height }, { 1, 32, 160 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
+
             break;
         case 4:
             switch (direction)
@@ -11536,7 +11443,6 @@ static void WoodenRCTrackLeftMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -11582,7 +11488,7 @@ static void WoodenRCTrackRightMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -11612,7 +11518,6 @@ static void WoodenRCTrackRightMediumHalfLoopUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -11642,7 +11547,7 @@ static void WoodenRCTrackRightMediumHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
+
             break;
         case 3:
             switch (direction)
@@ -11672,7 +11577,6 @@ static void WoodenRCTrackRightMediumHalfLoopUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
             break;
         case 4:
             switch (direction)
@@ -11702,7 +11606,6 @@ static void WoodenRCTrackRightMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -11760,7 +11663,7 @@ static void WoodenRCTrackLeftLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -11793,7 +11696,7 @@ static void WoodenRCTrackLeftLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -11822,7 +11725,7 @@ static void WoodenRCTrackLeftLargeHalfLoopUp(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 3:
             switch (direction)
@@ -11852,7 +11755,7 @@ static void WoodenRCTrackLeftLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 4:
             switch (direction)
@@ -11878,7 +11781,7 @@ static void WoodenRCTrackLeftLargeHalfLoopUp(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 128);
+
             break;
         case 5:
             switch (direction)
@@ -11910,7 +11813,7 @@ static void WoodenRCTrackLeftLargeHalfLoopUp(
                         { 0, 0, height }, { { 0, 0, height + 210 }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 6:
             switch (direction)
@@ -11939,7 +11842,7 @@ static void WoodenRCTrackLeftLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -11979,7 +11882,7 @@ static void WoodenRCTrackRightLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -12012,7 +11915,7 @@ static void WoodenRCTrackRightLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -12041,7 +11944,7 @@ static void WoodenRCTrackRightLargeHalfLoopUp(
                         { 0, 0, height }, { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 3:
             switch (direction)
@@ -12071,7 +11974,7 @@ static void WoodenRCTrackRightLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 4:
             switch (direction)
@@ -12097,7 +12000,7 @@ static void WoodenRCTrackRightLargeHalfLoopUp(
                         { 0, 0, height }, { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 128);
+
             break;
         case 5:
             switch (direction)
@@ -12129,7 +12032,7 @@ static void WoodenRCTrackRightLargeHalfLoopUp(
                         { 0, 0, height }, { { 0, 16, height + 210 }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 6:
             switch (direction)
@@ -12158,7 +12061,7 @@ static void WoodenRCTrackRightLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }

@@ -161,8 +161,6 @@ static void LatticeTriangleTrackFlat(
         {
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void LatticeTriangleTrackStation(
@@ -196,8 +194,6 @@ static void LatticeTriangleTrackStation(
     else if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AD684 */
@@ -298,7 +294,6 @@ static void LatticeTriangleTrack25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AD694 */
@@ -370,7 +365,6 @@ static void LatticeTriangleTrack60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 /** rct2: 0x008AD6A4 */
@@ -471,7 +465,6 @@ static void LatticeTriangleTrackFlatTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008AD6B4 */
@@ -555,7 +548,6 @@ static void LatticeTriangleTrack25DegUpTo60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x008AD6C4 */
@@ -639,7 +631,6 @@ static void LatticeTriangleTrack60DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x008AD6D4 */
@@ -740,7 +731,6 @@ static void LatticeTriangleTrack25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008AD6E4 */
@@ -826,10 +816,9 @@ static void LatticeTriangleTrackLeftQuarterTurn5(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -855,7 +844,7 @@ static void LatticeTriangleTrackLeftQuarterTurn5(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -881,10 +870,9 @@ static void LatticeTriangleTrackLeftQuarterTurn5(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 5:
             switch (direction)
@@ -910,7 +898,7 @@ static void LatticeTriangleTrackLeftQuarterTurn5(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 6:
             switch (direction)
@@ -946,7 +934,7 @@ static void LatticeTriangleTrackLeftQuarterTurn5(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -997,8 +985,6 @@ static void LatticeTriangleTrackFlatToLeftBank(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AD774 */
@@ -1038,8 +1024,6 @@ static void LatticeTriangleTrackFlatToRightBank(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AD784 */
@@ -1079,8 +1063,6 @@ static void LatticeTriangleTrackLeftBankToFlat(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AD794 */
@@ -1120,8 +1102,6 @@ static void LatticeTriangleTrackRightBankToFlat(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AD7A4 */
@@ -1162,10 +1142,9 @@ static void LatticeTriangleTrackBankedLeftQuarterTurn5(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -1191,7 +1170,7 @@ static void LatticeTriangleTrackBankedLeftQuarterTurn5(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -1217,10 +1196,9 @@ static void LatticeTriangleTrackBankedLeftQuarterTurn5(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 5:
             switch (direction)
@@ -1246,7 +1224,7 @@ static void LatticeTriangleTrackBankedLeftQuarterTurn5(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 6:
             switch (direction)
@@ -1285,7 +1263,7 @@ static void LatticeTriangleTrackBankedLeftQuarterTurn5(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -1343,7 +1321,6 @@ static void LatticeTriangleTrackLeftBankTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008AD7D4 */
@@ -1389,7 +1366,6 @@ static void LatticeTriangleTrackRightBankTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008AD7E4 */
@@ -1435,7 +1411,6 @@ static void LatticeTriangleTrack25DegUpToLeftBank(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008AD7F4 */
@@ -1481,7 +1456,6 @@ static void LatticeTriangleTrack25DegUpToRightBank(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008AD804 */
@@ -1549,8 +1523,6 @@ static void LatticeTriangleTrackLeftBank(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AD854 */
@@ -1596,10 +1568,9 @@ static void LatticeTriangleTrackLeftQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -1623,7 +1594,7 @@ static void LatticeTriangleTrackLeftQuarterTurn525DegUp(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -1648,10 +1619,9 @@ static void LatticeTriangleTrackLeftQuarterTurn525DegUp(
                         session, direction, session.TrackColours.WithIndex(18291), { 0, 0, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 5:
             switch (direction)
@@ -1675,7 +1645,7 @@ static void LatticeTriangleTrackLeftQuarterTurn525DegUp(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -1711,7 +1681,7 @@ static void LatticeTriangleTrackLeftQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -1751,10 +1721,9 @@ static void LatticeTriangleTrackRightQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -1778,7 +1747,7 @@ static void LatticeTriangleTrackRightQuarterTurn525DegUp(
                         session, direction, session.TrackColours.WithIndex(18270), { 0, 0, height }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -1803,10 +1772,9 @@ static void LatticeTriangleTrackRightQuarterTurn525DegUp(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 5:
             switch (direction)
@@ -1830,7 +1798,7 @@ static void LatticeTriangleTrackRightQuarterTurn525DegUp(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -1866,7 +1834,7 @@ static void LatticeTriangleTrackRightQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -1926,7 +1894,7 @@ static void LatticeTriangleTrackSBendLeft(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -1951,7 +1919,6 @@ static void LatticeTriangleTrackSBendLeft(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -1976,7 +1943,6 @@ static void LatticeTriangleTrackSBendLeft(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             switch (direction)
@@ -2012,7 +1978,7 @@ static void LatticeTriangleTrackSBendLeft(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2052,7 +2018,7 @@ static void LatticeTriangleTrackSBendRight(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -2077,7 +2043,6 @@ static void LatticeTriangleTrackSBendRight(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -2102,7 +2067,6 @@ static void LatticeTriangleTrackSBendRight(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             switch (direction)
@@ -2138,7 +2102,7 @@ static void LatticeTriangleTrackSBendRight(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2178,10 +2142,9 @@ static void LatticeTriangleTrackLeftQuarterTurn3(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -2207,7 +2170,7 @@ static void LatticeTriangleTrackLeftQuarterTurn3(
                         { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -2243,7 +2206,7 @@ static void LatticeTriangleTrackLeftQuarterTurn3(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2295,10 +2258,9 @@ static void LatticeTriangleTrackLeftQuarterTurn3Bank(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -2324,7 +2286,7 @@ static void LatticeTriangleTrackLeftQuarterTurn3Bank(
                         { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -2363,7 +2325,7 @@ static void LatticeTriangleTrackLeftQuarterTurn3Bank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2409,13 +2371,11 @@ static void LatticeTriangleTrackLeftQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             switch (direction)
@@ -2447,7 +2407,7 @@ static void LatticeTriangleTrackLeftQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -2483,13 +2443,11 @@ static void LatticeTriangleTrackRightQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             switch (direction)
@@ -2524,7 +2482,7 @@ static void LatticeTriangleTrackRightQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -2587,10 +2545,9 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -2616,7 +2573,7 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpSmall(
                         { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -2655,7 +2612,7 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -2694,10 +2651,9 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 6:
             switch (direction)
@@ -2723,7 +2679,7 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpSmall(
                         { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -2756,7 +2712,7 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -2799,10 +2755,9 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -2828,7 +2783,7 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpSmall(
                         { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -2867,7 +2822,7 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -2906,10 +2861,9 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpSmall(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 6:
             switch (direction)
@@ -2935,7 +2889,7 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpSmall(
                         { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -2968,7 +2922,7 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpSmall(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -3041,10 +2995,9 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -3070,7 +3023,7 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpLarge(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -3096,10 +3049,9 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpLarge(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 5:
             switch (direction)
@@ -3125,7 +3077,7 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpLarge(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 6:
             switch (direction)
@@ -3164,7 +3116,7 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -3203,10 +3155,9 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 8:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 9:
             switch (direction)
@@ -3232,7 +3183,7 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpLarge(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 10:
             switch (direction)
@@ -3258,10 +3209,9 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpLarge(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 11:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 12:
             switch (direction)
@@ -3287,7 +3237,7 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpLarge(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 13:
             switch (direction)
@@ -3320,7 +3270,7 @@ static void LatticeTriangleTrackLeftHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -3363,10 +3313,9 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -3392,7 +3341,7 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpLarge(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -3418,10 +3367,9 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpLarge(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 5:
             switch (direction)
@@ -3447,7 +3395,7 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpLarge(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 6:
             switch (direction)
@@ -3489,7 +3437,7 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 7:
             switch (direction)
@@ -3528,10 +3476,9 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpLarge(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 8:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 9:
             switch (direction)
@@ -3557,7 +3504,7 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpLarge(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 10:
             switch (direction)
@@ -3583,10 +3530,9 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpLarge(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 11:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 12:
             switch (direction)
@@ -3612,7 +3558,7 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpLarge(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 13:
             switch (direction)
@@ -3648,7 +3594,7 @@ static void LatticeTriangleTrackRightHalfBankedHelixUpLarge(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -3723,8 +3669,6 @@ static void LatticeTriangleTrackLeftQuarterTurn160DegUp(
                 { { 2, 2, height + 99 }, { 28, 28, 1 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 /** rct2: 0x008AD9F4 */
@@ -3767,8 +3711,6 @@ static void LatticeTriangleTrackRightQuarterTurn160DegUp(
                 { { 2, 2, height + 99 }, { 28, 28, 1 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 /** rct2: 0x008ADA04 */
@@ -3818,8 +3760,6 @@ static void LatticeTriangleTrackBrakes(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008ADC84 */
@@ -3859,7 +3799,6 @@ static void LatticeTriangleTrack25DegUpLeftBanked(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008ADC94 */
@@ -3899,7 +3838,6 @@ static void LatticeTriangleTrack25DegUpRightBanked(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008ADA44 */
@@ -4021,7 +3959,7 @@ static void LatticeTriangleTrackFlatTo60DegUpLongBase(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             if (trackElement.HasCableLift())
@@ -4082,7 +4020,7 @@ static void LatticeTriangleTrackFlatTo60DegUpLongBase(
                 {
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             if (trackElement.HasCableLift())
@@ -4143,7 +4081,7 @@ static void LatticeTriangleTrackFlatTo60DegUpLongBase(
                 {
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             if (trackElement.HasCableLift())
@@ -4213,7 +4151,7 @@ static void LatticeTriangleTrackFlatTo60DegUpLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
     }
 }
@@ -4255,7 +4193,7 @@ static void LatticeTriangleTrack60DegUpToFlatLongBase(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 1:
             switch (direction)
@@ -4284,7 +4222,7 @@ static void LatticeTriangleTrack60DegUpToFlatLongBase(
             if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 2:
             switch (direction)
@@ -4313,7 +4251,7 @@ static void LatticeTriangleTrack60DegUpToFlatLongBase(
             if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -4351,7 +4289,7 @@ static void LatticeTriangleTrack60DegUpToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -4414,7 +4352,7 @@ static void LatticeTriangleTrackCableLiftHill(
             else
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -4449,7 +4387,7 @@ static void LatticeTriangleTrackCableLiftHill(
             else
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 2:
             switch (direction)
@@ -4490,7 +4428,7 @@ static void LatticeTriangleTrackCableLiftHill(
             else
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -4525,7 +4463,7 @@ static void LatticeTriangleTrackCableLiftHill(
             else
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
     }
 }
@@ -4565,7 +4503,7 @@ static void LatticeTriangleTrackLeftEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -4591,7 +4529,7 @@ static void LatticeTriangleTrackLeftEighthToDiag(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -4617,10 +4555,10 @@ static void LatticeTriangleTrackLeftEighthToDiag(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -4650,7 +4588,7 @@ static void LatticeTriangleTrackLeftEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -4690,7 +4628,7 @@ static void LatticeTriangleTrackRightEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -4716,7 +4654,7 @@ static void LatticeTriangleTrackRightEighthToDiag(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -4742,10 +4680,10 @@ static void LatticeTriangleTrackRightEighthToDiag(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -4775,7 +4713,7 @@ static void LatticeTriangleTrackRightEighthToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -4833,7 +4771,7 @@ static void LatticeTriangleTrackLeftEighthBankToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -4859,7 +4797,7 @@ static void LatticeTriangleTrackLeftEighthBankToDiag(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -4885,10 +4823,10 @@ static void LatticeTriangleTrackLeftEighthBankToDiag(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -4918,7 +4856,7 @@ static void LatticeTriangleTrackLeftEighthBankToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -4958,7 +4896,7 @@ static void LatticeTriangleTrackRightEighthBankToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -4984,7 +4922,7 @@ static void LatticeTriangleTrackRightEighthBankToDiag(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -5010,10 +4948,10 @@ static void LatticeTriangleTrackRightEighthBankToDiag(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 4:
             switch (direction)
@@ -5043,7 +4981,7 @@ static void LatticeTriangleTrackRightEighthBankToDiag(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -5112,7 +5050,7 @@ static void LatticeTriangleTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -5137,7 +5075,7 @@ static void LatticeTriangleTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -5162,7 +5100,7 @@ static void LatticeTriangleTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -5207,7 +5145,7 @@ static void LatticeTriangleTrackDiag25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -5228,7 +5166,7 @@ static void LatticeTriangleTrackDiag60DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 1:
             switch (direction)
@@ -5239,7 +5177,7 @@ static void LatticeTriangleTrackDiag60DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 2:
             switch (direction)
@@ -5250,7 +5188,7 @@ static void LatticeTriangleTrackDiag60DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 3:
             switch (direction)
@@ -5271,7 +5209,7 @@ static void LatticeTriangleTrackDiag60DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
     }
 }
@@ -5306,7 +5244,7 @@ static void LatticeTriangleTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -5331,7 +5269,7 @@ static void LatticeTriangleTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -5356,7 +5294,7 @@ static void LatticeTriangleTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -5401,7 +5339,7 @@ static void LatticeTriangleTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -5422,7 +5360,7 @@ static void LatticeTriangleTrackDiag25DegUpTo60DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -5433,7 +5371,7 @@ static void LatticeTriangleTrackDiag25DegUpTo60DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -5444,7 +5382,7 @@ static void LatticeTriangleTrackDiag25DegUpTo60DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -5465,7 +5403,7 @@ static void LatticeTriangleTrackDiag25DegUpTo60DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -5486,7 +5424,7 @@ static void LatticeTriangleTrackDiag60DegUpTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -5497,7 +5435,7 @@ static void LatticeTriangleTrackDiag60DegUpTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -5508,7 +5446,7 @@ static void LatticeTriangleTrackDiag60DegUpTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -5529,7 +5467,7 @@ static void LatticeTriangleTrackDiag60DegUpTo25DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -5564,7 +5502,7 @@ static void LatticeTriangleTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -5589,7 +5527,7 @@ static void LatticeTriangleTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -5614,7 +5552,7 @@ static void LatticeTriangleTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -5659,7 +5597,7 @@ static void LatticeTriangleTrackDiag25DegUpToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -5694,7 +5632,7 @@ static void LatticeTriangleTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -5719,7 +5657,7 @@ static void LatticeTriangleTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -5744,7 +5682,7 @@ static void LatticeTriangleTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -5789,7 +5727,7 @@ static void LatticeTriangleTrackDiag25DegDown(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -5810,7 +5748,7 @@ static void LatticeTriangleTrackDiag60DegDown(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 1:
             switch (direction)
@@ -5821,7 +5759,7 @@ static void LatticeTriangleTrackDiag60DegDown(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 2:
             switch (direction)
@@ -5832,7 +5770,7 @@ static void LatticeTriangleTrackDiag60DegDown(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 3:
             switch (direction)
@@ -5853,7 +5791,7 @@ static void LatticeTriangleTrackDiag60DegDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
     }
 }
@@ -5982,8 +5920,6 @@ static void LatticeTriangleTrackDiagFlatTo25DegDown(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008ADB74 */
@@ -6002,7 +5938,7 @@ static void LatticeTriangleTrackDiag25DegDownTo60DegDown(
                         { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -6013,7 +5949,7 @@ static void LatticeTriangleTrackDiag25DegDownTo60DegDown(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -6024,7 +5960,7 @@ static void LatticeTriangleTrackDiag25DegDownTo60DegDown(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -6045,7 +5981,7 @@ static void LatticeTriangleTrackDiag25DegDownTo60DegDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -6066,7 +6002,7 @@ static void LatticeTriangleTrackDiag60DegDownTo25DegDown(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -6077,7 +6013,7 @@ static void LatticeTriangleTrackDiag60DegDownTo25DegDown(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -6088,7 +6024,7 @@ static void LatticeTriangleTrackDiag60DegDownTo25DegDown(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -6109,7 +6045,7 @@ static void LatticeTriangleTrackDiag60DegDownTo25DegDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -6144,7 +6080,7 @@ static void LatticeTriangleTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -6169,7 +6105,7 @@ static void LatticeTriangleTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             if (trackElement.HasChain())
@@ -6194,7 +6130,7 @@ static void LatticeTriangleTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             if (trackElement.HasChain())
@@ -6239,7 +6175,7 @@ static void LatticeTriangleTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -6260,7 +6196,7 @@ static void LatticeTriangleTrackDiagFlatToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -6274,7 +6210,7 @@ static void LatticeTriangleTrackDiagFlatToLeftBank(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -6285,7 +6221,7 @@ static void LatticeTriangleTrackDiagFlatToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -6306,7 +6242,7 @@ static void LatticeTriangleTrackDiagFlatToLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -6327,7 +6263,7 @@ static void LatticeTriangleTrackDiagFlatToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -6338,7 +6274,7 @@ static void LatticeTriangleTrackDiagFlatToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -6352,7 +6288,7 @@ static void LatticeTriangleTrackDiagFlatToRightBank(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -6373,7 +6309,7 @@ static void LatticeTriangleTrackDiagFlatToRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -6394,7 +6330,7 @@ static void LatticeTriangleTrackDiagLeftBankToFlat(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -6408,7 +6344,7 @@ static void LatticeTriangleTrackDiagLeftBankToFlat(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -6419,7 +6355,7 @@ static void LatticeTriangleTrackDiagLeftBankToFlat(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -6440,7 +6376,7 @@ static void LatticeTriangleTrackDiagLeftBankToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -6461,7 +6397,7 @@ static void LatticeTriangleTrackDiagRightBankToFlat(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -6472,7 +6408,7 @@ static void LatticeTriangleTrackDiagRightBankToFlat(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -6486,7 +6422,7 @@ static void LatticeTriangleTrackDiagRightBankToFlat(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -6507,7 +6443,7 @@ static void LatticeTriangleTrackDiagRightBankToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -6528,7 +6464,7 @@ static void LatticeTriangleTrackDiagLeftBankTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -6542,7 +6478,7 @@ static void LatticeTriangleTrackDiagLeftBankTo25DegUp(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -6553,7 +6489,7 @@ static void LatticeTriangleTrackDiagLeftBankTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -6574,7 +6510,7 @@ static void LatticeTriangleTrackDiagLeftBankTo25DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -6595,7 +6531,7 @@ static void LatticeTriangleTrackDiagRightBankTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -6606,7 +6542,7 @@ static void LatticeTriangleTrackDiagRightBankTo25DegUp(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -6620,7 +6556,7 @@ static void LatticeTriangleTrackDiagRightBankTo25DegUp(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -6641,7 +6577,7 @@ static void LatticeTriangleTrackDiagRightBankTo25DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -6662,7 +6598,7 @@ static void LatticeTriangleTrackDiag25DegUpToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -6676,7 +6612,7 @@ static void LatticeTriangleTrackDiag25DegUpToLeftBank(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -6687,7 +6623,7 @@ static void LatticeTriangleTrackDiag25DegUpToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -6708,7 +6644,7 @@ static void LatticeTriangleTrackDiag25DegUpToLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -6729,7 +6665,7 @@ static void LatticeTriangleTrackDiag25DegUpToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -6740,7 +6676,7 @@ static void LatticeTriangleTrackDiag25DegUpToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -6754,7 +6690,7 @@ static void LatticeTriangleTrackDiag25DegUpToRightBank(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -6775,7 +6711,7 @@ static void LatticeTriangleTrackDiag25DegUpToRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -6841,8 +6777,6 @@ static void LatticeTriangleTrackDiagLeftBankTo25DegDown(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008ADC54 */
@@ -6906,8 +6840,6 @@ static void LatticeTriangleTrackDiagRightBankTo25DegDown(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008ADC64 */
@@ -6926,7 +6858,7 @@ static void LatticeTriangleTrackDiag25DegDownToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -6940,7 +6872,7 @@ static void LatticeTriangleTrackDiag25DegDownToLeftBank(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -6951,7 +6883,7 @@ static void LatticeTriangleTrackDiag25DegDownToLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -6972,7 +6904,7 @@ static void LatticeTriangleTrackDiag25DegDownToLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -6993,7 +6925,7 @@ static void LatticeTriangleTrackDiag25DegDownToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -7004,7 +6936,7 @@ static void LatticeTriangleTrackDiag25DegDownToRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -7018,7 +6950,7 @@ static void LatticeTriangleTrackDiag25DegDownToRightBank(
                         { { -16, -16, height + 35 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -7039,7 +6971,7 @@ static void LatticeTriangleTrackDiag25DegDownToRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -7060,7 +6992,7 @@ static void LatticeTriangleTrackDiagLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -7071,7 +7003,7 @@ static void LatticeTriangleTrackDiagLeftBank(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -7082,7 +7014,7 @@ static void LatticeTriangleTrackDiagLeftBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -7103,7 +7035,7 @@ static void LatticeTriangleTrackDiagLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -7124,7 +7056,7 @@ static void LatticeTriangleTrackDiagRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -7135,7 +7067,7 @@ static void LatticeTriangleTrackDiagRightBank(
                         { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -7146,7 +7078,7 @@ static void LatticeTriangleTrackDiagRightBank(
                         { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -7167,7 +7099,7 @@ static void LatticeTriangleTrackDiagRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -7188,8 +7120,6 @@ static void LatticeTriangleTrackBlockBrakes(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008ADCC4 */
@@ -7224,13 +7154,11 @@ static void LatticeTriangleTrackLeftBankedQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             switch (direction)
@@ -7264,7 +7192,7 @@ static void LatticeTriangleTrackLeftBankedQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -7301,13 +7229,11 @@ static void LatticeTriangleTrackRightBankedQuarterTurn325DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 3:
             switch (direction)
@@ -7344,7 +7270,7 @@ static void LatticeTriangleTrackRightBankedQuarterTurn325DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -7404,10 +7330,9 @@ static void LatticeTriangleTrackLeftBankedQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -7432,7 +7357,7 @@ static void LatticeTriangleTrackLeftBankedQuarterTurn525DegUp(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -7457,10 +7382,9 @@ static void LatticeTriangleTrackLeftBankedQuarterTurn525DegUp(
                         session, direction, session.TrackColours.WithIndex(18641), { 0, 0, height }, { 16, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 5:
             switch (direction)
@@ -7486,7 +7410,7 @@ static void LatticeTriangleTrackLeftBankedQuarterTurn525DegUp(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -7522,7 +7446,7 @@ static void LatticeTriangleTrackLeftBankedQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -7562,10 +7486,9 @@ static void LatticeTriangleTrackRightBankedQuarterTurn525DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -7590,7 +7513,7 @@ static void LatticeTriangleTrackRightBankedQuarterTurn525DegUp(
                         session, direction, session.TrackColours.WithIndex(18620), { 0, 0, height }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -7615,10 +7538,9 @@ static void LatticeTriangleTrackRightBankedQuarterTurn525DegUp(
                         { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 5:
             switch (direction)
@@ -7644,7 +7566,7 @@ static void LatticeTriangleTrackRightBankedQuarterTurn525DegUp(
                         { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -7680,7 +7602,7 @@ static void LatticeTriangleTrackRightBankedQuarterTurn525DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -7745,7 +7667,6 @@ static void LatticeTriangleTrack25DegUpToLeftBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008ADD54 */
@@ -7788,7 +7709,6 @@ static void LatticeTriangleTrack25DegUpToRightBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008ADD64 */
@@ -7831,7 +7751,6 @@ static void LatticeTriangleTrackLeftBanked25DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008ADD74 */
@@ -7874,7 +7793,6 @@ static void LatticeTriangleTrackRightBanked25DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008ADD84 */
@@ -7950,7 +7868,6 @@ static void LatticeTriangleTrackLeftBankedFlatToLeftBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008ADDD4 */
@@ -7990,7 +7907,6 @@ static void LatticeTriangleTrackRightBankedFlatToRightBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008ADE04 */
@@ -8030,7 +7946,6 @@ static void LatticeTriangleTrackLeftBanked25DegUpToLeftBankedFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008ADE14 */
@@ -8070,7 +7985,6 @@ static void LatticeTriangleTrackRightBanked25DegUpToRightBankedFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008ADE24 */
@@ -8149,7 +8063,6 @@ static void LatticeTriangleTrackFlatToLeftBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008ADE54 */
@@ -8192,7 +8105,6 @@ static void LatticeTriangleTrackFlatToRightBanked25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008ADE64 */
@@ -8235,7 +8147,6 @@ static void LatticeTriangleTrackLeftBanked25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008ADE74 */
@@ -8278,7 +8189,6 @@ static void LatticeTriangleTrackRightBanked25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008ADE84 */
@@ -8339,8 +8249,6 @@ static void LatticeTriangleTrackBooster(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void LatticeTriangleTrackPoweredLift(
@@ -8360,7 +8268,6 @@ static void LatticeTriangleTrackPoweredLift(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void LatticeTriangleTrack90DegUp(
@@ -8394,7 +8301,6 @@ static void LatticeTriangleTrack90DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 1:
             break;
@@ -8445,7 +8351,6 @@ static void LatticeTriangleTrack60DegUpTo90DegUp(
             {
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 1:
             break;
@@ -8495,7 +8400,6 @@ static void LatticeTriangleTrack90DegUpTo60DegUp(
 
             break;
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 80);
 }
 
 static void LatticeTriangleTrack60DegDownTo90DegDown(
@@ -8531,7 +8435,7 @@ static void LatticeTriangleTrack60DegDownTo90DegDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 1:
             break;
@@ -8575,7 +8479,6 @@ static void LatticeTriangleTrackLeftQuarterTurn190DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
             break;
         case 1:
             break;
@@ -8619,7 +8522,6 @@ static void LatticeTriangleTrackRightQuarterTurn190DegUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
             break;
         case 1:
             break;
@@ -8691,7 +8593,7 @@ static void LatticeTriangleTrackLeftBarrelRollUpToDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -8729,7 +8631,7 @@ static void LatticeTriangleTrackLeftBarrelRollUpToDown(
                         { 0, 0, height }, { { 0, 6, height + 28 }, { 32, 20, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -8776,7 +8678,7 @@ static void LatticeTriangleTrackLeftBarrelRollUpToDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -8830,7 +8732,7 @@ static void LatticeTriangleTrackRightBarrelRollUpToDown(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -8868,7 +8770,7 @@ static void LatticeTriangleTrackRightBarrelRollUpToDown(
                         { 0, 0, height }, { { 0, 6, height + 28 }, { 32, 20, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -8915,7 +8817,7 @@ static void LatticeTriangleTrackRightBarrelRollUpToDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -8970,7 +8872,7 @@ static void LatticeTriangleTrackHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -9000,7 +8902,7 @@ static void LatticeTriangleTrackHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -9026,7 +8928,7 @@ static void LatticeTriangleTrackHalfLoopUp(
                         { 16, 16, height }, { { 15, 6, height }, { 2, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 3:
             switch (direction)
@@ -9055,7 +8957,7 @@ static void LatticeTriangleTrackHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -9104,7 +9006,7 @@ static void LatticeTriangleTrackLeftVerticalLoop(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -9134,7 +9036,7 @@ static void LatticeTriangleTrackLeftVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -9160,7 +9062,7 @@ static void LatticeTriangleTrackLeftVerticalLoop(
                         { 16, 16, height }, { { 16, 16, height }, { 2, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 3:
             switch (direction)
@@ -9186,13 +9088,11 @@ static void LatticeTriangleTrackLeftVerticalLoop(
                         { 0, 16, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 6:
             switch (direction)
@@ -9218,7 +9118,7 @@ static void LatticeTriangleTrackLeftVerticalLoop(
                         { 0, 0, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 7:
             switch (direction)
@@ -9244,7 +9144,7 @@ static void LatticeTriangleTrackLeftVerticalLoop(
                         { 12, 0, height }, { { 12, 0, height }, { 3, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
+
             break;
         case 8:
             switch (direction)
@@ -9274,7 +9174,7 @@ static void LatticeTriangleTrackLeftVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 9:
             switch (direction)
@@ -9313,7 +9213,7 @@ static void LatticeTriangleTrackLeftVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -9352,7 +9252,6 @@ static void LatticeTriangleTrackRightVerticalLoop(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
         case 1:
             switch (direction)
@@ -9382,7 +9281,6 @@ static void LatticeTriangleTrackRightVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -9408,7 +9306,6 @@ static void LatticeTriangleTrackRightVerticalLoop(
                         { 16, 0, height }, { { 16, 0, height }, { 2, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
             break;
         case 3:
             switch (direction)
@@ -9434,13 +9331,10 @@ static void LatticeTriangleTrackRightVerticalLoop(
                         { 0, 0, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 5:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 6:
             switch (direction)
@@ -9466,7 +9360,6 @@ static void LatticeTriangleTrackRightVerticalLoop(
                         { 0, 16, height + 32 }, { 32, 16, 3 });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 7:
             switch (direction)
@@ -9492,7 +9385,6 @@ static void LatticeTriangleTrackRightVerticalLoop(
                         { 10, 16, height }, { { 10, 16, height }, { 4, 16, 119 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 168);
             break;
         case 8:
             switch (direction)
@@ -9522,7 +9414,6 @@ static void LatticeTriangleTrackRightVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 9:
             switch (direction)
@@ -9558,7 +9449,6 @@ static void LatticeTriangleTrackRightVerticalLoop(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }
@@ -9600,7 +9490,7 @@ static void LatticeTriangleTrackLeftCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -9626,7 +9516,7 @@ static void LatticeTriangleTrackLeftCorkscrewUp(
                         { 0, 0, height }, { { 6, 6, height + 10 }, { 20, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -9662,7 +9552,6 @@ static void LatticeTriangleTrackLeftCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -9704,7 +9593,7 @@ static void LatticeTriangleTrackRightCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -9730,7 +9619,7 @@ static void LatticeTriangleTrackRightCorkscrewUp(
                         { 0, 0, height }, { { 6, 6, height + 10 }, { 20, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -9766,7 +9655,6 @@ static void LatticeTriangleTrackRightCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -9822,7 +9710,7 @@ static void LatticeTriangleTrackLeftLargeCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -9854,7 +9742,7 @@ static void LatticeTriangleTrackLeftLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -9882,10 +9770,9 @@ static void LatticeTriangleTrackLeftLargeCorkscrewUp(
                         { { 0, 6, height }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 4:
             switch (direction)
@@ -9918,7 +9805,6 @@ static void LatticeTriangleTrackLeftLargeCorkscrewUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
         case 5:
             switch (direction)
@@ -9956,7 +9842,6 @@ static void LatticeTriangleTrackLeftLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -9999,7 +9884,7 @@ static void LatticeTriangleTrackRightLargeCorkscrewUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -10033,7 +9918,7 @@ static void LatticeTriangleTrackRightLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -10063,10 +9948,9 @@ static void LatticeTriangleTrackRightLargeCorkscrewUp(
                         { { 0, 31, height }, { 48, 1, 64 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 4:
             switch (direction)
@@ -10100,7 +9984,6 @@ static void LatticeTriangleTrackRightLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
         case 5:
             switch (direction)
@@ -10140,7 +10023,6 @@ static void LatticeTriangleTrackRightLargeCorkscrewUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -10199,7 +10081,7 @@ static void LatticeTriangleTrackLeftMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -10230,7 +10112,6 @@ static void LatticeTriangleTrackLeftMediumHalfLoopUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -10264,7 +10145,7 @@ static void LatticeTriangleTrackLeftMediumHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
+
             break;
         case 3:
             switch (direction)
@@ -10294,7 +10175,7 @@ static void LatticeTriangleTrackLeftMediumHalfLoopUp(
                         { { 0, 0, height }, { 1, 32, 160 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
+
             break;
         case 4:
             switch (direction)
@@ -10328,7 +10209,6 @@ static void LatticeTriangleTrackLeftMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -10371,7 +10251,7 @@ static void LatticeTriangleTrackRightMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -10402,7 +10282,6 @@ static void LatticeTriangleTrackRightMediumHalfLoopUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
         case 2:
             switch (direction)
@@ -10436,7 +10315,7 @@ static void LatticeTriangleTrackRightMediumHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
+
             break;
         case 3:
             switch (direction)
@@ -10467,7 +10346,6 @@ static void LatticeTriangleTrackRightMediumHalfLoopUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 144);
             break;
         case 4:
             switch (direction)
@@ -10501,7 +10379,6 @@ static void LatticeTriangleTrackRightMediumHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
     }
 }
@@ -10564,7 +10441,7 @@ static void LatticeTriangleTrackLeftZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -10590,7 +10467,7 @@ static void LatticeTriangleTrackLeftZeroGRollUp(
                         { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -10632,7 +10509,6 @@ static void LatticeTriangleTrackLeftZeroGRollUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }
@@ -10680,7 +10556,7 @@ static void LatticeTriangleTrackRightZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -10706,7 +10582,7 @@ static void LatticeTriangleTrackRightZeroGRollUp(
                         { 0, 0, height }, { { 0, 6, height + 32 }, { 32, 20, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -10748,7 +10624,6 @@ static void LatticeTriangleTrackRightZeroGRollUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }
@@ -10811,7 +10686,7 @@ static void LatticeTriangleTrackLeftLargeZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 1:
             switch (direction)
@@ -10845,7 +10720,7 @@ static void LatticeTriangleTrackLeftLargeZeroGRollUp(
                         { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -10879,7 +10754,7 @@ static void LatticeTriangleTrackLeftLargeZeroGRollUp(
                         { 0, 0, height }, { { 0, 6, height + 40 }, { 32, 20, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -10926,7 +10801,6 @@ static void LatticeTriangleTrackLeftLargeZeroGRollUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }
@@ -10973,7 +10847,7 @@ static void LatticeTriangleTrackRightLargeZeroGRollUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 1:
             switch (direction)
@@ -11007,7 +10881,7 @@ static void LatticeTriangleTrackRightLargeZeroGRollUp(
                         { 0, 0, height }, { { 0, 30, height }, { 32, 0, 96 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -11042,7 +10916,6 @@ static void LatticeTriangleTrackRightLargeZeroGRollUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
             break;
         case 3:
             switch (direction)
@@ -11089,7 +10962,6 @@ static void LatticeTriangleTrackRightLargeZeroGRollUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
             break;
     }
 }
@@ -11140,7 +11012,7 @@ static void LatticeTriangleTrack90DegToInvertedFlatQuarterLoopUp(
                         { 0, 0, height }, { { 4, 6, height + 8 }, { 2, 20, 31 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 1:
             switch (direction)
@@ -11166,7 +11038,7 @@ static void LatticeTriangleTrack90DegToInvertedFlatQuarterLoopUp(
                         { 0, 0, height }, { { -8, 6, height }, { 2, 20, 31 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 2:
             switch (direction)
@@ -11195,7 +11067,7 @@ static void LatticeTriangleTrack90DegToInvertedFlatQuarterLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -11250,13 +11122,11 @@ static void LatticeTriangleTrackLeftBankToLeftQuarterTurn3Tile25DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -11296,7 +11166,7 @@ static void LatticeTriangleTrackLeftBankToLeftQuarterTurn3Tile25DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -11343,13 +11213,11 @@ static void LatticeTriangleTrackRightBankToRightQuarterTurn3Tile25DegUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -11389,7 +11257,7 @@ static void LatticeTriangleTrackRightBankToRightQuarterTurn3Tile25DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -11432,13 +11300,11 @@ static void LatticeTriangleTrackLeftQuarterTurn3Tile25DegDownToLeftBank(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -11482,7 +11348,7 @@ static void LatticeTriangleTrackLeftQuarterTurn3Tile25DegDownToLeftBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -11525,13 +11391,11 @@ static void LatticeTriangleTrackRightQuarterTurn3Tile25DegDownToRightBank(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             switch (direction)
@@ -11575,7 +11439,7 @@ static void LatticeTriangleTrackRightQuarterTurn3Tile25DegDownToRightBank(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -11616,7 +11480,7 @@ static void LatticeTriangleTrackLeftLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -11648,7 +11512,7 @@ static void LatticeTriangleTrackLeftLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -11676,7 +11540,7 @@ static void LatticeTriangleTrackLeftLargeHalfLoopUp(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 3:
             switch (direction)
@@ -11709,7 +11573,7 @@ static void LatticeTriangleTrackLeftLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 4:
             switch (direction)
@@ -11738,7 +11602,7 @@ static void LatticeTriangleTrackLeftLargeHalfLoopUp(
                         { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 128);
+
             break;
         case 5:
             switch (direction)
@@ -11767,7 +11631,7 @@ static void LatticeTriangleTrackLeftLargeHalfLoopUp(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 6:
             switch (direction)
@@ -11799,7 +11663,7 @@ static void LatticeTriangleTrackLeftLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -11842,7 +11706,7 @@ static void LatticeTriangleTrackRightLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -11876,7 +11740,7 @@ static void LatticeTriangleTrackRightLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -11906,7 +11770,7 @@ static void LatticeTriangleTrackRightLargeHalfLoopUp(
                         { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 88);
+
             break;
         case 3:
             switch (direction)
@@ -11940,7 +11804,7 @@ static void LatticeTriangleTrackRightLargeHalfLoopUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 4:
             switch (direction)
@@ -11970,7 +11834,7 @@ static void LatticeTriangleTrackRightLargeHalfLoopUp(
                         { { 16, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 128);
+
             break;
         case 5:
             switch (direction)
@@ -12000,7 +11864,7 @@ static void LatticeTriangleTrackRightLargeHalfLoopUp(
                         { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 224);
+
             break;
         case 6:
             switch (direction)
@@ -12033,7 +11897,7 @@ static void LatticeTriangleTrackRightLargeHalfLoopUp(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -12092,7 +11956,6 @@ static void LatticeTriangleTrackFlatTo60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 64);
 }
 
 static void LatticeTriangleTrack60DegUpToFlat(
@@ -12135,7 +11998,6 @@ static void LatticeTriangleTrack60DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void LatticeTriangleTrackFlatTo60DegDown(
@@ -12168,7 +12030,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegUp(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
             switch (direction)
@@ -12180,7 +12042,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegUp(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 2:
             switch (direction)
@@ -12192,7 +12054,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegUp(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -12214,7 +12076,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegUp(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -12235,7 +12097,7 @@ static void LatticeTriangleTrackDiag60DegUpToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -12247,7 +12109,7 @@ static void LatticeTriangleTrackDiag60DegUpToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -12259,7 +12121,7 @@ static void LatticeTriangleTrackDiag60DegUpToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -12281,7 +12143,7 @@ static void LatticeTriangleTrackDiag60DegUpToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -12302,7 +12164,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegDown(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -12314,7 +12176,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegDown(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -12326,7 +12188,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegDown(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -12348,7 +12210,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegDown(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -12369,7 +12231,7 @@ static void LatticeTriangleTrackDiag60DegDownToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 1:
             switch (direction)
@@ -12381,7 +12243,7 @@ static void LatticeTriangleTrackDiag60DegDownToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 2:
             switch (direction)
@@ -12393,7 +12255,7 @@ static void LatticeTriangleTrackDiag60DegDownToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 4 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 3:
             switch (direction)
@@ -12415,7 +12277,7 @@ static void LatticeTriangleTrackDiag60DegDownToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
     }
 }
@@ -12458,7 +12320,7 @@ static void LatticeTriangleTrackLeftEighthToDiagUp25(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -12488,7 +12350,7 @@ static void LatticeTriangleTrackLeftEighthToDiagUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -12518,10 +12380,10 @@ static void LatticeTriangleTrackLeftEighthToDiagUp25(
                         { 0, 0, height }, { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -12555,7 +12417,7 @@ static void LatticeTriangleTrackLeftEighthToDiagUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -12598,7 +12460,7 @@ static void LatticeTriangleTrackRightEighthToDiagUp25(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -12628,7 +12490,7 @@ static void LatticeTriangleTrackRightEighthToDiagUp25(
                         { 0, 0, height }, { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -12658,10 +12520,10 @@ static void LatticeTriangleTrackRightEighthToDiagUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -12695,7 +12557,7 @@ static void LatticeTriangleTrackRightEighthToDiagUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -12738,7 +12600,7 @@ static void LatticeTriangleTrackLeftEighthToOrthogonalUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -12768,10 +12630,10 @@ static void LatticeTriangleTrackLeftEighthToOrthogonalUp25(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -12801,7 +12663,7 @@ static void LatticeTriangleTrackLeftEighthToOrthogonalUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -12836,7 +12698,6 @@ static void LatticeTriangleTrackLeftEighthToOrthogonalUp25(
             {
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
             break;
     }
 }
@@ -12879,7 +12740,7 @@ static void LatticeTriangleTrackRightEighthToOrthogonalUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -12909,10 +12770,10 @@ static void LatticeTriangleTrackRightEighthToOrthogonalUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -12942,7 +12803,7 @@ static void LatticeTriangleTrackRightEighthToOrthogonalUp25(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -12976,7 +12837,7 @@ static void LatticeTriangleTrackRightEighthToOrthogonalUp25(
             if (direction == 0 || direction == 1)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -13035,7 +12896,7 @@ static void LatticeTriangleTrackDiagUp25ToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -13051,7 +12912,7 @@ static void LatticeTriangleTrackDiagUp25ToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 48 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -13063,7 +12924,7 @@ static void LatticeTriangleTrackDiagUp25ToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -13085,7 +12946,7 @@ static void LatticeTriangleTrackDiagUp25ToLeftBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -13106,7 +12967,7 @@ static void LatticeTriangleTrackDiagUp25ToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -13118,7 +12979,7 @@ static void LatticeTriangleTrackDiagUp25ToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -13134,7 +12995,7 @@ static void LatticeTriangleTrackDiagUp25ToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 48 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -13156,7 +13017,7 @@ static void LatticeTriangleTrackDiagUp25ToRightBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -13177,7 +13038,7 @@ static void LatticeTriangleTrackDiagLeftBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -13193,7 +13054,7 @@ static void LatticeTriangleTrackDiagLeftBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height + 48 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -13205,7 +13066,7 @@ static void LatticeTriangleTrackDiagLeftBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -13227,7 +13088,7 @@ static void LatticeTriangleTrackDiagLeftBankedUp25ToUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -13248,7 +13109,7 @@ static void LatticeTriangleTrackDiagRightBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -13260,7 +13121,7 @@ static void LatticeTriangleTrackDiagRightBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -13276,7 +13137,7 @@ static void LatticeTriangleTrackDiagRightBankedUp25ToUp25(
                         { -16, -16, height }, { { -16, -16, height + 48 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -13298,7 +13159,7 @@ static void LatticeTriangleTrackDiagRightBankedUp25ToUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -13351,7 +13212,7 @@ static void LatticeTriangleTrackDiagLeftBankedFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -13363,7 +13224,7 @@ static void LatticeTriangleTrackDiagLeftBankedFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -13375,7 +13236,7 @@ static void LatticeTriangleTrackDiagLeftBankedFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -13397,7 +13258,7 @@ static void LatticeTriangleTrackDiagLeftBankedFlatToLeftBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -13418,7 +13279,7 @@ static void LatticeTriangleTrackDiagRightBankedFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -13430,7 +13291,7 @@ static void LatticeTriangleTrackDiagRightBankedFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -13442,7 +13303,7 @@ static void LatticeTriangleTrackDiagRightBankedFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -13464,7 +13325,7 @@ static void LatticeTriangleTrackDiagRightBankedFlatToRightBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -13485,7 +13346,7 @@ static void LatticeTriangleTrackDiagLeftBankedUp25ToLeftBankedFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -13497,7 +13358,7 @@ static void LatticeTriangleTrackDiagLeftBankedUp25ToLeftBankedFlat(
                         { -16, -16, height }, { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -13509,7 +13370,7 @@ static void LatticeTriangleTrackDiagLeftBankedUp25ToLeftBankedFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -13531,7 +13392,7 @@ static void LatticeTriangleTrackDiagLeftBankedUp25ToLeftBankedFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -13552,7 +13413,7 @@ static void LatticeTriangleTrackDiagRightBankedUp25ToRightBankedFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -13564,7 +13425,7 @@ static void LatticeTriangleTrackDiagRightBankedUp25ToRightBankedFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -13576,7 +13437,7 @@ static void LatticeTriangleTrackDiagRightBankedUp25ToRightBankedFlat(
                         { -16, -16, height }, { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -13598,7 +13459,7 @@ static void LatticeTriangleTrackDiagRightBankedUp25ToRightBankedFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -13651,7 +13512,7 @@ static void LatticeTriangleTrackDiagUp25LeftBanked(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -13663,7 +13524,7 @@ static void LatticeTriangleTrackDiagUp25LeftBanked(
                         { -16, -16, height }, { { -16, -16, height + 48 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -13675,7 +13536,7 @@ static void LatticeTriangleTrackDiagUp25LeftBanked(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -13697,7 +13558,7 @@ static void LatticeTriangleTrackDiagUp25LeftBanked(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -13718,7 +13579,7 @@ static void LatticeTriangleTrackDiagUp25RightBanked(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -13730,7 +13591,7 @@ static void LatticeTriangleTrackDiagUp25RightBanked(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -13742,7 +13603,7 @@ static void LatticeTriangleTrackDiagUp25RightBanked(
                         { -16, -16, height }, { { -16, -16, height + 48 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -13764,7 +13625,7 @@ static void LatticeTriangleTrackDiagUp25RightBanked(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -13801,7 +13662,7 @@ static void LatticeTriangleTrackDiagFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -13817,7 +13678,7 @@ static void LatticeTriangleTrackDiagFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -13829,7 +13690,7 @@ static void LatticeTriangleTrackDiagFlatToLeftBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -13851,7 +13712,7 @@ static void LatticeTriangleTrackDiagFlatToLeftBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -13872,7 +13733,7 @@ static void LatticeTriangleTrackDiagFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -13884,7 +13745,7 @@ static void LatticeTriangleTrackDiagFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -13900,7 +13761,7 @@ static void LatticeTriangleTrackDiagFlatToRightBankedUp25(
                         { -16, -16, height }, { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -13922,7 +13783,7 @@ static void LatticeTriangleTrackDiagFlatToRightBankedUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -13943,7 +13804,7 @@ static void LatticeTriangleTrackDiagLeftBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -13959,7 +13820,7 @@ static void LatticeTriangleTrackDiagLeftBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -13971,7 +13832,7 @@ static void LatticeTriangleTrackDiagLeftBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -13993,7 +13854,7 @@ static void LatticeTriangleTrackDiagLeftBankedUp25ToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -14014,7 +13875,7 @@ static void LatticeTriangleTrackDiagRightBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 1:
             switch (direction)
@@ -14026,7 +13887,7 @@ static void LatticeTriangleTrackDiagRightBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 2:
             switch (direction)
@@ -14042,7 +13903,7 @@ static void LatticeTriangleTrackDiagRightBankedUp25ToFlat(
                         { -16, -16, height }, { { -16, -16, height + 27 }, { 32, 32, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
         case 3:
             switch (direction)
@@ -14064,7 +13925,7 @@ static void LatticeTriangleTrackDiagRightBankedUp25ToFlat(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
+
             break;
     }
 }
@@ -14142,7 +14003,7 @@ static void LatticeTriangleTrackLeftEighthBankToDiagUp25(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -14172,7 +14033,7 @@ static void LatticeTriangleTrackLeftEighthBankToDiagUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -14202,10 +14063,10 @@ static void LatticeTriangleTrackLeftEighthBankToDiagUp25(
                         { 0, 0, height }, { { 0, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -14239,7 +14100,7 @@ static void LatticeTriangleTrackLeftEighthBankToDiagUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -14285,7 +14146,7 @@ static void LatticeTriangleTrackRightEighthBankToDiagUp25(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -14315,7 +14176,7 @@ static void LatticeTriangleTrackRightEighthBankToDiagUp25(
                         { 0, 0, height }, { { 0, 0, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
             switch (direction)
@@ -14345,10 +14206,10 @@ static void LatticeTriangleTrackRightEighthBankToDiagUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -14382,7 +14243,7 @@ static void LatticeTriangleTrackRightEighthBankToDiagUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -14425,7 +14286,7 @@ static void LatticeTriangleTrackLeftEighthBankToOrthogonalUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -14455,10 +14316,10 @@ static void LatticeTriangleTrackLeftEighthBankToOrthogonalUp25(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -14488,7 +14349,7 @@ static void LatticeTriangleTrackLeftEighthBankToOrthogonalUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 32, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -14525,7 +14386,7 @@ static void LatticeTriangleTrackLeftEighthBankToOrthogonalUp25(
             if (direction == 1 || direction == 2)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -14568,7 +14429,7 @@ static void LatticeTriangleTrackRightEighthBankToOrthogonalUp25(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 1:
             switch (direction)
@@ -14598,10 +14459,10 @@ static void LatticeTriangleTrackRightEighthBankToOrthogonalUp25(
                         { 0, 0, height }, { { 0, 16, height }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 2:
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 3:
             switch (direction)
@@ -14631,7 +14492,7 @@ static void LatticeTriangleTrackRightEighthBankToOrthogonalUp25(
                         { 0, 0, height }, { { 16, 0, height }, { 16, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 4:
             switch (direction)
@@ -14668,7 +14529,7 @@ static void LatticeTriangleTrackRightEighthBankToOrthogonalUp25(
             if (direction == 0 || direction == 1)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
     }
 }
@@ -14733,8 +14594,6 @@ static void LatticeTriangleTrackDiagBrakes(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void LatticeTriangleTrackDiagBooster(
@@ -14765,7 +14624,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegUpLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 32);
+
             break;
         case 1:
             switch (direction)
@@ -14777,7 +14636,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegUpLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 2:
             switch (direction)
@@ -14789,7 +14648,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegUpLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 3:
             switch (direction)
@@ -14815,7 +14674,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegUpLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 4:
             switch (direction)
@@ -14827,7 +14686,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegUpLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 5:
             switch (direction)
@@ -14839,7 +14698,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegUpLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -14865,7 +14724,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegUpLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
+
             break;
         case 7:
             switch (direction)
@@ -14877,7 +14736,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegUpLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 8:
             switch (direction)
@@ -14889,7 +14748,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegUpLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 9:
             switch (direction)
@@ -14911,7 +14770,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegUpLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 136);
+
             break;
     }
 }
@@ -14932,7 +14791,7 @@ static void LatticeTriangleTrackDiag60DegUpToFlatLongBase(
                         { -16, -16, height }, { { -8, -8, height + 0 }, { 16, 16, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
+
             break;
         case 1:
             switch (direction)
@@ -14944,7 +14803,7 @@ static void LatticeTriangleTrackDiag60DegUpToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 2:
             switch (direction)
@@ -14956,7 +14815,7 @@ static void LatticeTriangleTrackDiag60DegUpToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 3:
             switch (direction)
@@ -14982,7 +14841,7 @@ static void LatticeTriangleTrackDiag60DegUpToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 112);
+
             break;
         case 4:
             switch (direction)
@@ -14994,7 +14853,7 @@ static void LatticeTriangleTrackDiag60DegUpToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 5:
             switch (direction)
@@ -15006,7 +14865,7 @@ static void LatticeTriangleTrackDiag60DegUpToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 6:
             switch (direction)
@@ -15032,7 +14891,7 @@ static void LatticeTriangleTrackDiag60DegUpToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 7:
             switch (direction)
@@ -15044,7 +14903,7 @@ static void LatticeTriangleTrackDiag60DegUpToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 8:
             switch (direction)
@@ -15056,7 +14915,7 @@ static void LatticeTriangleTrackDiag60DegUpToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 9:
             switch (direction)
@@ -15078,7 +14937,7 @@ static void LatticeTriangleTrackDiag60DegUpToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
     }
 }
@@ -15099,7 +14958,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegDownLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 1:
             switch (direction)
@@ -15111,7 +14970,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegDownLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 2:
             switch (direction)
@@ -15123,7 +14982,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegDownLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 3:
             switch (direction)
@@ -15149,7 +15008,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegDownLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 40);
+
             break;
         case 4:
             switch (direction)
@@ -15161,7 +15020,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegDownLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 5:
             switch (direction)
@@ -15173,7 +15032,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegDownLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 6:
             switch (direction)
@@ -15199,7 +15058,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegDownLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 112);
+
             break;
         case 7:
             switch (direction)
@@ -15211,7 +15070,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegDownLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 8:
             switch (direction)
@@ -15223,7 +15082,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegDownLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 104);
+
             break;
         case 9:
             switch (direction)
@@ -15245,7 +15104,7 @@ static void LatticeTriangleTrackDiagFlatTo60DegDownLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
+
             break;
     }
 }
@@ -15266,7 +15125,7 @@ static void LatticeTriangleTrackDiag60DegDownToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 80 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 136);
+
             break;
         case 1:
             switch (direction)
@@ -15278,7 +15137,7 @@ static void LatticeTriangleTrackDiag60DegDownToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 2:
             switch (direction)
@@ -15290,7 +15149,7 @@ static void LatticeTriangleTrackDiag60DegDownToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 3:
             switch (direction)
@@ -15316,7 +15175,7 @@ static void LatticeTriangleTrackDiag60DegDownToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
+
             break;
         case 4:
             switch (direction)
@@ -15328,7 +15187,7 @@ static void LatticeTriangleTrackDiag60DegDownToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 5:
             switch (direction)
@@ -15340,7 +15199,7 @@ static void LatticeTriangleTrackDiag60DegDownToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 72);
+
             break;
         case 6:
             switch (direction)
@@ -15366,7 +15225,7 @@ static void LatticeTriangleTrackDiag60DegDownToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 64);
+
             break;
         case 7:
             switch (direction)
@@ -15378,7 +15237,7 @@ static void LatticeTriangleTrackDiag60DegDownToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 8:
             switch (direction)
@@ -15390,7 +15249,7 @@ static void LatticeTriangleTrackDiag60DegDownToFlatLongBase(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 9:
             switch (direction)
@@ -15412,7 +15271,7 @@ static void LatticeTriangleTrackDiag60DegDownToFlatLongBase(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 32);
+
             break;
     }
 }
@@ -15437,7 +15296,7 @@ static void LatticeTriangleTrackLeftEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { 0, 0, height + -8 }, { 32, 32, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
+
             break;
         case 1:
             switch (direction)
@@ -15448,7 +15307,7 @@ static void LatticeTriangleTrackLeftEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 2:
             switch (direction)
@@ -15459,7 +15318,7 @@ static void LatticeTriangleTrackLeftEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 3:
             switch (direction)
@@ -15489,7 +15348,7 @@ static void LatticeTriangleTrackLeftEighthDiveLoopUpToOrthogonal(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 112);
+
             break;
         case 4:
             switch (direction)
@@ -15515,7 +15374,7 @@ static void LatticeTriangleTrackLeftEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { 0, 6, height + 58 }, { 32, 20, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 5:
             switch (direction)
@@ -15545,7 +15404,6 @@ static void LatticeTriangleTrackLeftEighthDiveLoopUpToOrthogonal(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }
@@ -15570,7 +15428,7 @@ static void LatticeTriangleTrackRightEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { 0, 0, height + -8 }, { 32, 32, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 96);
+
             break;
         case 1:
             switch (direction)
@@ -15581,7 +15439,7 @@ static void LatticeTriangleTrackRightEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 2:
             switch (direction)
@@ -15592,7 +15450,7 @@ static void LatticeTriangleTrackRightEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { -16, -16, height + 0 }, { 32, 32, 3 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 120);
+
             break;
         case 3:
             switch (direction)
@@ -15622,7 +15480,7 @@ static void LatticeTriangleTrackRightEighthDiveLoopUpToOrthogonal(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 112);
+
             break;
         case 4:
             switch (direction)
@@ -15648,7 +15506,7 @@ static void LatticeTriangleTrackRightEighthDiveLoopUpToOrthogonal(
                         { -16, -16, height }, { { 6, 0, height + 58 }, { 20, 32, 1 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 80);
+
             break;
         case 5:
             switch (direction)
@@ -15678,7 +15536,6 @@ static void LatticeTriangleTrackRightEighthDiveLoopUpToOrthogonal(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 56);
             break;
     }
 }

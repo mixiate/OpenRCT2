@@ -2064,6 +2064,17 @@ void PaintTrack(PaintSession& session, Direction direction, int32_t height, cons
         }
         paintFunction(session, *ride, trackSequence, direction, height, trackElement, trackDrawerEntry.supportType);
 
+        if (!(ted.sequences[trackSequence].flags & TRACK_SEQUENCE_FLAG_DO_NOT_SET_GENERAL_SUPPORT_HEIGHT))
+        {
+            const int32_t rideClearance = rtd.Heights.ClearanceHeight;
+            const int32_t trackClearance = ted.sequences[trackSequence].clearance.clearanceZ;
+            const int32_t supportClearance = ted.sequences[trackSequence].clearance.supportClearanceZ;
+            const int32_t clearance = std::max<int32_t>(
+                rideClearance + trackClearance + supportClearance,
+                ted.sequences[trackSequence].clearance.minimumSupportClearanceZ);
+            PaintUtilSetGeneralSupportHeight(session, (height + Numerics::floor2(clearance, kCoordsZStep)));
+        }
+
         if (!rtd.HasFlag(RtdFlag::trackMustBeOnWater))
         {
             for (const auto& tunnel :
@@ -2112,7 +2123,6 @@ void TrackPaintUtilOnridePhotoPaint2(
     int32_t supportsAboveHeightOffset, int32_t trackHeightOffset)
 {
     TrackPaintUtilOnridePhotoPaint(session, direction, height + trackHeightOffset, trackElement);
-    PaintUtilSetGeneralSupportHeight(session, height + supportsAboveHeightOffset);
 }
 
 void TrackPaintFunctionDummy(

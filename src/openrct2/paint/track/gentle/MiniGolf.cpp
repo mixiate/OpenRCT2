@@ -523,8 +523,6 @@ static void PaintMiniGolfTrackFlat(
             PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 22, height + 2 }, { 32, 1, 7 } });
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0087F11C */
@@ -558,8 +556,6 @@ static void PaintMiniGolfTrack25DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x0087F12C */
@@ -593,8 +589,6 @@ static void PaintMiniGolfTrackFlatTo25DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x0087F13C */
@@ -628,8 +622,6 @@ static void PaintMiniGolfTrack25DegUpToFlat(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x0087F14C */
@@ -708,8 +700,6 @@ static void PaintMiniGolfStation(
         TrackPaintUtilDrawStationCovers(session, EDGE_NW, hasFence, stationObj, height, stationColour);
         TrackPaintUtilDrawStationCovers(session, EDGE_SE, hasSEFence, stationObj, height, stationColour);
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0087F1AC */
@@ -782,8 +772,6 @@ static void PaintMiniGolfTrackLeftQuarterTurn1Tile(
                 break;
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0087F1BC */
@@ -800,8 +788,6 @@ static void PaintMiniGolfHoleAb(
 {
     ImageId imageId;
     CoordsXY boundBox, boundBoxOffset;
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 
     if ((direction == 0 && trackSequence == 0) || (direction == 2 && trackSequence == 1))
     {
@@ -856,8 +842,6 @@ static void PaintMiniGolfHoleC(
 {
     ImageId imageId;
     CoordsXY boundBox, boundBoxOffset;
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 
     if ((direction == 0 && trackSequence == 0) || (direction == 2 && trackSequence == 1))
     {
@@ -916,8 +900,6 @@ static void PaintMiniGolfHoleD(
     boundBoxFront.offset.z += height;
     PaintAddImageAsParent(session, frontImageId, { 0, 0, height }, boundBoxFront);
 
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
-
     switch ((direction << 4) | trackSequence)
     {
         case 0x00:
@@ -947,8 +929,6 @@ static void PaintMiniGolfHoleE(
     auto boundBoxFront = kMiniGolfTrackBoundingBoxesHoleEFront[direction][trackSequence];
     boundBoxFront.offset.z += height;
     PaintAddImageAsParent(session, frontImageId, { 0, 0, height }, boundBoxFront);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 
     switch ((direction << 4) | trackSequence)
     {

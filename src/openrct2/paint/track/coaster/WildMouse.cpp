@@ -186,8 +186,6 @@ static void WildMouseTrackFlat(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void WildMouseTrackStation(
@@ -215,8 +213,6 @@ static void WildMouseTrackStation(
     else if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0078B1F4 */
@@ -243,7 +239,6 @@ static void WildMouseTrack25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x0078B204 */
@@ -283,7 +278,6 @@ static void WildMouseTrack60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 /** rct2: 0x0078B214 */
@@ -310,7 +304,6 @@ static void WildMouseTrackFlatTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x0078B224 */
@@ -352,7 +345,6 @@ static void WildMouseTrack25DegUpTo60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x0078B234 */
@@ -394,7 +386,6 @@ static void WildMouseTrack60DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x0078B244 */
@@ -421,7 +412,6 @@ static void WildMouseTrack25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x0078B254 */
@@ -508,7 +498,6 @@ static void WildMouseTrackRightQuarterTurn3(
 
             break;
     }
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void WildMouseTrackRightQuarterTurn325DegDown(
@@ -533,7 +522,6 @@ static void WildMouseTrackRightQuarterTurn325DegDown(
             { SPR_WILD_MOUSE_QUARTER_TURN_3_25_DEG_DOWN_SE_NE_PART_1, { 0, 6, 0 }, { 0, 0, 0 }, { 32, 20, 3 } },
         },
     };
-    static constexpr int16_t generalSupportHeights[] = { 72, 56, 56, 72 };
 
     if (trackSequence == 0 || trackSequence == 3)
     {
@@ -543,7 +531,6 @@ static void WildMouseTrackRightQuarterTurn325DegDown(
         PaintAddImageAsParent(
             session, session.TrackColours.WithIndex(sbb->sprite_id), { offset.x, offset.y, height + offset.z }, sbb->bb_size);
     }
-    PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
 }
 
 static void WildMouseTrackLeftQuarterTurn325DegUp(
@@ -578,7 +565,6 @@ static void WildMouseTrackRightQuarterTurn325DegUp(
             { SPR_WILD_MOUSE_QUARTER_TURN_3_25_DEG_UP_SE_NE_PART_1, { 0, 6, 0 }, { 0, 0, 0 }, { 32, 20, 3 } },
         },
     };
-    static constexpr int16_t generalSupportHeights[] = { 72, 56, 56, 72 };
 
     if (trackSequence == 0 || trackSequence == 3)
     {
@@ -603,7 +589,6 @@ static void WildMouseTrackRightQuarterTurn325DegUp(
             }
             break;
     }
-    PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
 }
 
 /** rct2: 0x0078B324 */
@@ -652,8 +637,6 @@ static void WildMouseTrackLeftQuarterTurn1(
             PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 6, 6, height }, { 24, 24, 2 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0078B3A4 */
@@ -703,7 +686,6 @@ static void WildMouseTrackFlatTo60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 64);
 }
 
 /** rct2: 0x0078B364 */
@@ -751,7 +733,6 @@ static void WildMouseTrack60DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x0078B374 */
@@ -780,8 +761,6 @@ static void WildMouseTrackBrakes(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0078B3C4 */
@@ -801,8 +780,6 @@ static void WildMouseTrackRotationControlToggle(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0078B3B4 */
@@ -816,8 +793,6 @@ static void WildMouseTrackBlockBrakes(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 TrackPaintFunction GetTrackPaintFunctionWildMouse(OpenRCT2::TrackElemType trackType)

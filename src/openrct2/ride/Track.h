@@ -185,6 +185,8 @@ struct SequenceClearance
     int16_t y{};
     int16_t z{};
     uint8_t clearanceZ{};
+    int8_t supportClearanceZ{};
+    uint8_t minimumSupportClearanceZ{};
     QuarterTile quarterTile = { 0, 0 };
     uint8_t flags{};
 };
@@ -634,6 +636,7 @@ enum
     TRACK_SEQUENCE_FLAG_CONNECTS_TO_PATH = (1 << 5), // 0x20
     TRACK_SEQUENCE_FLAG_DISALLOW_DOORS = (1 << 6),   // 0x40
     TRACK_SEQUENCE_FLAG_VERTICAL_TUNNEL = (1 << 7),  // Create a vertical tunnel
+    TRACK_SEQUENCE_FLAG_DO_NOT_SET_GENERAL_SUPPORT_HEIGHT = (1 << 8),
 };
 
 enum

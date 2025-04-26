@@ -176,8 +176,6 @@ static void PaintVirginiaReelTrackFlat(
     {
         PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 2, height }, { 32, 27, 2 } });
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x00811274 */
@@ -223,8 +221,6 @@ static void PaintVirginiaReelTrack25DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x00811294 */
@@ -258,8 +254,6 @@ static void PaintVirginiaReelTrackFlatTo25DegUp(
             PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 2, 0, height }, { 27, 32, 2 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x00811294 */
@@ -305,8 +299,6 @@ static void PaintVirginiaReelTrack25DegUpToFlat(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x008112A4 */
@@ -352,8 +344,6 @@ static void PaintVirginiaReelStation(
     }
 
     TrackPaintUtilDrawStation(session, ride, direction, height, trackElement, StationBaseType::b, -2);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x00811304 */
@@ -373,8 +363,6 @@ static void PaintVirginiaReelTrackLeftQuarterTurn3Tiles(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static constexpr uint8_t virginia_reel_right_quarter_turn_3_tiles_to_left_turn_map[] = {
@@ -414,8 +402,6 @@ static void PaintVirginiaReelTrackLeftQuarterTurn1Tile(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x00811334 */

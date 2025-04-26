@@ -177,8 +177,6 @@ static void PaintCarRideTrackFlat(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x006F72D8 */
@@ -212,8 +210,6 @@ static void PaintCarRideTrack25DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x006F72E8 */
@@ -247,8 +243,6 @@ static void PaintCarRideTrackFlatTo25DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x006F72F8 */
@@ -282,8 +276,6 @@ static void PaintCarRideTrack25DegUpToFlat(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x006F7308 */
@@ -325,8 +317,6 @@ static void PaintCarRideStation(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x006F7378 */
@@ -345,8 +335,6 @@ static void PaintCarRideTrackRightQuarterTurn3Tiles(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x006F7368 */
@@ -384,8 +372,6 @@ static void PaintCarRideTrackLeftQuarterTurn1Tile(
             PaintAddImageAsParent(session, imageId, offset, { offset, { 24, 24, 1 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x006F7398 */
@@ -420,8 +406,6 @@ static void PaintCarRideTrackSpinningTunnel(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x006F73B8 */
@@ -466,8 +450,6 @@ static void PaintCarRideTrack60DegUp(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 /** rct2: 0x006F73C8 */
@@ -519,8 +501,6 @@ static void PaintCarRideTrack25DegUpTo60DegUp(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x006F73D8 */
@@ -572,8 +552,6 @@ static void PaintCarRideTrack60DegUpTo25DegUp(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x006F73E8 */
@@ -622,8 +600,6 @@ static void PaintCarRideTrackLogBumps(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /**

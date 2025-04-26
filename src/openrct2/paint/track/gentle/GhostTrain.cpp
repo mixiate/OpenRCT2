@@ -149,8 +149,6 @@ static void PaintGhostTrainTrackFlat(
     auto imageId = session.TrackColours.WithIndex(kGhostTrainTrackPiecesFlat[direction]);
 
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x00770BFC */
@@ -163,8 +161,6 @@ static void PaintGhostTrainTrack25DegUp(
 
     imageId = session.TrackColours.WithIndex(kGhostTrainTrackPieces25DegUp[direction][1]);
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 0, height }, { { 0, 27, height }, { 32, 1, 23 } });
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x00770C0C */
@@ -177,8 +173,6 @@ static void PaintGhostTrainTrackFlatTo25DegUp(
 
     imageId = session.TrackColours.WithIndex(kGhostTrainTrackPiecesFlatTo25DegUp[direction][1]);
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 0, height }, { { 0, 27, height }, { 32, 1, 15 } });
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void PaintGhostTrainTrack25DegUpToFlatShared(
@@ -190,8 +184,6 @@ static void PaintGhostTrainTrack25DegUpToFlatShared(
 
     imageId = session.TrackColours.WithIndex(kGhostTrainTrackPieces25DegUpToFlat[direction][1]);
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 0, height }, { { 0, 27, height }, { 32, 1, 15 } });
-
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x00770C1C */
@@ -236,8 +228,6 @@ static void PaintGhostTrainStation(
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 0, height }, { { 0, 6, height + 1 }, { 32, 20, 3 } });
 
     TrackPaintUtilDrawStation(session, ride, direction, height, trackElement, StationBaseType::b, -2);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x00770C9C */
@@ -248,8 +238,6 @@ static void PaintGhostTrainTrackRightQuarterTurn3Tiles(
     TrackPaintUtilRightQuarterTurn3TilesPaint(
         session, 3, height, direction, trackSequence, session.TrackColours, kGhostTrainTrackPiecesQuarterTurn3Tiles, nullptr,
         defaultRightQuarterTurn3TilesBoundLengths, defaultRightQuarterTurn3TilesBoundOffsets);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x00770CAC */
@@ -269,8 +257,6 @@ static void PaintGhostTrainTrackLeftQuarterTurn1Tile(
 {
     TrackPaintUtilLeftQuarterTurn1TilePaint(
         session, 3, height, 0, direction, session.TrackColours, kGhostTrainTrackPiecesQuarterTurn1Tile);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x00770CBC */
@@ -292,8 +278,6 @@ static void PaintGhostTrainTrackSpinningTunnel(
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 0, height }, { { 2, 6, height }, { 28, 20, 3 } });
 
     TrackPaintUtilSpinningTunnelPaint(session, 3, height, direction);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x00770CDC */
@@ -304,8 +288,6 @@ static void PaintGhostTrainTrackBrakes(
     auto imageId = session.TrackColours.WithIndex(kGhostTrainTrackPiecesBrakes[direction]);
 
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 0, height }, { { 0, 6, height }, { 32, 20, 3 } });
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /**

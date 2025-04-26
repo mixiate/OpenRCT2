@@ -1866,8 +1866,6 @@ static void JuniorRCPaintTrackFlat(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 template<JuniorRCSubType TSubType>
@@ -1913,8 +1911,6 @@ static void JuniorRCPaintStation(
     else if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 template<JuniorRCSubType TSubType>
@@ -1925,8 +1921,6 @@ static void JuniorRCPaintTrack25DegUp(
     auto subTypeOffset = JuniorRCGetSubTypeOffset<TSubType>(trackElement);
     auto imageId = session.TrackColours.WithIndex(junior_rc_track_pieces_25_deg_up[subTypeOffset][direction]);
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 6, height }, { 32, 20, 1 });
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 template<JuniorRCSubType TSubType>
@@ -1938,8 +1932,6 @@ static void JuniorRCPaintTrackFlatTo25DegUp(
     auto imageId = session.TrackColours.WithIndex(junior_rc_track_pieces_flat_to_25_deg_up[subTypeOffset][direction]);
 
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 6, height }, { 32, 20, 1 });
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 template<JuniorRCSubType TSubType>
@@ -1950,8 +1942,6 @@ static void JuniorRCPaintTrack25DegUpToFlat(
     auto subTypeOffset = JuniorRCGetSubTypeOffset<TSubType>(trackElement);
     auto imageId = session.TrackColours.WithIndex(junior_rc_track_pieces_25_deg_up_to_flat[subTypeOffset][direction]);
     PaintAddImageAsParentRotated(session, direction, imageId, { 0, 6, height }, { 32, 20, 1 });
-
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void JuniorRCRightQuarterTurn5TilesPaintSetup(
@@ -1962,8 +1952,6 @@ static void JuniorRCRightQuarterTurn5TilesPaintSetup(
         session, 1, height, direction, trackSequence, session.TrackColours, junior_rc_track_pieces_flat_quarter_turn_5_tiles,
         kDefaultRightQuarterTurn5TilesOffsets, kDefaultRightQuarterTurn5TilesBoundLengths,
         kDefaultRightQuarterTurn5TilesBoundOffsets);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static constexpr uint8_t junior_rc_left_quarter_turn_5_tiles_to_right_turn_map[] = {
@@ -2016,8 +2004,6 @@ static void JuniorRCFlatToLeftBankPaintSetup(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /**
@@ -2056,8 +2042,6 @@ static void JuniorRCFlatToRightBankPaintSetup(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void JuniorRCLeftBankToFlatPaintSetup(
@@ -2201,8 +2185,6 @@ static void JuniorRCBankedRightQuarterTurn5TilesPaintSetup(
         case 6:
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /* rct2: 0x008AB000 */
@@ -2267,8 +2249,6 @@ static void JuniorRCLeftBankTo25DegUpPaintSetup(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /**
@@ -2323,8 +2303,6 @@ static void JuniorRCRightBankTo25DegUpPaintSetup(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /**
@@ -2363,8 +2341,6 @@ static void JuniorRC25DegUpToLeftBankPaintSetup(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /**
@@ -2403,8 +2379,6 @@ static void JuniorRC25DegUpToRightBankPaintSetup(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /**
@@ -2485,8 +2459,6 @@ static void JuniorRCLeftBankPaintSetup(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /**
@@ -2524,11 +2496,9 @@ static void JuniorRCPaintTrackLeftQuarterTurn5Tiles25DegUp(
 
     if (trackSequence == 3)
     {
-        PaintUtilSetGeneralSupportHeight(session, height + 64);
     }
     else
     {
-        PaintUtilSetGeneralSupportHeight(session, height + 72);
     }
 }
 
@@ -2557,11 +2527,9 @@ static void JuniorRCPaintTrackRightQuarterTurn5Tiles25DegUp(
 
     if (trackSequence == 3)
     {
-        PaintUtilSetGeneralSupportHeight(session, height + 64);
     }
     else
     {
-        PaintUtilSetGeneralSupportHeight(session, height + 72);
     }
 }
 
@@ -2645,8 +2613,6 @@ static void JuniorRCSBendLeftPaintSetup(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /* rct2: 0x008AAE60, 0x0051BBC0, 0x0051BE06, 0x0051C04E, 0x0051C068 */
@@ -2709,8 +2675,6 @@ static void JuniorRCSBendRightPaintSetup(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AAEB0, 0x0051C0E0, 0x0051C2C1, 0x0051C47F, 0x0051C61D */
@@ -2731,8 +2695,6 @@ static void JuniorRCRightQuarterTurn3TilesPaintSetup(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AAEA0 */
@@ -2828,8 +2790,6 @@ static void JuniorRCRightQuarterTurn3TilesBankPaintSetup(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void JuniorRCPaintTrackRightQuarterTurn3Tiles25DegUp(
@@ -2862,37 +2822,6 @@ static void JuniorRCPaintTrackRightQuarterTurn3Tiles25DegUp(
     {
         PaintAddImageAsParent(session, imageId, { offset, height }, { { bb.offset, height }, { bb.length, 1 } });
     }
-
-    if (direction == 0 && trackSequence == 0)
-    {
-    }
-
-    if (direction == 0 && trackSequence == 3)
-    {
-    }
-
-    if (direction == 1 && trackSequence == 3)
-    {
-    }
-
-    if (direction == 3 && trackSequence == 0)
-    {
-    }
-
-    switch (trackSequence)
-    {
-        case 0:
-
-            break;
-        case 3:
-
-            break;
-    }
-
-    if (trackSequence == 0 || trackSequence == 3)
-        PaintUtilSetGeneralSupportHeight(session, height + 72);
-    else
-        PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void JuniorRCPaintTrackRightQuarterTurn3Tiles25DegDown(
@@ -2925,37 +2854,6 @@ static void JuniorRCPaintTrackRightQuarterTurn3Tiles25DegDown(
     {
         PaintAddImageAsParent(session, imageId, { offset, height }, { { bb.offset, height }, { bb.length, 1 } });
     }
-
-    if (direction == 0 && trackSequence == 0)
-    {
-    }
-
-    if (direction == 0 && trackSequence == 3)
-    {
-    }
-
-    if (direction == 1 && trackSequence == 3)
-    {
-    }
-
-    if (direction == 3 && trackSequence == 0)
-    {
-    }
-
-    switch (trackSequence)
-    {
-        case 0:
-
-            break;
-        case 3:
-
-            break;
-    }
-
-    if (trackSequence == 0 || trackSequence == 3)
-        PaintUtilSetGeneralSupportHeight(session, height + 72);
-    else
-        PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AA0C0 */
@@ -3012,31 +2910,6 @@ static void JuniorRCRightHalfBankedHelixUpSmallPaintSetup(
         session, thickness, height, direction, trackSequence, session.TrackColours,
         junior_rc_track_pieces_right_half_banked_helix_up_small_quarter_tiles, nullptr,
         defaultRightHelixUpSmallQuarterBoundLengths, defaultRightHelixUpSmallQuarterBoundOffsets);
-
-    if (trackSequence == 0)
-    {
-    }
-    else if (trackSequence == 3)
-    {
-    }
-
-    if (direction == 0 && trackSequence == 0)
-    {
-    }
-
-    if (direction == 0 && trackSequence == 3)
-    {
-    }
-
-    if (direction == 1 && trackSequence == 3)
-    {
-    }
-
-    if (direction == 3 && trackSequence == 0)
-    {
-    }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AB110, 0x0052BD80, 0x0052BFD4, 0x0052C23B, 0x0052C450 */
@@ -3056,31 +2929,6 @@ static void JuniorRCRightHalfBankedHelixDownSmallPaintSetup(
         session, thickness, height, direction, trackSequence, session.TrackColours,
         junior_rc_track_pieces_right_half_banked_helix_down_small_quarter_tiles, nullptr,
         defaultRightHelixUpSmallQuarterBoundLengths, defaultRightHelixUpSmallQuarterBoundOffsets);
-
-    if (trackSequence == 0)
-    {
-    }
-    else if (trackSequence == 3)
-    {
-    }
-
-    if (direction == 0 && trackSequence == 0)
-    {
-    }
-
-    if (direction == 0 && trackSequence == 3)
-    {
-    }
-
-    if (direction == 1 && trackSequence == 3)
-    {
-    }
-
-    if (direction == 3 && trackSequence == 0)
-    {
-    }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AB0E0 */
@@ -3132,45 +2980,6 @@ static void JuniorRCRightHalfBankedHelixUpLargePaintSetup(
         session, thickness, height, direction, trackSequence, session.TrackColours,
         junior_rc_track_pieces_right_half_banked_helix_up_large_quarter_tiles, nullptr,
         defaultRightHelixUpLargeQuarterBoundLengths, defaultRightHelixUpLargeQuarterBoundOffsets);
-
-    if (trackSequence == 0)
-    {
-    }
-    else if (trackSequence == 6)
-    {
-    }
-
-    if (direction == 0 && trackSequence == 0)
-    {
-    }
-
-    if (direction == 0 && trackSequence == 6)
-    {
-    }
-
-    if (direction == 1 && trackSequence == 6)
-    {
-    }
-
-    if (direction == 3 && trackSequence == 0)
-    {
-    }
-
-    switch (trackSequence)
-    {
-        case 0:
-            break;
-        case 2:
-            break;
-        case 3:
-            break;
-        case 5:
-            break;
-        case 6:
-            break;
-    }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AB150, 0x0052D778, 0x0052DB27, 0x0052DEEA, 0x0052E26B */
@@ -3190,45 +2999,6 @@ static void JuniorRCRightHalfBankedHelixDownLargePaintSetup(
         session, thickness, height, direction, trackSequence, session.TrackColours,
         junior_rc_track_pieces_right_half_banked_helix_down_large_quarter_tiles, nullptr,
         defaultRightHelixUpLargeQuarterBoundLengths, defaultRightHelixUpLargeQuarterBoundOffsets);
-
-    if (trackSequence == 0)
-    {
-    }
-    else if (trackSequence == 6)
-    {
-    }
-
-    if (direction == 0 && trackSequence == 0)
-    {
-    }
-
-    if (direction == 0 && trackSequence == 6)
-    {
-    }
-
-    if (direction == 1 && trackSequence == 6)
-    {
-    }
-
-    if (direction == 3 && trackSequence == 0)
-    {
-    }
-
-    switch (trackSequence)
-    {
-        case 0:
-            break;
-        case 2:
-            break;
-        case 3:
-            break;
-        case 5:
-            break;
-        case 6:
-            break;
-    }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AB120 */
@@ -3281,12 +3051,6 @@ static void JuniorRCBrakePaintSetup(
     {
         PaintAddImageAsParent(session, image_id, { 0, 6, height }, { 32, 20, 1 });
     }
-
-    if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
-    {
-    }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /**
@@ -3309,12 +3073,6 @@ static void JuniorRCBlockBrakePaintSetup(
     {
         PaintAddImageAsParent(session, image_id, { 0, 6, height }, { 32, 20, 1 });
     }
-
-    if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
-    {
-    }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AAF80 */
@@ -3326,25 +3084,6 @@ static void JuniorRCLeftEighthToDiagPaintSetup(
         session, defaultEighthToDiagThickness, height, direction, trackSequence, session.TrackColours,
         junior_rc_track_pieces_left_eight_to_diag, nullptr, defaultLeftEighthToDiagBoundLengths,
         defaultLeftEighthToDiagBoundOffsets);
-
-    switch (trackSequence)
-    {
-        case 0:
-
-            break;
-        case 4:
-
-            break;
-    }
-
-    if (direction == 0 && trackSequence == 0)
-    {
-    }
-    if (direction == 3 && trackSequence == 0)
-    {
-    }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AAF90 */
@@ -3356,25 +3095,6 @@ static void JuniorRCRightEighthToDiagPaintSetup(
         session, defaultEighthToDiagThickness, height, direction, trackSequence, session.TrackColours,
         junior_rc_track_pieces_right_eight_to_diag, nullptr, defaultRightEighthToDiagBoundLengths,
         defaultRightEighthToDiagBoundOffsets);
-
-    switch (trackSequence)
-    {
-        case 0:
-
-            break;
-        case 4:
-
-            break;
-    }
-
-    if (direction == 0 && trackSequence == 0)
-    {
-    }
-    if (direction == 3 && trackSequence == 0)
-    {
-    }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AAFA0 */
@@ -3485,25 +3205,6 @@ static void JuniorRCLeftEighthToDiagBankPaintSetup(
         session, junior_rc_left_eighth_to_diag_bank_thickness, height, direction, trackSequence, session.TrackColours,
         junior_rc_track_pieces_left_eight_to_diag_bank, nullptr, junior_rc_left_eighth_to_diag_bank_bound_lengths,
         junior_rc_left_eighth_to_diag_bank_bound_offsets);
-
-    switch (trackSequence)
-    {
-        case 0:
-
-            break;
-        case 4:
-
-            break;
-    }
-
-    if (direction == 0 && trackSequence == 0)
-    {
-    }
-    if (direction == 3 && trackSequence == 0)
-    {
-    }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static constexpr CoordsXY junior_rc_right_eighth_to_diag_bank_bound_lengths[4][4] = {
@@ -3613,8 +3314,6 @@ static void JuniorRCRightEighthToDiagBankPaintSetup(
     if (direction == 3 && trackSequence == 0)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AB180 */
@@ -3658,8 +3357,6 @@ static void JuniorRCTrackDiagBrakes(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void JuniorRCTrackDiagBlockBrakes(
@@ -3673,8 +3370,6 @@ static void JuniorRCTrackDiagBlockBrakes(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 template<JuniorRCSubType TSubType>
@@ -3690,8 +3385,6 @@ static void JuniorRCPaintTrackDiag25DegUp(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 template<JuniorRCSubType TSubType>
@@ -3707,8 +3400,6 @@ static void JuniorRCPaintTrackDiagFlatTo25DegUp(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void JuniorRCPaintTrackDiagFlatTo60DegUp(
@@ -3725,8 +3416,6 @@ static void JuniorRCPaintTrackDiagFlatTo60DegUp(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 64);
 }
 
 template<JuniorRCSubType TSubType>
@@ -3742,8 +3431,6 @@ static void JuniorRCPaintTrackDiag25DegUpToFlat(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void JuniorRCPaintTrackDiag60DegUpToFlat(
@@ -3760,8 +3447,6 @@ static void JuniorRCPaintTrackDiag60DegUpToFlat(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 64);
 }
 
 template<JuniorRCSubType TSubType>
@@ -3777,8 +3462,6 @@ static void JuniorRCPaintTrackDiag25DegDown(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 template<JuniorRCSubType TSubType>
@@ -3794,8 +3477,6 @@ static void JuniorRCPaintTrackDiagFlatTo25DegDown(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void JuniorRCPaintTrackDiagFlatTo60DegDown(
@@ -3812,8 +3493,6 @@ static void JuniorRCPaintTrackDiagFlatTo60DegDown(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 template<JuniorRCSubType TSubType>
@@ -3829,8 +3508,6 @@ static void JuniorRCPaintTrackDiag25DegDownToFlat(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void JuniorRCPaintTrackDiag60DegDownToFlat(
@@ -3847,8 +3524,6 @@ static void JuniorRCPaintTrackDiag60DegDownToFlat(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AB1C0 */
@@ -3869,8 +3544,6 @@ static void JuniorRCDiagFlatToLeftBankPaintSetup(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AB1D0 */
@@ -3891,8 +3564,6 @@ static void JuniorRCDiagFlatToRightBankPaintSetup(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AB1E0 */
@@ -3913,8 +3584,6 @@ static void JuniorRCDiagLeftBankToFlatPaintSetup(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AB1F0 */
@@ -3935,8 +3604,6 @@ static void JuniorRCDiagRightBankToFlatPaintSetup(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AB220 */
@@ -3957,8 +3624,6 @@ static void JuniorRCDiagLeftBankTo25DegUpPaintSetup(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008AB230 */
@@ -3979,8 +3644,6 @@ static void JuniorRCDiagRightBankTo25DegUpPaintSetup(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008AB200 */
@@ -4001,8 +3664,6 @@ static void JuniorRCDiag25DegUpToLeftBankPaintSetup(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AB210 */
@@ -4023,8 +3684,6 @@ static void JuniorRCDiag25DegUpToRightBankPaintSetup(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AB200 */
@@ -4045,8 +3704,6 @@ static void JuniorRCDiagLeftBankTo25DegDownPaintSetup(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AB210 */
@@ -4067,8 +3724,6 @@ static void JuniorRCDiagRightBankTo25DegDownPaintSetup(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008AB220 */
@@ -4089,8 +3744,6 @@ static void JuniorRCDiag25DegDownToLeftBankPaintSetup(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008AB230 */
@@ -4111,8 +3764,6 @@ static void JuniorRCDiag25DegDownToRightBankPaintSetup(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static constexpr CoordsXYZ junior_rc_diag_left_bank_bound_offsets[4] = {
@@ -4142,8 +3793,6 @@ static void JuniorRCDiagLeftBankPaintSetup(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x008AB1B0 */
@@ -4159,8 +3808,6 @@ static void JuniorRCDiagRightBankPaintSetup(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static constexpr CoordsXY junior_rc_60_deg_up_bound_offsets[4] = {
@@ -4220,8 +3867,6 @@ static void JuniorRCPaintTrack60DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 static void JuniorRC60DegDownPaintSetup(
@@ -4293,8 +3938,6 @@ static void JuniorRCPaintTrack25DegUpTo60DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void JuniorRC60DegDownTo25DegDownPaintSetup(
@@ -4349,8 +3992,6 @@ static void JuniorRCPaintTrack60DegUpTo25DegUp(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void JuniorRC25DegDownTo60DegDownPaintSetup(
@@ -4374,8 +4015,6 @@ static void JuniorRCPaintTrackDiag60DegUp(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 static void JuniorRCPaintTrackDiag60DegDown(
@@ -4392,8 +4031,6 @@ static void JuniorRCPaintTrackDiag60DegDown(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 static void JuniorRCPaintTrackDiag25DegUpTo60DegUp(
@@ -4410,8 +4047,6 @@ static void JuniorRCPaintTrackDiag25DegUpTo60DegUp(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void JuniorRCPaintTrackDiag60DegUpTo25DegUp(
@@ -4438,8 +4073,6 @@ static void JuniorRCPaintTrackDiag60DegUpTo25DegUp(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void JuniorRCPaintTrackDiag25DegDownTo60DegDown(
@@ -4466,8 +4099,6 @@ static void JuniorRCPaintTrackDiag25DegDownTo60DegDown(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void JuniorRCPaintTrackDiag60DegDownTo25DegDown(
@@ -4484,8 +4115,6 @@ static void JuniorRCPaintTrackDiag60DegDownTo25DegDown(
     if (trackSequence == 3)
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static constexpr CoordsXY junior_rc_flat_to_60_deg_up_bound_lengths[4][2] = {
@@ -4562,8 +4191,6 @@ static void JuniorRCFlatTo60DegUpPaintSetup(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void JuniorRC60DegDownToFlatPaintSetup(
@@ -4616,8 +4243,6 @@ static void JuniorRC60DegUpToFlatPaintSetup(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void JuniorRCFlatTo60DegDownPaintSetup(
@@ -4676,8 +4301,6 @@ static void JuniorRCBoosterPaintSetup(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void JuniorRCTrackOnRidePhoto(

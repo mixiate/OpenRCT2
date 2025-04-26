@@ -136,8 +136,6 @@ static void SideFrictionRCTrackFlat(
                 break;
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x007784AC, 0x007784BC, 0x007784CC */
@@ -162,8 +160,6 @@ static void SideFrictionRCTrackStation(
             session, direction, session.TrackColours.WithIndex(imageIds[direction][1]), { 0, 0, height },
             { { 0, 2, height + 27 }, { 32, 27, 0 } });
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x007783AC */
@@ -254,7 +250,6 @@ static void SideFrictionRCTrack25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x007783CC */
@@ -345,7 +340,6 @@ static void SideFrictionRCTrackFlatTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x007783FC */
@@ -436,7 +430,6 @@ static void SideFrictionRCTrack25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x0077840C */
@@ -506,10 +499,10 @@ static void SideFrictionRCTrackLeftQuarterTurn5(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 2:
             switch (direction)
@@ -544,7 +537,6 @@ static void SideFrictionRCTrackLeftQuarterTurn5(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             switch (direction)
@@ -579,10 +571,9 @@ static void SideFrictionRCTrackLeftQuarterTurn5(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 4:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 5:
             switch (direction)
@@ -617,7 +608,6 @@ static void SideFrictionRCTrackLeftQuarterTurn5(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 6:
             switch (direction)
@@ -661,7 +651,7 @@ static void SideFrictionRCTrackLeftQuarterTurn5(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -722,7 +712,7 @@ static void SideFrictionRCTrackSBendLeft(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -761,7 +751,6 @@ static void SideFrictionRCTrackSBendLeft(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -800,7 +789,6 @@ static void SideFrictionRCTrackSBendLeft(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             switch (direction)
@@ -848,7 +836,7 @@ static void SideFrictionRCTrackSBendLeft(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -900,7 +888,7 @@ static void SideFrictionRCTrackSBendRight(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -939,7 +927,6 @@ static void SideFrictionRCTrackSBendRight(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -978,7 +965,6 @@ static void SideFrictionRCTrackSBendRight(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             switch (direction)
@@ -1026,7 +1012,7 @@ static void SideFrictionRCTrackSBendRight(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -1078,10 +1064,9 @@ static void SideFrictionRCTrackLeftQuarterTurn3(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -1119,7 +1104,7 @@ static void SideFrictionRCTrackLeftQuarterTurn3(
                         { { 16, 16, height + 27 }, { 16, 16, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 3:
             switch (direction)
@@ -1167,7 +1152,7 @@ static void SideFrictionRCTrackLeftQuarterTurn3(
 
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -1207,8 +1192,6 @@ static void SideFrictionRCTrackBrakes(
                 { { 0, 2, height + 27 }, { 32, 27, 0 } });
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x007785DC */
@@ -1258,7 +1241,7 @@ static void SideFrictionRCTrackLeftEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -1297,7 +1280,6 @@ static void SideFrictionRCTrackLeftEighthToDiag(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -1336,11 +1318,9 @@ static void SideFrictionRCTrackLeftEighthToDiag(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 4:
             switch (direction)
@@ -1378,7 +1358,7 @@ static void SideFrictionRCTrackLeftEighthToDiag(
                         { { 16, 0, height + 27 }, { 16, 16, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -1430,7 +1410,7 @@ static void SideFrictionRCTrackRightEighthToDiag(
             if (direction == 0 || direction == 3)
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -1469,7 +1449,6 @@ static void SideFrictionRCTrackRightEighthToDiag(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 2:
             switch (direction)
@@ -1508,11 +1487,9 @@ static void SideFrictionRCTrackRightEighthToDiag(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 4:
             switch (direction)
@@ -1550,7 +1527,7 @@ static void SideFrictionRCTrackRightEighthToDiag(
                         { { 16, 16, height + 27 }, { 16, 16, 0 } });
                     break;
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -1610,8 +1587,6 @@ static void SideFrictionRCTrackDiagFlat(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0077853C */
@@ -1730,8 +1705,6 @@ static void SideFrictionRCTrackDiag25DegUp(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x0077851C */
@@ -1764,7 +1737,7 @@ static void SideFrictionRCTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -1796,7 +1769,6 @@ static void SideFrictionRCTrackDiagFlatTo25DegUp(
                 }
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             if (trackElement.HasChain())
@@ -1828,7 +1800,6 @@ static void SideFrictionRCTrackDiagFlatTo25DegUp(
                 }
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             if (trackElement.HasChain())
@@ -1853,7 +1824,7 @@ static void SideFrictionRCTrackDiagFlatTo25DegUp(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -1975,8 +1946,6 @@ static void SideFrictionRCTrackDiag25DegUpToFlat(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x0077859C */
@@ -2096,8 +2065,6 @@ static void SideFrictionRCTrackDiag25DegDown(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x0077857C */
@@ -2216,8 +2183,6 @@ static void SideFrictionRCTrackDiagFlatTo25DegDown(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x0077858C */
@@ -2250,7 +2215,7 @@ static void SideFrictionRCTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             if (trackElement.HasChain())
@@ -2282,7 +2247,6 @@ static void SideFrictionRCTrackDiag25DegDownToFlat(
                 }
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             if (trackElement.HasChain())
@@ -2314,7 +2278,6 @@ static void SideFrictionRCTrackDiag25DegDownToFlat(
                 }
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 3:
             if (trackElement.HasChain())
@@ -2339,7 +2302,7 @@ static void SideFrictionRCTrackDiag25DegDownToFlat(
                         break;
                 }
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -2391,7 +2354,6 @@ static void SideFrictionRCTrack60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 static void SideFrictionRCTrack60DegDown(
@@ -2447,7 +2409,6 @@ static void SideFrictionRCTrack25DegUpTo60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void SideFrictionRCTrack60DegDownTo25DegDown(
@@ -2503,7 +2464,6 @@ static void SideFrictionRCTrack60DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void SideFrictionRCTrack25DegDownTo60DegDown(
@@ -2567,8 +2527,6 @@ static void SideFrictionRCTrackDiag60DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 static void SideFrictionRCTrackDiag60DegDown(
@@ -2638,8 +2596,6 @@ static void SideFrictionRCTrackDiag60DegUpTo25DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void SideFrictionRCTrackDiag25DegDownTo60DegDown(
@@ -2708,8 +2664,6 @@ static void SideFrictionRCTrackDiag25DegUpTo60DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void SideFrictionRCTrackDiag60DegDownTo25DegDown(

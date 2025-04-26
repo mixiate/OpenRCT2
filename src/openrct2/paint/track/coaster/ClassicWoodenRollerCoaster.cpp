@@ -902,8 +902,6 @@ static void ClassicWoodenRCTrackBankedRightQuarterTurn5(
 
     WoodenRCTrackPaintBb<true>(session, &imageIds[direction][trackSequence][0], height);
     WoodenRCTrackPaintBb<true>(session, &imageIds[direction][trackSequence][1], height);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void ClassicWoodenRCTrackBankedLeftQuarterTurn5(
@@ -1050,8 +1048,6 @@ static void ClassicWoodenRCTrackRightQuarterTurn3Bank(
 
     WoodenRCTrackPaintBb<true>(session, &imageIds[direction][trackSequence][0], height);
     WoodenRCTrackPaintBb<true>(session, &imageIds[direction][trackSequence][1], height);
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void ClassicWoodenRCTrackLeftQuarterTurn3Bank(

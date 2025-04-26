@@ -237,8 +237,6 @@ static void DinghySlideTrackFlat(
     if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void DinghySlideTrackStation(
@@ -269,8 +267,6 @@ static void DinghySlideTrackStation(
         {
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void DinghySlideTrack25DegUp(
@@ -309,8 +305,6 @@ static void DinghySlideTrack25DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 static void DinghySlideTrack60DegUp(
@@ -340,8 +334,6 @@ static void DinghySlideTrack60DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 static void DinghySlideTrackFlatTo25DegUp(
@@ -380,8 +372,6 @@ static void DinghySlideTrackFlatTo25DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 static void DinghySlideTrack25DegUpTo60DegUp(
@@ -411,8 +401,6 @@ static void DinghySlideTrack25DegUpTo60DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void DinghySlideTrack60DegUpTo25DegUp(
@@ -442,8 +430,6 @@ static void DinghySlideTrack60DegUpTo25DegUp(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 static void DinghySlideTrack25DegUpToFlat(
@@ -482,8 +468,6 @@ static void DinghySlideTrack25DegUpToFlat(
     else
     {
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 static void DinghySlideTrack25DegDown(
@@ -623,8 +607,6 @@ static void DinghySlideTrackRightQuarterTurn5(
         case 6:
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void DinghySlideTrackLeftQuarterTurn5(
@@ -719,8 +701,6 @@ static void DinghySlideTrackSBendLeft(
         {
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void DinghySlideTrackSBendRight(
@@ -800,8 +780,6 @@ static void DinghySlideTrackSBendRight(
         {
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void DinghySlideTrackRightQuarterTurn3(
@@ -863,8 +841,6 @@ static void DinghySlideTrackRightQuarterTurn3(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void DinghySlideTrackLeftQuarterTurn3(

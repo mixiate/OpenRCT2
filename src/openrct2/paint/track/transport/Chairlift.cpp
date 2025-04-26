@@ -228,8 +228,6 @@ static void ChairliftPaintStationNeSw(
         PaintAddImageAsParent(
             session, imageId, { 30, 16, height + 2 }, { { 1, 16, height + 2 }, { 1, 1, 7 } }); // bound offset x is wrong?
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void ChairliftPaintStationSeNw(
@@ -317,8 +315,6 @@ static void ChairliftPaintStationSeNw(
         PaintAddImageAsParent(
             session, imageId, { 16, 30, height + 2 }, { { 16, 1, height + 2 }, { 1, 1, 7 } }); // bound offset x is wrong?
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x00744068 */
@@ -351,8 +347,6 @@ static void ChairliftPaintFlat(
         imageId = session.TrackColours.WithIndex(SPR_CHAIRLIFT_CABLE_FLAT_SW_NE);
         PaintAddImageAsParent(session, imageId, { 0, 0, height }, { { 0, 13, height + 28 }, { 32, 6, 2 } });
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x00743FD8 */
@@ -388,8 +382,6 @@ static void ChairliftPaint25DegUp(
 
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x00743FD8 */
@@ -437,7 +429,6 @@ static void ChairliftPaintFlatTo25DegUp(
 
             break;
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x00743FF8 */
@@ -485,7 +476,6 @@ static void ChairliftPaint25DegUpToFlat(
 
             break;
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x00744008 */
@@ -568,7 +558,6 @@ static void ChairliftPaintLeftQuarterTurn1Tile(
 
             break;
     }
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x00744048 */

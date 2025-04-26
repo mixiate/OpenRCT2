@@ -90,8 +90,6 @@ static void HeartlineTwisterRCTrackFlat(
                 break;
         }
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 static void HeartlineTwisterRCTrackStation(
@@ -117,8 +115,6 @@ static void HeartlineTwisterRCTrackStation(
             session, direction, session.TrackColours.WithIndex(imageIds[direction][1]), { 0, 0, height },
             { { 0, 27, height }, { 32, 1, 26 } });
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x0087695C */
@@ -209,7 +205,6 @@ static void HeartlineTwisterRCTrack25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
 /** rct2: 0x008769FC */
@@ -300,7 +295,6 @@ static void HeartlineTwisterRCTrack60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
 /** rct2: 0x0087696C */
@@ -391,7 +385,6 @@ static void HeartlineTwisterRCTrackFlatTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
 /** rct2: 0x008769BC */
@@ -482,7 +475,6 @@ static void HeartlineTwisterRCTrack25DegUpTo60DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x008769CC */
@@ -573,7 +565,6 @@ static void HeartlineTwisterRCTrack60DegUpTo25DegUp(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
 /** rct2: 0x0087697C */
@@ -664,7 +655,6 @@ static void HeartlineTwisterRCTrack25DegUpToFlat(
     else
     {
     }
-    PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
 /** rct2: 0x0087698C */
@@ -767,7 +757,7 @@ static void HeartlineTwisterRCTrackHeartlineTransferUp(
             else
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
         case 1:
             switch (direction)
@@ -830,7 +820,6 @@ static void HeartlineTwisterRCTrackHeartlineTransferUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             switch (direction)
@@ -869,7 +858,6 @@ static void HeartlineTwisterRCTrackHeartlineTransferUp(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             switch (direction)
@@ -913,7 +901,7 @@ static void HeartlineTwisterRCTrackHeartlineTransferUp(
             else
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
     }
 }
@@ -967,7 +955,7 @@ static void HeartlineTwisterRCTrackHeartlineTransferDown(
             else
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
+
             break;
         case 1:
             switch (direction)
@@ -1030,7 +1018,6 @@ static void HeartlineTwisterRCTrackHeartlineTransferDown(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
             break;
         case 2:
             switch (direction)
@@ -1069,7 +1056,6 @@ static void HeartlineTwisterRCTrackHeartlineTransferDown(
                     break;
             }
 
-            PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
         case 3:
             switch (direction)
@@ -1114,7 +1100,7 @@ static void HeartlineTwisterRCTrackHeartlineTransferDown(
             else
             {
             }
-            PaintUtilSetGeneralSupportHeight(session, height + 48);
+
             break;
     }
 }
@@ -1349,8 +1335,6 @@ static void HeartlineTwisterRCTrackLeftHeartlineRoll(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 /** rct2: 0x00876A5C */
@@ -1583,8 +1567,6 @@ static void HeartlineTwisterRCTrackRightHeartlineRoll(
             }
             break;
     }
-
-    PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
 TrackPaintFunction GetTrackPaintFunctionHeartlineTwisterRC(OpenRCT2::TrackElemType trackType)
