@@ -146,6 +146,7 @@ namespace OpenRCT2::TrackMetaData
         uint8_t allowedWallEdges{};
         /** rct2: 0x0099BA64 */
         uint16_t flags{};
+        uint8_t rotatedTrackSequence = 0;
         int8_t extraSupportRotation = 0;
         int8_t extraSupportCoverRotation = 0;
         bool invertSegmentBlocking = false;

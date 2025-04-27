@@ -3543,10 +3543,10 @@ namespace OpenRCT2::TrackMetaData
         { TrackElemType::RightTwistDownToUp, 2 },                       // RightTwistUpToDown
         { TrackElemType::HalfLoopDown, 0 },                             // HalfLoopUp
         { TrackElemType::HalfLoopUp, 0 },                               // HalfLoopDown
-        { TrackElemType::RightCorkscrewDown, 2 },                       // LeftCorkscrewUp
-        { TrackElemType::LeftCorkscrewDown, 2 },                        // RightCorkscrewUp
-        { TrackElemType::RightCorkscrewUp, 2 },                         // LeftCorkscrewDown
-        { TrackElemType::LeftCorkscrewUp, 2 },                          // RightCorkscrewDown
+        { TrackElemType::RightCorkscrewDown, 1 },                       // LeftCorkscrewUp
+        { TrackElemType::LeftCorkscrewDown, -1 },                       // RightCorkscrewUp
+        { TrackElemType::RightCorkscrewUp, 1 },                         // LeftCorkscrewDown
+        { TrackElemType::LeftCorkscrewUp, -1 },                         // RightCorkscrewDown
         { TrackElemType::Down60ToFlat, 2 },                             // FlatToUp60
         { TrackElemType::FlatToDown60, 2 },                             // Up60ToFlat
         { TrackElemType::Up60ToFlat, 2 },                               // FlatToDown60
@@ -3668,10 +3668,10 @@ namespace OpenRCT2::TrackMetaData
         { TrackElemType::RightBankToRightQuarterTurn3TilesUp25, 1 },    // LeftQuarterTurn3TilesDown25ToLeftBank
         { TrackElemType::LeftBankToLeftQuarterTurn3TilesUp25, -1 },     // RightQuarterTurn3TilesDown25ToRightBank
         { TrackElemType::PoweredLift, 0 },                              // PoweredLift
-        { TrackElemType::RightLargeHalfLoopDown, 2 },                   // LeftLargeHalfLoopUp
-        { TrackElemType::LeftLargeHalfLoopDown, 2 },                    // RightLargeHalfLoopUp
-        { TrackElemType::RightLargeHalfLoopUp, 2 },                     // LeftLargeHalfLoopDown
-        { TrackElemType::LeftLargeHalfLoopUp, 2 },                      // RightLargeHalfLoopDown
+        { TrackElemType::RightLargeHalfLoopDown, 0 },                   // LeftLargeHalfLoopUp
+        { TrackElemType::LeftLargeHalfLoopDown, 0 },                    // RightLargeHalfLoopUp
+        { TrackElemType::RightLargeHalfLoopUp, 0 },                     // LeftLargeHalfLoopDown
+        { TrackElemType::LeftLargeHalfLoopUp, 0 },                      // RightLargeHalfLoopDown
         { TrackElemType::RightFlyerTwistDown, 2 },                      // LeftFlyerTwistUp
         { TrackElemType::LeftFlyerTwistDown, 2 },                       // RightFlyerTwistUp
         { TrackElemType::RightFlyerTwistUp, 2 },                        // LeftFlyerTwistDown
@@ -5347,6 +5347,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 6,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topRight, Seg::bottomLeft),                   // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -5360,6 +5361,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesSeq1 = {
         .clearance = { 0, -32, 0, 0, 0, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = 4,
         .blockedSegments = { {
             kSegmentsNone,                                             // narrow
             kSegmentsNone,                                             // inverted
@@ -5372,6 +5374,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 5,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -5384,6 +5387,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesSeq3 = {
         .clearance = { -32, -32, 0, 0, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -5398,6 +5402,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesSeq4 = {
         .clearance = { -32, -64, 0, 0, 0, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = 1,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             kSegmentsNone,                                             // narrow
@@ -5411,6 +5416,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesSeq5 = {
         .clearance = { -64, -32, 0, 0, 0, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 2,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -5425,6 +5431,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesSeq6 = {
         .clearance = { -64, -64, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomRight),                // narrow
@@ -5439,6 +5446,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 6,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomLeft),               // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -5452,6 +5460,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesSeq1 = {
         .clearance = { 0, 32, 0, 0, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 4,
         .blockedSegments = { {
             kSegmentsNone,                                       // narrow
             kSegmentsNone,                                       // inverted
@@ -5464,6 +5473,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 5,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -5477,6 +5487,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesSeq3 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b1110, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -5491,6 +5502,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesSeq4 = {
         .clearance = { -32, 64, 0, 0, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 1,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             kSegmentsNone,                                       // narrow
@@ -5504,6 +5516,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesSeq5 = {
         .clearance = { -64, 32, 0, 0, 0, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 2,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -5518,6 +5531,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesSeq6 = {
         .clearance = { -64, 64, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomRight),                // narrow
@@ -5590,6 +5604,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kBankedLeftQuarterTurn5TilesSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq0.rotatedTrackSequence,
         .blockedSegments = kLeftQuarterTurn5TilesSeq0.blockedSegments,
         .tunnels = kLeftQuarterTurn5TilesSeq0.tunnels,
     };
@@ -5597,23 +5612,27 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kBankedLeftQuarterTurn5TilesSeq1 = {
         .clearance = { 0, -32, 0, 0, 0, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq1.rotatedTrackSequence,
         .blockedSegments = kLeftQuarterTurn5TilesSeq1.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kBankedLeftQuarterTurn5TilesSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq2.rotatedTrackSequence,
         .blockedSegments = kLeftQuarterTurn5TilesSeq2.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kBankedLeftQuarterTurn5TilesSeq3 = {
         .clearance = { -32, -32, 0, 0, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq3.rotatedTrackSequence,
         .blockedSegments = kLeftQuarterTurn5TilesSeq3.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kBankedLeftQuarterTurn5TilesSeq4 = {
         .clearance = { -32, -64, 0, 0, 0, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq4.rotatedTrackSequence,
         .extraSupportRotation = -1,
         .blockedSegments = kLeftQuarterTurn5TilesSeq4.blockedSegments,
     };
@@ -5621,6 +5640,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kBankedLeftQuarterTurn5TilesSeq5 = {
         .clearance = { -64, -32, 0, 0, 0, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq5.rotatedTrackSequence,
         .extraSupportRotation = -1,
         .blockedSegments = kLeftQuarterTurn5TilesSeq5.blockedSegments,
     };
@@ -5628,6 +5648,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kBankedLeftQuarterTurn5TilesSeq6 = {
         .clearance = { -64, -64, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq6.rotatedTrackSequence,
         .extraSupportRotation = -1,
         .blockedSegments = kLeftQuarterTurn5TilesSeq6.blockedSegments,
         .tunnels = kLeftQuarterTurn5TilesSeq6.tunnels,
@@ -5636,6 +5657,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kBankedRightQuarterTurn5TilesSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq0.rotatedTrackSequence,
         .blockedSegments = kRightQuarterTurn5TilesSeq0.blockedSegments,
         .tunnels = kRightQuarterTurn5TilesSeq0.tunnels,
     };
@@ -5643,23 +5665,27 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kBankedRightQuarterTurn5TilesSeq1 = {
         .clearance = { 0, 32, 0, 0, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq1.rotatedTrackSequence,
         .blockedSegments = kRightQuarterTurn5TilesSeq1.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kBankedRightQuarterTurn5TilesSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq2.rotatedTrackSequence,
         .blockedSegments = kRightQuarterTurn5TilesSeq2.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kBankedRightQuarterTurn5TilesSeq3 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b1110, 0 }, 0 },
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq3.rotatedTrackSequence,
         .blockedSegments = kRightQuarterTurn5TilesSeq3.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kBankedRightQuarterTurn5TilesSeq4 = {
         .clearance = { -32, 64, 0, 0, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq4.rotatedTrackSequence,
         .extraSupportRotation = 1,
         .blockedSegments = kRightQuarterTurn5TilesSeq4.blockedSegments,
     };
@@ -5667,6 +5693,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kBankedRightQuarterTurn5TilesSeq5 = {
         .clearance = { -64, 32, 0, 0, 0, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq5.rotatedTrackSequence,
         .extraSupportRotation = 1,
         .blockedSegments = kRightQuarterTurn5TilesSeq5.blockedSegments,
     };
@@ -5674,6 +5701,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kBankedRightQuarterTurn5TilesSeq6 = {
         .clearance = { -64, 64, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq6.rotatedTrackSequence,
         .extraSupportRotation = 1,
         .blockedSegments = kRightQuarterTurn5TilesSeq6.blockedSegments,
         .tunnels = kRightQuarterTurn5TilesSeq6.tunnels,
@@ -5827,6 +5855,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesUp25Seq0 = {
         .clearance = { 0, 0, 0, 16, 8, 0, { 0b1111, 0b1100 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq0.rotatedTrackSequence,
         .blockedSegments = kLeftQuarterTurn5TilesSeq0.blockedSegments,
         .tunnels = SequenceTunnelsAllGroups({ { { -8, 0, TunnelSlope::slopeStart } } }, 0),
     };
@@ -5834,23 +5863,27 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesUp25Seq1 = {
         .clearance = { 0, -32, 16, 0, 40, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq1.rotatedTrackSequence,
         .blockedSegments = kLeftQuarterTurn5TilesSeq1.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesUp25Seq2 = {
         .clearance = { -32, 0, 16, 16, 8, 0, { 0b0111, 0b0100 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq2.rotatedTrackSequence,
         .blockedSegments = kLeftQuarterTurn5TilesSeq2.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesUp25Seq3 = {
         .clearance = { -32, -32, 24, 16, 16, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq3.rotatedTrackSequence,
         .blockedSegments = kLeftQuarterTurn5TilesSeq3.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesUp25Seq4 = {
         .clearance = { -32, -64, 48, 0, 24, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq4.rotatedTrackSequence,
         .extraSupportRotation = -1,
         .blockedSegments = kLeftQuarterTurn5TilesSeq4.blockedSegments,
     };
@@ -5858,6 +5891,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesUp25Seq5 = {
         .clearance = { -64, -32, 32, 16, 24, 0, { 0b0111, 0b0100 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq5.rotatedTrackSequence,
         .extraSupportRotation = -1,
         .blockedSegments = kLeftQuarterTurn5TilesSeq5.blockedSegments,
     };
@@ -5865,6 +5899,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesUp25Seq6 = {
         .clearance = { -64, -64, 48, 16, 8, 0, { 0b1111, 0b0110 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq6.rotatedTrackSequence,
         .extraSupportRotation = -1,
         .blockedSegments = kLeftQuarterTurn5TilesSeq6.blockedSegments,
         .tunnels = SequenceTunnelsAllGroups({ { { 8, 3, TunnelSlope::slopeEnd } } }, 0),
@@ -5873,6 +5908,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesUp25Seq0 = {
         .clearance = { 0, 0, 0, 16, 8, 0, { 0b1111, 0b1100 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq0.rotatedTrackSequence,
         .blockedSegments = kRightQuarterTurn5TilesSeq0.blockedSegments,
         .tunnels = SequenceTunnelsFlipXAxis(kLeftQuarterTurn5TilesUp25Seq0.tunnels),
     };
@@ -5880,23 +5916,27 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesUp25Seq1 = {
         .clearance = { 0, 32, 16, 0, 40, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq1.rotatedTrackSequence,
         .blockedSegments = kRightQuarterTurn5TilesSeq1.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesUp25Seq2 = {
         .clearance = { -32, 0, 16, 16, 8, 0, { 0b1011, 0b1000 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq2.rotatedTrackSequence,
         .blockedSegments = kRightQuarterTurn5TilesSeq2.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesUp25Seq3 = {
         .clearance = { -32, 32, 24, 16, 16, 0, { 0b1110, 0 }, 0 },
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq3.rotatedTrackSequence,
         .blockedSegments = kRightQuarterTurn5TilesSeq3.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesUp25Seq4 = {
         .clearance = { -32, 64, 48, 0, 24, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq4.rotatedTrackSequence,
         .extraSupportRotation = 1,
         .blockedSegments = kRightQuarterTurn5TilesSeq4.blockedSegments,
     };
@@ -5904,6 +5944,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesUp25Seq5 = {
         .clearance = { -64, 32, 32, 16, 24, 0, { 0b1011, 0b1000 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq5.rotatedTrackSequence,
         .extraSupportRotation = 1,
         .blockedSegments = kRightQuarterTurn5TilesSeq5.blockedSegments,
     };
@@ -5911,6 +5952,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesUp25Seq6 = {
         .clearance = { -64, 64, 48, 16, 8, 0, { 0b1111, 0b1001 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq6.rotatedTrackSequence,
         .extraSupportRotation = 1,
         .blockedSegments = kRightQuarterTurn5TilesSeq6.blockedSegments,
         .tunnels = SequenceTunnelsFlipXAxis(kLeftQuarterTurn5TilesUp25Seq6.tunnels),
@@ -5919,6 +5961,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesDown25Seq0 = {
         .clearance = { 0, 0, 48, 16, 8, 0, { 0b1111, 0b0011 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq0.rotatedTrackSequence,
         .blockedSegments = kLeftQuarterTurn5TilesSeq0.blockedSegments,
         .tunnels = SequenceTunnelsPrev(kRightQuarterTurn5TilesUp25Seq6.tunnels),
     };
@@ -5926,23 +5969,27 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesDown25Seq1 = {
         .clearance = { 0, -32, 48, 0, 24, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq1.rotatedTrackSequence,
         .blockedSegments = kLeftQuarterTurn5TilesSeq1.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesDown25Seq2 = {
         .clearance = { -32, 0, 32, 16, 24, 0, { 0b0111, 0b0001 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq2.rotatedTrackSequence,
         .blockedSegments = kLeftQuarterTurn5TilesSeq2.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesDown25Seq3 = {
         .clearance = { -32, -32, 24, 16, 16, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq3.rotatedTrackSequence,
         .blockedSegments = kLeftQuarterTurn5TilesSeq3.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesDown25Seq4 = {
         .clearance = { -32, -64, 16, 0, 40, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq4.rotatedTrackSequence,
         .extraSupportRotation = -1,
         .blockedSegments = kLeftQuarterTurn5TilesSeq4.blockedSegments,
     };
@@ -5950,6 +5997,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesDown25Seq5 = {
         .clearance = { -64, -32, 16, 16, 8, 0, { 0b0111, 0b0001 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq5.rotatedTrackSequence,
         .extraSupportRotation = -1,
         .blockedSegments = kLeftQuarterTurn5TilesSeq5.blockedSegments,
     };
@@ -5957,6 +6005,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn5TilesDown25Seq6 = {
         .clearance = { -64, -64, 0, 16, 8, 0, { 0b1111, 0b1001 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = kLeftQuarterTurn5TilesSeq6.rotatedTrackSequence,
         .extraSupportRotation = -1,
         .blockedSegments = kLeftQuarterTurn5TilesSeq6.blockedSegments,
         .tunnels = SequenceTunnelsPrev(kRightQuarterTurn5TilesUp25Seq0.tunnels),
@@ -5965,6 +6014,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesDown25Seq0 = {
         .clearance = { 0, 0, 48, 16, 8, 0, { 0b1111, 0b0011 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq0.rotatedTrackSequence,
         .blockedSegments = kRightQuarterTurn5TilesSeq0.blockedSegments,
         .tunnels = SequenceTunnelsFlipXAxis(kLeftQuarterTurn5TilesDown25Seq0.tunnels),
     };
@@ -5972,23 +6022,27 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesDown25Seq1 = {
         .clearance = { 0, 32, 48, 0, 24, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq1.rotatedTrackSequence,
         .blockedSegments = kRightQuarterTurn5TilesSeq1.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesDown25Seq2 = {
         .clearance = { -32, 0, 32, 16, 24, 0, { 0b1011, 0b0010 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq2.rotatedTrackSequence,
         .blockedSegments = kRightQuarterTurn5TilesSeq2.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesDown25Seq3 = {
         .clearance = { -32, 32, 24, 16, 16, 0, { 0b1110, 0 }, 0 },
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq3.rotatedTrackSequence,
         .blockedSegments = kRightQuarterTurn5TilesSeq3.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesDown25Seq4 = {
         .clearance = { -32, 64, 16, 0, 40, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq4.rotatedTrackSequence,
         .extraSupportRotation = 1,
         .blockedSegments = kRightQuarterTurn5TilesSeq4.blockedSegments,
     };
@@ -5996,6 +6050,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesDown25Seq5 = {
         .clearance = { -64, 32, 16, 16, 8, 0, { 0b1011, 0b0010 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq5.rotatedTrackSequence,
         .extraSupportRotation = 1,
         .blockedSegments = kRightQuarterTurn5TilesSeq5.blockedSegments,
     };
@@ -6003,6 +6058,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn5TilesDown25Seq6 = {
         .clearance = { -64, 64, 0, 16, 8, 0, { 0b1111, 0b0110 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = kRightQuarterTurn5TilesSeq6.rotatedTrackSequence,
         .extraSupportRotation = 1,
         .blockedSegments = kRightQuarterTurn5TilesSeq6.blockedSegments,
         .tunnels = SequenceTunnelsFlipXAxis(kLeftQuarterTurn5TilesDown25Seq6.tunnels),
@@ -6377,6 +6433,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topRight, Seg::bottomLeft),                   // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -6390,11 +6447,13 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesSeq1 = {
         .clearance = { 0, -32, 0, 0, 0, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = 1,
     };
 
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0010, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -6407,6 +6466,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesSeq3 = {
         .clearance = { -32, -32, 0, 0, 0, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomRight),                // narrow
@@ -6421,6 +6481,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomLeft),               // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -6434,11 +6495,13 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesSeq1 = {
         .clearance = { 0, 32, 0, 0, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 1,
     };
 
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0001, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -6451,6 +6514,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesSeq3 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomRight),                // narrow
@@ -6465,6 +6529,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftBankedQuarterTurn3TilesSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topRight, Seg::bottomLeft),                   // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -6478,6 +6543,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftBankedQuarterTurn3TilesSeq1 = {
         .clearance = { 0, -32, 0, 0, 0, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             kSegmentsNone,                                             // narrow
             kSegmentsNone,                                             // inverted
@@ -6490,6 +6556,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftBankedQuarterTurn3TilesSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0010, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -6502,6 +6569,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftBankedQuarterTurn3TilesSeq3 = {
         .clearance = { -32, -32, 0, 0, 0, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomRight),                // narrow
@@ -6516,6 +6584,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightBankedQuarterTurn3TilesSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomLeft),               // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -6529,6 +6598,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightBankedQuarterTurn3TilesSeq1 = {
         .clearance = { 0, 32, 0, 0, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             kSegmentsNone,                                       // narrow
             kSegmentsNone,                                       // inverted
@@ -6541,6 +6611,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightBankedQuarterTurn3TilesSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0001, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -6553,6 +6624,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightBankedQuarterTurn3TilesSeq3 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomRight),                // narrow
@@ -6567,6 +6639,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesUp25Seq0 = {
         .clearance = { 0, 0, 0, 16, 8, 0, { 0b0111, 0b0100 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topRight, Seg::bottomLeft),                   // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -6580,11 +6653,13 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesUp25Seq1 = {
         .clearance = { 0, -32, 16, 0, 24, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = 1,
     };
 
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesUp25Seq2 = {
         .clearance = { -32, 0, 16, 0, 24, 0, { 0b0010, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             kSegmentsNone,                                                       // narrow
             kSegmentsNone,                                                       // inverted
@@ -6597,6 +6672,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesUp25Seq3 = {
         .clearance = { -32, -32, 16, 24, 0, 0, { 0b0111, 0b0110 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomRight),                // narrow
@@ -6611,6 +6687,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesUp25Seq0 = {
         .clearance = { 0, 0, 0, 16, 8, 0, { 0b1011, 0b1000 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomLeft),               // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -6624,11 +6701,13 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesUp25Seq1 = {
         .clearance = { 0, 32, 16, 0, 24, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 1,
     };
 
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesUp25Seq2 = {
         .clearance = { -32, 0, 16, 0, 24, 0, { 0b0001, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             kSegmentsNone,                                                             // narrow
             kSegmentsNone,                                                             // inverted
@@ -6641,6 +6720,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesUp25Seq3 = {
         .clearance = { -32, 32, 16, 16, 0, 0, { 0b1011, 0b1001 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomRight),                // narrow
@@ -6655,6 +6735,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesDown25Seq0 = {
         .clearance = { 0, 0, 16, 16, 8, 0, { 0b0111, 0b0011 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topRight, Seg::bottomLeft),                   // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -6668,11 +6749,13 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesDown25Seq1 = {
         .clearance = { 0, -32, 16, 0, 24, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = 1,
     };
 
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesDown25Seq2 = {
         .clearance = { -32, 0, 16, 0, 24, 0, { 0b0010, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             kSegmentsNone,                                                       // narrow
             kSegmentsNone,                                                       // inverted
@@ -6685,6 +6768,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesDown25Seq3 = {
         .clearance = { -32, -32, 0, 16, 8, 0, { 0b0111, 0b0001 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomRight),                // narrow
@@ -6699,6 +6783,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesDown25Seq0 = {
         .clearance = { 0, 0, 16, 16, 8, 0, { 0b1011, 0b0011 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomLeft),               // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -6712,11 +6797,13 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesDown25Seq1 = {
         .clearance = { 0, 32, 16, 0, 24, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 1,
     };
 
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesDown25Seq2 = {
         .clearance = { -32, 0, 16, 0, 24, 0, { 0b0001, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             kSegmentsNone,                                                             // narrow
             kSegmentsNone,                                                             // inverted
@@ -6729,6 +6816,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesDown25Seq3 = {
         .clearance = { -32, 32, 0, 16, 8, 0, { 0b1011, 0b0010 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomRight),                // narrow
@@ -6769,6 +6857,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftTwistDownToUpSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft),         // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -6784,6 +6873,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftTwistDownToUpSeq1 = {
         .clearance = { -32, 0, 0, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft),         // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -6798,6 +6888,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftTwistDownToUpSeq2 = {
         .clearance = { -64, 0, 16, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 0,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft),         // narrow
@@ -6816,6 +6907,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightTwistDownToUpSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft),         // inverted
@@ -6830,6 +6922,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightTwistDownToUpSeq1 = {
         .clearance = { -32, 0, 0, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft),         // inverted
@@ -6843,6 +6936,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightTwistDownToUpSeq2 = {
         .clearance = { -64, 0, 16, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 0,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -6858,6 +6952,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftTwistUpToDownSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -6873,6 +6968,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftTwistUpToDownSeq1 = {
         .clearance = { -32, 0, -16, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft),         // inverted
@@ -6886,6 +6982,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftTwistUpToDownSeq2 = {
         .clearance = { -64, 0, -16, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft),         // inverted
@@ -6900,6 +6997,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightTwistUpToDownSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft),         // narrow
@@ -6916,6 +7014,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightTwistUpToDownSeq1 = {
         .clearance = { -32, 0, -16, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft),         // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -6930,6 +7029,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightTwistUpToDownSeq2 = {
         .clearance = { -64, 0, -16, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft),         // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -6945,6 +7045,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kHalfLoopUpSeq0 = {
         .clearance = { 0, 0, 0, 16, 0, 0, { 0b1111, 0b1100 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // inverted
@@ -6958,6 +7059,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kHalfLoopUpSeq1 = {
         .clearance = { -32, 0, 16, 16, 0, 0, { 0b1111, 0b1100 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             kSegmentsAll,           // narrow
             kSegmentsAll,           // inverted
@@ -6970,6 +7072,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kHalfLoopUpSeq2 = {
         .clearance = { -64, 0, 32, 96, 0, 0, { 0b0011, 0 }, 0 },
         .allowedWallEdges = 0b1011,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -6982,6 +7085,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kHalfLoopUpSeq3 = {
         .clearance = { -32, 0, 120, 16, 0, 0, { 0b1111, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // inverted
@@ -6996,6 +7100,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kHalfLoopDownSeq0 = {
         .clearance = { 0, 0, -32, 16, 0, 0, { 0b1111, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // inverted
@@ -7009,6 +7114,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kHalfLoopDownSeq1 = {
         .clearance = { -32, 0, -120, 96, 0, 0, { 0b0011, 0 }, 0 },
         .allowedWallEdges = 0b1011,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -7022,6 +7128,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kHalfLoopDownSeq2 = {
         .clearance = { 0, 0, -136, 16, 0, 0, { 0b1111, 0b1100 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             kSegmentsAll,           // narrow
             kSegmentsAll,           // inverted
@@ -7034,6 +7141,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kHalfLoopDownSeq3 = {
         .clearance = { 32, 0, -152, 16, 0, 0, { 0b1111, 0b1100 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // inverted
@@ -7047,6 +7155,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftCorkscrewUpSeq0 = {
         .clearance = { 0, 0, 0, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(
@@ -7063,6 +7172,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftCorkscrewUpSeq1 = {
         .clearance = { -32, 0, 24, 32, 16, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             kSegmentsAll,           // narrow
             kSegmentsAll,           // inverted
@@ -7075,6 +7185,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftCorkscrewUpSeq2 = {
         .clearance = { -32, -32, 48, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0101,
+        .rotatedTrackSequence = 0,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -7094,6 +7205,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightCorkscrewUpSeq0 = {
         .clearance = { 0, 0, 0, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(
@@ -7110,6 +7222,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightCorkscrewUpSeq1 = {
         .clearance = { -32, 0, 24, 32, 16, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             kSegmentsAll,           // narrow
             kSegmentsAll,           // inverted
@@ -7122,6 +7235,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightCorkscrewUpSeq2 = {
         .clearance = { -32, 32, 48, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0101,
+        .rotatedTrackSequence = 0,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -7139,6 +7253,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftCorkscrewDownSeq0 = {
         .clearance = { 0, 0, -32, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
@@ -7156,6 +7271,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftCorkscrewDownSeq1 = {
         .clearance = { -32, 0, -56, 32, 16, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             kSegmentsAll,           // narrow
             kSegmentsAll,           // inverted
@@ -7168,6 +7284,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftCorkscrewDownSeq2 = {
         .clearance = { -32, -32, -80, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0101,
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(
@@ -7184,6 +7301,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightCorkscrewDownSeq0 = {
         .clearance = { 0, 0, -32, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -7201,6 +7319,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightCorkscrewDownSeq1 = {
         .clearance = { -32, 0, -56, 32, 16, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             kSegmentsAll,           // narrow
             kSegmentsAll,           // inverted
@@ -7213,6 +7332,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightCorkscrewDownSeq2 = {
         .clearance = { -32, 32, -80, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0101,
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(
@@ -7818,6 +7938,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownSmallSeq0 = {
         .clearance = { 0, 0, 8, 4, 8, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 7,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                                            // inverted
@@ -7831,6 +7952,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownSmallSeq1 = {
         .clearance = { 0, -32, 8, 4, 8, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = 5,
         .blockedSegments = { {
             kSegmentsNone,          // narrow
             kSegmentsUnimplemented, // inverted
@@ -7843,6 +7965,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownSmallSeq2 = {
         .clearance = { -32, 0, 8, 0, 8, 0, { 0b0010, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 6,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                              // inverted
@@ -7855,6 +7978,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownSmallSeq3 = {
         .clearance = { -32, -32, 8, 0, 8, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 4,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -7869,6 +7993,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownSmallSeq4 = {
         .clearance = { -32, -64, 0, 4, 0, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 3,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -7883,6 +8008,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownSmallSeq5 = {
         .clearance = { 0, -64, 0, 4, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 1,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             kSegmentsNone,          // narrow
@@ -7896,6 +8022,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownSmallSeq6 = {
         .clearance = { -32, -96, 0, 0, 0, 0, { 0b0001, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 2,
         .extraSupportRotation = -2,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -7909,6 +8036,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownSmallSeq7 = {
         .clearance = { 0, -96, 0, 0, 0, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = -2,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -7923,6 +8051,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownSmallSeq0 = {
         .clearance = { 0, 0, 8, 4, 8, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 7,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                                  // inverted
@@ -7936,6 +8065,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownSmallSeq1 = {
         .clearance = { 0, 32, 8, 4, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 5,
         .blockedSegments = { {
             kSegmentsNone,          // narrow
             kSegmentsUnimplemented, // inverted
@@ -7948,6 +8078,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownSmallSeq2 = {
         .clearance = { -32, 0, 8, 0, 8, 0, { 0b0001, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 6,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                    // inverted
@@ -7960,6 +8091,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownSmallSeq3 = {
         .clearance = { -32, 32, 8, 0, 8, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 4,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -7974,6 +8106,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownSmallSeq4 = {
         .clearance = { -32, 64, 0, 4, 0, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 3,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -7988,6 +8121,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownSmallSeq5 = {
         .clearance = { 0, 64, 0, 4, 0, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = 1,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             kSegmentsNone,          // narrow
@@ -8001,6 +8135,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownSmallSeq6 = {
         .clearance = { -32, 96, 0, 0, 0, 0, { 0b0010, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 2,
         .extraSupportRotation = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
@@ -8014,6 +8149,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownSmallSeq7 = {
         .clearance = { 0, 96, 0, 0, 0, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
@@ -8394,6 +8530,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownLargeSeq0 = {
         .clearance = { 0, 0, 8, 4, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 13,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                                            // inverted
@@ -8407,6 +8544,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownLargeSeq1 = {
         .clearance = { 0, -32, 8, 4, 8, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = 11,
         .blockedSegments = { {
             kSegmentsNone,                                             // narrow
             kSegmentsUnimplemented,                                    // inverted
@@ -8419,6 +8557,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownLargeSeq2 = {
         .clearance = { -32, 0, 8, 4, 8, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 12,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                                                       // inverted
@@ -8430,6 +8569,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownLargeSeq3 = {
         .clearance = { -32, -32, 8, 0, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 10,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                 // inverted
@@ -8444,6 +8584,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownLargeSeq4 = {
         .clearance = { -32, -64, 8, 0, 8, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = 8,
         .blockedSegments = { {
             kSegmentsNone,                                             // narrow
             kSegmentsUnimplemented,                                    // inverted
@@ -8456,6 +8597,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownLargeSeq5 = {
         .clearance = { -64, -32, 8, 0, 8, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 9,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -8469,6 +8611,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownLargeSeq6 = {
         .clearance = { -64, -64, 8, 0, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 7,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -8483,6 +8626,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownLargeSeq7 = {
         .clearance = { -64, -96, 0, 4, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 6,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -8497,6 +8641,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownLargeSeq8 = {
         .clearance = { -32, -96, 0, 4, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 4,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             kSegmentsNone,                                       // narrow
@@ -8510,6 +8655,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownLargeSeq9 = {
         .clearance = { -64, -128, 0, 4, 0, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 5,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -8522,6 +8668,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownLargeSeq10 = {
         .clearance = { -32, -128, 0, 0, 0, 0, { 0b1110, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
@@ -8537,6 +8684,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownLargeSeq11 = {
         .clearance = { 0, -128, 0, 0, 0, 0, { 0b0100, 0b0000 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 1,
         .extraSupportRotation = -2,
         .blockedSegments = { {
             kSegmentsNone,                                       // narrow
@@ -8550,6 +8698,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownLargeSeq12 = {
         .clearance = { -32, -160, 0, 0, 0, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 2,
         .extraSupportRotation = -2,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -8563,6 +8712,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftHalfBankedHelixDownLargeSeq13 = {
         .clearance = { 0, -160, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = -2,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -8577,6 +8727,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownLargeSeq0 = {
         .clearance = { 0, 0, 8, 4, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 13,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                                  // inverted
@@ -8590,6 +8741,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownLargeSeq1 = {
         .clearance = { 0, 32, 8, 4, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 11,
         .blockedSegments = { {
             kSegmentsNone,                                       // narrow
             kSegmentsUnimplemented,                              // inverted
@@ -8602,6 +8754,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownLargeSeq2 = {
         .clearance = { -32, 0, 8, 4, 8, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 12,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                                               // inverted
@@ -8613,6 +8766,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownLargeSeq3 = {
         .clearance = { -32, 32, 8, 0, 8, 0, { 0b1110, 0 }, 0 },
+        .rotatedTrackSequence = 10,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             kSegmentsUnimplemented,                                           // inverted
@@ -8627,6 +8781,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownLargeSeq4 = {
         .clearance = { -32, 64, 8, 0, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 8,
         .blockedSegments = { {
             kSegmentsNone,                                       // narrow
             kSegmentsUnimplemented,                              // inverted
@@ -8639,6 +8794,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownLargeSeq5 = {
         .clearance = { -64, 32, 8, 0, 8, 0, { 0b1011, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 9,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -8652,6 +8808,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownLargeSeq6 = {
         .clearance = { -64, 64, 8, 0, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 7,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -8666,6 +8823,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownLargeSeq7 = {
         .clearance = { -64, 96, 0, 4, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 6,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -8680,6 +8838,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownLargeSeq8 = {
         .clearance = { -32, 96, 0, 4, 0, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = 4,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             kSegmentsNone,                                             // narrow
@@ -8693,6 +8852,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownLargeSeq9 = {
         .clearance = { -64, 128, 0, 4, 0, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 5,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -8705,6 +8865,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownLargeSeq10 = {
         .clearance = { -32, 128, 0, 0, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
@@ -8720,6 +8881,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownLargeSeq11 = {
         .clearance = { 0, 128, 0, 0, 0, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = 1,
         .extraSupportRotation = 2,
         .blockedSegments = { {
             kSegmentsNone,                                             // narrow
@@ -8733,6 +8895,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownLargeSeq12 = {
         .clearance = { -32, 160, 0, 0, 0, 0, { 0b0111, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 2,
         .extraSupportRotation = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
@@ -8746,6 +8909,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightHalfBankedHelixDownLargeSeq13 = {
         .clearance = { 0, 160, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
@@ -9388,6 +9552,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kFlatToUp60LongBaseSeq0 = {
         .clearance = { 0, 0, 0, 8, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 3,
         .blockedSegments = kFlatSeq0.blockedSegments,
         .tunnels = SequenceTunnelsAllGroups({ { { 0, 0, TunnelSlope::flat } } }, 0),
     };
@@ -9395,18 +9560,21 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kFlatToUp60LongBaseSeq1 = {
         .clearance = { -32, 0, 0, 16, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .blockedSegments = kFlatSeq0.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kFlatToUp60LongBaseSeq2 = {
         .clearance = { -64, 0, 16, 24, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = kFlatSeq0.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kFlatToUp60LongBaseSeq3 = {
         .clearance = { -96, 0, 40, 48, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 0,
         .blockedSegments = kFlatSeq0.blockedSegments,
         .tunnels = SequenceTunnelsAllGroups({ { { 24, 2, TunnelSlope::slopeEnd } } }, 0),
     };
@@ -9414,6 +9582,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kUp60ToFlatLongBaseSeq0 = {
         .clearance = { 0, 0, 0, 48, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 3,
         .blockedSegments = kFlatSeq0.blockedSegments,
         .tunnels = SequenceTunnelsAllGroups({ { { 0, 0, TunnelSlope::slopeStart } } }, 0),
     };
@@ -9421,18 +9590,21 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kUp60ToFlatLongBaseSeq1 = {
         .clearance = { -32, 0, 40, 48, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .blockedSegments = kFlatSeq0.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kUp60ToFlatLongBaseSeq2 = {
         .clearance = { -64, 0, 64, 24, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = kFlatSeq0.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kUp60ToFlatLongBaseSeq3 = {
         .clearance = { -96, 0, 80, 8, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 0,
         .blockedSegments = kFlatSeq0.blockedSegments,
         .tunnels = SequenceTunnelsAllGroups({ { { 8, 2, TunnelSlope::flatTo25Deg } } }, 0),
     };
@@ -9455,6 +9627,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDown60ToFlatLongBaseSeq0 = {
         .clearance = { 0, 0, 40, 48, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 3,
         .blockedSegments = kFlatSeq0.blockedSegments,
         .tunnels = SequenceTunnelsReverse(kFlatToUp60LongBaseSeq3.tunnels),
     };
@@ -9462,18 +9635,21 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDown60ToFlatLongBaseSeq1 = {
         .clearance = { -32, 0, 16, 24, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .blockedSegments = kFlatSeq0.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kDown60ToFlatLongBaseSeq2 = {
         .clearance = { -64, 0, 0, 16, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = kFlatSeq0.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kDown60ToFlatLongBaseSeq3 = {
         .clearance = { -96, 0, 0, 8, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 0,
         .blockedSegments = kFlatSeq0.blockedSegments,
         .tunnels = SequenceTunnelsReverse(kFlatToUp60LongBaseSeq0.tunnels),
     };
@@ -9481,6 +9657,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kFlatToDown60LongBaseSeq0 = {
         .clearance = { 0, 0, 80, 8, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 3,
         .blockedSegments = kFlatSeq0.blockedSegments,
         .tunnels = SequenceTunnelsReverse(kUp60ToFlatLongBaseSeq3.tunnels),
     };
@@ -9488,18 +9665,21 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kFlatToDown60LongBaseSeq1 = {
         .clearance = { -32, 0, 64, 24, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .blockedSegments = kFlatSeq0.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kFlatToDown60LongBaseSeq2 = {
         .clearance = { -64, 0, 40, 48, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = kFlatSeq0.blockedSegments,
     };
 
     static constexpr SequenceDescriptor kFlatToDown60LongBaseSeq3 = {
         .clearance = { -96, 0, 0, 48, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 0,
         .blockedSegments = kFlatSeq0.blockedSegments,
         .tunnels = SequenceTunnelsReverse(kUp60ToFlatLongBaseSeq0.tunnels),
     };
@@ -9600,6 +9780,7 @@ namespace OpenRCT2::TrackMetaData
         .clearance = { 0, 0, 0, 8, 8, 0, { 0b1111, 0 }, RCT_PREVIEW_TRACK_FLAG_IS_VERTICAL },
         .allowedWallEdges = 0b1111,
         .flags = TRACK_SEQUENCE_FLAG_VERTICAL_TUNNEL,
+        .rotatedTrackSequence = 0,
         .blockedSegments = kFlatSeq0.blockedSegments,
         .tunnels = { {}, 32 },
     };
@@ -9607,12 +9788,14 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kUp90Seq1 = {
         .clearance = { 32, 0, 0, 0, 0, 0, { 0b0000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 | RCT_PREVIEW_TRACK_FLAG_IS_VERTICAL },
         .flags = TRACK_SEQUENCE_FLAG_DO_NOT_SET_GENERAL_SUPPORT_HEIGHT,
+        .rotatedTrackSequence = 1,
     };
 
     static constexpr SequenceDescriptor kDown90Seq0 = {
         .clearance = { 0, 0, 0, 8, 8, 0, { 0b1111, 0 }, RCT_PREVIEW_TRACK_FLAG_IS_VERTICAL },
         .allowedWallEdges = 0b1111,
         .flags = TRACK_SEQUENCE_FLAG_VERTICAL_TUNNEL,
+        .rotatedTrackSequence = 0,
         .blockedSegments = kFlatSeq0.blockedSegments,
         .tunnels = { {}, 32 },
     };
@@ -9620,6 +9803,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDown90Seq1 = {
         .clearance = { 32, 0, 0, 0, 0, 0, { 0b0000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 | RCT_PREVIEW_TRACK_FLAG_IS_VERTICAL },
         .flags = TRACK_SEQUENCE_FLAG_DO_NOT_SET_GENERAL_SUPPORT_HEIGHT,
+        .rotatedTrackSequence = 1,
     };
 
     static constexpr SequenceDescriptor kUp60ToUp90Seq0 = {
@@ -9672,6 +9856,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthToDiagSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 4,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft),                   // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft),                   // inverted
@@ -9685,6 +9870,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthToDiagSeq1 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -9698,6 +9884,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthToDiagSeq2 = {
         .clearance = { -32, -32, 0, 0, 0, 0, { 0b1000, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -9710,6 +9897,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthToDiagSeq3 = {
         .clearance = { -64, 0, 0, 0, 0, 0, { 0b0010, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -9721,6 +9909,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kLeftEighthToDiagSeq4 = {
         .clearance = { -64, -32, 0, 0, 0, 0, { 0b0001, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -9736,6 +9925,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthToDiagSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 4,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft),               // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft),               // inverted
@@ -9749,6 +9939,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthToDiagSeq1 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -9763,6 +9954,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthToDiagSeq2 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b0100, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -9775,6 +9967,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthToDiagSeq3 = {
         .clearance = { -64, 0, 0, 0, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -9786,6 +9979,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kRightEighthToDiagSeq4 = {
         .clearance = { -64, 32, 0, 0, 0, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = 1,
         .extraSupportCoverRotation = 1,
         .blockedSegments = { {
@@ -9801,6 +9995,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kLeftEighthToOrthogonalSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 4,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -9816,6 +10011,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthToOrthogonalSeq1 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0001, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -9828,6 +10024,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthToOrthogonalSeq2 = {
         .clearance = { 0, 32, 0, 0, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -9840,6 +10037,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthToOrthogonalSeq3 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -9853,6 +10051,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthToOrthogonalSeq4 = {
         .clearance = { -64, 32, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft),                   // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft),                   // inverted
@@ -9865,6 +10064,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kRightEighthToOrthogonalSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 4,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -9879,6 +10079,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthToOrthogonalSeq1 = {
         .clearance = { 0, 32, 0, 0, 0, 0, { 0b0100, 0 }, 0 },
         .allowedWallEdges = 0b0100,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::right, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::right, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -9891,6 +10092,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthToOrthogonalSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -9903,6 +10105,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthToOrthogonalSeq3 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 1,
         .extraSupportCoverRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -9917,6 +10120,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthToOrthogonalSeq4 = {
         .clearance = { -32, 64, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topLeft, Seg::bottomRight),                // narrow
@@ -9931,6 +10135,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthBankToDiagSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 4,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft),                   // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -9944,6 +10149,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthBankToDiagSeq1 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -9957,6 +10163,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthBankToDiagSeq2 = {
         .clearance = { -32, -32, 0, 0, 0, 0, { 0b1000, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -9969,6 +10176,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthBankToDiagSeq3 = {
         .clearance = { -64, 0, 0, 0, 0, 0, { 0b0010, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -9980,6 +10188,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kLeftEighthBankToDiagSeq4 = {
         .clearance = { -64, -32, 0, 0, 0, 0, { 0b0001, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(
@@ -9996,6 +10205,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthBankToDiagSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 4,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft),               // narrow
             EnumsToFlags(Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -10009,6 +10219,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthBankToDiagSeq1 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10023,6 +10234,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthBankToDiagSeq2 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b0100, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10035,6 +10247,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthBankToDiagSeq3 = {
         .clearance = { -64, 0, 0, 0, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10046,6 +10259,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kRightEighthBankToDiagSeq4 = {
         .clearance = { -64, 32, 0, 0, 0, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(
@@ -10060,6 +10274,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kLeftEighthBankToOrthogonalSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 4,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(
@@ -10077,6 +10292,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthBankToOrthogonalSeq1 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0001, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10089,6 +10305,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthBankToOrthogonalSeq2 = {
         .clearance = { 0, 32, 0, 0, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10101,6 +10318,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthBankToOrthogonalSeq3 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -10114,6 +10332,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftEighthBankToOrthogonalSeq4 = {
         .clearance = { -64, 32, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft),                   // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10126,6 +10345,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kRightEighthBankToOrthogonalSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 4,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -10142,6 +10362,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthBankToOrthogonalSeq1 = {
         .clearance = { 0, 32, 0, 0, 0, 0, { 0b0100, 0 }, 0 },
         .allowedWallEdges = 0b0100,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::right, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::right, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10154,6 +10375,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthBankToOrthogonalSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10166,6 +10388,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthBankToOrthogonalSeq3 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10179,6 +10402,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightEighthBankToOrthogonalSeq4 = {
         .clearance = { -32, 64, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topLeft, Seg::bottomRight),                // narrow
@@ -10238,6 +10462,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp25Seq0 = {
         .clearance = { 0, 0, 0, 16, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -10250,6 +10475,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp25Seq1 = {
         .clearance = { 0, 32, 0, 16, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10262,6 +10488,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp25Seq2 = {
         .clearance = { -32, 0, 0, 16, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10273,6 +10500,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp25Seq3 = {
         .clearance = { -32, 32, 0, 16, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -10284,6 +10512,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp60Seq0 = {
         .clearance = { 0, 0, 0, 64, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -10296,6 +10525,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp60Seq1 = {
         .clearance = { 0, 32, 0, 64, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10308,6 +10538,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp60Seq2 = {
         .clearance = { -32, 0, 0, 64, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10319,6 +10550,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp60Seq3 = {
         .clearance = { -32, 32, 0, 64, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -10330,6 +10562,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagFlatToUp25Seq0 = {
         .clearance = { 0, 0, 0, 8, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -10342,6 +10575,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagFlatToUp25Seq1 = {
         .clearance = { 0, 32, 0, 8, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10354,6 +10588,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagFlatToUp25Seq2 = {
         .clearance = { -32, 0, 0, 8, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10365,6 +10600,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagFlatToUp25Seq3 = {
         .clearance = { -32, 32, 0, 8, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -10376,6 +10612,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp25ToUp60Seq0 = {
         .clearance = { 0, 0, 0, 32, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -10388,6 +10625,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp25ToUp60Seq1 = {
         .clearance = { 0, 32, 0, 32, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10400,6 +10638,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp25ToUp60Seq2 = {
         .clearance = { -32, 0, 0, 32, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10411,6 +10650,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp25ToUp60Seq3 = {
         .clearance = { -32, 32, 0, 32, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -10422,6 +10662,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp60ToUp25Seq0 = {
         .clearance = { 0, 0, 0, 32, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -10434,6 +10675,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp60ToUp25Seq1 = {
         .clearance = { 0, 32, 0, 32, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10446,6 +10688,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp60ToUp25Seq2 = {
         .clearance = { -32, 0, 0, 32, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10457,6 +10700,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp60ToUp25Seq3 = {
         .clearance = { -32, 32, 0, 32, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -10468,6 +10712,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp25ToFlatSeq0 = {
         .clearance = { 0, 0, 0, 8, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -10480,6 +10725,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp25ToFlatSeq1 = {
         .clearance = { 0, 32, 0, 8, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10492,6 +10738,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp25ToFlatSeq2 = {
         .clearance = { -32, 0, 0, 8, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10503,6 +10750,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp25ToFlatSeq3 = {
         .clearance = { -32, 32, 0, 8, 0, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -10514,6 +10762,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown25Seq0 = {
         .clearance = { 0, 0, 0, 16, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -10526,6 +10775,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown25Seq1 = {
         .clearance = { 0, 32, 0, 16, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10538,6 +10788,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown25Seq2 = {
         .clearance = { -32, 0, 0, 16, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10549,6 +10800,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown25Seq3 = {
         .clearance = { -32, 32, 0, 16, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -10560,6 +10812,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown60Seq0 = {
         .clearance = { 0, 0, 0, 64, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -10572,6 +10825,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown60Seq1 = {
         .clearance = { 0, 32, 0, 64, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10584,6 +10838,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown60Seq2 = {
         .clearance = { -32, 0, 0, 64, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10595,6 +10850,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown60Seq3 = {
         .clearance = { -32, 32, 0, 64, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -10606,6 +10862,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagFlatToDown25Seq0 = {
         .clearance = { 0, 0, 0, 8, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -10618,6 +10875,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagFlatToDown25Seq1 = {
         .clearance = { 0, 32, 0, 8, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10630,6 +10888,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagFlatToDown25Seq2 = {
         .clearance = { -32, 0, 0, 8, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10641,6 +10900,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagFlatToDown25Seq3 = {
         .clearance = { -32, 32, 0, 8, 0, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -10652,6 +10912,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown25ToDown60Seq0 = {
         .clearance = { 0, 0, 0, 32, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -10664,6 +10925,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown25ToDown60Seq1 = {
         .clearance = { 0, 32, 0, 32, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10676,6 +10938,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown25ToDown60Seq2 = {
         .clearance = { -32, 0, 0, 32, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10687,6 +10950,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown25ToDown60Seq3 = {
         .clearance = { -32, 32, 0, 32, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -10698,6 +10962,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown60ToDown25Seq0 = {
         .clearance = { 0, 0, 0, 32, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -10710,6 +10975,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown60ToDown25Seq1 = {
         .clearance = { 0, 32, 0, 32, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10722,6 +10988,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown60ToDown25Seq2 = {
         .clearance = { -32, 0, 0, 32, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10733,6 +11000,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown60ToDown25Seq3 = {
         .clearance = { -32, 32, 0, 32, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -10744,6 +11012,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown25ToFlatSeq0 = {
         .clearance = { 0, 0, 0, 8, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -10756,6 +11025,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown25ToFlatSeq1 = {
         .clearance = { 0, 32, 0, 8, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10768,6 +11038,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown25ToFlatSeq2 = {
         .clearance = { -32, 0, 0, 8, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -10779,6 +11050,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown25ToFlatSeq3 = {
         .clearance = { -32, 32, 0, 8, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -10790,6 +11062,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagFlatToUp60Seq0 = {
         .clearance = { 0, 0, 0, 24, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                 // inverted
@@ -10802,6 +11075,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagFlatToUp60Seq1 = {
         .clearance = { 0, 32, 0, 24, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             kSegmentsUnimplemented,                                           // inverted
@@ -10814,6 +11088,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagFlatToUp60Seq2 = {
         .clearance = { -32, 0, 0, 24, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                    // inverted
@@ -10825,6 +11100,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagFlatToUp60Seq3 = {
         .clearance = { -32, 32, 0, 24, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                              // inverted
@@ -10836,6 +11112,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp60ToFlatSeq0 = {
         .clearance = { 0, 0, 0, 24, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                 // inverted
@@ -10848,6 +11125,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp60ToFlatSeq1 = {
         .clearance = { 0, 32, 0, 24, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             kSegmentsUnimplemented,                                           // inverted
@@ -10860,6 +11138,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp60ToFlatSeq2 = {
         .clearance = { -32, 0, 0, 24, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                    // inverted
@@ -10871,6 +11150,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp60ToFlatSeq3 = {
         .clearance = { -32, 32, 0, 24, 0, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                              // inverted
@@ -10882,6 +11162,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagFlatToDown60Seq0 = {
         .clearance = { 0, 0, 0, 24, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                 // inverted
@@ -10894,6 +11175,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagFlatToDown60Seq1 = {
         .clearance = { 0, 32, 0, 24, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             kSegmentsUnimplemented,                                           // inverted
@@ -10906,6 +11188,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagFlatToDown60Seq2 = {
         .clearance = { -32, 0, 0, 24, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                    // inverted
@@ -10917,6 +11200,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagFlatToDown60Seq3 = {
         .clearance = { -32, 32, 0, 24, 0, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                              // inverted
@@ -10928,6 +11212,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown60ToFlatSeq0 = {
         .clearance = { 0, 0, 0, 24, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                 // inverted
@@ -10940,6 +11225,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown60ToFlatSeq1 = {
         .clearance = { 0, 32, 0, 24, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             kSegmentsUnimplemented,                                           // inverted
@@ -10952,6 +11238,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown60ToFlatSeq2 = {
         .clearance = { -32, 0, 0, 24, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                    // inverted
@@ -10963,6 +11250,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown60ToFlatSeq3 = {
         .clearance = { -32, 32, 0, 24, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                              // inverted
@@ -10974,6 +11262,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagFlatToLeftBankSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -10986,6 +11275,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagFlatToLeftBankSeq1 = {
         .clearance = { 0, 32, 0, 0, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -10998,6 +11288,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagFlatToLeftBankSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -11009,6 +11300,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagFlatToLeftBankSeq3 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft),              // narrow
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -11020,6 +11312,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagFlatToRightBankSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -11032,6 +11325,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagFlatToRightBankSeq1 = {
         .clearance = { 0, 32, 0, 0, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -11044,6 +11338,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagFlatToRightBankSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -11055,6 +11350,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagFlatToRightBankSeq3 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft),           // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -11066,6 +11362,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagLeftBankToFlatSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -11078,6 +11375,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagLeftBankToFlatSeq1 = {
         .clearance = { 0, 32, 0, 0, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -11090,6 +11388,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagLeftBankToFlatSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -11101,6 +11400,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagLeftBankToFlatSeq3 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft),              // narrow
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -11112,6 +11412,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagRightBankToFlatSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -11124,6 +11425,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagRightBankToFlatSeq1 = {
         .clearance = { 0, 32, 0, 0, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -11136,6 +11438,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagRightBankToFlatSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -11147,6 +11450,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagRightBankToFlatSeq3 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft),           // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -11158,6 +11462,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagLeftBankToUp25Seq0 = {
         .clearance = { 0, 0, 0, 8, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -11170,6 +11475,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagLeftBankToUp25Seq1 = {
         .clearance = { 0, 32, 0, 8, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -11182,6 +11488,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagLeftBankToUp25Seq2 = {
         .clearance = { -32, 0, 0, 8, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -11193,6 +11500,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagLeftBankToUp25Seq3 = {
         .clearance = { -32, 32, 0, 8, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -11204,6 +11512,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagRightBankToUp25Seq0 = {
         .clearance = { 0, 0, 0, 8, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -11216,6 +11525,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagRightBankToUp25Seq1 = {
         .clearance = { 0, 32, 0, 8, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -11228,6 +11538,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagRightBankToUp25Seq2 = {
         .clearance = { -32, 0, 0, 8, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -11239,6 +11550,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagRightBankToUp25Seq3 = {
         .clearance = { -32, 32, 0, 8, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -11250,6 +11562,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp25ToLeftBankSeq0 = {
         .clearance = { 0, 0, 0, 8, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -11262,6 +11575,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp25ToLeftBankSeq1 = {
         .clearance = { 0, 32, 0, 8, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -11274,6 +11588,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp25ToLeftBankSeq2 = {
         .clearance = { -32, 0, 0, 8, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -11285,6 +11600,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp25ToLeftBankSeq3 = {
         .clearance = { -32, 32, 0, 8, 0, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -11296,6 +11612,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp25ToRightBankSeq0 = {
         .clearance = { 0, 0, 0, 8, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -11308,6 +11625,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp25ToRightBankSeq1 = {
         .clearance = { 0, 32, 0, 8, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -11320,6 +11638,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagUp25ToRightBankSeq2 = {
         .clearance = { -32, 0, 0, 8, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -11331,6 +11650,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagUp25ToRightBankSeq3 = {
         .clearance = { -32, 32, 0, 8, 0, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -11342,6 +11662,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagLeftBankToDown25Seq0 = {
         .clearance = { 0, 0, 0, 8, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -11354,6 +11675,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagLeftBankToDown25Seq1 = {
         .clearance = { 0, 32, 0, 8, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -11366,6 +11688,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagLeftBankToDown25Seq2 = {
         .clearance = { -32, 0, 0, 8, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -11377,6 +11700,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagLeftBankToDown25Seq3 = {
         .clearance = { -32, 32, 0, 8, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -11388,6 +11712,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagRightBankToDown25Seq0 = {
         .clearance = { 0, 0, 0, 8, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -11400,6 +11725,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagRightBankToDown25Seq1 = {
         .clearance = { 0, 32, 0, 8, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -11412,6 +11738,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagRightBankToDown25Seq2 = {
         .clearance = { -32, 0, 0, 8, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -11423,6 +11750,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagRightBankToDown25Seq3 = {
         .clearance = { -32, 32, 0, 8, 0, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -11434,6 +11762,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown25ToLeftBankSeq0 = {
         .clearance = { 0, 0, 0, 8, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -11446,6 +11775,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown25ToLeftBankSeq1 = {
         .clearance = { 0, 32, 0, 8, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -11458,6 +11788,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown25ToLeftBankSeq2 = {
         .clearance = { -32, 0, 0, 8, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -11469,6 +11800,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown25ToLeftBankSeq3 = {
         .clearance = { -32, 32, 0, 8, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -11480,6 +11812,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown25ToRightBankSeq0 = {
         .clearance = { 0, 0, 0, 8, 8, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -11492,6 +11825,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown25ToRightBankSeq1 = {
         .clearance = { 0, 32, 0, 8, 8, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -11504,6 +11838,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagDown25ToRightBankSeq2 = {
         .clearance = { -32, 0, 0, 8, 8, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -11515,6 +11850,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagDown25ToRightBankSeq3 = {
         .clearance = { -32, 32, 0, 8, 8, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -11526,6 +11862,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagLeftBankSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -11538,6 +11875,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagLeftBankSeq1 = {
         .clearance = { 0, 32, 0, 0, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -11550,6 +11888,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagLeftBankSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -11561,6 +11900,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagLeftBankSeq3 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft),              // narrow
             EnumsToFlags(Seg::left, Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -11572,6 +11912,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagRightBankSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1101, 0 }, 0 },
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomRight), // inverted
@@ -11584,6 +11925,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagRightBankSeq1 = {
         .clearance = { 0, 32, 0, 0, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // narrow
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight), // inverted
@@ -11596,6 +11938,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kDiagRightBankSeq2 = {
         .clearance = { -32, 0, 0, 0, 0, 0, { 0b0001, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -11607,6 +11950,7 @@ namespace OpenRCT2::TrackMetaData
 
     static constexpr SequenceDescriptor kDiagRightBankSeq3 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b0010, 0 }, 0 },
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft),           // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -11639,6 +11983,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftBarrelRollUpToDownSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                                  // inverted
@@ -11652,6 +11997,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftBarrelRollUpToDownSeq1 = {
         .clearance = { -32, 0, 0, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                                               // inverted
@@ -11664,6 +12010,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftBarrelRollUpToDownSeq2 = {
         .clearance = { -64, 0, 0, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 0,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -11678,6 +12025,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightBarrelRollUpToDownSeq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                                            // inverted
@@ -11691,6 +12039,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightBarrelRollUpToDownSeq1 = {
         .clearance = { -32, 0, 0, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                                                       // inverted
@@ -11703,6 +12052,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightBarrelRollUpToDownSeq2 = {
         .clearance = { -64, 0, 0, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 0,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
@@ -11717,6 +12067,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftBarrelRollDownToUpSeq0 = {
         .clearance = { 0, 0, -32, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
@@ -11731,6 +12082,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftBarrelRollDownToUpSeq1 = {
         .clearance = { -32, 0, -32, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                                                       // inverted
@@ -11743,6 +12095,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftBarrelRollDownToUpSeq2 = {
         .clearance = { -64, 0, -32, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                                             // inverted
@@ -11756,6 +12109,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightBarrelRollDownToUpSeq0 = {
         .clearance = { 0, 0, -32, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 2,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -11770,6 +12124,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightBarrelRollDownToUpSeq1 = {
         .clearance = { -32, 0, -32, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                                               // inverted
@@ -11782,6 +12137,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightBarrelRollDownToUpSeq2 = {
         .clearance = { -64, 0, -32, 0, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             kSegmentsUnimplemented,                                                                   // inverted
@@ -11795,6 +12151,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftBankToLeftQuarterTurn3TilesUp25Seq0 = {
         .clearance = { 0, 0, 0, 0, 0, 0, { 0b0111, 0b0100 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                              // inverted
@@ -11808,6 +12165,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftBankToLeftQuarterTurn3TilesUp25Seq1 = {
         .clearance = { 0, -32, 0, 16, 0, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             kSegmentsNone,          // narrow
             kSegmentsUnimplemented, // inverted
@@ -11820,6 +12178,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftBankToLeftQuarterTurn3TilesUp25Seq2 = {
         .clearance = { -32, 0, 0, 16, 0, 0, { 0b0010, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             kSegmentsNone,                                                       // narrow
             kSegmentsUnimplemented,                                              // inverted
@@ -11832,6 +12191,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftBankToLeftQuarterTurn3TilesUp25Seq3 = {
         .clearance = { -32, -32, 16, 16, 0, 0, { 0b0111, 0b0110 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomRight), // narrow
@@ -11846,6 +12206,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightBankToRightQuarterTurn3TilesUp25Seq0 = {
         .clearance = { 0, 0, 0, 16, 0, 0, { 0b1011, 0b1000 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                                // inverted
@@ -11859,6 +12220,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightBankToRightQuarterTurn3TilesUp25Seq1 = {
         .clearance = { 0, 32, 0, 16, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             kSegmentsNone,          // narrow
             kSegmentsUnimplemented, // inverted
@@ -11871,6 +12233,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightBankToRightQuarterTurn3TilesUp25Seq2 = {
         .clearance = { -32, 0, 0, 16, 0, 0, { 0b0001, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             kSegmentsNone,                                                             // narrow
             kSegmentsUnimplemented,                                                    // inverted
@@ -11883,6 +12246,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightBankToRightQuarterTurn3TilesUp25Seq3 = {
         .clearance = { -32, 32, 16, 16, 0, 0, { 0b1011, 0b1001 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomRight), // narrow
@@ -11897,6 +12261,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesDown25ToLeftBankSeq0 = {
         .clearance = { 0, 0, 16, 16, 0, 0, { 0b0111, 0b0011 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                              // inverted
@@ -11910,6 +12275,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesDown25ToLeftBankSeq1 = {
         .clearance = { 0, -32, 0, 16, 0, 0, { 0b1000, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b1100,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             kSegmentsNone,          // narrow
             kSegmentsUnimplemented, // inverted
@@ -11922,6 +12288,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesDown25ToLeftBankSeq2 = {
         .clearance = { -32, 0, 0, 16, 0, 0, { 0b0010, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             kSegmentsNone,                                                       // narrow
             kSegmentsUnimplemented,                                              // inverted
@@ -11934,6 +12301,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftQuarterTurn3TilesDown25ToLeftBankSeq3 = {
         .clearance = { -32, -32, 0, 0, 0, 0, { 0b0111, 0b0001 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = -1,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::topLeft, Seg::bottomRight), // narrow
@@ -11948,6 +12316,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesDown25ToRightBankSeq0 = {
         .clearance = { 0, 0, 16, 16, 0, 0, { 0b1011, 0b0011 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             kSegmentsUnimplemented,                                                // inverted
@@ -11961,6 +12330,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesDown25ToRightBankSeq1 = {
         .clearance = { 0, 32, 0, 16, 0, 0, { 0b0100, 0 }, RCT_PREVIEW_TRACK_FLAG_0 },
         .allowedWallEdges = 0b0110,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             kSegmentsNone,          // narrow
             kSegmentsUnimplemented, // inverted
@@ -11973,6 +12343,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesDown25ToRightBankSeq2 = {
         .clearance = { -32, 0, 0, 16, 0, 0, { 0b0001, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             kSegmentsNone,                                                             // narrow
             kSegmentsUnimplemented,                                                    // inverted
@@ -11985,6 +12356,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightQuarterTurn3TilesDown25ToRightBankSeq3 = {
         .clearance = { -32, 32, 0, 0, 0, 0, { 0b1011, 0b0010 }, 0 },
         .allowedWallEdges = 0b0001,
+        .rotatedTrackSequence = 0,
         .extraSupportRotation = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomRight), // narrow
@@ -12006,6 +12378,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftLargeHalfLoopUpSeq0 = {
         .clearance = { 0, 0, 0, 24, 0, 0, { 0b1111, 0b1100 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 6,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // inverted
@@ -12019,6 +12392,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftLargeHalfLoopUpSeq1 = {
         .clearance = { -32, 0, 16, 40, 0, 0, { 0b1111, 0b1100 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 5,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // inverted
@@ -12031,6 +12405,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftLargeHalfLoopUpSeq2 = {
         .clearance = { -64, 0, 32, 56, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 4,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -12044,6 +12419,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftLargeHalfLoopUpSeq3 = {
         .clearance = { -96, 0, 64, 192, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -12057,6 +12433,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftLargeHalfLoopUpSeq4 = {
         .clearance = { -128, -32, 120, 96, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -12069,6 +12446,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftLargeHalfLoopUpSeq5 = {
         .clearance = { -96, -32, 64, 192, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -12083,6 +12461,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftLargeHalfLoopUpSeq6 = {
         .clearance = { -64, -32, 248, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 0,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -12101,6 +12480,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightLargeHalfLoopUpSeq0 = {
         .clearance = { 0, 0, 0, 24, 0, 0, { 0b1111, 0b1100 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 6,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // inverted
@@ -12114,6 +12494,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightLargeHalfLoopUpSeq1 = {
         .clearance = { -32, 0, 16, 40, 0, 0, { 0b1111, 0b1100 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 5,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // inverted
@@ -12126,6 +12507,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightLargeHalfLoopUpSeq2 = {
         .clearance = { -64, 0, 32, 56, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 4,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -12140,6 +12522,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightLargeHalfLoopUpSeq3 = {
         .clearance = { -96, 0, 64, 192, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -12154,6 +12537,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightLargeHalfLoopUpSeq4 = {
         .clearance = { -128, 32, 120, 96, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -12166,6 +12550,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightLargeHalfLoopUpSeq5 = {
         .clearance = { -96, 32, 64, 192, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -12179,6 +12564,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightLargeHalfLoopUpSeq6 = {
         .clearance = { -64, 32, 248, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 0,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
@@ -12194,6 +12580,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftLargeHalfLoopDownSeq0 = {
         .clearance = { 0, 0, -32, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 6,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
@@ -12209,6 +12596,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftLargeHalfLoopDownSeq1 = {
         .clearance = { -32, 0, -216, 192, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 5,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -12222,6 +12610,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftLargeHalfLoopDownSeq2 = {
         .clearance = { -64, 0, -160, 96, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 4,
         .blockedSegments = { {
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::left, Seg::centre, Seg::topLeft, Seg::bottomLeft), // inverted
@@ -12234,6 +12623,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftLargeHalfLoopDownSeq3 = {
         .clearance = { -32, -32, -216, 192, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -12248,6 +12638,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftLargeHalfLoopDownSeq4 = {
         .clearance = { 0, -32, -248, 56, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -12262,6 +12653,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftLargeHalfLoopDownSeq5 = {
         .clearance = { 32, -32, -264, 40, 0, 0, { 0b1111, 0b1100 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // inverted
@@ -12274,6 +12666,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kLeftLargeHalfLoopDownSeq6 = {
         .clearance = { 64, -32, -280, 24, 0, 0, { 0b1111, 0b1100 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // inverted
@@ -12287,6 +12680,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightLargeHalfLoopDownSeq0 = {
         .clearance = { 0, 0, -32, 16, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 6,
         .invertSegmentBlocking = true,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
@@ -12303,6 +12697,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightLargeHalfLoopDownSeq1 = {
         .clearance = { -32, 0, -216, 192, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1000,
+        .rotatedTrackSequence = 5,
         .blockedSegments = { {
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::right, Seg::bottom, Seg::centre, Seg::topRight, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -12317,6 +12712,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightLargeHalfLoopDownSeq2 = {
         .clearance = { -64, 0, -160, 96, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b1001,
+        .rotatedTrackSequence = 4,
         .blockedSegments = { {
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // narrow
             EnumsToFlags(Seg::bottom, Seg::centre, Seg::bottomLeft, Seg::bottomRight), // inverted
@@ -12329,6 +12725,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightLargeHalfLoopDownSeq3 = {
         .clearance = { -32, 32, -216, 192, 8, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0011,
+        .rotatedTrackSequence = 3,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -12342,6 +12739,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightLargeHalfLoopDownSeq4 = {
         .clearance = { 0, 32, -248, 56, 0, 0, { 0b1111, 0 }, 0 },
         .allowedWallEdges = 0b0010,
+        .rotatedTrackSequence = 2,
         .blockedSegments = { {
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::top, Seg::left, Seg::centre, Seg::topLeft, Seg::topRight, Seg::bottomLeft), // inverted
@@ -12355,6 +12753,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightLargeHalfLoopDownSeq5 = {
         .clearance = { 32, 32, -264, 40, 0, 0, { 0b1111, 0b1100 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 1,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // inverted
@@ -12367,6 +12766,7 @@ namespace OpenRCT2::TrackMetaData
     static constexpr SequenceDescriptor kRightLargeHalfLoopDownSeq6 = {
         .clearance = { 64, 32, -280, 24, 0, 0, { 0b1111, 0b1100 }, 0 },
         .allowedWallEdges = 0b1010,
+        .rotatedTrackSequence = 0,
         .blockedSegments = { {
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // narrow
             EnumsToFlags(Seg::centre, Seg::topRight, Seg::bottomLeft), // inverted

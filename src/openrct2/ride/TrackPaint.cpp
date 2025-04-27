@@ -956,7 +956,7 @@ struct TrackSequenceSpriteDesc
 };
 
 static TrackSequenceSpriteDesc getTrackElementSpriteDesc(
-    const TrackElement& trackElement, const uint8_t trackSequence, Direction direction)
+    const TrackElement& trackElement, uint8_t trackSequence, Direction direction)
 {
     // this should be simplified eventually
     const auto& rideTypeDescriptor = GetRideTypeDescriptor(trackElement.GetRideType());
@@ -975,7 +975,7 @@ static TrackSequenceSpriteDesc getTrackElementSpriteDesc(
     if (spritesOriginal.isRotated)
     {
         direction = (direction + trackElementDescriptor.rotatedType.extraDirection) & 3;
-        /*trackSequence = trackElementDescriptor.sequences[trackSequence].rotatedTrackSequence;*/
+        trackSequence = trackElementDescriptor.sequences[trackSequence].rotatedTrackSequence;
     }
 
     return { sprites,   trackElementDescriptor.numSequences, trackSequence,
@@ -998,7 +998,7 @@ void trackPaintSpriteCommon(
     const auto& sprites = spriteDesc.sprites;
 
     constexpr uint32_t spriteCount = TSpriteCount * (TChildSprite + 1);
-    const uint32_t index = (direction * spriteDesc.numSequences * spriteCount) + (trackSequence * spriteCount);
+    const uint32_t index = (direction * spriteDesc.numSequences * spriteCount) + (spriteDesc.trackSequence * spriteCount);
     uint32_t spriteIndex = index;
     if constexpr (TTypeFunction1 != nullptr && TTypeFunction2 == nullptr)
     {
@@ -1383,7 +1383,8 @@ void trackPaintSpriteFence2(
     const auto& sprites = spriteDesc.sprites;
 
     constexpr uint32_t spriteCount = 3;
-    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount) + (trackSequence * spriteCount);
+    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount)
+        + (spriteDesc.trackSequence * spriteCount);
 
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(sprites.imageIndexes[spriteIndex]), height, { 0, 0, 0 },
@@ -1407,7 +1408,8 @@ void trackPaintSpriteFence3(
     const auto& sprites = spriteDesc.sprites;
 
     constexpr uint32_t spriteCount = 4;
-    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount) + (trackSequence * spriteCount);
+    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount)
+        + (spriteDesc.trackSequence * spriteCount);
 
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(sprites.imageIndexes[spriteIndex]), height, { 0, 0, 0 },
@@ -1434,7 +1436,8 @@ void trackPaintSpriteSupport(
     const auto& sprites = spriteDesc.sprites;
 
     constexpr uint32_t spriteCount = 2;
-    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount) + (trackSequence * spriteCount);
+    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount)
+        + (spriteDesc.trackSequence * spriteCount);
 
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(sprites.imageIndexes[spriteIndex]), height, { 0, 0, 0 },
@@ -1463,7 +1466,8 @@ void trackPaintSpriteSupports2(
     const auto& sprites = spriteDesc.sprites;
 
     constexpr uint32_t spriteCount = 3;
-    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount) + (trackSequence * spriteCount);
+    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount)
+        + (spriteDesc.trackSequence * spriteCount);
 
     PaintAddImageAsParentHeight(
         session, session.TrackColours.WithIndex(sprites.imageIndexes[spriteIndex]), height, { 0, 0, 0 },
@@ -1495,7 +1499,8 @@ void trackPaintSpriteSupportChildTrackColours(
     const auto& sprites = spriteDesc.sprites;
 
     constexpr uint32_t spriteCount = 2;
-    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount) + (trackSequence * spriteCount);
+    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount)
+        + (spriteDesc.trackSequence * spriteCount);
 
     const CoordsXYZ& offset = sprites.offsets != nullptr ? sprites.offsets[spriteIndex] : CoordsXYZ{ 0, 0, 0 };
     PaintAddImageAsParentHeight(
@@ -1860,12 +1865,13 @@ void trackPaintStationChairlift(
     const auto& sprites = spriteDesc.sprites;
 
     constexpr uint32_t spriteCount = 5;
-    const uint32_t spriteIndex = (direction * spriteDesc.numSequences * spriteCount) + (trackSequence * spriteCount);
+    const uint32_t spriteIndex = (direction * spriteDesc.numSequences * spriteCount) + (spriteDesc.trackSequence * spriteCount);
 
     if (isStart || isEnd)
     {
         const Direction endDirection = isStart ? DirectionReverse(direction) : direction;
-        const uint32_t endSpriteIndex = (endDirection * spriteDesc.numSequences * spriteCount) + (trackSequence * spriteCount);
+        const uint32_t endSpriteIndex = (endDirection * spriteDesc.numSequences * spriteCount)
+            + (spriteDesc.trackSequence * spriteCount);
         const uint32_t bullwheelFrame = ride.chairliftBullwheelRotation / 16384;
 
         const CoordsXYZ& offset1 = sprites.offsets != nullptr ? sprites.offsets[endSpriteIndex + 3] : CoordsXYZ{ 0, 0, 0 };
@@ -1912,7 +1918,7 @@ void trackPaintStation1SpriteFences(
     const auto& sprites = spriteDesc.sprites;
 
     constexpr uint32_t spriteCount = 3;
-    const uint32_t spriteIndex = (direction * spriteDesc.numSequences * spriteCount) + (trackSequence * spriteCount);
+    const uint32_t spriteIndex = (direction * spriteDesc.numSequences * spriteCount) + (spriteDesc.trackSequence * spriteCount);
 
     const CoordsXYZ& offset = sprites.offsets != nullptr ? sprites.offsets[spriteIndex] : CoordsXYZ{ 0, 0, 0 };
     PaintAddImageAsParentHeight(
@@ -1963,7 +1969,8 @@ void trackPaintWaterfall(
     const auto& sprites = spriteDesc.sprites;
 
     constexpr uint32_t spriteCount = 5;
-    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount) + (trackSequence * spriteCount);
+    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount)
+        + (spriteDesc.trackSequence * spriteCount);
 
     const uint32_t frame = (getGameState().currentTicks / 2) & 7;
 
@@ -1992,7 +1999,8 @@ void trackPaintRapidsSprites2(
     const auto& sprites = spriteDesc.sprites;
 
     constexpr uint32_t spriteCount = 2;
-    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount) + (trackSequence * spriteCount);
+    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount)
+        + (spriteDesc.trackSequence * spriteCount);
 
     const uint32_t frame = (getGameState().currentTicks / 2) & 7;
 
@@ -2047,7 +2055,7 @@ void trackPaintWatersplashSupportColoursWithChild(
     const auto& sprites = spriteDesc.sprites;
 
     constexpr uint32_t spriteCount = 4;
-    const uint32_t spriteIndex = (direction * spriteDesc.numSequences * spriteCount) + (trackSequence * spriteCount);
+    const uint32_t spriteIndex = (direction * spriteDesc.numSequences * spriteCount) + (spriteDesc.trackSequence * spriteCount);
 
     // draw underwater track
     const CoordsXYZ& offset1 = sprites.offsets != nullptr ? sprites.offsets[spriteIndex + 0] : CoordsXYZ{ 0, 0, 0 };
@@ -2068,11 +2076,11 @@ void trackPaintWatersplashSupportColoursWithChild(
 
     // draw sides
     PaintAddImageAsChildHeight(
-        session, session.SupportColours.WithIndex(kWatersplashSideSprites[direction][trackSequence][0]), height, { 0, 0, 0 },
-        sprites.boundBoxes[spriteIndex + 0]);
+        session, session.SupportColours.WithIndex(kWatersplashSideSprites[direction][spriteDesc.trackSequence][0]), height,
+        { 0, 0, 0 }, sprites.boundBoxes[spriteIndex + 0]);
     PaintAddImageAsChildHeight(
-        session, session.SupportColours.WithIndex(kWatersplashSideSprites[direction][trackSequence][1]), height, { 0, 0, 0 },
-        sprites.boundBoxes[spriteIndex + 0]);
+        session, session.SupportColours.WithIndex(kWatersplashSideSprites[direction][spriteDesc.trackSequence][1]), height,
+        { 0, 0, 0 }, sprites.boundBoxes[spriteIndex + 0]);
 
     // draw overwater track
     const CoordsXYZ& offset7 = sprites.offsets != nullptr ? sprites.offsets[spriteIndex + 2] : CoordsXYZ{ 0, 0, 0 };
@@ -2093,7 +2101,8 @@ void trackPaintWhirlpoolSprites2(
     const auto& sprites = spriteDesc.sprites;
 
     constexpr uint32_t spriteCount = 3;
-    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount) + (trackSequence * spriteCount);
+    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount)
+        + (spriteDesc.trackSequence * spriteCount);
 
     const uint32_t frame = (getGameState().currentTicks / 4) % 16;
 
@@ -2131,7 +2140,8 @@ void trackPaintReverseFreefallSlope(
     const bool reverseAngle = spriteDesc.direction > 0 && spriteDesc.direction < 3;
 
     constexpr uint32_t spriteCount = 2;
-    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount) + (trackSequence * spriteCount);
+    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount)
+        + (spriteDesc.trackSequence * spriteCount);
 
     session.LastPS = nullptr;
     session.LastAttachedPS = nullptr;
@@ -2174,9 +2184,9 @@ void trackPaintReverseFreefallVertical(
 
     const std::array colours = { supportColours, session.TrackColours };
 
-    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences) + trackSequence;
+    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences) + spriteDesc.trackSequence;
 
-    uint32_t colourIndex = trackSequence;
+    uint32_t colourIndex = spriteDesc.trackSequence;
     if (colourIndex == 1
         || (colourIndex == 0
             && !(session.ViewFlags & VIEWPORT_FLAG_HIDE_SUPPORTS && session.ViewFlags & VIEWPORT_FLAG_INVISIBLE_SUPPORTS)
@@ -2208,7 +2218,8 @@ void trackPaintFlatRailwayCrossing(
     const auto& sprites = spriteDesc.sprites;
 
     constexpr uint32_t spriteCount = 4;
-    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount) + (trackSequence * spriteCount);
+    const uint32_t spriteIndex = (spriteDesc.direction * spriteDesc.numSequences * spriteCount)
+        + (spriteDesc.trackSequence * spriteCount);
 
     if (session.PathElementOnSameHeight == nullptr)
     {
