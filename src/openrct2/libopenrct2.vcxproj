@@ -427,7 +427,6 @@
     <ClInclude Include="paint\tile_element\Paint.Wall.h" />
     <ClInclude Include="paint\tile_element\Segment.h" />
     <ClInclude Include="paint\track\coaster\WoodenRollerCoaster.hpp" />
-    <ClInclude Include="paint\track\Segment.h" />
     <ClInclude Include="paint\track\Support.h" />
     <ClInclude Include="paint\track\TrackPaintGeneric.h" />
     <ClInclude Include="paint\track_pieces\QuarterHelix.h" />

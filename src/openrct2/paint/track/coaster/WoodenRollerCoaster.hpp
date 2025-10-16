@@ -17,7 +17,6 @@
 #include "../../support/WoodenSupports.h"
 #include "../../support/WoodenSupports.hpp"
 #include "../../tile_element/Segment.h"
-#include "../../track/Segment.h"
 
 #include <cstdint>
 
@@ -128,7 +127,6 @@ namespace OpenRCT2::WoodenRC
         WoodenASupportsPaintSetupRotated(
             session, supportType.wooden, WoodenSupportSubType::neSw, direction, height, session.SupportColours);
         PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::Flat);
-        PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
     }
 
@@ -150,7 +148,6 @@ namespace OpenRCT2::WoodenRC
         {
             PaintUtilPushTunnelRotated(session, direction, height + 8, kTunnelGroup, TunnelSubType::FlatTo25Deg);
         }
-        PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + 40);
     }
 
@@ -172,7 +169,6 @@ namespace OpenRCT2::WoodenRC
         {
             PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::SlopeEnd);
         }
-        PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + 48);
     }
 
@@ -307,8 +303,6 @@ namespace OpenRCT2::WoodenRC
 
         DrawSupportForSequenceA<TrackElemType::leftBankedQuarterTurn3Tiles>(
             session, supportType.wooden, trackSequence, direction, height, session.SupportColours);
-        PaintUtilSetSegmentSupportHeight(
-            session, PaintUtilRotateSegments(blockedSegments[trackSequence], direction), 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
     }
 
@@ -527,8 +521,6 @@ namespace OpenRCT2::WoodenRC
 
         DrawSupportForSequenceA<TrackElemType::bankedRightQuarterTurn5Tiles>(
             session, supportType.wooden, trackSequence, direction, height, session.SupportColours);
-        PaintUtilSetSegmentSupportHeight(
-            session, PaintUtilRotateSegments(blockedSegments[trackSequence], direction), 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
     }
 
@@ -2694,19 +2686,12 @@ namespace OpenRCT2::WoodenRC
                 {
                     PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::Flat);
                 }
-                PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 64);
                 break;
             case 1:
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
@@ -2768,7 +2753,6 @@ namespace OpenRCT2::WoodenRC
                         PaintUtilPushTunnelLeft(session, height, kTunnelGroup, TunnelSubType::SlopeEnd);
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 64);
                 break;
         }
@@ -2830,20 +2814,12 @@ namespace OpenRCT2::WoodenRC
                 {
                     PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::Flat);
                 }
-                PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 64);
                 break;
             case 1:
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
@@ -2905,7 +2881,6 @@ namespace OpenRCT2::WoodenRC
                         PaintUtilPushTunnelLeft(session, height, kTunnelGroup, TunnelSubType::SlopeEnd);
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 64);
                 break;
         }
@@ -2975,7 +2950,6 @@ namespace OpenRCT2::WoodenRC
 
         DrawSupportForSequenceA<TrackElemType::diagFlat>(
             session, supportType.wooden, trackSequence, direction, height, session.SupportColours);
-        PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
     }
 
@@ -3043,7 +3017,6 @@ namespace OpenRCT2::WoodenRC
 
         DrawSupportForSequenceA<TrackElemType::diagFlatToUp25>(
             session, supportType.wooden, trackSequence, direction, height, session.SupportColours);
-        PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + 48);
     }
 
@@ -3111,7 +3084,6 @@ namespace OpenRCT2::WoodenRC
 
         DrawSupportForSequenceB<TrackElemType::diagUp25ToFlat>(
             session, supportType.wooden, trackSequence, direction, height + 16, session.SupportColours);
-        PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + 56);
     }
 
@@ -3179,7 +3151,6 @@ namespace OpenRCT2::WoodenRC
 
         DrawSupportForSequenceA<TrackElemType::diagLeftBank>(
             session, supportType.wooden, trackSequence, direction, height, session.SupportColours);
-        PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
     }
 
@@ -3347,7 +3318,6 @@ namespace OpenRCT2::WoodenRC
 
         DrawSupportForSequenceA<TrackElemType::leftEighthBankToDiag>(
             session, supportType.wooden, trackSequence, direction, height, session.SupportColours);
-        PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
     }
 
@@ -3515,7 +3485,6 @@ namespace OpenRCT2::WoodenRC
 
         DrawSupportForSequenceA<TrackElemType::rightEighthBankToDiag>(
             session, supportType.wooden, trackSequence, direction, height, session.SupportColours);
-        PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
     }
 

@@ -14,8 +14,6 @@
 #include "../../Paint.h"
 #include "../../support/WoodenSupports.h"
 #include "../../support/WoodenSupports.hpp"
-#include "../../tile_element/Segment.h"
-#include "../../track/Segment.h"
 #include "../../track/Support.h"
 
 using namespace OpenRCT2;
@@ -1368,7 +1366,6 @@ static void PaintGoKartsTrackFlat(
     DrawSupportForSequenceA<TrackElemType::flat>(
         session, supportType.wooden, trackSequence, direction, height, session.SupportColours);
 
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
@@ -1421,7 +1418,6 @@ static void PaintGoKartsTrack25DegUp(
             break;
     }
 
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
@@ -1474,7 +1470,6 @@ static void PaintGoKartsTrackFlatTo25DegUp(
             break;
     }
 
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
@@ -1528,7 +1523,6 @@ static void PaintGoKartsTrack25DegUpToFlat(
             break;
     }
 
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 40);
 }
 
@@ -1663,7 +1657,6 @@ static void PaintGoKartsStation(
     DrawSupportForSequenceA<TrackElemType::endStation>(
         session, supportType.wooden, trackSequence, direction, height, session.SupportColours);
 
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
@@ -1734,7 +1727,6 @@ static void PaintGoKartsTrackLeftQuarterTurn1Tile(
     WoodenASupportsPaintSetupRotated(
         session, supportType.wooden, WoodenSupportSubType::neSw, direction, height, session.SupportColours);
 
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
@@ -1768,7 +1760,6 @@ static void TrackUp60(
     {
         PaintUtilPushTunnelRotated(session, direction, height + 56, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
@@ -1794,7 +1785,6 @@ static void TrackUp25ToUp60(
     {
         PaintUtilPushTunnelRotated(session, direction, height + 24, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
@@ -1820,7 +1810,6 @@ static void TrackUp60ToUp25(
     {
         PaintUtilPushTunnelRotated(session, direction, height + 24, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
@@ -1866,7 +1855,6 @@ static void TrackFlatToUp60LongBase(
     {
         PaintUtilPushTunnelRotated(session, direction, height + 24, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     static constexpr std::array generalSupportHeights = { 48, 48, 64, 80 };
     PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
 }
@@ -1892,7 +1880,6 @@ static void TrackUp60ToFlatLongBase(
     {
         PaintUtilPushTunnelRotated(session, direction, height + 8, kTunnelGroup, TunnelSubType::FlatTo25Deg);
     }
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     static constexpr std::array generalSupportHeights = { 80, 80, 56, 40 };
     PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
 }
@@ -1936,13 +1923,6 @@ static void TrackLeftQuarterTurn3Tiles(
             WoodenSupportTransitionType::none);
     }
     TrackPaintUtilLeftQuarterTurn3TilesTunnel(session, kTunnelGroup, TunnelSubType::Flat, height, direction, trackSequence);
-    static constexpr std::array<int32_t, 4> blockedSegments = {
-        kSegmentsAll,
-        EnumsToFlags(PaintSegment::right, PaintSegment::topRight, PaintSegment::bottomRight),
-        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-        kSegmentsAll,
-    };
-    PaintUtilSetSegmentSupportHeight(session, PaintUtilRotateSegments(blockedSegments[trackSequence], direction), 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
@@ -1979,22 +1959,6 @@ static void TrackLeftQuarterTurn5Tiles(
     {
         PaintUtilPushTunnelRotated(session, DirectionPrev(direction), height, kTunnelGroup, TunnelSubType::Flat);
     }
-    static constexpr std::array<int32_t, 7> blockedSegments = {
-        kSegmentsAll,
-        EnumsToFlags(PaintSegment::right, PaintSegment::topRight, PaintSegment::bottomRight),
-        EnumsToFlags(
-            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight,
-            PaintSegment::bottomLeft),
-        EnumsToFlags(
-            PaintSegment::top, PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft,
-            PaintSegment::topRight, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-        EnumsToFlags(PaintSegment::right, PaintSegment::topRight, PaintSegment::bottomRight),
-        EnumsToFlags(
-            PaintSegment::left, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft,
-            PaintSegment::bottomRight),
-        kSegmentsAll,
-    };
-    PaintUtilSetSegmentSupportHeight(session, PaintUtilRotateSegments(blockedSegments[trackSequence], direction), 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
@@ -2027,7 +1991,6 @@ static void TrackLeftEighthToDiag(
     {
         PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::Flat);
     }
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
@@ -2051,7 +2014,6 @@ static void TrackRightEighthToDiag(
     {
         PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::Flat);
     }
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
@@ -2086,7 +2048,6 @@ static void TrackDiagFlat(
 
     DrawSupportForSequenceA<TrackElemType::diagFlat>(
         session, supportType.wooden, trackSequence, direction, height, session.SupportColours);
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
@@ -2103,7 +2064,6 @@ static void TrackDiagFlatToUp25(
 
     DrawSupportForSequenceA<TrackElemType::diagFlatToUp25>(
         session, supportType.wooden, trackSequence, direction, height, session.SupportColours);
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 48);
 }
 
@@ -2120,7 +2080,6 @@ static void TrackDiagUp25ToFlat(
 
     DrawSupportForSequenceB<TrackElemType::diagUp25ToFlat>(
         session, supportType.wooden, trackSequence, direction, height + 16, session.SupportColours);
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
@@ -2137,7 +2096,6 @@ static void TrackDiagUp25(
 
     DrawSupportForSequenceB<TrackElemType::diagUp25>(
         session, supportType.wooden, trackSequence, direction, height + 16, session.SupportColours);
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 56);
 }
 
@@ -2181,7 +2139,6 @@ static void TrackDiagUp25ToUp60(
 
     DrawSupportForSequenceB<TrackElemType::diagUp25ToUp60>(
         session, supportType.wooden, trackSequence, direction, height + 16, session.SupportColours);
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
@@ -2198,7 +2155,6 @@ static void TrackDiagUp60ToUp25(
 
     DrawSupportForSequenceB<TrackElemType::diagUp60ToUp25>(
         session, supportType.wooden, trackSequence, direction, height + 16, session.SupportColours);
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
@@ -2215,7 +2171,6 @@ static void TrackDiagUp60(
 
     DrawSupportForSequenceB<TrackElemType::diagUp60>(
         session, supportType.wooden, trackSequence, direction, height + 16, session.SupportColours);
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 104);
 }
 
@@ -2292,14 +2247,6 @@ static void TrackLeftQuarterTurn3TilesUp25(
         PaintUtilPushTunnelRotated(session, DirectionPrev(direction), height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
 
-    static constexpr std::array<int32_t, 4> blockedSegments = {
-        kSegmentsAll,
-        EnumsToFlags(PaintSegment::right, PaintSegment::topRight, PaintSegment::bottomRight),
-        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-        kSegmentsAll,
-    };
-    PaintUtilSetSegmentSupportHeight(session, PaintUtilRotateSegments(blockedSegments[trackSequence], direction), 0xFFFF, 0);
-
     static constexpr std::array generalSupportHeights = { 72, 56, 56, 72 };
     PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
 }
@@ -2349,14 +2296,6 @@ static void TrackRightQuarterTurn3TilesUp25(
     {
         PaintUtilPushTunnelRotated(session, DirectionNext(direction), height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
-
-    static constexpr std::array<int32_t, 4> blockedSegments = {
-        kSegmentsAll,
-        EnumsToFlags(PaintSegment::topLeft, PaintSegment::top, PaintSegment::topRight),
-        EnumsToFlags(PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-        kSegmentsAll,
-    };
-    PaintUtilSetSegmentSupportHeight(session, PaintUtilRotateSegments(blockedSegments[trackSequence], direction), 0xFFFF, 0);
 
     static constexpr std::array generalSupportHeights = { 72, 56, 56, 72 };
     PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
@@ -2419,23 +2358,6 @@ static void TrackLeftQuarterTurn5TilesUp25(
         PaintUtilPushTunnelRotated(session, DirectionPrev(direction), height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
 
-    static constexpr std::array<int32_t, 7> blockedSegments = {
-        kSegmentsAll,
-        EnumsToFlags(PaintSegment::right, PaintSegment::topRight, PaintSegment::bottomRight),
-        EnumsToFlags(
-            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight,
-            PaintSegment::bottomLeft),
-        EnumsToFlags(
-            PaintSegment::top, PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft,
-            PaintSegment::topRight, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-        EnumsToFlags(PaintSegment::right, PaintSegment::topRight, PaintSegment::bottomRight),
-        EnumsToFlags(
-            PaintSegment::left, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft,
-            PaintSegment::bottomRight),
-        kSegmentsAll,
-    };
-    PaintUtilSetSegmentSupportHeight(session, PaintUtilRotateSegments(blockedSegments[trackSequence], direction), 0xFFFF, 0);
-
     static constexpr std::array generalSupportHeights = { 72, 72, 72, 64, 72, 72, 72 };
     PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
 }
@@ -2478,23 +2400,6 @@ static void TrackRightQuarterTurn5TilesUp25(
     {
         PaintUtilPushTunnelRotated(session, DirectionNext(direction), height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
-
-    static constexpr std::array<int32_t, 7> blockedSegments = {
-        kSegmentsAll,
-        EnumsToFlags(PaintSegment::top, PaintSegment::topLeft, PaintSegment::topRight),
-        EnumsToFlags(
-            PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomLeft,
-            PaintSegment::bottomRight),
-        EnumsToFlags(
-            PaintSegment::top, PaintSegment::left, PaintSegment::right, PaintSegment::centre, PaintSegment::topLeft,
-            PaintSegment::topRight, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-        EnumsToFlags(PaintSegment::top, PaintSegment::topLeft, PaintSegment::topRight),
-        EnumsToFlags(
-            PaintSegment::left, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft,
-            PaintSegment::bottomRight),
-        kSegmentsAll,
-    };
-    PaintUtilSetSegmentSupportHeight(session, PaintUtilRotateSegments(blockedSegments[trackSequence], direction), 0xFFFF, 0);
 
     static constexpr std::array generalSupportHeights = { 72, 72, 72, 64, 72, 72, 72 };
     PaintUtilSetGeneralSupportHeight(session, height + generalSupportHeights[trackSequence]);
@@ -2551,7 +2456,6 @@ static void TrackLeftEighthToDiagUp25(
         PaintUtilPushTunnelRotated(session, direction, height - 8, kTunnelGroup, TunnelSubType::SlopeStart);
     }
 
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
@@ -2588,7 +2492,6 @@ static void TrackRightEighthToDiagUp25(
         PaintUtilPushTunnelRotated(session, direction, height - 8, kTunnelGroup, TunnelSubType::SlopeStart);
     }
 
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
@@ -2620,7 +2523,6 @@ static void TrackLeftEighthToOrthogonalUp25(
         PaintUtilPushTunnelRotated(session, direction, height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
 
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
@@ -2652,7 +2554,6 @@ static void TrackRightEighthToOrthogonalUp25(
         PaintUtilPushTunnelRotated(session, DirectionNext(direction), height + 8, kTunnelGroup, TunnelSubType::SlopeEnd);
     }
 
-    PaintUtilSetSegmentSupportHeight(session, kSegmentsAll, 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + 72);
 }
 
@@ -2713,17 +2614,6 @@ static void TrackSBendLeft(
     {
         PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::Flat);
     }
-    static constexpr std::array<int32_t, 4> blockedSegments = {
-        kSegmentsAll,
-        EnumsToFlags(
-            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight,
-            PaintSegment::bottomLeft),
-        EnumsToFlags(
-            PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomLeft,
-            PaintSegment::bottomRight),
-        kSegmentsAll,
-    };
-    PaintUtilSetSegmentSupportHeight(session, PaintUtilRotateSegments(blockedSegments[trackSequence], direction), 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 
@@ -2748,17 +2638,6 @@ static void TrackSBendRight(
     {
         PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::Flat);
     }
-    static constexpr std::array<int32_t, 4> blockedSegments = {
-        kSegmentsAll,
-        EnumsToFlags(
-            PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomLeft,
-            PaintSegment::bottomRight),
-        EnumsToFlags(
-            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight,
-            PaintSegment::bottomLeft),
-        kSegmentsAll,
-    };
-    PaintUtilSetSegmentSupportHeight(session, PaintUtilRotateSegments(blockedSegments[trackSequence], direction), 0xFFFF, 0);
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 }
 

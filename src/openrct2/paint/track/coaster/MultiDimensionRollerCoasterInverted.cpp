@@ -9,7 +9,6 @@
 
 #include "../../../SpriteIds.h"
 #include "../../../ride/TrackPaint.h"
-#include "../../track/Segment.h"
 
 namespace OpenRCT2::MultiDimensionRCInverted
 {
@@ -62,8 +61,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 break;
         }
 
-        PaintUtilSetSegmentSupportHeight(
-            session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             MetalASupportsPaintSetup(
@@ -102,8 +99,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 break;
         }
 
-        PaintUtilSetSegmentSupportHeight(
-            session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             switch (direction)
@@ -173,8 +168,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
         {
             PaintUtilPushTunnelRotated(session, direction, height + 56, kTunnelGroup, TunnelSubType::SlopeEnd);
         }
-        PaintUtilSetSegmentSupportHeight(
-            session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + 104);
     }
 
@@ -206,8 +199,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 break;
         }
 
-        PaintUtilSetSegmentSupportHeight(
-            session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             switch (direction)
@@ -283,8 +274,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
         {
             PaintUtilPushTunnelRotated(session, direction, height + 24, kTunnelGroup, TunnelSubType::SlopeEnd);
         }
-        PaintUtilSetSegmentSupportHeight(
-            session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + 72);
     }
 
@@ -322,8 +311,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 break;
         }
 
-        PaintUtilSetSegmentSupportHeight(
-            session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             switch (direction)
@@ -386,8 +373,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 break;
         }
 
-        PaintUtilSetSegmentSupportHeight(
-            session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             switch (direction)
@@ -495,14 +480,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomLeft,
-                            PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -539,14 +516,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 0, 16, height + 22 }, { 32, 16, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::topRight, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
@@ -573,13 +542,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 0, 0, height + 22 }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 4:
@@ -609,14 +571,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 16, 0, height + 22 }, { 16, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::left, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 6:
@@ -644,14 +598,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight,
-                            PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -706,14 +652,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 break;
         }
 
-        PaintUtilSetSegmentSupportHeight(
-            session,
-            PaintUtilRotateSegments(
-                EnumsToFlags(
-                    PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight,
-                    PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                direction),
-            0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             MetalASupportsPaintSetup(
@@ -752,14 +690,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 break;
         }
 
-        PaintUtilSetSegmentSupportHeight(
-            session,
-            PaintUtilRotateSegments(
-                EnumsToFlags(
-                    PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight,
-                    PaintSegment::bottomLeft),
-                direction),
-            0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             MetalASupportsPaintSetup(
@@ -798,14 +728,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 break;
         }
 
-        PaintUtilSetSegmentSupportHeight(
-            session,
-            PaintUtilRotateSegments(
-                EnumsToFlags(
-                    PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight,
-                    PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                direction),
-            0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             MetalASupportsPaintSetup(
@@ -844,14 +766,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 break;
         }
 
-        PaintUtilSetSegmentSupportHeight(
-            session,
-            PaintUtilRotateSegments(
-                EnumsToFlags(
-                    PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight,
-                    PaintSegment::bottomLeft),
-                direction),
-            0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             MetalASupportsPaintSetup(
@@ -893,14 +807,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomLeft,
-                            PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -935,14 +841,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 0, 16, height + 24 }, { 32, 16, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::topRight, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
@@ -968,13 +866,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             session, direction, session.TrackColours.WithIndex(26347), { 0, 0, height + 24 }, { 16, 16, 3 });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 4:
@@ -1002,14 +893,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 16, 0, height + 24 }, { 16, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::left, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 6:
@@ -1037,14 +920,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight,
-                            PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -1099,14 +974,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 break;
         }
 
-        PaintUtilSetSegmentSupportHeight(
-            session,
-            PaintUtilRotateSegments(
-                EnumsToFlags(
-                    PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight,
-                    PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                direction),
-            0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             switch (direction)
@@ -1169,14 +1036,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 break;
         }
 
-        PaintUtilSetSegmentSupportHeight(
-            session,
-            PaintUtilRotateSegments(
-                EnumsToFlags(
-                    PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight,
-                    PaintSegment::bottomLeft),
-                direction),
-            0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             switch (direction)
@@ -1239,14 +1098,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 break;
         }
 
-        PaintUtilSetSegmentSupportHeight(
-            session,
-            PaintUtilRotateSegments(
-                EnumsToFlags(
-                    PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight,
-                    PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                direction),
-            0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             switch (direction)
@@ -1309,14 +1160,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 break;
         }
 
-        PaintUtilSetSegmentSupportHeight(
-            session,
-            PaintUtilRotateSegments(
-                EnumsToFlags(
-                    PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight,
-                    PaintSegment::bottomLeft),
-                direction),
-            0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             switch (direction)
@@ -1407,14 +1250,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 break;
         }
 
-        PaintUtilSetSegmentSupportHeight(
-            session,
-            PaintUtilRotateSegments(
-                EnumsToFlags(
-                    PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight,
-                    PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                direction),
-            0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             MetalASupportsPaintSetup(
@@ -1463,12 +1298,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -1503,14 +1332,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::topRight, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -1551,14 +1372,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight,
-                            PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 2:
@@ -1599,13 +1412,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -1654,13 +1460,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 DrawSBendRightSupports(session, supportType.metal, trackSequence, direction, height + 36, 0, 0);
 
                 if (direction == 0 || direction == 3)
@@ -1694,14 +1493,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight,
-                            PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 DrawSBendRightSupports(session, supportType.metal, trackSequence, direction, height + 36, 0, 0);
 
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
@@ -1731,14 +1522,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::topRight, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 DrawSBendRightSupports(session, supportType.metal, trackSequence, direction, height + 36, 0, 0);
 
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
@@ -1768,13 +1551,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::left, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 DrawSBendRightSupports(session, supportType.metal, trackSequence, direction, height + 36, 0, 0);
 
                 switch (direction)
@@ -1822,14 +1598,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomLeft,
-                            PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -1866,12 +1634,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 16, 16, height + 22 }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
@@ -1899,14 +1661,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight,
-                            PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -1964,14 +1718,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomLeft,
-                            PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -2008,12 +1754,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 16, 16, height + 22 }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
@@ -2041,14 +1781,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight,
-                            PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -2095,8 +1827,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 break;
         }
 
-        PaintUtilSetSegmentSupportHeight(
-            session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             MetalASupportsPaintSetup(
@@ -2185,8 +1915,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
                 PaintUtilSetVerticalTunnel(session, height + 32);
-                PaintUtilSetSegmentSupportHeight(
-                    session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 1:
@@ -2237,8 +1965,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         session, direction, height - 8, TunnelGroup::Inverted, TunnelSubType::SlopeStart);
                 }
                 PaintUtilSetVerticalTunnel(session, height + 56);
-                PaintUtilSetSegmentSupportHeight(
-                    session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 1:
@@ -2289,8 +2015,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 PaintUtilPushTunnelLeft(session, height + 48, TunnelGroup::Inverted, TunnelSubType::SlopeEnd);
                 break;
         }
-        PaintUtilSetSegmentSupportHeight(
-            session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + 96);
     }
 
@@ -2328,8 +2052,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 {
                     PaintUtilPushTunnelRotated(session, direction, height + 48, TunnelGroup::Inverted, TunnelSubType::SlopeEnd);
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 96);
                 break;
             case 1:
@@ -2368,8 +2090,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -2403,14 +2123,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 0, 16, height + 22 }, { 32, 16, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::topRight, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
@@ -2437,23 +2149,9 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 0, 0, height + 22 }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight,
-                            PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 4:
@@ -2481,14 +2179,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight,
-                            PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -2546,8 +2236,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -2581,14 +2269,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 0, 0, height + 22 }, { 32, 16, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight,
-                            PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
@@ -2615,24 +2295,9 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 0, 16, height + 22 }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 4:
@@ -2660,14 +2325,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight,
-                            PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -2743,13 +2400,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -2783,14 +2433,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 0, 16, height + 22 }, { 32, 16, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::topRight, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
@@ -2817,23 +2459,9 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 0, 0, height + 22 }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight,
-                            PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 4:
@@ -2861,14 +2489,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::topRight, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -2926,13 +2546,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -2966,14 +2579,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 0, 0, height + 22 }, { 32, 16, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight,
-                            PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
@@ -3000,24 +2605,9 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 0, 16, height + 22 }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 4:
@@ -3045,14 +2635,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::topRight, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -3126,13 +2708,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             break;
                     }
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 1:
@@ -3158,12 +2733,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             break;
                     }
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
@@ -3189,13 +2758,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             break;
                     }
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
@@ -3222,12 +2784,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                     }
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -3283,13 +2839,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             break;
                     }
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 1:
@@ -3315,12 +2864,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             break;
                     }
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
@@ -3346,13 +2889,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             break;
                     }
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
@@ -3379,12 +2915,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                     }
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -3426,13 +2956,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 88 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 104);
                 break;
             case 1:
@@ -3444,12 +2967,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 88 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 104);
                 break;
             case 2:
@@ -3461,13 +2978,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 88 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 104);
                 break;
             case 3:
@@ -3480,12 +2990,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -3542,13 +3046,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             break;
                     }
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 1:
@@ -3574,12 +3071,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             break;
                     }
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
@@ -3605,13 +3096,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             break;
                     }
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
@@ -3638,12 +3122,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                     }
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -3685,13 +3163,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 56 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 1:
@@ -3703,12 +3174,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 56 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
@@ -3720,13 +3185,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 56 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
@@ -3739,12 +3197,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -3787,13 +3239,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 56 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 1:
@@ -3805,12 +3250,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 56 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
@@ -3822,13 +3261,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 56 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
@@ -3841,12 +3273,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -3903,13 +3329,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             break;
                     }
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 1:
@@ -3935,12 +3354,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             break;
                     }
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
@@ -3966,13 +3379,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             break;
                     }
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
@@ -3999,12 +3405,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                     }
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -4046,13 +3446,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 40 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 1:
@@ -4064,12 +3457,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 40 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
@@ -4081,13 +3468,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 40 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
@@ -4100,12 +3480,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -4147,13 +3521,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 24 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 104);
                 break;
             case 1:
@@ -4165,12 +3532,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 88 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 104);
                 break;
             case 2:
@@ -4182,13 +3543,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 88 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 104);
                 break;
             case 3:
@@ -4201,12 +3555,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -4249,13 +3597,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 1:
@@ -4267,12 +3608,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
@@ -4284,13 +3619,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
@@ -4303,12 +3631,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -4350,13 +3672,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 0, 0, height + 56 }, { 16, 16, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 1:
@@ -4368,12 +3683,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 56 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
@@ -4385,13 +3694,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 56 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
@@ -4404,12 +3706,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -4452,13 +3748,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 56 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 1:
@@ -4470,12 +3759,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 56 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 2:
@@ -4487,13 +3770,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 56 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 3:
@@ -4506,12 +3782,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -4553,13 +3823,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 1:
@@ -4571,12 +3834,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
@@ -4588,13 +3845,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
@@ -4607,12 +3857,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -4654,13 +3898,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 1:
@@ -4672,12 +3909,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
@@ -4689,13 +3920,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
@@ -4708,14 +3932,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::left, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -4757,13 +3973,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 1:
@@ -4775,12 +3984,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
@@ -4792,13 +3995,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
@@ -4811,14 +4007,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -4860,13 +4048,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 1:
@@ -4878,12 +4059,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
@@ -4895,13 +4070,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
@@ -4914,14 +4082,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::left, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -4963,13 +4123,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 1:
@@ -4981,12 +4134,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
@@ -4998,13 +4145,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
@@ -5017,14 +4157,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -5066,13 +4198,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 1:
@@ -5084,12 +4209,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
@@ -5101,13 +4220,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
@@ -5120,12 +4232,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -5167,13 +4273,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 1:
@@ -5185,12 +4284,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
@@ -5202,13 +4295,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
@@ -5221,12 +4307,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -5268,13 +4348,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 1:
@@ -5286,12 +4359,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
@@ -5303,13 +4370,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
@@ -5322,12 +4382,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -5369,13 +4423,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 1:
@@ -5387,12 +4434,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 2:
@@ -5404,13 +4445,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 56);
                 break;
             case 3:
@@ -5423,12 +4457,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -5470,13 +4498,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 break;
             case 1:
                 switch (direction)
@@ -5487,12 +4508,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 break;
             case 2:
                 switch (direction)
@@ -5503,13 +4518,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 break;
             case 3:
                 switch (direction)
@@ -5521,12 +4529,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -5568,13 +4570,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 break;
             case 1:
                 switch (direction)
@@ -5585,12 +4580,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 break;
             case 2:
                 switch (direction)
@@ -5601,13 +4590,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 break;
             case 3:
                 switch (direction)
@@ -5619,12 +4601,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -5666,13 +4642,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 1:
@@ -5684,12 +4653,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
@@ -5701,13 +4664,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
@@ -5720,12 +4676,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -5767,13 +4717,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 1:
@@ -5785,12 +4728,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
@@ -5802,13 +4739,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 32 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 3:
@@ -5821,12 +4751,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -5868,13 +4792,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 1:
@@ -5886,12 +4803,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
@@ -5903,13 +4814,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
@@ -5922,14 +4826,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::left, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -5971,13 +4867,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::centre, PaintSegment::topRight, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 1:
@@ -5989,12 +4878,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(PaintSegment::top, PaintSegment::centre, PaintSegment::topLeft, PaintSegment::topRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
@@ -6006,13 +4889,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -16, -16, height + 22 }, { 32, 32, 3 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::bottom, PaintSegment::centre, PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 3:
@@ -6025,14 +4901,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 switch (direction)
                 {
                     case 0:
@@ -6087,14 +4955,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight,
-                            PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -6125,14 +4985,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             session, direction, session.TrackColours.WithIndex(26375), { 0, 6, height + 24 }, { 32, 20, 3 });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight,
-                            PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
@@ -6166,14 +5018,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         PaintUtilPushTunnelLeft(session, height, kTunnelGroup, TunnelSubType::Flat);
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::right, PaintSegment::bottom, PaintSegment::centre, PaintSegment::topRight,
-                            PaintSegment::bottomLeft, PaintSegment::bottomRight),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
         }
@@ -6206,14 +5050,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         break;
                 }
 
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::topRight, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 MetalASupportsPaintSetup(
                     session, supportType.metal, MetalSupportPlace::centre, 0, height + 36, session.SupportColours);
 
@@ -6243,14 +5079,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             session, direction, session.TrackColours.WithIndex(26387), { 0, 6, height + 24 }, { 32, 20, 3 });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::topRight, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
             case 2:
@@ -6284,14 +5112,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                         PaintUtilPushTunnelLeft(session, height, kTunnelGroup, TunnelSubType::Flat);
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session,
-                    PaintUtilRotateSegments(
-                        EnumsToFlags(
-                            PaintSegment::top, PaintSegment::left, PaintSegment::centre, PaintSegment::topLeft,
-                            PaintSegment::topRight, PaintSegment::bottomLeft),
-                        direction),
-                    0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
         }
@@ -6313,8 +5133,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
             session, direction, session.TrackColours.WithIndex(imageIds[direction][isClosed]), { 0, 0, height + 24 },
             { { 0, 6, height + 24 }, { 32, 20, 3 } });
 
-        PaintUtilSetSegmentSupportHeight(
-            session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
         if (TrackPaintUtilShouldPaintSupports(session.MapPosition))
         {
             MetalASupportsPaintSetup(
@@ -6359,8 +5177,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 {
                     PaintUtilPushTunnelRotated(session, direction, height + 16, kTunnelGroup, TunnelSubType::Flat);
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 1:
@@ -6387,8 +5203,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { -8, 6, height }, { 2, 20, 31 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 64);
                 break;
             case 2:
@@ -6415,8 +5229,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 4, 6, height + 8 }, { 2, 20, 31 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 88);
                 break;
             case 3:
@@ -6454,8 +5266,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 28, 6, height - 8 }, { 2, 20, 31 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 72);
                 break;
             case 1:
@@ -6482,8 +5292,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                             { { 24, 6, height - 16 }, { 2, 20, 31 } });
                         break;
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + 48);
                 break;
             case 2:
@@ -6514,8 +5322,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
                 {
                     PaintUtilPushTunnelRotated(session, direction, height, kTunnelGroup, TunnelSubType::Flat);
                 }
-                PaintUtilSetSegmentSupportHeight(
-                    session, PaintUtilRotateSegments(BlockedSegments::kStraightFlat, direction), 0xFFFF, 0);
                 PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
                 break;
         }
@@ -6529,8 +5335,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
             session, -3, height + 24, direction, trackSequence, kMultidimDiagBrakeImages, defaultDiagTileOffsets,
             defaultDiagBoundLengths, nullptr);
 
-        const uint16_t blockedSegments = BlockedSegments::kDiagStraightFlat[trackSequence];
-        PaintUtilSetSegmentSupportHeight(session, PaintUtilRotateSegments(blockedSegments, direction), 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 
         if (trackSequence == 3)
@@ -6548,8 +5352,6 @@ namespace OpenRCT2::MultiDimensionRCInverted
             session, -3, height + 24, direction, trackSequence, kMultidimDiagBlockBrakeImages[trackElement.IsBrakeClosed()],
             defaultDiagTileOffsets, defaultDiagBoundLengths, nullptr);
 
-        const uint16_t blockedSegments = BlockedSegments::kDiagStraightFlat[trackSequence];
-        PaintUtilSetSegmentSupportHeight(session, PaintUtilRotateSegments(blockedSegments, direction), 0xFFFF, 0);
         PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
 
         if (trackSequence == 3)
