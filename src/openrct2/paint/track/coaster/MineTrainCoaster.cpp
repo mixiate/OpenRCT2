@@ -2579,7 +2579,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpSmall(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::left, PaintSegment::right, PaintSegment::bottom, PaintSegment::bottomRight),
                     direction),
                 48, 0x20);
@@ -2663,7 +2663,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpSmall(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::top, PaintSegment::left, PaintSegment::right, PaintSegment::topRight),
                     direction),
                 48, 0x20);
@@ -2715,7 +2715,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpSmall(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::top, PaintSegment::right, PaintSegment::bottom, PaintSegment::topRight),
                     direction),
                 48, 0x20);
@@ -2793,7 +2793,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpSmall(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::top, PaintSegment::left, PaintSegment::bottom, PaintSegment::topLeft),
                     direction),
                 48, 0x20);
@@ -2850,7 +2850,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpSmall(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::top, PaintSegment::left, PaintSegment::bottom, PaintSegment::topLeft),
                     direction),
                 48, 0x20);
@@ -2934,7 +2934,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpSmall(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::top, PaintSegment::right, PaintSegment::bottom, PaintSegment::topRight),
                     direction),
                 48, 0x20);
@@ -2986,7 +2986,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpSmall(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::top, PaintSegment::left, PaintSegment::right, PaintSegment::topRight),
                     direction),
                 48, 0x20);
@@ -3065,7 +3065,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpSmall(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::left, PaintSegment::right, PaintSegment::bottom, PaintSegment::bottomRight),
                     direction),
                 48, 0x20);
@@ -3152,7 +3152,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::left, PaintSegment::right, PaintSegment::bottom, PaintSegment::bottomRight),
                     direction),
                 48, 0x20);
@@ -3161,7 +3161,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
         case 1:
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::right, PaintSegment::topRight, PaintSegment::bottomRight), direction),
                 48, 0x20);
             PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
@@ -3234,7 +3234,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::top, PaintSegment::bottom, PaintSegment::topLeft, PaintSegment::bottomLeft),
                     direction),
                 48, 0x20);
@@ -3243,7 +3243,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
         case 4:
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::right, PaintSegment::topRight, PaintSegment::bottomRight), direction),
                 48, 0x20);
             PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
@@ -3328,7 +3328,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::top, PaintSegment::left, PaintSegment::right, PaintSegment::topRight),
                     direction),
                 48, 0x20);
@@ -3380,7 +3380,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::top, PaintSegment::right, PaintSegment::bottom, PaintSegment::topRight),
                     direction),
                 48, 0x20);
@@ -3389,8 +3389,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
         case 8:
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
-                    EnumsToFlags(PaintSegment::top, PaintSegment::topLeft, PaintSegment::topRight), direction),
+                paintSegmentsRotate(EnumsToFlags(PaintSegment::top, PaintSegment::topLeft, PaintSegment::topRight), direction),
                 48, 0x20);
             PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
@@ -3462,7 +3461,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::left, PaintSegment::right, PaintSegment::bottomLeft, PaintSegment::bottomRight),
                     direction),
                 48, 0x20);
@@ -3471,8 +3470,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
         case 11:
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
-                    EnumsToFlags(PaintSegment::top, PaintSegment::topLeft, PaintSegment::topRight), direction),
+                paintSegmentsRotate(EnumsToFlags(PaintSegment::top, PaintSegment::topLeft, PaintSegment::topRight), direction),
                 48, 0x20);
             PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
@@ -3551,7 +3549,7 @@ static void MineTrainRCTrackLeftHalfBankedHelixUpLarge(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::top, PaintSegment::left, PaintSegment::bottom, PaintSegment::topLeft),
                     direction),
                 48, 0x20);
@@ -3608,7 +3606,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::top, PaintSegment::left, PaintSegment::bottom, PaintSegment::topLeft),
                     direction),
                 48, 0x20);
@@ -3617,8 +3615,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
         case 1:
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
-                    EnumsToFlags(PaintSegment::top, PaintSegment::topLeft, PaintSegment::topRight), direction),
+                paintSegmentsRotate(EnumsToFlags(PaintSegment::top, PaintSegment::topLeft, PaintSegment::topRight), direction),
                 48, 0x20);
             PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
@@ -3690,7 +3687,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::left, PaintSegment::right, PaintSegment::bottomLeft, PaintSegment::bottomRight),
                     direction),
                 48, 0x20);
@@ -3699,8 +3696,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
         case 4:
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
-                    EnumsToFlags(PaintSegment::top, PaintSegment::topLeft, PaintSegment::topRight), direction),
+                paintSegmentsRotate(EnumsToFlags(PaintSegment::top, PaintSegment::topLeft, PaintSegment::topRight), direction),
                 48, 0x20);
             PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
             break;
@@ -3784,7 +3780,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::top, PaintSegment::right, PaintSegment::bottom, PaintSegment::topRight),
                     direction),
                 48, 0x20);
@@ -3836,7 +3832,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::top, PaintSegment::left, PaintSegment::right, PaintSegment::topRight),
                     direction),
                 48, 0x20);
@@ -3845,7 +3841,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
         case 8:
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::right, PaintSegment::topRight, PaintSegment::bottomRight), direction),
                 48, 0x20);
             PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
@@ -3918,7 +3914,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::top, PaintSegment::bottom, PaintSegment::topLeft, PaintSegment::bottomLeft),
                     direction),
                 48, 0x20);
@@ -3927,7 +3923,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
         case 11:
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::right, PaintSegment::topRight, PaintSegment::bottomRight), direction),
                 48, 0x20);
             PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
@@ -4007,7 +4003,7 @@ static void MineTrainRCTrackRightHalfBankedHelixUpLarge(
             }
             PaintUtilSetSegmentSupportHeight(
                 session,
-                PaintUtilRotateSegments(
+                paintSegmentsRotate(
                     EnumsToFlags(PaintSegment::left, PaintSegment::right, PaintSegment::bottom, PaintSegment::bottomRight),
                     direction),
                 48, 0x20);

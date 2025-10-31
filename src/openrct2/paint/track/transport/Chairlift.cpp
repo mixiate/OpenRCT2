@@ -637,7 +637,7 @@ static void ChairliftPaintLeftQuarterTurn1Tile(
     }
 
     ChairliftPaintUtilDrawSupports(
-        session, PaintUtilRotateSegments(EnumsToFlags(PaintSegment::topLeft, PaintSegment::bottomLeft), direction), height,
+        session, paintSegmentsRotate(EnumsToFlags(PaintSegment::topLeft, PaintSegment::bottomLeft), direction), height,
         supportType);
 
     PaintUtilSetGeneralSupportHeight(session, height + kDefaultGeneralSupportHeight);
