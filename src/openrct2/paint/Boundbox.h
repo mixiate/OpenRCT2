@@ -42,17 +42,20 @@ struct BoundBoxXYZ
 
 constexpr BoundBoxXYZ kBoundingBoxUnimplemented{};
 
-template<size_t trackSequenceCount, size_t spriteCount>
+static constexpr std ::array<size_t, kNumOrthogonalDirections> kDirectionMapFlipX = { 3, 2, 1, 0 };
+static constexpr std ::array<size_t, kNumOrthogonalDirections> kDirectionMapFlipDiagonal = { 2, 1, 0, 3 };
+
+template<size_t trackSequenceCount, size_t spriteCount, const std ::array<size_t, kNumOrthogonalDirections> directionMap>
 constexpr std::array<std::array<std::array<BoundBoxXYZ, spriteCount>, trackSequenceCount>, kNumOrthogonalDirections>
-    flipTrackSequenceBoundBoxesXAxis(
+    flipTrackSequenceBoundBoxes(
         const std::array<std::array<std::array<BoundBoxXYZ, spriteCount>, trackSequenceCount>, kNumOrthogonalDirections>&
             boundBoxes)
 {
     auto flippedBoundBoxes = boundBoxes;
-    flippedBoundBoxes[0] = boundBoxes[3];
-    flippedBoundBoxes[1] = boundBoxes[2];
-    flippedBoundBoxes[2] = boundBoxes[1];
-    flippedBoundBoxes[3] = boundBoxes[0];
+    for (const Direction direction : kAllDirections)
+    {
+        flippedBoundBoxes[direction] = boundBoxes[directionMap[direction]];
+    }
     for (auto& view : flippedBoundBoxes)
     {
         for (auto& trackSequence : view)
@@ -65,4 +68,22 @@ constexpr std::array<std::array<std::array<BoundBoxXYZ, spriteCount>, trackSeque
         }
     }
     return flippedBoundBoxes;
+}
+
+template<size_t trackSequenceCount, size_t spriteCount>
+constexpr std::array<std::array<std::array<BoundBoxXYZ, spriteCount>, trackSequenceCount>, kNumOrthogonalDirections>
+    flipTrackSequenceBoundBoxesXAxis(
+        const std::array<std::array<std::array<BoundBoxXYZ, spriteCount>, trackSequenceCount>, kNumOrthogonalDirections>&
+            boundBoxes)
+{
+    return flipTrackSequenceBoundBoxes<trackSequenceCount, spriteCount, kDirectionMapFlipX>(boundBoxes);
+}
+
+template<size_t trackSequenceCount, size_t spriteCount>
+constexpr std::array<std::array<std::array<BoundBoxXYZ, spriteCount>, trackSequenceCount>, kNumOrthogonalDirections>
+    flipTrackSequenceBoundBoxesDiagonal(
+        const std::array<std::array<std::array<BoundBoxXYZ, spriteCount>, trackSequenceCount>, kNumOrthogonalDirections>&
+            boundBoxes)
+{
+    return flipTrackSequenceBoundBoxes<trackSequenceCount, spriteCount, kDirectionMapFlipDiagonal>(boundBoxes);
 }

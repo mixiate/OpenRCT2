@@ -20,6 +20,9 @@ struct Ride;
 
 namespace OpenRCT2
 {
+    typedef std::array<std::array<std::array<BoundBoxXYZ, 1>, 5>, kNumOrthogonalDirections> TrackBoundingBoxes5Seq1Spr;
+    typedef std::array<std::array<std::array<BoundBoxXYZ, 2>, 5>, kNumOrthogonalDirections> TrackBoundingBoxes5Seq2Spr;
+
     ImageId getPrimaryTrackColourWithSecondarySupportColour(const PaintSession& session);
 
     template<const bool flipXAxis, const size_t sequenceCount, const size_t spriteCount>
@@ -36,6 +39,30 @@ namespace OpenRCT2
                     if (array[direction][sequence][sprite] == true)
                     {
                         const size_t directionIndex = flipXAxis ? kNumOrthogonalDirections - 1 - direction : direction;
+                        const uint64_t shift = sprite + (sequence * spriteCount) + (directionIndex * directionOffset);
+                        const uint64_t bit = 0b1LL << shift;
+                        spriteMap |= bit;
+                    }
+                }
+            }
+        }
+        return spriteMap;
+    }
+
+    template<const size_t sequenceCount, const size_t spriteCount>
+    constexpr uint64_t createSpriteMapFlipDiagonal(const bool array[kNumOrthogonalDirections][sequenceCount][spriteCount])
+    {
+        const size_t directionOffset = sequenceCount * spriteCount;
+        uint64_t spriteMap = 0;
+        for (size_t direction = 0; direction < kNumOrthogonalDirections; direction++)
+        {
+            for (size_t sequence = 0; sequence < sequenceCount; sequence++)
+            {
+                for (size_t sprite = 0; sprite < spriteCount; sprite++)
+                {
+                    if (array[direction][sequence][sprite] == true)
+                    {
+                        const size_t directionIndex = kDirectionMapFlipDiagonal[direction];
                         const uint64_t shift = sprite + (sequence * spriteCount) + (directionIndex * directionOffset);
                         const uint64_t bit = 0b1LL << shift;
                         spriteMap |= bit;
