@@ -14,6 +14,14 @@
 using Direction = uint8_t;
 struct TileCornersZ;
 
+namespace OpenRCT2
+{
+    constexpr uint8_t quartersFlipXAxis(const uint8_t quarters)
+    {
+        return ((quarters & 0b1010) >> 1) | ((quarters & 0b0101) << 1);
+    }
+} // namespace OpenRCT2
+
 class QuarterTile
 {
 private:
@@ -32,9 +40,24 @@ public:
 
     // Rotate both of the values amount. Returns new RValue QuarterTile
     const QuarterTile Rotate(Direction amount) const;
-    uint8_t GetBaseQuarterOccupied() const;
-    uint8_t GetZQuarterOccupied() const;
+
+    constexpr uint8_t GetBaseQuarterOccupied() const
+    {
+        return _val & 0xF;
+    }
+
+    constexpr uint8_t GetZQuarterOccupied() const
+    {
+        return (_val >> 4) & 0xF;
+    }
+
     TileCornersZ GetQuarterHeights(int32_t height) const;
+
+    constexpr QuarterTile flipXAxis() const
+    {
+        return QuarterTile(
+            OpenRCT2::quartersFlipXAxis(GetBaseQuarterOccupied()), OpenRCT2::quartersFlipXAxis(GetZQuarterOccupied()));
+    }
 };
 
 enum
