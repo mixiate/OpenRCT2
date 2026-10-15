@@ -55,16 +55,6 @@ const QuarterTile QuarterTile::Rotate(Direction amount) const
     }
 }
 
-uint8_t QuarterTile::GetBaseQuarterOccupied() const
-{
-    return _val & 0xF;
-}
-
-uint8_t QuarterTile::GetZQuarterOccupied() const
-{
-    return (_val >> 4) & 0xF;
-}
-
 TileCornersZ QuarterTile::GetQuarterHeights(const int32_t height) const
 {
     const uint8_t raisedQuarters = GetZQuarterOccupied();
