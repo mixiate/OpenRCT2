@@ -33,6 +33,7 @@ set(test_files
    "${CMAKE_CURRENT_SOURCE_DIR}/ScenarioPatcherTests.cpp"
    "${CMAKE_CURRENT_SOURCE_DIR}/ScriptingTests.cpp"
    "${CMAKE_CURRENT_SOURCE_DIR}/StringTest.cpp"
+   "${CMAKE_CURRENT_SOURCE_DIR}/TedSequenceTest.cpp"
    "${CMAKE_CURRENT_SOURCE_DIR}/TestData.cpp"
    "${CMAKE_CURRENT_SOURCE_DIR}/TestData.h"
    "${CMAKE_CURRENT_SOURCE_DIR}/tests.cpp"
