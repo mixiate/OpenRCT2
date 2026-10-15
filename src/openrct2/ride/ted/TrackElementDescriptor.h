@@ -282,7 +282,10 @@ namespace OpenRCT2::TrackMetadata
     {
         for (auto& tunnel : sequenceTunnels)
         {
-            tunnel.direction = directionFunction(tunnel.direction);
+            if (DirectionValid(tunnel.direction))
+            {
+                tunnel.direction = directionFunction(tunnel.direction);
+            }
         }
         return sequenceTunnels;
     }
