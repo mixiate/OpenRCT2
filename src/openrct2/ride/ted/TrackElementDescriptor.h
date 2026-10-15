@@ -203,6 +203,8 @@ namespace OpenRCT2::TrackMetadata
         QuarterTile quarterTile = { 0, 0 };
         ClearanceFlags flags{};
 
+        bool operator==(const SequenceClearance&) const = default;
+
         constexpr SequenceClearance offset(const CoordsXYZ offset) const
         {
             auto sequenceClearance = *this;

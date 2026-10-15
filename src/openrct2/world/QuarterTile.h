@@ -43,6 +43,8 @@ public:
     {
     }
 
+    bool operator==(const QuarterTile&) const = default;
+
     constexpr QuarterTile Rotate(const Direction amount) const
     {
         switch (amount)
