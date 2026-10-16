@@ -38,8 +38,46 @@ public:
     {
     }
 
-    // Rotate both of the values amount. Returns new RValue QuarterTile
-    const QuarterTile Rotate(Direction amount) const;
+    constexpr QuarterTile Rotate(const Direction amount) const
+    {
+        switch (amount)
+        {
+            case 0:
+                return QuarterTile(_val);
+            case 1:
+            {
+                auto rotVal1 = _val << 1;
+                auto rotVal2 = rotVal1 >> 4;
+                // Clear the bit from the tileQuarter
+                rotVal1 &= 0b11101110;
+                // Clear the bit from the zQuarter
+                rotVal2 &= 0b00010001;
+                return QuarterTile(static_cast<uint8_t>(rotVal1 | rotVal2));
+            }
+            case 2:
+            {
+                auto rotVal1 = _val << 2;
+                auto rotVal2 = rotVal1 >> 4;
+                // Clear the bit from the tileQuarter
+                rotVal1 &= 0b11001100;
+                // Clear the bit from the zQuarter
+                rotVal2 &= 0b00110011;
+                return QuarterTile(static_cast<uint8_t>(rotVal1 | rotVal2));
+            }
+            case 3:
+            {
+                auto rotVal1 = _val << 3;
+                auto rotVal2 = rotVal1 >> 4;
+                // Clear the bit from the tileQuarter
+                rotVal1 &= 0b10001000;
+                // Clear the bit from the zQuarter
+                rotVal2 &= 0b01110111;
+                return QuarterTile(static_cast<uint8_t>(rotVal1 | rotVal2));
+            }
+            default:
+                return QuarterTile(0);
+        }
+    }
 
     constexpr uint8_t GetBaseQuarterOccupied() const
     {
