@@ -51,6 +51,16 @@ namespace OpenRCT2
         else
             return subType;
     }
+
+    constexpr WoodenSupportSubType woodenSupportSubTypeFlipDiagonal(const WoodenSupportSubType subType)
+    {
+        if (subType == WoodenSupportSubType::corner0)
+            return WoodenSupportSubType::corner2;
+        if (subType == WoodenSupportSubType::corner2)
+            return WoodenSupportSubType::corner0;
+        else
+            return subType;
+    }
 } // namespace OpenRCT2
 
 enum class WoodenSupportTransitionType : uint8_t
