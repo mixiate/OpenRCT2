@@ -470,6 +470,20 @@ namespace OpenRCT2::TrackMetadata
             return SequenceTable{ numSequences, newSequences };
         }
 
+        constexpr SequenceTable flipDiagonalStraight() const
+        {
+            auto newSequences = sequences;
+            for (size_t i = 0; i < numSequences; i++)
+            {
+                newSequences[i] = sequences[i].flipDiagonal();
+            }
+            for (size_t i = 1; i < numSequences; i += 3)
+            {
+                std::swap(newSequences[i], newSequences[i + 1]);
+            }
+            return SequenceTable{ numSequences, newSequences };
+        }
+
         constexpr SequenceTable rotate(const Direction rotation) const
         {
             auto newSequences = sequences;
