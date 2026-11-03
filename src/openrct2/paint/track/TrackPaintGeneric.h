@@ -97,7 +97,7 @@ namespace OpenRCT2
         if constexpr (config.reversed)
         {
             modifiedTrackSequence = sequenceDescriptor.reversedTrackSequence;
-            modifiedDirection = (direction + ted.reversedRotationOffset) & 3;
+            modifiedDirection = DirectionRotate(direction, ted.reversedRotationOffset);
         }
 
         const ImageId imageId = config.trackSupportColours
@@ -120,7 +120,7 @@ namespace OpenRCT2
         {
             if (sequenceDescriptor.woodenSupports.subType != WoodenSupportSubType::null)
             {
-                const Direction supportRotation = (direction + sequenceDescriptor.extraSupportRotation) & 3;
+                const Direction supportRotation = DirectionRotate(direction, sequenceDescriptor.extraSupportRotation);
                 WoodenASupportsPaintSetupRotated(
                     session, supportType.wooden, sequenceDescriptor.woodenSupports.subType, supportRotation,
                     height + sequenceDescriptor.woodenSupports.height, session.SupportColours,
@@ -131,7 +131,7 @@ namespace OpenRCT2
         {
             if (sequenceDescriptor.metalSupports.place != MetalSupportPlace::none)
             {
-                const Direction supportRotation = (direction + sequenceDescriptor.extraSupportRotation) & 3;
+                const Direction supportRotation = DirectionRotate(direction, sequenceDescriptor.extraSupportRotation);
                 MetalASupportsPaintSetupRotated(
                     session, supportType.metal, sequenceDescriptor.metalSupports.place, supportRotation,
                     elementArgs.supportHeights[modifiedTrackSequence][modifiedDirection],
