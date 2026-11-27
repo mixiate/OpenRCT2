@@ -2810,22 +2810,26 @@ namespace OpenRCT2::TrackMetadata
         .allowedWallEdges = 0b0010,
         .flags = { SequenceFlag::hasHeightMarker },
         .woodenSupports = { WoodenSupportSubType::neSw, WoodenSupportTransitionType::up25Deg },
+        .metalSupports = { MetalSupportPlace::centre },
         .blockedSegments = { {
             { PS::centre, PS::topRight, PS::bottomLeft }, // narrow
             kSegmentsUnimplemented,                       // inverted
             kSegmentsAll,                                 // wide
         } },
+        .generalSupportHeight = calculateGeneralSupportHeight(kLeftEighthToDiagUp25Seq0.clearance, 1, true),
+        .tunnels = { sequenceTunnelAllTypes(0, -8, TunnelSubType::slopeStart) },
     };
 
     static constexpr SequenceDescriptor kLeftEighthToDiagUp25Seq1 = {
         .clearance = { -32, 0, 16, 32, { 0b1111, 0 }, {} },
         .allowedWallEdges = 0b0010,
-        .woodenSupports = { WoodenSupportSubType::neSw },
+        .woodenSupports = { WoodenSupportSubType::neSw, WoodenSupportTransitionType::none, 16 },
         .blockedSegments = { {
             { PS::top, PS::left, PS::centre, PS::topLeft, PS::topRight, PS::bottomLeft }, // narrow
             kSegmentsUnimplemented,                                                       // inverted
             kSegmentsAll,                                                                 // wide
         } },
+        .generalSupportHeight = calculateGeneralSupportHeight(kLeftEighthToDiagUp25Seq1.clearance, 0, true),
     };
 
     static constexpr SequenceDescriptor kLeftEighthToDiagUp25Seq2 = {
@@ -2837,6 +2841,7 @@ namespace OpenRCT2::TrackMetadata
             kSegmentsUnimplemented,                                               // inverted
             kSegmentsAll,                                                         // wide
         } },
+        .generalSupportHeight = calculateGeneralSupportHeight(kLeftEighthToDiagUp25Seq2.clearance, 1, true),
     };
 
     static constexpr SequenceDescriptor kLeftEighthToDiagUp25Seq3 = {
@@ -2848,50 +2853,61 @@ namespace OpenRCT2::TrackMetadata
             kSegmentsUnimplemented,                                // inverted
             kSegmentsAll,                                          // wide
         } },
+        .generalSupportHeight = calculateGeneralSupportHeight(kLeftEighthToDiagUp25Seq3.clearance, 1, true),
     };
 
     static constexpr SequenceDescriptor kLeftEighthToDiagUp25Seq4 = {
         .clearance = { -64, -32, 32, 24, { 0b0001, 0 }, {} },
+        .metalSupports = { MetalSupportPlace::bottomCorner },
         .blockedSegments = { {
             { PS::bottom, PS::centre, PS::topLeft, PS::topRight, PS::bottomLeft, PS::bottomRight }, // narrow
             kSegmentsUnimplemented,                                                                 // inverted
             kSegmentsAll,                                                                           // wide
         } },
+        .generalSupportHeight = calculateGeneralSupportHeight(kLeftEighthToDiagUp25Seq4.clearance, 1, true),
     };
 
     static constexpr SequenceDescriptor kLeftEighthToOrthogonalUp25Seq0 = {
         .clearance = { 0, 0, 0, 16, { 0b1101, 0 }, {} },
         .flags = { SequenceFlag::hasHeightMarker },
+        .metalSupports = { MetalSupportPlace::rightCorner },
         .blockedSegments = blockedSegmentsRotate(blockedSegmentsFlipXAxis(kLeftEighthToDiagUp25Seq4.blockedSegments), 2),
+        .generalSupportHeight = calculateGeneralSupportHeight(kLeftEighthToOrthogonalUp25Seq0.clearance, 1, true),
     };
 
     static constexpr SequenceDescriptor kLeftEighthToOrthogonalUp25Seq1 = {
         .clearance = { -32, 0, 0, 16, { 0b0001, 0 }, {} },
         .allowedWallEdges = 0b1000,
-        .woodenSupports = { WoodenSupportSubType::corner2 },
+        .woodenSupports = { WoodenSupportSubType::corner2, WoodenSupportTransitionType::none, 16 },
         .blockedSegments = blockedSegmentsRotate(blockedSegmentsFlipXAxis(kLeftEighthToDiagUp25Seq2.blockedSegments), 2),
+        .generalSupportHeight = calculateGeneralSupportHeight(kLeftEighthToOrthogonalUp25Seq1.clearance, 1, true),
     };
 
     static constexpr SequenceDescriptor kLeftEighthToOrthogonalUp25Seq2 = {
         .clearance = { 0, 32, 0, 16, { 0b0100, 0 }, { ClearanceFlag::flag0 } },
         .allowedWallEdges = 0b0110,
-        .woodenSupports = { WoodenSupportSubType::corner0 },
+        .woodenSupports = { WoodenSupportSubType::corner0, WoodenSupportTransitionType::none, 16 },
         .blockedSegments = blockedSegmentsRotate(blockedSegmentsFlipXAxis(kLeftEighthToDiagUp25Seq3.blockedSegments), 2),
+        .generalSupportHeight = calculateGeneralSupportHeight(kLeftEighthToOrthogonalUp25Seq2.clearance, 1, true),
     };
 
     static constexpr SequenceDescriptor kLeftEighthToOrthogonalUp25Seq3 = {
         .clearance = { -32, 32, 16, 16, { 0b1111, 0 }, {} },
         .allowedWallEdges = 0b0010,
-        .woodenSupports = { WoodenSupportSubType::neSw },
+        .woodenSupports = { WoodenSupportSubType::neSw, WoodenSupportTransitionType::none, 16 },
         .blockedSegments = blockedSegmentsRotate(blockedSegmentsFlipXAxis(kLeftEighthToDiagUp25Seq1.blockedSegments), 2),
+        .generalSupportHeight = calculateGeneralSupportHeight(kLeftEighthToOrthogonalUp25Seq3.clearance, 1, true),
     };
 
     static constexpr SequenceDescriptor kLeftEighthToOrthogonalUp25Seq4 = {
         .clearance = { -64, 32, 32, 16, { 0b1111, 0 }, {} },
         .allowedWallEdges = 0b0010,
         .flags = { SequenceFlag::hasHeightMarker },
-        .woodenSupports = { WoodenSupportSubType::neSw },
+        .woodenSupports = { WoodenSupportSubType::neSw, WoodenSupportTransitionType::up25Deg },
+        .metalSupports = { MetalSupportPlace::centre },
         .blockedSegments = blockedSegmentsRotate(blockedSegmentsFlipXAxis(kLeftEighthToDiagUp25Seq0.blockedSegments), 2),
+        .generalSupportHeight = calculateGeneralSupportHeight(kLeftEighthToOrthogonalUp25Seq4.clearance, 1, true),
+        .tunnels = { sequenceTunnelAllTypes(2, 8, TunnelSubType::slopeEnd) },
     };
 
     static constexpr SequenceDescriptor kDiagUp25ToLeftBankedUp25Seq0 = {
@@ -3248,69 +3264,107 @@ namespace OpenRCT2::TrackMetadata
         .clearance = { 0, 0, 0, 16, { 0b1111, 0 }, {} },
         .allowedWallEdges = 0b0010,
         .flags = { SequenceFlag::hasHeightMarker },
-        .woodenSupports = { WoodenSupportSubType::neSw, WoodenSupportTransitionType::up25Deg },
-        .blockedSegments = kLeftEighthToDiagUp25Seq0.blockedSegments,
+        .woodenSupports = kLeftEighthToDiagUp25Seq0.woodenSupports,
+        .metalSupports = kLeftEighthToDiagUp25Seq0.metalSupports,
+        .blockedSegments = { {
+            { PS::centre, PS::topRight, PS::bottomLeft }, // narrow
+            kSegmentsUnimplemented,                       // inverted
+            kSegmentsAll,                                 // wide
+        } },
+        .generalSupportHeight = kLeftEighthToDiagUp25Seq0.generalSupportHeight,
+        .tunnels = kLeftEighthToDiagUp25Seq0.tunnels,
     };
 
     static constexpr SequenceDescriptor kLeftEighthBankToDiagUp25Seq1 = {
         .clearance = { -32, 0, 16, 32, { 0b1111, 0 }, {} },
         .allowedWallEdges = 0b0010,
-        .woodenSupports = { WoodenSupportSubType::neSw },
-        .blockedSegments = kLeftEighthToDiagUp25Seq1.blockedSegments,
+        .woodenSupports = kLeftEighthToDiagUp25Seq1.woodenSupports,
+        .blockedSegments = { {
+            { PS::top, PS::left, PS::centre, PS::topLeft, PS::topRight, PS::bottomLeft }, // narrow
+            kSegmentsUnimplemented,                                                       // inverted
+            kSegmentsAll,                                                                 // wide
+        } },
+        .generalSupportHeight = kLeftEighthToDiagUp25Seq1.generalSupportHeight,
     };
 
     static constexpr SequenceDescriptor kLeftEighthBankToDiagUp25Seq2 = {
         .clearance = { -32, -32, 32, 16, { 0b1000, 0 }, {} },
         .allowedWallEdges = 0b1000,
-        .woodenSupports = { WoodenSupportSubType::corner1 },
-        .blockedSegments = kLeftEighthToDiagUp25Seq2.blockedSegments,
+        .woodenSupports = kLeftEighthToDiagUp25Seq2.woodenSupports,
+        .blockedSegments = { {
+            { PS::right, PS::bottom, PS::centre, PS::topRight, PS::bottomRight }, // narrow
+            kSegmentsUnimplemented,                                               // inverted
+            kSegmentsAll,                                                         // wide
+        } },
+        .generalSupportHeight = kLeftEighthToDiagUp25Seq2.generalSupportHeight,
     };
 
     static constexpr SequenceDescriptor kLeftEighthBankToDiagUp25Seq3 = {
         .clearance = { -64, 0, 32, 16, { 0b0010, 0 }, { ClearanceFlag::flag0 } },
         .allowedWallEdges = 0b0011,
-        .woodenSupports = { WoodenSupportSubType::corner3 },
-        .blockedSegments = kLeftEighthToDiagUp25Seq3.blockedSegments,
+        .woodenSupports = kLeftEighthToDiagUp25Seq3.woodenSupports,
+        .blockedSegments = { {
+            { PS::left, PS::centre, PS::topLeft, PS::bottomLeft }, // narrow
+            kSegmentsUnimplemented,                                // inverted
+            kSegmentsAll,                                          // wide
+        } },
+        .generalSupportHeight = kLeftEighthToDiagUp25Seq3.generalSupportHeight,
     };
 
     static constexpr SequenceDescriptor kLeftEighthBankToDiagUp25Seq4 = {
         .clearance = { -64, -32, 32, 24, { 0b0001, 0 }, {} },
-        .blockedSegments = kLeftEighthToDiagUp25Seq4.blockedSegments,
+        .woodenSupports = kLeftEighthToDiagUp25Seq4.woodenSupports,
+        .metalSupports = kLeftEighthToDiagUp25Seq4.metalSupports,
+        .blockedSegments = { {
+            { PS::bottom, PS::centre, PS::topLeft, PS::topRight, PS::bottomLeft, PS::bottomRight }, // narrow
+            kSegmentsUnimplemented,                                                                 // inverted
+            kSegmentsAll,                                                                           // wide
+        } },
+        .generalSupportHeight = kLeftEighthToDiagUp25Seq4.generalSupportHeight,
     };
 
     static constexpr SequenceDescriptor kLeftEighthBankToOrthogonalUp25Seq0 = {
         .clearance = { 0, 0, 0, 16, { 0b1101, 0 }, {} },
         .flags = { SequenceFlag::hasHeightMarker },
+        .woodenSupports = kLeftEighthToOrthogonalUp25Seq0.woodenSupports,
+        .metalSupports = kLeftEighthToOrthogonalUp25Seq0.metalSupports,
         .blockedSegments = blockedSegmentsRotate(blockedSegmentsFlipXAxis(kLeftEighthBankToDiagUp25Seq4.blockedSegments), 2),
+        .generalSupportHeight = kLeftEighthToOrthogonalUp25Seq0.generalSupportHeight,
     };
 
     static constexpr SequenceDescriptor kLeftEighthBankToOrthogonalUp25Seq1 = {
         .clearance = { -32, 0, 0, 16, { 0b0001, 0 }, {} },
         .allowedWallEdges = 0b1000,
-        .woodenSupports = { WoodenSupportSubType::corner2 },
+        .woodenSupports = kLeftEighthToOrthogonalUp25Seq1.woodenSupports,
         .blockedSegments = blockedSegmentsRotate(blockedSegmentsFlipXAxis(kLeftEighthBankToDiagUp25Seq2.blockedSegments), 2),
+        .generalSupportHeight = kLeftEighthToOrthogonalUp25Seq1.generalSupportHeight,
     };
 
     static constexpr SequenceDescriptor kLeftEighthBankToOrthogonalUp25Seq2 = {
         .clearance = { 0, 32, 0, 16, { 0b0100, 0 }, { ClearanceFlag::flag0 } },
         .allowedWallEdges = 0b0110,
-        .woodenSupports = { WoodenSupportSubType::corner0 },
+        .woodenSupports = kLeftEighthToOrthogonalUp25Seq2.woodenSupports,
         .blockedSegments = blockedSegmentsRotate(blockedSegmentsFlipXAxis(kLeftEighthBankToDiagUp25Seq3.blockedSegments), 2),
+        .generalSupportHeight = kLeftEighthToOrthogonalUp25Seq2.generalSupportHeight,
     };
 
     static constexpr SequenceDescriptor kLeftEighthBankToOrthogonalUp25Seq3 = {
         .clearance = { -32, 32, 16, 16, { 0b1111, 0 }, {} },
         .allowedWallEdges = 0b0010,
-        .woodenSupports = { WoodenSupportSubType::neSw },
+        .woodenSupports = kLeftEighthToOrthogonalUp25Seq3.woodenSupports,
         .blockedSegments = blockedSegmentsRotate(blockedSegmentsFlipXAxis(kLeftEighthBankToDiagUp25Seq1.blockedSegments), 2),
+        .generalSupportHeight = kLeftEighthToOrthogonalUp25Seq3.generalSupportHeight,
     };
 
     static constexpr SequenceDescriptor kLeftEighthBankToOrthogonalUp25Seq4 = {
         .clearance = { -64, 32, 32, 16, { 0b1111, 0 }, {} },
         .allowedWallEdges = 0b0010,
         .flags = { SequenceFlag::hasHeightMarker },
-        .woodenSupports = { WoodenSupportSubType::neSw },
+        .woodenSupports = kLeftEighthToOrthogonalUp25Seq4.woodenSupports,
+        .metalSupports = kLeftEighthToOrthogonalUp25Seq4.metalSupports,
         .blockedSegments = blockedSegmentsRotate(blockedSegmentsFlipXAxis(kLeftEighthBankToDiagUp25Seq0.blockedSegments), 2),
+        .generalSupportHeight = kLeftEighthToOrthogonalUp25Seq4.generalSupportHeight,
+        .tunnels = kLeftEighthToOrthogonalUp25Seq4.tunnels,
     };
 
     static constexpr SequenceDescriptor kDiagBrakesSeq0 = {
@@ -6209,6 +6263,7 @@ namespace OpenRCT2::TrackMetadata
                         -16 },
         .spinFunction = SpinFunction::l9,
         .lateralFactor = EvaluatorConst<137>,
+        .reversedRotationOffset = 1,
         .sequenceData =
             [] { // TED sequence override! (diagonal connection) (#27299)
                 auto sequenceData = kTEDRightEighthToOrthogonalUp25.sequenceData.rotate(1)
@@ -6231,6 +6286,7 @@ namespace OpenRCT2::TrackMetadata
                         -16 },
         .spinFunction = SpinFunction::r9,
         .lateralFactor = EvaluatorConst<-137>,
+        .reversedRotationOffset = 2,
         .sequenceData = kTEDLeftEighthToDiagDown25.sequenceData.flipXAxis(),
     };
 
@@ -6246,6 +6302,7 @@ namespace OpenRCT2::TrackMetadata
                         -16 },
         .spinFunction = SpinFunction::l9,
         .lateralFactor = EvaluatorConst<137>,
+        .reversedRotationOffset = 2,
         .sequenceData =
             [] { // TED sequence override! (diagonal connection) (#27299)
                 auto sequenceData = kTEDRightEighthToDiagUp25.sequenceData.rotate(2)
@@ -6268,6 +6325,7 @@ namespace OpenRCT2::TrackMetadata
                         -16 },
         .spinFunction = SpinFunction::r9,
         .lateralFactor = EvaluatorConst<-137>,
+        .reversedRotationOffset = 3,
         .sequenceData = kTEDLeftEighthToOrthogonalDown25.sequenceData.flipDiagonal(),
     };
 
@@ -6735,6 +6793,7 @@ namespace OpenRCT2::TrackMetadata
         .spinFunction = SpinFunction::l9,
         .verticalFactor = EvaluatorConst<270>,
         .lateralFactor = EvaluatorConst<200>,
+        .reversedRotationOffset = 1,
         .sequenceData =
             [] { // TED sequence override! (diagonal connection) (#27299)
                 auto sequenceData = kTEDRightEighthBankToOrthogonalUp25.sequenceData.rotate(1)
@@ -6758,6 +6817,7 @@ namespace OpenRCT2::TrackMetadata
         .spinFunction = SpinFunction::r9,
         .verticalFactor = EvaluatorConst<270>,
         .lateralFactor = EvaluatorConst<-200>,
+        .reversedRotationOffset = 2,
         .sequenceData = kTEDLeftEighthBankToDiagDown25.sequenceData.flipXAxis(),
     };
 
@@ -6774,6 +6834,7 @@ namespace OpenRCT2::TrackMetadata
         .spinFunction = SpinFunction::l9,
         .verticalFactor = EvaluatorConst<270>,
         .lateralFactor = EvaluatorConst<200>,
+        .reversedRotationOffset = 2,
         .sequenceData =
             [] { // TED sequence override! (diagonal connection) (#27299)
                 auto sequenceData = kTEDRightEighthBankToDiagUp25.sequenceData.rotate(2)
@@ -6797,6 +6858,7 @@ namespace OpenRCT2::TrackMetadata
         .spinFunction = SpinFunction::r9,
         .verticalFactor = EvaluatorConst<270>,
         .lateralFactor = EvaluatorConst<-200>,
+        .reversedRotationOffset = 3,
         .sequenceData = kTEDLeftEighthBankToOrthogonalDown25.sequenceData.flipDiagonal(),
     };
 
