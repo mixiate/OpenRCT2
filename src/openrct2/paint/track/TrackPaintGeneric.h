@@ -22,8 +22,16 @@ namespace OpenRCT2
 
     ImageId getPrimaryTrackColourWithSecondarySupportColour(const PaintSession& session);
 
-    template<const bool flipXAxis, const size_t sequenceCount, const size_t spriteCount>
-    constexpr uint64_t createSpriteMap(const bool array[kNumOrthogonalDirections][sequenceCount][spriteCount])
+    enum class TrackSpriteMapFlip
+    {
+        none,
+        xAxis,
+        diagonal,
+    };
+
+    template<const size_t sequenceCount, const size_t spriteCount>
+    constexpr uint64_t createSpriteMap(
+        const bool array[kNumOrthogonalDirections][sequenceCount][spriteCount], const TrackSpriteMapFlip flipType)
     {
         const size_t directionOffset = sequenceCount * spriteCount;
         uint64_t spriteMap = 0;
@@ -35,7 +43,11 @@ namespace OpenRCT2
                 {
                     if (array[direction][sequence][sprite] == true)
                     {
-                        const size_t directionIndex = flipXAxis ? kNumOrthogonalDirections - 1 - direction : direction;
+                        size_t directionIndex = direction;
+                        if (flipType == TrackSpriteMapFlip::xAxis)
+                            directionIndex = kNumOrthogonalDirections - 1 - direction;
+                        else if (flipType == TrackSpriteMapFlip::diagonal)
+                            directionIndex = kDirectionMapFlipDiagonal[direction];
                         const uint64_t shift = sprite + (sequence * spriteCount) + (directionIndex * directionOffset);
                         const uint64_t bit = 0b1LL << shift;
                         spriteMap |= bit;

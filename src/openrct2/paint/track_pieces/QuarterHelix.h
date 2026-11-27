@@ -78,14 +78,14 @@ namespace OpenRCT2
               { true, false },
               { true, false } } };
 
-    static constexpr uint64_t kLeftQuarterHelixLargeUpSpriteMap = createSpriteMap<false>(
-        kLeftQuarterHelixLargeUpSpriteMapArray);
-    static constexpr uint64_t kRightQuarterHelixLargeUpSpriteMap = createSpriteMap<true>(
-        kLeftQuarterHelixLargeUpSpriteMapArray);
-    static constexpr uint64_t kLeftQuarterBankedHelixLargeUpSpriteMap = createSpriteMap<false>(
-        kLeftQuarterBankedHelixLargeUpSpriteMapArray);
-    static constexpr uint64_t kRightQuarterBankedHelixLargeUpSpriteMap = createSpriteMap<true>(
-        kLeftQuarterBankedHelixLargeUpSpriteMapArray);
+    static constexpr uint64_t kLeftQuarterHelixLargeUpSpriteMap = createSpriteMap(
+        kLeftQuarterHelixLargeUpSpriteMapArray, TrackSpriteMapFlip::none);
+    static constexpr uint64_t kRightQuarterHelixLargeUpSpriteMap = createSpriteMap(
+        kLeftQuarterHelixLargeUpSpriteMapArray, TrackSpriteMapFlip::xAxis);
+    static constexpr uint64_t kLeftQuarterBankedHelixLargeUpSpriteMap = createSpriteMap(
+        kLeftQuarterBankedHelixLargeUpSpriteMapArray, TrackSpriteMapFlip::none);
+    static constexpr uint64_t kRightQuarterBankedHelixLargeUpSpriteMap = createSpriteMap(
+        kLeftQuarterBankedHelixLargeUpSpriteMapArray, TrackSpriteMapFlip::xAxis);
 
     typedef std::array<
         std::array<std::array<BoundBoxXYZ, kQuarterHelixSequenceSpriteCount>, kQuarterHelixSequenceCount>,

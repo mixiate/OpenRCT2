@@ -118,25 +118,25 @@ namespace OpenRCT2::HybridRC
               { true, false } } };
 
     constexpr auto kLeftQuarterHelixArgs = TrackPaintElementArgs{
-        .spriteMap = createSpriteMap<false>(kLeftQuarterHelixLargeUpSpriteMapArray),
+        .spriteMap = createSpriteMap(kLeftQuarterHelixLargeUpSpriteMapArray, TrackSpriteMapFlip::none),
         .boundingBoxes = &kLeftQuarterHelixLargeUpBoundingBoxes[0][0][0],
         .imageIndex = SPR_TRACKS_HYBRID_TRACK_QUARTER_HELIX_LEFT,
         .mapSpriteCount = 2,
     };
     constexpr auto kRightQuarterHelixArgs = TrackPaintElementArgs{
-        .spriteMap = createSpriteMap<true>(kLeftQuarterHelixLargeUpSpriteMapArray),
+        .spriteMap = createSpriteMap(kLeftQuarterHelixLargeUpSpriteMapArray, TrackSpriteMapFlip::xAxis),
         .boundingBoxes = &kRightQuarterHelixLargeUpBoundingBoxes[0][0][0],
         .imageIndex = SPR_TRACKS_HYBRID_TRACK_QUARTER_HELIX_RIGHT,
         .mapSpriteCount = 2,
     };
     constexpr auto kLeftQuarterBankedHelixArgs = TrackPaintElementArgs{
-        .spriteMap = createSpriteMap<false>(kLeftQuarterBankedHelixLargeUpSpriteMapArray),
+        .spriteMap = createSpriteMap(kLeftQuarterBankedHelixLargeUpSpriteMapArray, TrackSpriteMapFlip::none),
         .boundingBoxes = &kLeftQuarterHelixLargeUpBoundingBoxes[0][0][0],
         .imageIndex = SPR_TRACKS_HYBRID_TRACK_QUARTER_HELIX_LEFT_BANKED,
         .mapSpriteCount = 2,
     };
     constexpr auto kRightQuarterBankedHelixArgs = TrackPaintElementArgs{
-        .spriteMap = createSpriteMap<true>(kLeftQuarterBankedHelixLargeUpSpriteMapArray),
+        .spriteMap = createSpriteMap(kLeftQuarterBankedHelixLargeUpSpriteMapArray, TrackSpriteMapFlip::xAxis),
         .boundingBoxes = &kRightQuarterHelixLargeUpBoundingBoxes[0][0][0],
         .imageIndex = SPR_TRACKS_HYBRID_TRACK_QUARTER_HELIX_RIGHT_BANKED,
         .mapSpriteCount = 2,

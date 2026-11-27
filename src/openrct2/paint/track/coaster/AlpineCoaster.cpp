@@ -74,14 +74,14 @@ namespace OpenRCT2::AlpineRC
         .supportHeights = { { { 4, 4, 4, 4 }, {}, {}, {}, {}, {}, { 8, 8, 8, 8 } } },
     };
     constexpr auto kLeftQuarterBankedHelixArgs = TrackPaintElementArgs{
-        .spriteMap = createSpriteMap<false>(kLeftQuarterBankedHelixLargeUpSpriteMapArray),
+        .spriteMap = createSpriteMap(kLeftQuarterBankedHelixLargeUpSpriteMapArray, TrackSpriteMapFlip::none),
         .boundingBoxes = &kLeftQuarterHelixLargeUpBoundingBoxes[0][0][0],
         .imageIndex = SPR_TRACKS_ALPINE_TRACK_QUARTER_HELIX_LEFT_BANKED,
         .mapSpriteCount = 2,
         .supportHeights = { { { 5, 4, 4, 4 }, {}, {}, {}, {}, {}, { 8, 8, 8, 8 } } },
     };
     constexpr auto kRightQuarterBankedHelixArgs = TrackPaintElementArgs{
-        .spriteMap = createSpriteMap<true>(kLeftQuarterBankedHelixLargeUpSpriteMapArray),
+        .spriteMap = createSpriteMap(kLeftQuarterBankedHelixLargeUpSpriteMapArray, TrackSpriteMapFlip::xAxis),
         .boundingBoxes = &kRightQuarterHelixLargeUpBoundingBoxes[0][0][0],
         .imageIndex = SPR_TRACKS_ALPINE_TRACK_QUARTER_HELIX_RIGHT_BANKED,
         .mapSpriteCount = 2,
