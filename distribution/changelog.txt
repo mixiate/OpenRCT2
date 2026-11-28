@@ -39,6 +39,7 @@
 - Fix: [#27392] Crash in `BannerSetStyleAction` when called on something that is not a banner.
 - Fix: [#27409] The ‘not enough cash’ message and track design costs show the wrong amount on big-endian systems.
 - Fix: [#27447] Make ‘Remove ducks’ cheat skip frozen ducks.
+- Fix: [#27478] Hybrid Coaster large gentle banked turns are not visible in tunnels at certain angles.
 
 0.5.7 (2026-11-01)
 ------------------------------------------------------------------------
